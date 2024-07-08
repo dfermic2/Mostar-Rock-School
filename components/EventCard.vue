@@ -19,7 +19,7 @@
       </div>
     </section>
 
-    <section class="event-description p-block-1 pl-02">
+    <section class="event-description p-block-12 pl-02">
       <h2 class="font-weight-900">{{ event.title }}</h2>
     </section>
 
@@ -32,7 +32,7 @@
       </div>
 
       <div class="actions mr-05">
-        <button class="btn pl-pr-1 p-block-045">Find out more</button>
+        <button class="btn pl-pr-2 p-block-045">Find out more</button>
       </div>
     </section>
   </div>
@@ -63,7 +63,7 @@ console.log(event)
   padding-inline: 1rem;
 }
 
-.pl-pr-1 {
+.pl-pr-2 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -76,7 +76,7 @@ console.log(event)
   padding: 0.5rem;
 }
 
-.p-block-1 {
+.p-block-12 {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
