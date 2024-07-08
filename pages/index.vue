@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MediaLinks :mediaPosition="'footer'" :mediaOrientation="'row'" />
+    <MediaLinks :mediaPosition="'side'" />
   </div>
 </template>
 

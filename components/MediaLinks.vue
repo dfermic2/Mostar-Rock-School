@@ -5,8 +5,7 @@
       'g-05': mediaPosition === 'side',
       'g-3': mediaPosition === 'footer',
       'g-6': mediaPosition === 'normal',
-      'flex-row': mediaOrientation === 'row',
-      'flex-column': mediaOrientation === 'column',
+      'o-side': mediaPosition === 'side',
     }"
   >
     <div class="link-container">
@@ -49,10 +48,7 @@
 </template>
 
 <script setup>
-const { mediaPosition, mediaOrientation } = defineProps([
-  'mediaPosition',
-  'mediaOrientation',
-])
+const { mediaPosition } = defineProps(['mediaPosition'])
 </script>
 
 <style scoped>
@@ -78,20 +74,16 @@ const { mediaPosition, mediaOrientation } = defineProps([
   gap: 6rem;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
 .link-container {
   color: #fff;
 }
 
 .normal {
   font-size: 3rem;
+}
+
+.o-side {
+  flex-direction: column;
 }
 
 .footer {
