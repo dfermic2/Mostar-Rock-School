@@ -2,10 +2,9 @@
   <div
     class="container"
     :class="{
-      'g-05': mediaPosition === 'side',
+      'g-05 o-side': mediaPosition === 'side',
       'g-3': mediaPosition === 'footer',
       'g-6': mediaPosition === 'normal',
-      'o-side': mediaPosition === 'side',
     }"
   >
     <div class="link-container">
@@ -84,6 +83,7 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 
 .o-side {
   flex-direction: column;
+  padding: 0.6rem;
 }
 
 .footer {
