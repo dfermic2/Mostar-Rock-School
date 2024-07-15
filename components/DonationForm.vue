@@ -4,9 +4,9 @@
       :items="items"
       :ui="{
         list: {
-          base: 'relative',
+          base: 'relative -mt-1',
           background: 'bg-white-100 dark:bg-gray-800',
-          rounded: 'rounded-sm',
+          rounded: 'rounded-tr',
           shadow: '',
           padding: 'p-0',
           height: 'h-14',
@@ -15,8 +15,8 @@
             wrapper:
               'absolute inset-x-0 inset-y-0 duration-200 ease-out focus:outline-none',
             base: 'w-full h-full',
-            background: 'bg-blue-600 dark:bg-gray-900',
-            rounded: 'rounded-sm',
+            background: 'bg-donation dark:bg-gray-900',
+            rounded: 'rounded-tr',
             shadow: 'shadow-sm',
           },
           tab: {
@@ -28,7 +28,7 @@
             padding: 'p-3',
             size: 'text-sm',
             font: 'font-medium',
-            rounded: 'rounded-sm',
+            rounded: 'rounded-tr',
             shadow: '',
           },
         },
@@ -42,21 +42,23 @@
 
         <!-- Monthly support -->
         <div v-if="item.key === 'monthlysupport'" class="space-y-3 px-5">
-          <section class="donation-section support p-1">
+          <section class="donation-section p-1">
             <p class="f-bold-size">Pick an amount</p>
             <div class="amount-donations">
               <span
+                @click="handleValuePick()"
+                class="donation"
                 v-for="amount in possibleDonationAmounts"
                 :key="amount"
-                @click="handleValuePick(amount)"
+                :data-amount="amount"
               >
                 <Icon name="healthicons:money-bag" size="20" />
-                <span class="amount p-1" :value="amount">{{ amount }} KM</span>
+                <span class="amount p-1">{{ amount }} KM</span>
               </span>
             </div>
           </section>
 
-          <hr />
+          <hr class="separator" />
 
           <section class="donation-section p-1">
             <p class="f-bold-size">Other amount</p>
@@ -89,17 +91,30 @@ const items = [
     label: 'Montly support',
   },
 ]
-const handleValuePick = (donation) => {
-  alert(`You picked ${donation} KM`)
+
+const handleValuePick = () => {
+  let amountDonations = document.querySelectorAll('.donation')
+  let donationValue = null
+
+  amountDonations.forEach((amount) => {
+    amount.addEventListener('click', (e) => {
+      amountDonations.forEach((amount) => {
+        amount.classList.remove('active')
+      })
+      e.currentTarget.classList.add('active')
+      donationValue = e.currentTarget.dataset.amount
+    })
+  })
 }
 </script>
 
 <style scoped>
 .container {
-  width: 400px;
+  width: 380px;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
   padding-bottom: 2.5rem;
+  border-radius: 0.4rem;
 }
 
 .donation-section {
@@ -119,25 +134,36 @@ const handleValuePick = (donation) => {
   display: grid;
   margin-top: 0.5rem;
   grid-template-columns: auto auto auto;
-  column-gap: 0.5rem;
+  column-gap: 1rem;
   row-gap: 0.8rem;
 }
 
-.amount-donations > span {
+.donation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  background: #f3f2f2;
+  justify-content: center;
+  background: #fafbfb;
   padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;
   box-shadow: 1px 1px 3px #d6d6d6;
 }
 
-.amount-donations span:hover {
-  background: #2563eb;
+.active {
+  background: #437fd9;
+  color: #ffffff;
+  font-weight: 600;
+  transition: 100ms;
+}
+
+.amount-donations > span:hover {
+  background: #437fd9;
   color: #fff;
   cursor: pointer;
+  box-shadow: inset 1px 0px 3px gray;
+}
+
+.amount-donations > span > span {
+  margin-left: -0.3rem;
 }
 
 .amount {
@@ -146,6 +172,10 @@ const handleValuePick = (donation) => {
   font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
+}
+
+.separator {
+  color: #edf3fc;
 }
 
 .custom-donation {
@@ -158,8 +188,8 @@ const handleValuePick = (donation) => {
 .custom-donation > input {
   width: 100%;
   color: #939393;
-  border: 1px solid #2563eb;
-  border-radius: 0.2rem;
+  border: 1px solid #437fd9;
+  border-radius: 0.2rem 0 0.2rem 0.2rem;
 }
 
 .custom-donation > input:focus {
@@ -187,10 +217,10 @@ input::-webkit-inner-spin-button {
 }
 
 .custom-donation > span {
-  border: 1px solid #2563eb;
+  border: 1px solid #437fd9;
   border-left: none;
-  color: #2563eb;
-  border-radius: 0.2rem;
+  color: #437fd9;
+  border-radius: 0rem 0.2rem 0.2rem 0;
 }
 
 .btn {

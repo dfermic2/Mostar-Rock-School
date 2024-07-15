@@ -1,7 +1,7 @@
 <template>
   <div>
-    <MediaLinks :mediaPosition="'footer'" :mediaOrientation="'row'" />
-    <DonationForm />
+    <!-- <MediaLinks :mediaPosition="'footer'" :mediaOrientation="'row'" /> -->
+    <DonationForm style="margin: 20px" />
   </div>
 </template>
 
