@@ -1,0 +1,38 @@
+@font-face {
+  font-family: F37Hybrid-Bold;
+  src: url(../fonts/F37Hybrid-Bold.ttf);
+  font-display: swap;
+}
+
+.btn-red {
+  border-radius: 0.2rem;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 0.5rem 0.8rem;
+}
+
+.btn-red:hover {
+  background-color: #bb0000;
+}
+
+.g-05 {
+  gap: 0.5rem;
+}
+
+.g-07 {
+  gap: 0.7rem;
+}
+
+.g-3 {
+  gap: 3rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+body {
+  font-family: "F37Hybrid-Bold";
+  letter-spacing: 0.07rem;
+}
