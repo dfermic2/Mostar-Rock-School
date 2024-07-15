@@ -4,30 +4,30 @@
       <div class="location-time-info ml-minus-05">
         <div class="date">
           <Icon name="mdi:calendar-check" size="17" />
-          <p class="date-time pl-02">{{ event.date }}</p>
+          <p class="date-time pl-05">{{ event.date }}</p>
         </div>
 
         <div class="time">
           <Icon class="icon" name="uil:clock" size="17" />
-          <p class="date-time pl-02">{{ event.time }}</p>
+          <p class="date-time pl-05">{{ event.time }}</p>
         </div>
 
         <div class="location">
           <Icon name="mdi:place" size="17" />
-          <p class="location-place pl-02">{{ event.location }}</p>
+          <p class="location-place pl-05">{{ event.location }}</p>
         </div>
       </div>
     </section>
 
-    <section class="event-description p-block-12 pl-02">
+    <section class="event-description p-block-12 pl-05">
       <h2 class="font-weight-900">{{ event.title }}</h2>
     </section>
 
     <section class="footer p-inline-1 m-minus-1">
-      <div class="fee-info pl-02">
-        <Icon name="solar:ticker-star-bold" size="17" />
+      <div class="fee-info pl-05">
+        <Icon name="bi:ticket" size="17" />
         <p>
-          <span class="pl-02 font-weight-900">{{ event.fee }}</span>
+          <span class="pl-05 font-weight-900">{{ event.fee }}</span>
         </p>
       </div>
 
@@ -51,12 +51,12 @@ console.log(event)
   flex-direction: column;
   justify-content: flex-start;
   background: #fff;
-  box-shadow: 2px 2px 2px #d6d6d6;
+  box-shadow: 2px 2px 2px #f1f2f3;
 }
 
 .header {
   width: 100%;
-  background: #e3e3e3;
+  background: #f1f5f9;
 }
 
 .p-inline-1 {
@@ -86,8 +86,8 @@ console.log(event)
   padding-bottom: 0.45rem;
 }
 
-.pl-02 {
-  padding-left: 0.2rem;
+.pl-05 {
+  padding-left: 0.5rem;
 }
 
 .m-minus-1 {
@@ -136,7 +136,7 @@ console.log(event)
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #e3e3e3;
+  background: #f1f5f9;
 }
 
 .fee-info {
