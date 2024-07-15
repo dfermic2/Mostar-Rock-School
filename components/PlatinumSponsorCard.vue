@@ -3,7 +3,7 @@
     <div class="left-side p-inline-1">
       <img
         class="image"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F015%2F309%2F575%2Fnon_2x%2Fnorway-waving-flag-realistic-transparent-background-free-png.png&f=1&nofb=1&ipt=194377af285d70a77f2125a5cb1ad2faf538ee47e318e3cfb8c585151e5e799a&ipo=images"
+        src="../assets/images/Norwegian Embassy Sarajevo.png"
         alt="Norway Embassy Sarajevo logo"
       />
     </div>
@@ -51,6 +51,14 @@
 }
 
 .image {
-  width: 200px;
+  width: 150px;
+}
+
+.right-side {
+  padding-inline: 2.5rem;
+}
+
+.right-side p {
+  font-size: 0.9rem;
 }
 </style>
