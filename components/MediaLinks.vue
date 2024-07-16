@@ -1,47 +1,49 @@
 <template>
-  <div
-    class="container"
-    :class="{
-      'g-05 o-side': mediaPosition === 'side',
-      'g-3': mediaPosition === 'footer',
-      'g-6': mediaPosition === 'normal',
-    }"
-  >
-    <div class="link-container">
-      <Icon
-        name="uil:instagram"
-        :class="{
-          footer: mediaPosition === `footer`,
-          normal: mediaPosition === 'normal',
-        }"
-      />
-    </div>
-    <div class="link-container">
-      <Icon
-        name="uil:facebook"
-        :class="{
-          footer: mediaPosition === `footer`,
-          normal: mediaPosition === 'normal',
-        }"
-      />
-    </div>
-    <div class="link-container">
-      <Icon
-        name="uil:youtube"
-        :class="{
-          footer: mediaPosition === `footer`,
-          normal: mediaPosition === 'normal',
-        }"
-      />
-    </div>
-    <div class="link-container">
-      <Icon
-        name="mdi:soundcloud"
-        :class="{
-          footer: mediaPosition === `footer`,
-          normal: mediaPosition === 'normal',
-        }"
-      />
+  <div id="media-links-main-container">
+    <div
+      class="container"
+      :class="{
+        'g-05 o-side': mediaPosition === 'side',
+        'g-3': mediaPosition === 'footer',
+        'g-6': mediaPosition === 'normal',
+      }"
+    >
+      <div class="link-container">
+        <Icon
+          name="uil:instagram"
+          :class="{
+            footer: mediaPosition === `footer`,
+            normal: mediaPosition === 'normal',
+          }"
+        />
+      </div>
+      <div class="link-container">
+        <Icon
+          name="uil:facebook"
+          :class="{
+            footer: mediaPosition === `footer`,
+            normal: mediaPosition === 'normal',
+          }"
+        />
+      </div>
+      <div class="link-container">
+        <Icon
+          name="uil:youtube"
+          :class="{
+            footer: mediaPosition === `footer`,
+            normal: mediaPosition === 'normal',
+          }"
+        />
+      </div>
+      <div class="link-container">
+        <Icon
+          name="mdi:soundcloud"
+          :class="{
+            footer: mediaPosition === `footer`,
+            normal: mediaPosition === 'normal',
+          }"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +53,10 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 </script>
 
 <style scoped>
+#media-links-main-container {
+  width: fit-content;
+}
+
 .container {
   padding: 10px 20px;
   border-radius: 5px;
@@ -75,6 +81,11 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 
 .link-container {
   color: #fff;
+}
+
+.link-container:hover {
+  color: #ff0000;
+  transition: 300ms;
 }
 
 .normal {
