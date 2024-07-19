@@ -33,7 +33,7 @@
         </div>
 
         <div class="actions">
-          <button class="btn p-btn f-weight-600">Find out more</button>
+          <button class="btn p-btn">Find out more</button>
         </div>
       </section>
     </div>
@@ -95,6 +95,8 @@ console.log(event)
 }
 
 .btn {
+  width: 180px;
+  height: 35px;
   background: #ff0000;
   background: hsl(0, 240, 120);
   color: #fff;
@@ -102,7 +104,7 @@ console.log(event)
   text-transform: uppercase;
   outline: none;
   border: none;
-  font-size: 0.65rem;
+  font-size: 0.875rem;
   font-weight: 500;
   border-radius: 0.2rem;
 }
