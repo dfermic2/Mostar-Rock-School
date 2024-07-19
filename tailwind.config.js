@@ -8,6 +8,9 @@ module.exports = {
       borderRadius: {
         tr: '0 0.4rem 0 0',
       },
+      fontSize: {
+        l: '19px',
+      },
     },
   },
 }
