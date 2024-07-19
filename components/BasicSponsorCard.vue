@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="image-container">
+    <div class="image-container p-main">
       <img class="image" src="../assets/images/SPARK.png" alt="USAID" />
     </div>
   </div>
@@ -10,21 +10,24 @@
 
 <style scoped>
 .container {
-  width: 210px;
+  width: 280px;
+  height: 180px;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
-  border-radius: 0.2rem;
-  padding-inline: 1rem;
+  border-radius: 0.3125rem;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+}
+
+.p-main {
+  padding: 1.25rem 0.92125rem;
 }
 
 .image {
-  width: 200px;
+  width: 250.53px;
+  height: 140px;
 }
 </style>
