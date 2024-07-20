@@ -1,8 +1,4 @@
-@font-face {
-  font-family: F37Hybrid-Bold;
-  src: url(../fonts/F37Hybrid-Bold.ttf);
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 .btn-red {
   border-radius: 0.2rem;
@@ -10,10 +6,15 @@
   background-color: red;
   color: white;
   padding: 0.5rem 0.8rem;
+  font-size: 1rem;
 }
 
 .btn-red:hover {
   background-color: #bb0000;
+}
+
+.g-03 {
+  gap: 0.3rem;
 }
 
 .g-05 {
@@ -24,15 +25,43 @@
   gap: 0.7rem;
 }
 
+.g-1 {
+  gap: 1rem;
+}
+
+.g-15 {
+  gap: 1.5rem;
+}
+
+.g-2 {
+  gap: 2rem;
+}
 .g-3 {
   gap: 3rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
 }
 
 .pb-1 {
   padding-bottom: 1rem;
 }
 
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
 body {
-  font-family: "F37Hybrid-Bold";
-  letter-spacing: 0.07rem;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
 }

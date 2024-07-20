@@ -1,116 +1,123 @@
 <template>
   <nav>
     <div class="container align-center">
-      <logo imgHeight="110" />
-      <div class="align-center nav-links">
-        <ul class="align-center g-3">
-          <li>
-            <NuxtLink class="link-text" to="/school">THE SCHOOL</NuxtLink>
+      <logo imgHeight="100" />
+      <div class="align-center nav-links g-2">
+        <ul class="align-center nav-links-list g-07">
+          <li @mouseover="hovered" @mouseleave="mouseleave">
+            <NuxtLink to="/school">THE SCHOOL</NuxtLink>
             <div class="dropdown">
               <ul>
                 <li>
-                  <NuxtLink class="link-text" to="/school/journey">
-                    OUR JOURNEY
-                  </NuxtLink>
+                  <NuxtLink to="/school/journey"> OUR JOURNEY </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink class="link-text" to="/school/people">
-                    OUR PEOPLE
-                  </NuxtLink>
+                  <NuxtLink to="/school/people"> OUR PEOPLE </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink class="link-text" to="/school/schedule">
-                    SCHEDULE
-                  </NuxtLink>
+                  <NuxtLink to="/school/schedule"> SCHEDULE </NuxtLink>
                 </li>
               </ul>
             </div>
           </li>
-          <li>
-            <NuxtLink class="link-text" to="/programme">PROGRAMME</NuxtLink>
+          <li @mouseover="hovered" @mouseleave="mouseleave">
+            <NuxtLink to="/programme">PROGRAMME</NuxtLink>
             <div class="dropdown">
               <ul>
                 <li>
-                  <NuxtLink class="link-text" to="/programme/dk-studio">
-                    DK STUDIO
-                  </NuxtLink>
+                  <NuxtLink to="/programme/dk-studio"> DK STUDIO </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink class="link-text" to="/programme/booking">
-                    MORS BOOKING
-                  </NuxtLink>
+                  <NuxtLink to="/programme/booking"> MORS BOOKING </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink
-                    class="link-text"
-                    to="/programme/summer-rock-school"
-                  >
+                  <NuxtLink to="/programme/summer-rock-school">
                     SUMMER ROCK SCHOOL
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink
-                    class="link-text"
-                    to="/programme/mobile-rock-school"
-                  >
+                  <NuxtLink to="/programme/mobile-rock-school">
                     MOBILE ROCK SCHOOL
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink class="link-text" to="/programme/liron">
-                    LIRON
-                  </NuxtLink>
+                  <NuxtLink to="/programme/liron"> LIRON </NuxtLink>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <NuxtLink class="link-text" to="/enroll">ENROLL</NuxtLink>
+            <NuxtLink to="/enroll">ENROLL</NuxtLink>
           </li>
-          <li><NuxtLink class="link-text" to="/news">NEWS</NuxtLink></li>
+          <li><NuxtLink to="/news">NEWS</NuxtLink></li>
           <li>
-            <NuxtLink class="link-text" to="/contact">CONTACT</NuxtLink>
+            <NuxtLink to="/contact">CONTACT</NuxtLink>
           </li>
 
-          <li>
-            <NuxtLink class="link-text" to="/support">
+          <li @mouseover="hovered" @mouseleave="mouseleave">
+            <NuxtLink to="/support">
               <button class="btn-red align-center g-07">
-                <Icon class="iconHeight" name="ion:heart"></Icon>SUPPORT
+                <Icon name="ion:heart" size="0.9rem" />SUPPORT
               </button>
             </NuxtLink>
-            <div class="dropdown">
+            <div class="dropdown pl-1">
               <ul>
                 <li>
-                  <NuxtLink class="link-text" to="/support/donors">
-                    OUR DONORS
-                  </NuxtLink>
+                  <NuxtLink to="/support/donors"> OUR DONORS </NuxtLink>
                 </li>
               </ul>
-            </div>
-          </li>
-
-          <li>
-            <div class="link-text align-center g-05">
-              <Icon name="ion:earth"></Icon>EN
             </div>
           </li>
         </ul>
+        <div class="link-text align-center g-05">
+          <Icon name="ion:earth" />EN
+        </div>
       </div>
     </div>
   </nav>
 </template>
+
+<script setup>
+const emit = defineEmits(["hovered", "mouseleave"]);
+function hovered() {
+  emit("hovered");
+}
+
+function mouseleave() {
+  emit("mouseleave");
+}
+</script>
+
 <style scoped>
 nav {
-  font-size: 1rem;
-}
-.container {
-  justify-content: space-between;
-  margin-top: 2rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.03rem;
+  position: relative;
+  z-index: 999;
 }
 
 .align-center {
   display: flex;
   align-items: center;
+}
+
+.container {
+  justify-content: space-between;
+  margin-inline: auto;
+  max-width: 74rem;
+  padding-top: 2rem;
+}
+
+.nav-links {
+  flex-grow: 1;
+  justify-content: right;
+}
+
+.nav-links-list {
+  flex-grow: inherit;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 50rem;
 }
 
 ul {
@@ -121,6 +128,7 @@ ul {
   padding: 0 0 0 1rem;
 }
 
+a,
 .link-text {
   text-decoration: none;
   color: white;
@@ -128,8 +136,21 @@ ul {
   transition: all 0.2s ease-in-out;
 }
 
-.link-text:hover {
+.dropdown a {
+  display: block;
+  width: 100%;
+}
+
+a:hover,
+.link-text:hover,
+.dropdown li:hover a {
   color: red;
+}
+
+li:hover,
+button:hover,
+.link-text:hover {
+  cursor: pointer;
 }
 
 .router-link-exact-active {
@@ -152,9 +173,10 @@ ul {
   font-size: 0.85rem;
   margin-top: 0.1rem;
   padding: 0.8rem 1.3rem;
+  min-width: 7.5rem;
 }
 
-.link-text:hover + .dropdown,
+a:hover + .dropdown,
 .dropdown:hover {
   display: block;
 }
