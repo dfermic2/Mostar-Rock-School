@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MediaLinks :mediaPosition="'footer'" />
+    <Newsletter />
   </div>
 </template>
 
