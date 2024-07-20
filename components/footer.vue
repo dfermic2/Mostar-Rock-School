@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer>
     <div class="container align-center">
       <div class="content">
         <div class="flex-column g-2">
@@ -62,7 +62,7 @@
       <Icon name="ph:copyright" />
       <span>2024 Mostar Rock School. The school that rocks.</span>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>

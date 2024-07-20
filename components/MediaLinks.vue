@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="media-links-main-container">
     <div
       class="container"
       :class="{
@@ -53,6 +53,10 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 </script>
 
 <style scoped>
+#media-links-main-container {
+  width: fit-content;
+}
+
 .container {
   padding: 10px 0px;
   border-radius: 5px;
@@ -77,6 +81,12 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 
 .link-container {
   color: #fff;
+}
+
+.link-container:hover {
+  color: #ff0000;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 .normal {
