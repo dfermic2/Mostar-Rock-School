@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/icon', '@nuxt/ui'],
+  css: ['@/public/styles/styles.css'],
 })

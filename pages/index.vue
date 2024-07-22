@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <DonationForm style="margin: 20px" />
-  </div>
+  <div></div>
 </template>
 
 <script setup></script>
