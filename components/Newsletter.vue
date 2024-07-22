@@ -27,16 +27,15 @@
   border-radius: 0.4rem;
   padding: 1.56rem 2rem 1.875rem 2rem;
   box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .container:hover {
   background-color: red;
-  transition: background-color 0.4s ease-in-out;
 }
 
 .container:hover button {
   background-color: #b00;
-  transition: background-color 0.4s ease-in-out;
 }
 
 .content {
@@ -101,6 +100,7 @@ button {
   line-height: 1.56rem;
   letter-spacing: 0.02rem;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
