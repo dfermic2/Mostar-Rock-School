@@ -115,8 +115,8 @@ const handleValuePick = () => {
 
 <style scoped>
 .container {
-  width: 480px;
-  height: 485px;
+  width: 30rem;
+  height: 30.3125rem;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
   border-radius: 0.4rem;
@@ -125,7 +125,7 @@ const handleValuePick = () => {
 
 .content {
   box-sizing: border-box;
-  height: 425px;
+  height: 26.5625rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,24 +152,25 @@ const handleValuePick = () => {
 }
 
 .donation {
-  width: 120px;
-  height: 50px;
+  width: 7.5rem;
+  height: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fafbfb;
   border-radius: 0.2rem;
   box-shadow: 1px 1px 3px #d6d6d6;
+  transition: 600ms;
 }
 
 .active {
   background: #437fd9;
   color: #ffffff;
   font-weight: 600;
-  transition: 600ms;
 }
 
 .amount-donations > span:hover {
+  transition: 0ms;
   background: #437fd9;
   color: #fff;
   cursor: pointer;
