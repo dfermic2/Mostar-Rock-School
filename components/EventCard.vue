@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <section class="header p-inline-25 f-size-s">
-        <div class="location-time-info pt-05">
+        <div class="location-time-info pt-125">
           <div class="date">
             <Icon name="mdi:calendar-check" size="17" />
             <p class="date-time pl-05">{{ event.date }}</p>
@@ -47,8 +47,8 @@ console.log(event)
 
 <style scoped>
 .container {
-  width: 480px;
-  height: 255px;
+  width: 30.3125rem;
+  height: 15.9375rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ console.log(event)
 
 .header {
   width: 100%;
-  height: 60px;
+  height: 3.75rem;
   background: #f1f5f9;
   box-sizing: border-box;
 }
@@ -80,7 +80,7 @@ console.log(event)
 }
 
 .footer {
-  height: 70px;
+  height: 4.375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,15 +88,15 @@ console.log(event)
 }
 
 .fee-info {
-  width: 81px;
+  width: 5.0625rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .btn {
-  width: 180px;
-  height: 35px;
+  width: 11.25rem;
+  height: 2.1875rem;
   background: #ff0000;
   background: hsl(0, 240, 120);
   color: #fff;
@@ -117,8 +117,8 @@ console.log(event)
   padding-inline: 2.5rem;
 }
 
-.pt-05 {
-  padding-top: 0.5rem;
+.pt-125 {
+  padding-top: 1.25rem;
 }
 
 .pl-05 {
