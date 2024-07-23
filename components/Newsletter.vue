@@ -17,8 +17,6 @@
   </div>
 </template>
 
-<script></script>
-
 <style scoped>
 .container-newsletter {
   width: 23.75rem;

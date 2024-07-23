@@ -15,9 +15,6 @@
 </template>
 
 <script setup>
-import BasicSponsorCard from '~/components/BasicSponsorCard.vue'
-import GoldenSponsorCard from '~/components/GoldenSponsorCard.vue'
-
 const events = [
   {
     id: 1,
