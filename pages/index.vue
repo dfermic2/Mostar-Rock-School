@@ -1,10 +1,23 @@
 <template>
   <div class="container">
-    <EventCard :event="events[0]" />
+    <div style="margin-top: 20px">
+      <PlatinumSponsorCard />
+    </div>
+
+    <div style="margin-top: 20px">
+      <GoldenSponsorCard />
+    </div>
+
+    <div style="margin-top: 20px">
+      <BasicSponsorCard />
+    </div>
   </div>
 </template>
 
 <script setup>
+import BasicSponsorCard from '~/components/BasicSponsorCard.vue'
+import GoldenSponsorCard from '~/components/GoldenSponsorCard.vue'
+
 const events = [
   {
     id: 1,
