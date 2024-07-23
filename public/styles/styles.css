@@ -5,6 +5,10 @@
   src: url(../fonts/F37Hybrid-Bold.ttf);
   font-display: swap;
 }
+
+.font-hybrid {
+  font-family: F37Hybrid-Bold;
+}
 .btn-red {
   border-radius: 0.25rem;
   border: none;
@@ -26,12 +30,20 @@
   gap: 0.5rem;
 }
 
+.g-06 {
+  gap: 0.6rem;
+}
+
 .g-07 {
   gap: 0.7rem;
 }
 
 .g-1 {
   gap: 1rem;
+}
+
+.g-125 {
+  gap: 1.25rem;
 }
 
 .g-15 {
@@ -49,8 +61,14 @@
   padding-left: 1rem;
 }
 
+.pb-09 {
+  padding-bottom: 0.9rem;
+}
 .pb-1 {
   padding-bottom: 1rem;
+}
+.pb-15 {
+  padding-bottom: 1.5rem;
 }
 
 .pb-2 {
@@ -61,12 +79,8 @@
   margin: 0;
 }
 
-.line-heigt-15 {
-  line-height: 1.5rem;
-}
-
-.line-heigt-2 {
-  line-height: 2rem;
+.line-heigt-219 {
+  line-height: 2.19rem;
 }
 
 .font-weight-600 {

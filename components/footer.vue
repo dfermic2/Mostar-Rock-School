@@ -4,14 +4,14 @@
       <div class="content">
         <div class="first-column font-weight-600">
           <div>
-            <ul class="g-05 m-0 line-height-15">
-              <li class="pb-1"><logo imgHeight="70" /></li>
+            <ul class="g-06 m-0 line-height-15">
+              <li class="pb-09"><logo imgHeight="70" /></li>
               <li>Maršala Tita 179 (MC Pavarotti)</li>
               <li>88000, Mostar, Bosna i Hercegovina</li>
             </ul>
           </div>
           <div>
-            <ul class="g-07 line-height-2">
+            <ul class="g-125 line-height-2 m-0">
               <li class="align-center g-05 link-text">
                 <Icon name="material-symbols:call" /> +387 (0) 36 550 444
               </li>
