@@ -57,7 +57,7 @@
           <li @mouseover="hovered" @mouseleave="mouseleave">
             <NuxtLink to="/support">
               <button class="btn-red align-center g-07">
-                <Icon name="ion:heart" size="0.9rem" />SUPPORT
+                <Icon name="ion:heart" size="1rem" />SUPPORT
               </button>
             </NuxtLink>
             <div class="dropdown pl-1">
@@ -91,6 +91,7 @@ function mouseleave() {
 <style scoped>
 nav {
   font-size: 0.875rem;
+  font-weight: bold;
   letter-spacing: 0.03rem;
   position: relative;
   z-index: 999;
@@ -134,6 +135,11 @@ a,
   color: white;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
+}
+
+button {
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 
 .dropdown a {

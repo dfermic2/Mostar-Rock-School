@@ -2,16 +2,16 @@
   <footer>
     <div class="container align-center">
       <div class="content">
-        <div class="flex-column g-2">
+        <div class="first-column font-weight-600">
           <div>
-            <ul class="g-05">
+            <ul class="g-05 m-0 line-height-15">
               <li class="pb-1"><logo imgHeight="70" /></li>
               <li>Maršala Tita 179 (MC Pavarotti)</li>
               <li>88000, Mostar, Bosna i Hercegovina</li>
             </ul>
           </div>
           <div>
-            <ul class="g-07">
+            <ul class="g-07 line-height-2">
               <li class="align-center g-05 link-text">
                 <Icon name="material-symbols:call" /> +387 (0) 36 550 444
               </li>
@@ -27,11 +27,11 @@
             </ul>
           </div>
           <div data-v-45a0dde9>
-            <MediaLinks mediaPosition="footer" />
+            <MediaLinks :mediaPosition="'footer'" />
           </div>
         </div>
-        <div class="flex-column">
-          <ul class="g-15">
+        <div class="second-column">
+          <ul class="g-15 m-0 font-weight-bold">
             <li>
               <NuxtLink to="/school">OUR SCHOOL</NuxtLink>
             </li>
@@ -55,7 +55,7 @@
             </li>
           </ul>
         </div>
-        <div class="temp">TEMP</div>
+        <Newsletter />
       </div>
     </div>
     <div class="copyright-container align-center g-03">
@@ -66,9 +66,12 @@
 </template>
 
 <style scoped>
+footer {
+  background: black;
+}
 .container {
-  background-color: black;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  margin-inline: auto;
 }
 
 .content {
@@ -78,17 +81,25 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 74rem;
+  min-height: 20.625px;
   margin: 6.25rem auto;
+  box-sizing: border-box;
 }
 
-.flex-column {
+.first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second-column {
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
 
 .copyright-container {
-  background-color: white;
+  background: white;
   justify-content: center;
   padding: 1.2rem 0;
 }
@@ -109,12 +120,6 @@ ul {
 .align-center {
   display: flex;
   align-items: center;
-}
-
-.temp {
-  background-color: red;
-  padding: 11rem;
-  border-radius: 0.3rem;
 }
 
 ul a,

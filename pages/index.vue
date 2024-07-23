@@ -1,3 +1,5 @@
 <template>
-  <div>Index</div>
+  <div>
+    <MediaLinks :mediaPosition="'side'" />
+  </div>
 </template>

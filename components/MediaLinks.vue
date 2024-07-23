@@ -58,7 +58,6 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 }
 
 .container {
-  padding: 10px 0px;
   border-radius: 5px;
   margin: 0;
   background: #000;

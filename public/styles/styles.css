@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+@font-face {
+  font-family: F37Hybrid-Bold;
+  src: url(../fonts/F37Hybrid-Bold.ttf);
+  font-display: swap;
+}
 .btn-red {
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   border: none;
   background-color: red;
   color: white;
@@ -52,16 +57,33 @@
   padding-bottom: 2rem;
 }
 
+.m-0 {
+  margin: 0;
+}
+
+.line-heigt-15 {
+  line-height: 1.5rem;
+}
+
+.line-heigt-2 {
+  line-height: 2rem;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: bold;
   font-style: normal;
 }
-
 html,
 body {
   padding: 0;
   margin: 0;
-  min-height: 100%;
 }
