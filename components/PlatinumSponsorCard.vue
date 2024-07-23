@@ -11,10 +11,9 @@
       <div class="right-side">
         <h3 class="f-size-m">Norwegian Embassy Sarajevo</h3>
         <p class="f-size-s">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dicta
-          illum consectetur facere deleniti quia temporibus saepe, cumque
-          pariatur dolorum, sunt blanditiis vitae ab sed suscipit atque autem
-          ipsa voluptatum?
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+          exercitationem dolore accusamus at et aperiam, harum minus. Minima,
+          expedita delectus.
         </p>
       </div>
     </div>
@@ -44,6 +43,8 @@
 
 .left-side {
   width: 13.4375rem;
+  height: 13.4375rem;
+  box-sizing: border-box;
   background: rgb(237, 243, 252);
   display: flex;
   flex-direction: column;
@@ -56,13 +57,17 @@
 }
 
 .right-side {
+  width: 22.9375rem;
+  height: 13.4375rem;
+  box-sizing: border-box;
   padding: 1.875rem 2.5rem;
 }
 
 .right-side p {
   margin-top: 1.0625rem;
   text-align: justify;
-  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.375rem;
 }
 
 .f-size-s {
