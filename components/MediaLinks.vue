@@ -3,7 +3,7 @@
     <div
       class="container"
       :class="{
-        'g-05 o-side': mediaPosition === 'side',
+        'g-125 o-side': mediaPosition === 'side',
         'g-3': mediaPosition === 'footer',
         'g-6': mediaPosition === 'normal',
       }"
@@ -12,6 +12,7 @@
         <Icon
           name="uil:instagram"
           :class="{
+            side: mediaPosition === `side`,
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
@@ -21,6 +22,7 @@
         <Icon
           name="uil:facebook"
           :class="{
+            side: mediaPosition === `side`,
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
@@ -30,6 +32,7 @@
         <Icon
           name="uil:youtube"
           :class="{
+            side: mediaPosition === `side`,
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
@@ -39,6 +42,7 @@
         <Icon
           name="mdi:soundcloud"
           :class="{
+            'side side-soundclound': mediaPosition === `side`,
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
@@ -67,8 +71,8 @@ const { mediaPosition } = defineProps(['mediaPosition'])
   align-items: center;
 }
 
-.g-05 {
-  gap: 0.5rem;
+.g-125 {
+  gap: 1.25rem;
 }
 
 .g-3 {
@@ -88,13 +92,29 @@ const { mediaPosition } = defineProps(['mediaPosition'])
   transition: 300ms;
 }
 
+.link-container:not(hover) {
+  color: #fff;
+  transition: 300ms;
+}
+
 .normal {
   font-size: 3rem;
 }
 
 .o-side {
+  width: 50px;
+  height: 170px;
   flex-direction: column;
   padding: 0.6rem;
+}
+
+.side {
+  font-size: 1.25rem;
+}
+
+.side-soundclound {
+  margin-top: -0.3125rem;
+  font-size: 1.875rem;
 }
 
 .footer {
