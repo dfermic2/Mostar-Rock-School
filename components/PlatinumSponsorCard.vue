@@ -30,8 +30,8 @@
 }
 
 .container {
-  width: 580px;
-  height: 215px;
+  width: 36.25rem;
+  height: 13.4375rem;
   display: flex;
   justify-content: space-around;
   box-shadow: 1px 1px 3px #d6d6d6;
@@ -43,9 +43,8 @@
 }
 
 .left-side {
-  width: 215px;
+  width: 13.4375rem;
   background: rgb(237, 243, 252);
-  background: hsl(144, 171, 230);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,7 +52,7 @@
 }
 
 .image {
-  width: 195px;
+  width: 12.1875rem;
 }
 
 .right-side {

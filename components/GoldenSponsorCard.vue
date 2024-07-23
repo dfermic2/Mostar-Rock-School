@@ -16,10 +16,9 @@
 
 <style scoped>
 .container {
-  width: 380px;
-  height: 180px;
+  width: 23.75rem;
+  height: 11.25rem;
   background: rgb(237, 243, 252);
-  background: hsl(144, 171, 230);
   box-shadow: 1px 1px 3px #d6d6d6;
   border-radius: 0.3125rem;
 }
@@ -34,7 +33,7 @@
 }
 
 .image {
-  width: 340px;
-  height: 140px;
+  width: 21.25rem;
+  height: 8.75rem;
 }
 </style>

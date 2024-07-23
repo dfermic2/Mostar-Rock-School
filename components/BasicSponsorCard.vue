@@ -10,8 +10,8 @@
 
 <style scoped>
 .container {
-  width: 280px;
-  height: 180px;
+  width: 17.5rem;
+  height: 11.25rem;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
   border-radius: 0.3125rem;
@@ -27,7 +27,7 @@
 }
 
 .image {
-  width: 250.53px;
-  height: 140px;
+  width: 15.658125rem;
+  height: 8.75rem;
 }
 </style>
