@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container" role="event-card">
       <section class="header p-inline-25 f-size-s">
         <div class="location-time-info pt-125">
           <div class="date">
@@ -56,6 +56,43 @@ console.log(event)
   background: #fff;
   box-shadow: 2px 2px 2px #f1f2f3;
   box-sizing: border-box;
+}
+
+.container[role='event-card']:hover {
+  box-shadow: 5px 9px 9px #e4e4e4;
+
+  .header {
+    background: #e3ecfa;
+    transition: 500ms;
+  }
+
+  .footer {
+    background: #e3ecfa;
+
+    transition: 500ms;
+  }
+
+  .btn {
+    background: #bb0000;
+    transition: 500ms;
+  }
+}
+
+.container[role='event-card']:not(hover) {
+  .header {
+    background: #f1f5f9;
+    transition: 500ms;
+  }
+
+  .footer {
+    background: #f1f5f9;
+    transition: 500ms;
+  }
+
+  .btn {
+    background: #ff0000;
+    transition: 500ms;
+  }
 }
 
 .header {
