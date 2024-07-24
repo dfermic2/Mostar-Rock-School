@@ -101,7 +101,6 @@ import dubioza_kolektiv from '@/assets/images/DUBIOZA KOLEKTIV.png'
 import red_bull from '@/assets/images/RED-BULL.png'
 import osce from '@/assets/images/OSCE.png'
 import robert_bosch_stiftung from '@/assets/images/ROBERT-BOSCH.png'
-import BasicSponsorCard from '~/components/BasicSponsorCard.vue'
 
 const basicSponsors = [
   {
