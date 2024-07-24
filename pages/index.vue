@@ -1,6 +1,8 @@
 <template>
   <div class="container">
     <EventCard :event="events[0]" />
+
+    <MediaLinks :mediaPosition="'side'" />
   </div>
 </template>
 
