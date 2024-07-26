@@ -1,15 +1,10 @@
 <template>
   <div class="container">
-    <EventCard :event="events[0]" />
-
-    <MediaLinks :mediaPosition="'side'" />
+    <SupportCallCard />
   </div>
 </template>
 
 <script setup>
-import BasicSponsorCard from '~/components/BasicSponsorCard.vue'
-import GoldenSponsorCard from '~/components/GoldenSponsorCard.vue'
-
 const events = [
   {
     id: 1,
