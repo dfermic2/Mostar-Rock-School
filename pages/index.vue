@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <EventCard :event="events[0]" />
-
-    <MediaLinks :mediaPosition="'side'" />
+    <div style="margin: 40px">
+      <NewsCard />
+    </div>
   </div>
 </template>
 
