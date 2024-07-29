@@ -3,7 +3,7 @@
     <div class="container">
       <h2>
         The Show Must go on.<br />
-        There are two ways of doing it.
+        There are two ways to do it.
       </h2>
       <p>
         Support Mostar Rock School and be a part of their musical journey! Your
@@ -52,12 +52,14 @@ p {
 }
 
 .btn {
-  width: 23.75rem;
+  /* width: 23.75rem; */
   height: 2.8125rem;
+  line-height: 25px;
   box-sizing: border-box;
   background: #ff0000;
-  font-size: 0.9375rem;
+  font-size: 0.7875rem;
   color: #fff;
+  text-align: center;
   padding: 0.875rem 3.875rem 0.8125rem 3.9375rem;
   border-radius: 0.1875rem;
   text-transform: uppercase;
