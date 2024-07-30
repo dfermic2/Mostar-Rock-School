@@ -26,9 +26,9 @@
 
       <section class="footer p-inline-25">
         <div class="fee-info">
-          <Icon name="bi:ticket" size="17" />
-          <p class="mr-05 f-size-m">
-            <span class="font-hybrid">{{ event.fee }}</span>
+          <img src="../assets/images/Ticket.png" alt="Ticket icon" />
+          <p class="mr-05 f-size-m f-size-m">
+            <span>{{ event.fee }}</span>
           </p>
         </div>
 
@@ -42,7 +42,6 @@
 
 <script setup>
 const { event } = defineProps(["event"]);
-console.log(event);
 </script>
 
 <style scoped>
@@ -162,8 +161,8 @@ console.log(event);
   padding-left: 0.5rem;
 }
 
-.mr-05 {
-  margin-right: 0.5rem;
+.ml-05 {
+  margin-left: 0.5rem;
 }
 
 .f-size-s {
