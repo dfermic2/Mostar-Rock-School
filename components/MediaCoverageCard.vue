@@ -2,7 +2,11 @@
   <div>
     <div class="container" role="media-coverage">
       <section class="left-side">
-        <img :src="mediaCoverage.img" :alt="`${mediaCoverage.imgName} logo`" />
+        <img
+          class="media-coverage-img"
+          :src="mediaCoverage.img"
+          :alt="`${mediaCoverage.imgName} logo`"
+        />
       </section>
       <section class="right-side">
         <div class="details">
@@ -20,7 +24,7 @@ let { mediaCoverage } = defineProps(['mediaCoverage'])
 onMounted(() => {
   let container = document.querySelector('div[role="media-coverage"]')
   let rightSide = document.querySelector('.right-side')
-  let img = document.querySelector('img')
+  let img = document.querySelector('.media-coverage-img')
   let button = document.querySelector('.btn')
 
   container.addEventListener('mouseover', () => {
@@ -88,7 +92,7 @@ div[role='media-coverage'] {
   overflow: hidden;
 }
 
-img {
+.media-coverage-img {
   width: 12.5rem;
   height: 12.5rem;
 }
