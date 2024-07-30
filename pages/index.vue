@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <EventCard :event="events[0]" />
+  <!-- <div class="container">
     <div style="margin-top: 20px">
       <PlatinumSponsorCard />
     </div>
@@ -11,7 +12,7 @@
     <div style="margin-top: 20px">
       <BasicSponsorCard />
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
