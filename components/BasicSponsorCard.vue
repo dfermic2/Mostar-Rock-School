@@ -1,7 +1,11 @@
 <template>
   <div class="container">
     <div class="image-container p-main">
-      <img class="image" src="../assets/images/SPARK.png" alt="SPARK logo" />
+      <img
+        class="image"
+        src="../public/assets/images/SPARK.png"
+        alt="SPARK logo"
+      />
     </div>
   </div>
 </template>

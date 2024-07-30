@@ -4,7 +4,7 @@
       <div class="image-container p-125">
         <img
           class="image"
-          src="../assets/images/SWISS-AGENCY.png"
+          src="../public/assets/images/SWISS-AGENCY.png"
           alt="Swiss Agency logo"
         />
       </div>

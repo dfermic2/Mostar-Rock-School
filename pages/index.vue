@@ -1,16 +1,14 @@
 <template>
-  <div class="container">
-    <div style="margin: 20px">
-      <Contributions :contributionTypes="contributionTypes" />
-    </div>
-  </div>
+  <div class="container"></div>
 </template>
 
 <script setup>
-import tongue from '../assets/images/tongue.png'
-import bubbles from '../assets/images/bubbles.png'
-import drum from '../assets/images/drum.png'
-import diamond from '../assets/images/diamond.png'
+import tongue from '../public/assets/images/tongue.png'
+import bubbles from '../public/assets/images/bubbles.png'
+import drum from '../public/assets/images/drum.png'
+import diamond from '../public/assets/images/diamond.png'
+import theGuardian from '../public/assets/images/The-Guardian.png'
+import alJazeera from '../public/assets/images/Al-Jazeera.png'
 
 let contributionTypes = [
   {
@@ -49,7 +47,7 @@ const events = [
     date: '27.04.2023',
     time: '21:00',
     location: 'MC Pavarotti',
-    fee: '5KM',
+    fee: '5 KM',
   },
   {
     id: 2,
@@ -60,6 +58,21 @@ const events = [
     fee: 'Free',
   },
 ]
-</script>
 
-<style lang="scss" scoped></style>
+const mediaCoverageList = [
+  {
+    id: 1,
+    date: '16 March 2018',
+    content: `Come together: music is rebuilding bridges in divided Balkans`,
+    img: theGuardian,
+    imgName: 'The Guardian',
+  },
+  {
+    id: 2,
+    date: '30 July 2024',
+    content: `Development in progress. School is amazing`,
+    img: alJazeera,
+    imgName: 'Al-Jazeera',
+  },
+]
+</script>
