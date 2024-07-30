@@ -64,9 +64,8 @@ const { sponsor } = defineProps(['sponsor'])
 
 .right-side p {
   margin-top: 1.0625rem;
-  text-align: justify;
-  font-weight: 500;
-  line-height: 1.375rem;
+  text-align: left;
+  font-weight: normal;
 }
 
 .f-size-s {
