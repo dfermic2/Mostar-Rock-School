@@ -24,7 +24,7 @@ onMounted(() => {
 
   container.addEventListener('mouseover', () => {
     //container
-    container.style.boxShadow = '2px 15px 10px rgb(221,221,221)'
+    container.style.boxShadow = '0.125rem 0.9375rem 0.625rem #ddddd'
     container.style.transition = '500ms'
 
     //image
@@ -32,17 +32,17 @@ onMounted(() => {
     img.style.transition = '500ms'
 
     //rightside
-    rightSide.style.background = 'rgb(232,239,248)'
+    rightSide.style.background = '#E8EFF8'
     rightSide.style.transition = '500ms'
 
     //button
-    button.style.background = 'rgb(187,0,0)'
+    button.style.background = '#b00'
     button.style.transition = '500ms'
   })
 
   container.addEventListener('mouseleave', () => {
     //container
-    container.style.boxShadow = '2px 2px 4px rgb(217, 219, 222)'
+    container.style.boxShadow = '0.125rem 0.1875rem 0.25rem #d9dbde'
     container.style.transition = '500ms'
 
     //image
@@ -50,11 +50,11 @@ onMounted(() => {
     img.style.transition = '500ms'
 
     //rightside
-    rightSide.style.background = 'rgb(250, 251, 251)'
+    rightSide.style.background = '#fafbfb'
     rightSide.style.transition = '500ms'
 
     //button
-    button.style.background = 'rgb(255,0,0)'
+    button.style.background = '#ff0000'
     button.style.transition = '500ms'
   })
 })
@@ -71,77 +71,64 @@ onMounted(() => {
 }
 
 div[role='media-coverage'] {
-  width: 580px;
-  height: 235px;
+  width: 36.25rem;
+  height: 14.6875rem;
   display: flex;
   align-content: baseline;
   box-sizing: border-box;
-  box-shadow: 2px 3px 4px rgb(217, 219, 222);
-  /* border: 1px solid red; */
+  box-shadow: 0.125rem 0.1875rem 0.25rem #d9dbde;
 }
 
 .left-side {
   box-sizing: border-box;
-  width: 250px;
-  padding: 18px 25px 17px 25px;
-  margin-top: -2px;
+  width: 15.625rem;
+  padding: 1.125rem 1.5625rem 1.0625rem 1.5625rem;
+  margin-top: -0.125rem;
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 img {
-  /* border: 1px solid red; */
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
 }
 
 .right-side {
   background: #fafbfb;
-  width: 330px;
-  height: 235px;
-  margin-top: -1px;
-  /* border: 1px solid red; */
+  width: 20.625rem;
+  height: 14.6875rem;
+  padding: 1.875rem 2.5rem;
   box-sizing: border-box;
 }
 
 .details {
   height: 100%;
-  padding: 30px 40px;
   box-sizing: border-box;
-  /* background: yellow; */
-  /* box-sizing: border-box; */
-  /* border: 1px solid red; */
 }
 
 .details p:first-child {
-  /* DISCUSS THIS APPROACH */
-  height: 9px; /* ? */
-  margin-bottom: 21px;
-  /* border: 1px solid red; */
-  font-size: 13px;
+  margin-bottom: 0.625rem;
+  font-size: 0.8125rem;
 }
 
 .details p:nth-child(2) {
-  /* DISCUSS THIS APPROACH */
-  height: 76px; /* ? */
-  /* border: 1px solid red; */
-  margin-bottom: 39px;
-  font-size: 20px;
+  margin-bottom: 1.5625rem;
+  font-family: 'F37Hybrid-Bold';
+  font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.875rem;
 }
 
 .btn {
-  width: 150px;
-  height: 30px;
+  width: 9.375rem;
+  height: 1.875rem;
   background: #ff0000;
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 6px 31.5px 6px 32.5px;
+  padding: 0.375rem 1.96875rem 0.375rem 2.03125rem;
   box-sizing: border-box;
-  font-size: 14px;
-  letter-spacing: 0.25px;
-  border-radius: 3px;
-  /* border: 1px solid red; */
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  border-radius: 0.1875rem;
 }
 </style>

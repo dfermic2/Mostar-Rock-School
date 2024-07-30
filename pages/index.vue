@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-import BasicSponsorCard from '~/components/BasicSponsorCard.vue'
-import GoldenSponsorCard from '~/components/GoldenSponsorCard.vue'
+import theGuardian from '../assets/images/The-Guardian.png'
+import AlJazeera from '../assets/images/Al-Jazeera.png'
 
 const events = [
   {
@@ -24,6 +24,23 @@ const events = [
     time: '21:00',
     location: 'OKC Abrasevic',
     fee: 'Free',
+  },
+]
+
+const mediaCoverageList = [
+  {
+    id: 1,
+    name: '16 March 2018',
+    content: `Come together: music is rebuilding bridges in divided Balkans`,
+    img: theGuardian,
+    imgName: 'The Guardian',
+  },
+  {
+    id: 2,
+    name: '30 July 2024',
+    content: `Development in progress. School is amazing`,
+    img: AlJazeera,
+    imgName: 'Al-Jazeera',
   },
 ]
 </script>
