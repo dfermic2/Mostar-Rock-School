@@ -4,13 +4,15 @@
       <div class="left-side p-0625">
         <img
           class="image"
-          src="../assets/images/Norwegian Embassy Sarajevo.png"
+          src="../public/assets/images/Norwegian Embassy Sarajevo.png"
           alt="Norway Embassy Sarajevo logo"
         />
       </div>
       <div class="right-side">
-        <h3 class="f-size-m">Norwegian Embassy Sarajevo</h3>
-        <p class="f-size-s">
+        <h3 class="f-size-m line-height-15 font-hybrid">
+          Norwegian Embassy Sarajevo
+        </h3>
+        <p class="f-size-s line-heigt-134">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
           exercitationem dolore accusamus at et aperiam, harum minus. Minima,
           expedita delectus.
@@ -65,9 +67,8 @@
 
 .right-side p {
   margin-top: 1.0625rem;
-  text-align: justify;
-  font-weight: 500;
-  line-height: 1.375rem;
+  text-align: left;
+  font-weight: normal;
 }
 
 .f-size-s {

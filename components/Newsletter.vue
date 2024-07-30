@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container-newsletter">
       <div class="content">
         <div class="heading">
           <img src="../public/assets/doodle.png" alt="drum doodle" />
@@ -17,25 +17,23 @@
   </div>
 </template>
 
-<script></script>
-
 <style scoped>
-.container {
-  max-width: 23.75rem;
-  min-height: 20.6rem;
-  background-color: #b00;
+.container-newsletter {
+  width: 23.75rem;
+  height: 20.6rem;
+  background: #b00;
   border-radius: 0.4rem;
   padding: 1.56rem 2rem 1.875rem 2rem;
   box-sizing: border-box;
-  transition: background-color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
-.container:hover {
-  background-color: red;
+.container-newsletter:hover {
+  background: red;
 }
 
-.container:hover button {
-  background-color: #b00;
+.container-newsletter:hover button {
+  background: #b00;
 }
 
 .content {
@@ -68,7 +66,7 @@ p {
 }
 
 input {
-  max-width: 20rem;
+  width: 20rem;
   height: 3.125rem;
   border-radius: 0.2rem;
   border: none;
@@ -91,14 +89,15 @@ input:focus {
 }
 
 button {
-  max-width: 20rem;
+  width: 20rem;
   height: 3.125rem;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   border: none;
-  background-color: red;
+  background: red;
   color: white;
   line-height: 1.56rem;
   letter-spacing: 0.02rem;
+  font-weight: bold;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
 }
