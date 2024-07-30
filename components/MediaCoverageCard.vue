@@ -2,13 +2,13 @@
   <div>
     <div class="container" role="media-coverage">
       <section class="left-side">
-        <img src="../assets/images/Al-Jazeera.png" alt="Al-Jazeera logo" />
+        <img :src="mediaCoverage.img" :alt="`${mediaCoverage.imgName} logo`" />
       </section>
       <section class="right-side">
         <div class="details">
-          <p>16 March 2018</p>
-          <p>Come together: music is rebuilding bridges in divided Balkans</p>
-          <button class="btn" type="btn">Read more</button>
+          <p>{{ mediaCoverage.date }}</p>
+          <p>{{ mediaCoverage.content }}</p>
+          <button class="btn" type="button">Read more</button>
         </div>
       </section>
     </div>
@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+let { mediaCoverage } = defineProps(['mediaCoverage'])
 onMounted(() => {
   let container = document.querySelector('div[role="media-coverage"]')
   let rightSide = document.querySelector('.right-side')
@@ -120,6 +121,9 @@ img {
 
 .btn {
   width: 9.375rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
   height: 1.875rem;
   background: #ff0000;
   color: #fff;
