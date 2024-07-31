@@ -13,6 +13,7 @@
           }"
         ></div>
         <img
+          class="staff-image"
           :src="person.img"
           type="image/webp"
           :alt="`${person.name} photo`"
@@ -34,7 +35,7 @@ onMounted(() => {
   let container = document.querySelector('.container[role="staff-container"]')
   let staffInfoContainer = document.querySelector('.staff-info-container')
   let shape = document.querySelector('.shape')
-  let img = document.querySelector('img')
+  let img = document.querySelector('.staff-image')
 
   container.addEventListener('mouseover', () => {
     //image
@@ -105,7 +106,13 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.container {
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+div[role='staff-container'] {
   width: 17.5rem;
   height: 22.5rem;
   position: relative;
@@ -116,41 +123,47 @@ onMounted(() => {
 }
 
 .shape {
-  width: 17.5rem;
-  height: 17.5rem;
   position: absolute;
   top: 0;
   z-index: 0;
 }
 
 .circle {
+  width: 17.5rem;
+  height: 17.5rem;
   background: #000;
   border-radius: 50%;
   clip-path: rect(0% 100% 92.5% 0%);
 }
 
 .rectangle {
+  width: 17.5rem;
+  height: 17.5rem;
   background: #000;
   border-radius: 0;
   clip-path: rect(0% 100% 92.5% 0%);
 }
 
 .triangle {
+  height: 17.5rem;
   border-left: 8.75rem solid transparent;
   border-right: 8.75rem solid transparent;
   border-top: 17.5rem solid #000;
-  clip-path: rect(0% 100% 92.5% 0%);
+  clip-path: rect(0% 100% 45.5% 0%);
 }
 
 .half-rectangle {
+  width: 0;
+  height: 0;
   border-left: 0px solid transparent;
   border-right: 17.5rem solid transparent;
-  border-top: 0px solid #000;
+  border-top: 0 solid #000;
   border-bottom: 17.5rem solid #000;
   clip-path: rect(0% 100% 92.5% 0%);
 }
 
 .leaf {
+  height: 17.5rem;
   border-top-left-radius: 8.75rem;
   border-bottom-right-radius: 8.75rem;
   border-left: 17.5rem solid #000;
