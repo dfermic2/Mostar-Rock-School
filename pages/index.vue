@@ -1,4 +1,10 @@
-<template>Index</template>
+<template>
+  <div style="padding: 10rem">
+    <NewsletterHorizontal />
+    <br />
+    <Newsletter />
+  </div>
+</template>
 
 <script setup>
 const events = [
