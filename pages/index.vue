@@ -1,5 +1,9 @@
 <template>
-  <div style="padding: 10rem">Index</div>
+  <div style="padding: 10rem">
+    <SpreadTheWord />
+    <br />
+    <NewsletterHorizontal />
+  </div>
 </template>
 
 <script setup>
