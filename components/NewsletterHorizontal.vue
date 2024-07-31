@@ -39,6 +39,7 @@
   min-height: 15.9rem;
   padding: 2.5rem 0;
   box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
 }
 
 .container:hover {
