@@ -1,12 +1,111 @@
 <template>
-  <div style="padding: 10rem">
+  <div style="padding: 5rem">
     <SpreadTheWord />
-    <br />
-    <NewsletterHorizontal />
   </div>
 </template>
 
 <script setup>
+//Management and Administration images
+import MarinBosnjak from "../public/assets/images/staff/marin-bosnjak.webp";
+import JasminaKazazic from "../public/assets/images/staff/jasmina-kazazic.webp";
+import LubnaCuric from "../public/assets/images/staff/lubna-curic.webp";
+import OrhanMaslo from "../public/assets/images/staff/orhan-maslo.webp";
+//Programme images
+import DjenoMujic from "../public/assets/images/staff/djeno-mujic.webp";
+import MonikaGrubisic from "../public/assets/images/staff/monika-grubisic.webp";
+import NerminaCoric from "../public/assets/images/staff/nermica-coric.webp";
+//Lecturers images
+import AtilaAksoj from "../public/assets/images/staff/atilla-aksoj.webp";
+import IvanKovacevic from "../public/assets/images/staff/ivan-kovacevic.webp";
+import DomagojZelenika from "../public/assets/images/staff/domagoj-zelenika.webp";
+import SeminMerzic from "../public/assets/images/staff/semin-merzic.webp";
+
+const staff = {
+  managementAndAdministration: [
+    {
+      id: 1,
+      name: "Marin Bošnjak",
+      department: "Head of Production",
+      shape: "circle",
+      img: MarinBosnjak,
+    },
+    {
+      id: 2,
+      name: "Jasmina Kazazić",
+      department: "Financial Manager",
+      shape: "rectangle",
+      img: JasminaKazazic,
+    },
+    {
+      id: 3,
+      name: "Lubna Ćurić",
+      department: "Project Assistant/Booking Manager",
+      shape: "triangle",
+      img: LubnaCuric,
+    },
+    {
+      id: 4,
+      name: "Orhan Maslo",
+      department: "Project Manager",
+      shape: "circle",
+      img: OrhanMaslo,
+    },
+  ],
+  programme: [
+    {
+      id: 5,
+      name: "Đeno Mujić",
+      department: "Creative Department/Drums & Audio Production",
+      shape: "triangle",
+      img: DjenoMujic,
+    },
+    {
+      id: 6,
+      name: "Monika Grubišić-Ćabo",
+      department: "Head of Education/Vocal Coach",
+      shape: "circle",
+      img: MonikaGrubisic,
+    },
+    {
+      id: 7,
+      name: "Nermina Ćorić",
+      department: "Student Administration Officer",
+      shape: "rectangle",
+      img: NerminaCoric,
+    },
+  ],
+  lecturers: [
+    {
+      id: 8,
+      name: "Atila Aksoj",
+      department: "Guitar",
+      shape: "half-rectangle",
+      img: AtilaAksoj,
+    },
+    {
+      id: 9,
+      name: "Ivan Kovacevic",
+      department: "Guitar",
+      shape: "leaf",
+      img: IvanKovacevic,
+    },
+    {
+      id: 10,
+      name: "Domagoj Zelenika",
+      department: "Guitar",
+      shape: "triangle",
+      img: DomagojZelenika,
+    },
+    {
+      id: 11,
+      name: "Semin Merzić",
+      department: "Band Coach",
+      shape: "circle",
+      img: SeminMerzic,
+    },
+  ],
+};
+
 import tongue from "../public/assets/images/tongue.png";
 import bubbles from "../public/assets/images/bubbles.png";
 import drum from "../public/assets/images/drum.png";
@@ -63,9 +162,7 @@ const events = [
   },
 ];
 
-{
-  /* PLATINUM SPONSORS */
-}
+/* PLATINUM SPONSORS */
 
 import norway_embassy_sarajevo from "../public/assets/images/Norwegian Embassy Sarajevo.png";
 import kingdom_of_netherland from "../public/assets/images/Kingdom of Netherland.png";
@@ -87,9 +184,7 @@ const platinumSponsors = [
   },
 ];
 
-{
-  /* GOLDEN SPONSORS */
-}
+/* GOLDEN SPONSORS */
 
 import njemacka_ambasada_sarajevo from "../public/assets/images/Njemacka ambasada Sarajevo.png";
 import embassy_of_sweden_sarajevo from "../public/assets/images/Embassy of Sweden Sarajevo.png";
@@ -113,9 +208,7 @@ const goldenSponsors = [
   },
 ];
 
-{
-  /* BASIC SPONSORS */
-}
+/* BASIC SPONSORS */
 
 import federalno_ministarstvo_kulture_i_sporta from "../public/assets/images/FBIH-Kultura i sport.png";
 import usaid from "../public/assets/images/USAID.png";
@@ -130,6 +223,7 @@ import dubioza_kolektiv from "../public/assets/images/DUBIOZA KOLEKTIV.png";
 import red_bull from "../public/assets/images/RED-BULL.png";
 import osce from "../public/assets/images/OSCE.png";
 import robert_bosch_stiftung from "../public/assets/images/ROBERT-BOSCH.png";
+import SpreadTheWord from "~/components/SpreadTheWord.vue";
 
 const basicSponsors = [
   {
