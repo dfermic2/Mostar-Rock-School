@@ -39,6 +39,7 @@
   min-height: 15.9rem;
   padding: 2.5rem 0;
   box-sizing: border-box;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease-in-out;
 }
 
