@@ -53,8 +53,4 @@ h1 {
   line-height: 2.19rem;
   margin: 0;
 }
-
-p {
-  margin: 0;
-}
 </style>
