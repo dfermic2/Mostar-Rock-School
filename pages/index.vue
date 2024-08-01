@@ -1,12 +1,109 @@
 <template>
   <div class="container">
     <div style="margin: 40px">
-      <NewsCard />
+      <NewsCard :news="news[0]" />
+      <NewsCard :news="news[1]" />
+      <NewsCard :news="news[2]" />
+      <NewsCard :news="news[3]" />
+      <NewsCard :news="news[4]" />
+      <NewsCard :news="news[5]" />
+      <NewsCard :news="news[6]" />
+      <NewsCard :news="news[7]" />
+    </div>
+
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.
     </div>
   </div>
 </template>
 
 <script setup>
+import videoType from '../public/assets/images/news-images/icon-video.png'
+import textType from '../public/assets/images/news-images/icon-text.png'
+import quoteType from '../public/assets/images/news-images/icon-quote.png'
+
+import firstArticlePhoto from '../public/assets/images/news-images/1.png'
+import secondArticlePhoto from '../public/assets/images/news-images/2.png'
+import thirdArticlePhoto from '../public/assets/images/news-images/3.png'
+import fourthArticlePhoto from '../public/assets/images/news-images/4.png'
+import fifthArticlePhoto from '../public/assets/images/news-images/5.png'
+import sixthArticlePhoto from '../public/assets/images/news-images/6.png'
+import seventhArticlePhoto from '../public/assets/images/news-images/7.png'
+import eightArticlePhoto from '../public/assets/images/news-images/8.png'
+
+const news = [
+  {
+    id: 1,
+    title: 'Come together: how music is rebuilding bridges in divided Balkans',
+    date: '1 August 2024',
+    newsTypeIcon: videoType,
+    newsTypeIconName: 'Video icon',
+    coverPhoto: firstArticlePhoto,
+  },
+  {
+    id: 2,
+    title: 'Jazz masterclass with Francisco Angel Blanco "Latino"',
+    date: '31 July 2024',
+    newsTypeIcon: textType,
+    newsTypeIconName: 'Text icon',
+    coverPhoto: secondArticlePhoto,
+  },
+  {
+    id: 3,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '30 July 2024',
+    newsTypeIcon: quoteType,
+    newsTypeIconName: 'Quote icon',
+    coverPhoto: thirdArticlePhoto,
+  },
+  {
+    id: 4,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '29 July 2024',
+    newsTypeIcon: textType,
+    newsTypeIconName: 'Text icon',
+    coverPhoto: fourthArticlePhoto,
+  },
+  {
+    id: 5,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '28 July 2024',
+    newsTypeIcon: videoType,
+    newsTypeIconName: 'Video icon',
+    coverPhoto: fifthArticlePhoto,
+  },
+  {
+    id: 6,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '27 July 2024',
+    newsTypeIcon: textType,
+    newsTypeIconName: 'Text icon',
+    coverPhoto: sixthArticlePhoto,
+  },
+  {
+    id: 7,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '26 July 2024',
+    newsTypeIcon: textType,
+    newsTypeIconName: 'Text icon',
+    coverPhoto: seventhArticlePhoto,
+  },
+  {
+    id: 8,
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.',
+    date: '25 July 2024',
+    newsTypeIcon: textType,
+    newsTypeIconName: 'Text icon',
+    coverPhoto: eightArticlePhoto,
+  },
+]
+
 //Management and Administration images
 import MarinBosnjak from '../public/assets/images/staff/marin-bosnjak.webp'
 import JasminaKazazic from '../public/assets/images/staff/jasmina-kazazic.webp'

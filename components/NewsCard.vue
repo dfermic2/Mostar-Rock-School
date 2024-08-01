@@ -4,24 +4,26 @@
       <div class="img">
         <img
           class="news-card-img"
-          srcset="../public/assets/images/news-images/1.png"
-          alt="News 1st img"
+          :src="news.coverPhoto"
+          alt="News photo"
+          :title="news.title"
         />
       </div>
 
       <div class="news-footer">
         <div class="header">
           <h3>
-            Come together: how music is rebuilding bridges in divided Balkans
+            {{ news.title }}
           </h3>
         </div>
         <div class="footer">
           <div class="left-side">
             <img
-              src="../public/assets/images/news-images/icon-video.png"
-              alt="Video icon"
+              :src="news.newsTypeIcon"
+              :alt="news.newsTypeIconName"
+              :title="news.newsTypeIconName"
             />
-            <span class="space">[date]</span>
+            <span class="space">{{ news.date }}</span>
           </div>
           <div class="right-side">
             <button class="btn" type="button">Read More</button>
@@ -32,7 +34,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+let { news } = defineProps(['news'])
+</script>
 
 <style scoped>
 * {
@@ -98,6 +102,12 @@
   left: 0;
   border-top-left-radius: 0.3125rem;
   border-top-right-radius: 0.3125rem;
+  background: linear-gradient(to top, #000 1%, transparent);
+}
+
+.news-card-img {
+  position: relative;
+  z-index: -1;
 }
 
 .news-footer {
@@ -145,5 +155,7 @@
   padding: 0.375rem 2.90625rem 0.375rem 2.96875rem;
   border-radius: 0.1875rem;
   text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
 }
 </style>
