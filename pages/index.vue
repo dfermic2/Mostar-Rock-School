@@ -1,7 +1,24 @@
 <template>
   <div class="container">
-    <div style="margin-left: 20px; margin-top: 20px">
-      <StaffCard :person="staff.lecturers[3]" />
+    <div
+      style="margin-left: 20px; margin-top: 20px"
+      v-for="person in staff.managementAndAdministration"
+    >
+      <StaffCard :person="person" />
+    </div>
+
+    <div
+      style="margin-left: 20px; margin-top: 20px"
+      v-for="person in staff.programme"
+    >
+      <StaffCard :person="person" />
+    </div>
+
+    <div
+      style="margin-left: 20px; margin-top: 20px"
+      v-for="person in staff.lecturers"
+    >
+      <StaffCard :person="person" />
     </div>
   </div>
 </template>
@@ -55,21 +72,21 @@ const staff = {
   ],
   programme: [
     {
-      id: 1,
+      id: 5,
       name: 'Đeno Mujić',
       department: 'Creative Department/Drums & Audio Production',
       shape: 'triangle',
       img: DjenoMujic,
     },
     {
-      id: 2,
+      id: 6,
       name: 'Monika Grubišić-Ćabo',
       department: 'Head of Education/Vocal Coach',
       shape: 'circle',
       img: MonikaGrubisic,
     },
     {
-      id: 3,
+      id: 7,
       name: 'Nermina Ćorić',
       department: 'Student Administration Officer',
       shape: 'rectangle',
@@ -78,28 +95,28 @@ const staff = {
   ],
   lecturers: [
     {
-      id: 1,
+      id: 8,
       name: 'Atila Aksoj',
       department: 'Guitar',
       shape: 'half-rectangle',
       img: AtilaAksoj,
     },
     {
-      id: 2,
+      id: 9,
       name: 'Ivan Kovacevic',
       department: 'Guitar',
       shape: 'leaf',
       img: IvanKovacevic,
     },
     {
-      id: 3,
+      id: 10,
       name: 'Domagoj Zelenika',
       department: 'Guitar',
       shape: 'triangle',
       img: DomagojZelenika,
     },
     {
-      id: 4,
+      id: 11,
       name: 'Semin Merzić',
       department: 'Band Coach',
       shape: 'circle',
