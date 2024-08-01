@@ -1,6 +1,6 @@
 <template>
-  <div style="padding: 5rem">
-    <SpreadTheWord />
+  <div style="padding: 5rem; background: #222">
+    <StatisticsTable />
   </div>
 </template>
 
