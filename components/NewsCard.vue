@@ -1,68 +1,38 @@
 <template>
   <div>
     <div class="container" role="news-card">
-      <section class="video-container">
-        <iframe
-          id="video-clip"
-          width="660"
-          height="340"
-          src="https://www.youtube.com/embed/iIpfWORQWhU?si=baGQfwA-T06i9B2P"
-          title="YouTube video player"
-          frameborder="1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </section>
+      <div class="img">
+        <img
+          class="news-card-img"
+          srcset="../public/assets/images/news-images/1.png"
+          alt="News 1st img"
+        />
+      </div>
 
-      <section class="news-information">
-        <div class="details">
-          <h2>Akademski band</h2>
-          <p>
-            Our Akademski band, led by Atila Aksoj with assistants Goran Rebac
-            and Ivan zovko, consists of students attending an advanced level of
-            classes gathered to explore.....
-          </p>
-          <button id="btn" class="btn" type="button">Find out more</button>
+      <div class="news-footer">
+        <div class="header">
+          <h3>
+            Come together: how music is rebuilding bridges in divided Balkans
+          </h3>
         </div>
-      </section>
+        <div class="footer">
+          <div class="left-side">
+            <img
+              src="../public/assets/images/news-images/icon-video.png"
+              alt="Video icon"
+            />
+            <span class="space">[date]</span>
+          </div>
+          <div class="right-side">
+            <button class="btn" type="button">Read More</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup>
-onMounted(() => {
-  console.log('Mounted')
-  let container = document.querySelector('.container[role="news-card"]')
-  let video = document.getElementById('video-clip')
-  let btn = document.getElementById('btn')
-
-  container.addEventListener('mouseover', () => {
-    // iframe style
-    video.style.transform = 'scale(1.1)'
-    video.style.transition = '500ms'
-    // button style
-    btn.style.background = '#b00000'
-    btn.style.transition = '500ms'
-
-    //container
-    container.style.boxShadow = '1px 7px 20px #e3e3e3'
-    container.style.transition = '500ms'
-  })
-
-  container.addEventListener('mouseleave', () => {
-    // iframe style
-    video.style.transform = 'scale(1)'
-    video.style.transition = '500ms'
-    // button style
-    btn.style.background = '#ff0000'
-    btn.style.transition = '500ms'
-    //container
-    container.style.boxShadow = '1px 4px 8px #ced0d4'
-    container.style.transition = '500ms'
-  })
-})
-</script>
+<script setup></script>
 
 <style scoped>
 * {
@@ -71,58 +41,109 @@ onMounted(() => {
 }
 
 .container[role='news-card'] {
-  width: 660px;
-  height: 550px;
-  padding: 40px 40px 30px 40px;
-  box-shadow: 1px 4px 8px #ced0d4;
+  width: 36.25rem;
+  height: 21.875rem;
+  margin: 0rem 2.5rem 1.875rem 2.5rem;
+  position: relative;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+  box-shadow: 0rem 0.125rem 0.25rem #9d9c9c;
 }
 
-.video-container {
-  margin: -40px -40px 30px -40px;
-  border-radius: 5px;
-  overflow: hidden;
+.container[role='news-card']:hover {
+  box-shadow: 0px 1.5625rem 2.1875rem #9d9c9c;
+  transition: 500ms;
+
+  .img {
+    overflow: hidden;
+  }
+
+  .news-card-img {
+    transform: scale(1.1);
+    transition: 500ms;
+  }
+
+  .btn {
+    background: #bb0000;
+    transition: 500ms;
+  }
 }
 
-iframe {
-  border-radius: 5px;
+.container[role='news-card']:not(hover) {
+  box-shadow: 0px 0.125rem 0.25rem #9d9c9c;
+
+  transition: 500ms;
+
+  .img {
+    overflow: hidden;
+  }
+
+  .news-card-img {
+    transform: scale(1);
+    transition: 500ms;
+  }
+
+  .btn {
+    background: #ff0000;
+    transition: 500ms;
+  }
 }
 
-.news-information {
-  margin-top: 40px;
-  margin-bottom: 30px;
-  height: 140px;
-}
-.details {
-  width: 100%;
+.img {
+  max-width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+
+.news-footer {
+  margin: 0rem 2.5rem 1.875rem 2.5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.header {
+  margin-bottom: 1.25rem;
+}
+
+.header h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: 'F37Hybrid-Bold';
+}
+
+.footer {
   display: flex;
-  flex-direction: column;
-  justify-items: normal;
+  align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.details h2 {
-  font-weight: 700;
-  font-size: 25px;
+.left-side {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
 }
 
-.details p {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
+.space {
+  font-size: 0.8125rem;
 }
 
 .btn {
-  width: 180px;
-  height: 35px;
+  width: 11.25rem;
+  height: 1.875rem;
   background: #ff0000;
   color: #fff;
+  outline: 0;
+  border: 0;
+  padding: 0.375rem 2.90625rem 0.375rem 2.96875rem;
+  border-radius: 0.1875rem;
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 1px 1px 2px #ff0000 inset;
-  border-radius: 3px;
 }
 </style>
