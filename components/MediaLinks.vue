@@ -42,9 +42,9 @@
         <Icon
           name="mdi:soundcloud"
           :class="{
+            'sc-footer': mediaPosition === `footer`,
             'side side-soundclound': mediaPosition === `side`,
-            footer: mediaPosition === `footer`,
-            normal: mediaPosition === 'normal',
+            'sc-normal': mediaPosition === 'normal',
           }"
         />
       </div>
@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-const { mediaPosition } = defineProps(['mediaPosition'])
+const { mediaPosition } = defineProps(["mediaPosition"]);
 </script>
 
 <style scoped>
@@ -62,7 +62,6 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 }
 
 .container {
-  padding: 10px 20px;
   border-radius: 5px;
   margin: 0;
   background: #000;
@@ -90,6 +89,7 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 .link-container:hover {
   color: #ff0000;
   transition: 300ms;
+  cursor: pointer;
 }
 
 .link-container:not(hover) {
@@ -98,7 +98,11 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 }
 
 .normal {
-  font-size: 3rem;
+  font-size: 2.15rem;
+}
+
+.sc-normal {
+  font-size: 2.85rem;
 }
 
 .o-side {
@@ -119,5 +123,9 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 
 .footer {
   font-size: 1.5rem;
+}
+
+.sc-footer {
+  font-size: 2rem;
 }
 </style>
