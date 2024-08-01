@@ -44,7 +44,7 @@
           :class="{
             'sc-footer': mediaPosition === `footer`,
             'side side-soundclound': mediaPosition === `side`,
-            normal: mediaPosition === 'normal',
+            'sc-normal': mediaPosition === 'normal',
           }"
         />
       </div>
@@ -98,7 +98,11 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 }
 
 .normal {
-  font-size: 3rem;
+  font-size: 2.15rem;
+}
+
+.sc-normal {
+  font-size: 2.85rem;
 }
 
 .o-side {
