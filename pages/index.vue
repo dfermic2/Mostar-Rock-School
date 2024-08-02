@@ -10,10 +10,6 @@
       <NewsCard :news="news[6]" />
       <NewsCard :news="news[7]" />
     </div>
-
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.
-    </div>
   </div>
 </template>
 

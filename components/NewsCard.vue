@@ -45,8 +45,8 @@ let { news } = defineProps(['news'])
 }
 
 .container[role='news-card'] {
-  width: 36.25rem;
-  height: 21.875rem;
+  max-width: 36.25rem;
+  min-height: 21.875rem;
   margin: 0rem 2.5rem 1.875rem 2.5rem;
   position: relative;
   box-sizing: border-box;
@@ -106,6 +106,10 @@ let { news } = defineProps(['news'])
 }
 
 .news-card-img {
+  width: 100%;
+  height: 100%;
+  max-width: 580px;
+  max-height: 350px;
   position: relative;
   z-index: -1;
 }
@@ -146,8 +150,8 @@ let { news } = defineProps(['news'])
 }
 
 .btn {
-  width: 11.25rem;
-  height: 1.875rem;
+  max-width: 11.25rem;
+  min-height: 1.875rem;
   background: #ff0000;
   color: #fff;
   outline: 0;
