@@ -49,7 +49,17 @@ let sortBy = () => {
   let selectItem = document.querySelector('.sort-filter')
   let checkedSortingMethod = selectItem.options[selectItem.selectedIndex].value
 
-  alert('Sorting in progress...')
+  if (selectItem.selectedIndex === 0) {
+    ref_articles.value = [...articles]
+  } else if (checkedSortingMethod === 'Latest first') {
+    ref_articles.value = ref_articles.value.sort((a, b) => {
+      return new Date(a.date) - new Date(b.date)
+    })
+  } else if (checkedSortingMethod === 'Earliest first') {
+    ref_articles.value = ref_articles.value.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date)
+    })
+  }
 }
 
 let filterByCategory = () => {
