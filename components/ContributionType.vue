@@ -23,8 +23,8 @@ let { contribution } = defineProps(['contribution'])
 
 <style scoped>
 .container {
-  width: 36.25rem;
-  height: 13.4375rem;
+  max-width: 36.25rem;
+  min-height: 13.4375rem;
   box-sizing: border-box;
   background: rgb(250, 251, 251);
   box-shadow: 0.125rem 0.125rem 0.125rem #f2f3f4;
@@ -33,7 +33,7 @@ let { contribution } = defineProps(['contribution'])
 
 .contribution-type-container {
   box-sizing: border-box;
-  padding: 1.25rem 2.5rem 2.5rem 2.5rem;
+  margin: 1.25rem 2.5rem 2.5rem 2.5rem;
 }
 
 .header {
@@ -51,8 +51,8 @@ h3 {
 }
 
 .content {
-  width: 31.25rem;
-  height: 5.625rem;
+  max-width: 31.25rem;
+  min-height: 5.625rem;
   padding-top: 0.9375rem;
 }
 
