@@ -47,7 +47,6 @@ let { news } = defineProps(['news'])
 .container[role='news-card'] {
   max-width: 36.25rem;
   min-height: 21.875rem;
-  margin: 0rem 2.5rem 1.875rem 2.5rem;
   position: relative;
   box-sizing: border-box;
   border-top-left-radius: 0.3125rem;
@@ -56,7 +55,7 @@ let { news } = defineProps(['news'])
 }
 
 .container[role='news-card']:hover {
-  box-shadow: 0px 1.5625rem 2.1875rem #9d9c9c;
+  box-shadow: 0rem 1.5625rem 2.1875rem #9d9c9c;
   transition: 500ms;
 
   .img {
@@ -75,7 +74,7 @@ let { news } = defineProps(['news'])
 }
 
 .container[role='news-card']:not(hover) {
-  box-shadow: 0px 0.125rem 0.25rem #9d9c9c;
+  box-shadow: 0rem 0.125rem 0.25rem #9d9c9c;
 
   transition: 500ms;
 
@@ -108,8 +107,8 @@ let { news } = defineProps(['news'])
 .news-card-img {
   width: 100%;
   height: 100%;
-  max-width: 580px;
-  max-height: 350px;
+  max-width: 36.25rem;
+  max-height: 21.875rem;
   position: relative;
   z-index: -1;
 }

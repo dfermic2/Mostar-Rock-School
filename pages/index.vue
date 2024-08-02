@@ -1,14 +1,7 @@
 <template>
   <div class="container">
     <div style="margin: 40px">
-      <NewsCard :news="news[0]" />
-      <NewsCard :news="news[1]" />
-      <NewsCard :news="news[2]" />
-      <NewsCard :news="news[3]" />
-      <NewsCard :news="news[4]" />
-      <NewsCard :news="news[5]" />
-      <NewsCard :news="news[6]" />
-      <NewsCard :news="news[7]" />
+      <NewsCardList :articles="news" :categories="categories" />
     </div>
   </div>
 </template>
@@ -18,14 +11,14 @@ import videoType from '../public/assets/images/news-images/icon-video.png'
 import textType from '../public/assets/images/news-images/icon-text.png'
 import quoteType from '../public/assets/images/news-images/icon-quote.png'
 
-import firstArticlePhoto from '../public/assets/images/news-images/1.png'
-import secondArticlePhoto from '../public/assets/images/news-images/2.png'
-import thirdArticlePhoto from '../public/assets/images/news-images/3.png'
-import fourthArticlePhoto from '../public/assets/images/news-images/4.png'
-import fifthArticlePhoto from '../public/assets/images/news-images/5.png'
-import sixthArticlePhoto from '../public/assets/images/news-images/6.png'
-import seventhArticlePhoto from '../public/assets/images/news-images/7.png'
-import eightArticlePhoto from '../public/assets/images/news-images/8.png'
+import firstArticlePhoto from '../public/assets/images/news-images/firstArticlePhoto.png'
+import secondArticlePhoto from '../public/assets/images/news-images/secondArticlePhoto.png'
+import thirdArticlePhoto from '../public/assets/images/news-images/thirdArticlePhoto.png'
+import fourthArticlePhoto from '../public/assets/images/news-images/fourthArticlePhoto.png'
+import fifthArticlePhoto from '../public/assets/images/news-images/fifthArticlePhoto.png'
+import sixthArticlePhoto from '../public/assets/images/news-images/sixthArticlePhoto.png'
+import seventhArticlePhoto from '../public/assets/images/news-images/seventhArticlePhoto.png'
+import eightArticlePhoto from '../public/assets/images/news-images/eightArticlePhoto.png'
 
 const news = [
   {
@@ -35,6 +28,7 @@ const news = [
     newsTypeIcon: videoType,
     newsTypeIconName: 'Video icon',
     coverPhoto: firstArticlePhoto,
+    category: 'Video',
   },
   {
     id: 2,
@@ -43,6 +37,7 @@ const news = [
     newsTypeIcon: textType,
     newsTypeIconName: 'Text icon',
     coverPhoto: secondArticlePhoto,
+    category: 'Article',
   },
   {
     id: 3,
@@ -52,6 +47,7 @@ const news = [
     newsTypeIcon: quoteType,
     newsTypeIconName: 'Quote icon',
     coverPhoto: thirdArticlePhoto,
+    category: 'Interview',
   },
   {
     id: 4,
@@ -61,6 +57,7 @@ const news = [
     newsTypeIcon: textType,
     newsTypeIconName: 'Text icon',
     coverPhoto: fourthArticlePhoto,
+    category: 'Article',
   },
   {
     id: 5,
@@ -70,6 +67,7 @@ const news = [
     newsTypeIcon: videoType,
     newsTypeIconName: 'Video icon',
     coverPhoto: fifthArticlePhoto,
+    category: 'Video',
   },
   {
     id: 6,
@@ -79,6 +77,7 @@ const news = [
     newsTypeIcon: textType,
     newsTypeIconName: 'Text icon',
     coverPhoto: sixthArticlePhoto,
+    category: 'Article',
   },
   {
     id: 7,
@@ -88,6 +87,7 @@ const news = [
     newsTypeIcon: textType,
     newsTypeIconName: 'Text icon',
     coverPhoto: seventhArticlePhoto,
+    category: 'Article',
   },
   {
     id: 8,
@@ -97,8 +97,12 @@ const news = [
     newsTypeIcon: textType,
     newsTypeIconName: 'Text icon',
     coverPhoto: eightArticlePhoto,
+    category: 'Article',
   },
 ]
+
+let categories = [...new Set(news.map((c) => c.category))]
+categories.splice(0, 0, 'All Categories')
 
 //Management and Administration images
 import MarinBosnjak from '../public/assets/images/staff/marin-bosnjak.webp'
