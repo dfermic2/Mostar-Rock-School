@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <div style="margin: 40px">
+      <HomeNewsCard />
+    </div>
+
+    <div style="margin: 40px">
       <NewsCardList :articles="news" :categories="categories" />
     </div>
   </div>
