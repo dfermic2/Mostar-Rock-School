@@ -15,18 +15,20 @@
 
 <script setup>
 function darkenPage() {
-  document.getElementById("overlay").classList.add("darken");
-  document.getElementById("overlay").classList.remove("normal");
+  document.getElementById('overlay').classList.add('darken')
+  document.getElementById('overlay').classList.remove('normal')
 }
 
 function removeDarken() {
-  document.getElementById("overlay").classList.add("normal");
-  document.getElementById("overlay").classList.remove("darken");
+  document.getElementById('overlay').classList.add('normal')
+  document.getElementById('overlay').classList.remove('darken')
 }
 </script>
 
 <style scoped>
 .bg-grey {
+  max-width: 1440px;
+  height: 850px;
   background-color: rgb(147, 90, 90);
 }
 .darken {
