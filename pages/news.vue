@@ -12,20 +12,23 @@
             Ipsum, voluptates?
           </p>
         </section>
-        <div class="media-links">
+        <section class="media-links">
           <MediaLinks mediaPosition="side" />
-        </div>
+        </section>
       </div>
-      <div class="speakers-container">
+      <section class="speakers-container">
         <img
           class="speakers-img"
           src="../public/assets/images/news-images/speakers.png"
           alt="Speakers image"
         />
-      </div>
-      <div class="news-container">
+      </section>
+      <section class="news-container">
         <NewsCardList :articles="news" :categories="categories" />
-      </div>
+      </section>
+      <section class="paging">
+        <NewsPaging />
+      </section>
     </div>
   </div>
 </template>
