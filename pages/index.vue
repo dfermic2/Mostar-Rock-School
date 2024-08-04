@@ -1,6 +1,6 @@
 <template>
-  <div style="padding: 5rem; background: #222">
-    <StatisticsTable />
+  <div style="padding: 5rem 0; background: #222">
+    <Statistics />
   </div>
 </template>
 
