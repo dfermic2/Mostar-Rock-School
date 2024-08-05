@@ -29,7 +29,7 @@ function removeDarken() {
 .bg-grey {
   max-width: 1440px;
   height: 850px;
-  background-color: rgb(147, 90, 90);
+  /* background-color: rgb(147, 90, 90); */
 }
 .darken {
   position: fixed;

@@ -171,6 +171,7 @@
 
 .container {
   width: 1180px;
+  border-radius: 5px;
 }
 
 .intro {

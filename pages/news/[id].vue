@@ -4,12 +4,14 @@
       <section class="hero">
         <div class="article-info">
           <div class="header">
-            <p>< News</p>
+            <p @click="$router.back()">< News</p>
             <h1>{{ article.title }}</h1>
           </div>
 
           <div class="footer">
-            <p>{{ article.date }}</p>
+            <p>
+              {{ article.date }} by <span class="author">Name and Surname</span>
+            </p>
           </div>
         </div>
 
@@ -21,6 +23,10 @@
       <article>
         <Article />
       </article>
+
+      <section class="recommended-articles">
+        <RecommendationArticles />
+      </section>
     </div>
   </div>
 </template>
@@ -45,5 +51,70 @@ header.style.height = '960px'
 <style scoped>
 .container {
   margin: 0px 130px;
+  position: relative;
+}
+
+.hero {
+  color: #fff;
+  /* margin: 0px 100px; */
+  width: 1440px;
+  height: 350px;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  /* background: yellow; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-info {
+  width: 880px;
+  line-height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header > p {
+  font-size: 30px;
+  font-family: 'F37Hybrid-Bold';
+  cursor: pointer;
+}
+
+.header > p:hover {
+  color: #ff0000;
+  transition: 500ms;
+}
+
+.header > p:not(hover) {
+  color: #fff;
+  transition: 500ms;
+}
+
+.header > h1 {
+  font-size: 50px;
+  font-family: 'F37Hybrid-Bold';
+}
+
+.author {
+  color: #ff0000;
+}
+
+.footer {
+  margin-bottom: 50px;
+}
+
+.media-links {
+  margin-right: 130px;
+}
+
+article {
+  margin-top: -30px;
+}
+
+.recommended-articles {
+  width: 100%;
+  margin: 0px -130px;
+  background: #fafbfb;
 }
 </style>
