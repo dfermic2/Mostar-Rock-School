@@ -19,7 +19,7 @@
       <section class="speakers-container">
         <img
           class="speakers-img"
-          src="../public/assets/images/news-images/speakers.png"
+          src="../../public/assets/images/news-images/speakers.png"
           alt="Speakers image"
         />
       </section>

@@ -4,7 +4,7 @@
       <div
         class="container"
         role="news-card"
-        @click="navigateTo(`news/${news.id}`)"
+        @click="navigateTo(`/news/${news.id}`)"
       >
         <div class="img">
           <img
