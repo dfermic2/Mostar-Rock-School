@@ -78,13 +78,14 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["hovered", "mouseleave"]);
 function hovered() {
-  emit("hovered");
+  document.querySelector("#darkenOverlay").classList.add("darken");
+  document.querySelector("#darkenOverlay").classList.remove("normal");
 }
 
 function mouseleave() {
-  emit("mouseleave");
+  document.querySelector("#darkenOverlay").classList.add("normal");
+  document.querySelector("#darkenOverlay").classList.remove("darken");
 }
 </script>
 

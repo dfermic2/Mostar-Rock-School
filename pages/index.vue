@@ -1,7 +1,15 @@
 <template>
+<<<<<<< Updated upstream
   <div style="padding: 5rem 0; background: #222">
     <Statistics />
+=======
+  <div class="bg-grey">
+    <header>
+      <Navbar />
+    </header>
+>>>>>>> Stashed changes
   </div>
+  Index
 </template>
 
 <script setup>

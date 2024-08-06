@@ -26,7 +26,7 @@
               </li>
             </ul>
           </div>
-          <div data-v-45a0dde9>
+          <div>
             <MediaLinks :mediaPosition="'footer'" />
           </div>
         </div>
