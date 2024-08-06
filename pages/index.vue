@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <SupportCallCard />
     <div style="margin: 40px">
       <HomeNewsCard />
     </div>
