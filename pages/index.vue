@@ -1,10 +1,12 @@
 <template>
-  <div class="bg-grey">
-    <header>
-      <Navbar />
-    </header>
+  <div>
+    <div class="bg-grey">
+      <header>
+        <Navbar />
+      </header>
+    </div>
+    <p>Index</p>
   </div>
-  Index
 </template>
 
 <script setup>
