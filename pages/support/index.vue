@@ -1,4 +1,9 @@
 <template>
+  <div class="bg-grey">
+    <header>
+      <Navbar />
+    </header>
+  </div>
   <div style="padding: 4rem; background: #222">
     <DonationTypes :donationTypes="donationTypes" />
   </div>

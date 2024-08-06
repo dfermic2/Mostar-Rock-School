@@ -4,43 +4,43 @@
       <logo imgHeight="100" />
       <div class="align-center nav-links g-2">
         <ul class="align-center nav-links-list g-07">
-          <li @mouseover="hovered" @mouseleave="mouseleave">
+          <li @mouseover="addOverlay" @mouseleave="removeOverlay">
             <NuxtLink to="/school">THE SCHOOL</NuxtLink>
             <div class="dropdown">
               <ul>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/school/journey"> OUR JOURNEY </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/school/people"> OUR PEOPLE </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/school/schedule"> SCHEDULE </NuxtLink>
                 </li>
               </ul>
             </div>
           </li>
-          <li @mouseover="hovered" @mouseleave="mouseleave">
+          <li @mouseover="addOverlay" @mouseleave="removeOverlay">
             <NuxtLink to="/programme">PROGRAMME</NuxtLink>
             <div class="dropdown">
               <ul>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/programme/dk-studio"> DK STUDIO </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/programme/booking"> MORS BOOKING </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/programme/summer-rock-school">
                     SUMMER ROCK SCHOOL
                   </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/programme/mobile-rock-school">
                     MOBILE ROCK SCHOOL
                   </NuxtLink>
                 </li>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/programme/liron"> LIRON </NuxtLink>
                 </li>
               </ul>
@@ -54,7 +54,7 @@
             <NuxtLink to="/contact">CONTACT</NuxtLink>
           </li>
 
-          <li @mouseover="hovered" @mouseleave="mouseleave">
+          <li @mouseover="addOverlay" @mouseleave="removeOverlay">
             <NuxtLink to="/support">
               <button class="btn-red align-center g-07">
                 <Icon name="ion:heart" size="1rem" />SUPPORT
@@ -62,7 +62,7 @@
             </NuxtLink>
             <div class="dropdown pl-1">
               <ul>
-                <li>
+                <li @click="removeOverlay">
                   <NuxtLink to="/support/donors"> OUR DONORS </NuxtLink>
                 </li>
               </ul>
@@ -78,13 +78,16 @@
 </template>
 
 <script setup>
-const emit = defineEmits(["hovered", "mouseleave"]);
-function hovered() {
-  emit("hovered");
+function addOverlay() {
+  document.querySelector("#darkenOverlay").classList.add("darken");
+  document.querySelector("#darkenOverlay").classList.remove("normal");
+  console.log("HOVERED");
 }
 
-function mouseleave() {
-  emit("mouseleave");
+function removeOverlay() {
+  document.querySelector("#darkenOverlay").classList.add("normal");
+  document.querySelector("#darkenOverlay").classList.remove("darken");
+  console.log("MOUSE LEAVE");
 }
 </script>
 
@@ -145,6 +148,8 @@ button {
 .dropdown a {
   display: block;
   width: 100%;
+  padding: 0.8rem 1.3rem;
+  min-width: 7.5rem;
 }
 
 a:hover,
@@ -178,8 +183,6 @@ button:hover,
   background-color: rgba(0, 0, 0, 0.875);
   font-size: 0.85rem;
   margin-top: 0.1rem;
-  padding: 0.8rem 1.3rem;
-  min-width: 7.5rem;
 }
 
 a:hover + .dropdown,
