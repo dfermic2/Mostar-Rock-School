@@ -4,15 +4,18 @@
       <div class="image-container p-125">
         <img
           class="image"
-          src="../assets/images/SWISS-AGENCY.png"
-          alt="Swiss Agency logo"
+          :src="sponsor.img"
+          :alt="`${sponsor.name} logo`"
+          :title="`${sponsor.name}`"
         />
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { sponsor } = defineProps(['sponsor'])
+</script>
 
 <style scoped>
 .container {

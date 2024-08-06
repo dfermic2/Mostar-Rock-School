@@ -1,12 +1,19 @@
 <template>
   <div class="container">
     <div class="image-container p-main">
-      <img class="image" src="../assets/images/SPARK.png" alt="SPARK logo" />
+      <img
+        class="image"
+        :src="sponsor.img"
+        :alt="`${sponsor.name} logo`"
+        :title="`${sponsor.name}`"
+      />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { sponsor } = defineProps(['sponsor'])
+</script>
 
 <style scoped>
 .container {

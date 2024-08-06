@@ -4,7 +4,11 @@
       <div class="container" role="support-call-card" id="support-call-card">
         <section class="support-card">
           <div div class="header-container">
-            <img src="@/assets/images/hand.svg" alt="Hand icon" />
+            <img
+              src="../public/assets/images/hand.svg"
+              alt="Hand icon"
+              title="Hand icon"
+            />
             <h1>We need your support!</h1>
           </div>
 
@@ -25,7 +29,11 @@
         </section>
       </div>
       <div id="animation" class="animation-container">
-        <img src="@/assets/images/hand.svg" alt="Hand icon" />
+        <img
+          src="../public/assets/images/hand.svg"
+          alt="Hand icon"
+          title="Hand icon"
+        />
       </div>
     </div>
   </div>
@@ -34,6 +42,11 @@
 <script setup></script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .with-animation {
   width: 30rem;
   height: 19.6875rem;
@@ -107,6 +120,11 @@ button {
   font-size: 0.875rem;
   text-transform: uppercase;
   line-height: 1.5625rem;
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
 }
 
 .animation-container {
@@ -116,7 +134,7 @@ button {
 
 .animation-container > img {
   height: 24.375rem;
-  margin: auto;
+  margin: 0.625rem auto auto 3.125rem;
   filter: invert();
   opacity: 0.2;
 }
@@ -140,6 +158,7 @@ button {
     transform: translateY(-100%);
     visibility: visible;
     transition: 500ms;
+    position: relative;
   }
 }
 

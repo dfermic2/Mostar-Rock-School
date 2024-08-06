@@ -4,23 +4,22 @@
       <div class="left-side p-0625">
         <img
           class="image"
-          src="../assets/images/Norwegian Embassy Sarajevo.png"
-          alt="Norway Embassy Sarajevo logo"
+          :src="sponsor.img"
+          :alt="`${sponsor.name} logo`"
+          :title="`${sponsor.name}`"
         />
       </div>
       <div class="right-side">
-        <h3 class="f-size-m">Norwegian Embassy Sarajevo</h3>
-        <p class="f-size-s">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-          exercitationem dolore accusamus at et aperiam, harum minus. Minima,
-          expedita delectus.
-        </p>
+        <h3 class="f-size-m">{{ sponsor.name }}</h3>
+        <p class="f-size-s">{{ sponsor.description }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { sponsor } = defineProps(['sponsor'])
+</script>
 
 <style scoped>
 * {
@@ -65,9 +64,8 @@
 
 .right-side p {
   margin-top: 1.0625rem;
-  text-align: justify;
-  font-weight: 500;
-  line-height: 1.375rem;
+  text-align: left;
+  font-weight: normal;
 }
 
 .f-size-s {
