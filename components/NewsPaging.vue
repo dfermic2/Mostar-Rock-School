@@ -48,12 +48,19 @@
   padding: 5px 16px;
   text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .page-number:hover {
   background: #ff0000;
   color: #fff;
   transition: 200ms;
+}
+
+.page-number:nth-child(1) {
+  background: #fff;
+  color: #ff0000;
+  cursor: not-allowed;
 }
 
 .page-number:nth-child(2) {

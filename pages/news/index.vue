@@ -14,7 +14,12 @@
                 tempore rerum quibusdam tempora ducimus explicabo.
               </p>
             </div>
+
+            <div class="media">
+              <MediaLinks mediaPosition="side" />
+            </div>
           </section>
+
           <section class="speakers">
             <img
               src="../../public/assets/images/news-images/speakers.png"
@@ -23,26 +28,19 @@
             />
           </section>
         </div>
-        <section class="media">
-          <MediaLinks mediaPosition="side" />
-        </section>
       </header>
+      <div class="news-container">
+        <NewsCardList :articles="news" :categories="categories" />
+        <div class="news-paging">
+          <NewsPaging />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { news } from '~/data'
-
-// import heroImage from '../public/assets/images/news-images/news-hero-image.png'
-
-// let header = document.querySelector('header')
-// header.style.background = 'url(' + heroImage + ') no-repeat'
-// // header.style.margin = '0px 30px'
-// header.style.width = '1920px'
-// header.style.height = '960px'
-// console.log(header)
-
 let categories = [...new Set(news.map((c) => c.category))]
 categories.splice(0, 0, 'All Categories')
 </script>
@@ -53,21 +51,60 @@ categories.splice(0, 0, 'All Categories')
   z-index: 3;
 }
 
-.media {
-  position: sticky;
-}
-
 header {
-  z-index: 5;
-  background: yellow;
-  position: relative;
-  width: 74rem;
-  height: 960px;
+  height: 850px;
   background: url('../../public/assets/images/news-images/news-hero-image.png');
   background-size: cover;
+  margin-bottom: 50px;
+}
+
+.hero {
+  margin: 210px auto 50px 130px;
+  margin-top: 210px;
+  height: 610px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .info {
-  position: absolute;
+  color: #fff;
+  max-width: 780px;
+}
+
+.info > h1 {
+  font-size: 75px;
+  line-height: 85px;
+  font-family: 'F37Hybrid-Bold';
+  margin-bottom: 35px;
+}
+
+.info > p {
+  font-size: 16px;
+  line-height: 23px;
+  font-family: 'Inter';
+}
+
+.media {
+  margin-top: -35px;
+}
+
+.speakers {
+  width: 480px;
+  height: 350px;
+  margin: 0px 130px 0px 0px;
+  float: right;
+}
+
+.news-container {
+  clear: both;
+  max-width: 74rem;
+  margin-inline: auto;
+}
+
+.news-paging {
+  margin-top: 30px;
 }
 </style>
