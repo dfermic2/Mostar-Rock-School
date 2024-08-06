@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="bg-grey">
-      <header>
+      <!-- <header>
         <Navbar @hovered="darkenPage" @mouseleave="removeDarken" />
-      </header>
+      </header> -->
     </div>
     <div id="overlay" class="normal"></div>
     <div>
@@ -27,8 +27,6 @@ function removeDarken() {
 
 <style scoped>
 .bg-grey {
-  max-width: 1440px;
-  height: 850px;
   /* background-color: rgb(147, 90, 90); */
 }
 .darken {
