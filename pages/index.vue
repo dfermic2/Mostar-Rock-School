@@ -4,6 +4,7 @@
       <header>
         <Navbar />
       </header>
+      <Statistics />
     </div>
     <p>Index</p>
   </div>
