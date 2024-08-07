@@ -1,28 +1,25 @@
 <template>
   <div>
     <div class="container">
-      <section class="hero">
-        <div class="article-info">
-          <div class="header">
-            <p @click="$router.back()">< News</p>
+      <header>
+        <Navbar />
+        <div class="hero">
+          <div class="info">
+            <p @click="navigateTo(`/news/`)">< News</p>
             <h1>{{ article.title }}</h1>
-          </div>
-
-          <div class="footer">
-            <p>
-              {{ article.date }} by <span class="author">Name and Surname</span>
+            <p class="created-and-creator">
+              {{ article.date }} by <span class="author"> Name Surname</span>
             </p>
           </div>
+          <div class="media">
+            <MediaLinks mediaPosition="side" />
+          </div>
         </div>
+      </header>
 
-        <div class="media-links">
-          <MediaLinks mediaPosition="side" />
-        </div>
-      </section>
-
-      <article>
+      <section class="articles">
         <Article />
-      </article>
+      </section>
 
       <section class="recommended-articles">
         <RecommendationArticles />
@@ -38,83 +35,95 @@ const route = useRoute()
 let { id } = route.params
 id = parseInt(id)
 let article = news.find((t) => t.id === id)
-
-import heroImage from '../../public/assets/images/news-images/Jazz masterclass - Cover-Photo1210x642.png'
-
-let header = document.querySelector('header')
-header.style.background = 'url(' + heroImage + ') no-repeat'
-// header.style.margin = '0px 30px'
-header.style.width = '1920px'
-header.style.height = '960px'
 </script>
 
 <style scoped>
-.container {
-  margin: 0px 130px;
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 700px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(9, 9, 121, 0) 33%,
+      rgba(7, 7, 97, 0) 67%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../../public/assets/images/news-images/news-article-jazz-masterclass-cover-photo.png');
+  background-size: cover;
+  margin-bottom: 100px;
 }
 
 .hero {
-  color: #fff;
-  /* margin: 0px 100px; */
-  width: 1440px;
-  height: 350px;
-  position: absolute;
-  top: -20%;
-  left: 0;
-  /* background: yellow; */
+  position: relative;
+  min-height: 361px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 172px auto 0px 130px;
 }
 
-.article-info {
+.info {
   width: 880px;
-  line-height: 65px;
+  min-height: 361px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  color: #fff;
 }
 
-.header > p {
+.info > p:first-child {
+  width: fit-content;
   font-size: 30px;
   font-family: 'F37Hybrid-Bold';
+  letter-spacing: 0%;
   cursor: pointer;
 }
 
-.header > p:hover {
+.info > p:first-child:hover {
   color: #ff0000;
   transition: 500ms;
 }
 
-.header > p:not(hover) {
+.info > p:first-child:not(hover) {
   color: #fff;
   transition: 500ms;
 }
 
-.header > h1 {
+.info > h1 {
+  margin-top: 35px;
+  margin-bottom: 140px;
   font-size: 50px;
   font-family: 'F37Hybrid-Bold';
+  letter-spacing: 0%;
+  line-height: 65px;
+}
+
+.created-and-creator {
+  margin-top: -15px;
 }
 
 .author {
   color: #ff0000;
+  font-weight: 700;
 }
 
-.footer {
-  margin-bottom: 50px;
+.media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 38px;
 }
 
-.media-links {
-  margin-right: 130px;
-}
-
-article {
-  margin-top: -30px;
+.articles {
+  max-width: 74rem;
+  margin-inline: auto;
 }
 
 .recommended-articles {
-  width: 100%;
-  margin: 0px -130px;
   background: #fafbfb;
 }
 </style>

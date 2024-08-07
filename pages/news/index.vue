@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <header>
-        <Navbar @hovered="darkenPage" @mouseleave="removeDarken" />
+        <Navbar />
         <div class="hero">
           <section class="header">
             <div class="info">
@@ -53,7 +53,14 @@ categories.splice(0, 0, 'All Categories')
 
 header {
   height: 850px;
-  background: url('../../public/assets/images/news-images/news-hero-image.png');
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(9, 9, 121, 0) 33%,
+      rgba(7, 7, 97, 0) 67%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../../public/assets/images/news-images/news-hero-image.png');
   background-size: cover;
   margin-bottom: 50px;
 }

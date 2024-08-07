@@ -34,8 +34,8 @@ import { news } from '~/data'
 }
 
 .header {
-  margin-bottom: 42px;
-  margin-top: 113px;
+  margin-bottom: 10px;
+  margin-top: 80px;
 }
 
 .header h2 {
