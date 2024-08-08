@@ -14,10 +14,6 @@
                 tempore rerum quibusdam tempora ducimus explicabo.
               </p>
             </div>
-
-            <!-- <div class="media">
-              <MediaLinks mediaPosition="side" />
-            </div> -->
           </section>
 
           <section class="speakers">
