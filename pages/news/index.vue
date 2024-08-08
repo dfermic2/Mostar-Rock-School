@@ -6,12 +6,12 @@
         <div class="hero">
           <section class="header">
             <div class="info">
-              <h1>News lorem ipsum dolor sit amet.</h1>
+              <h1>What’s new in our world of music.</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati eligendi laudantium ullam dolore itaque doloremque
-                magnam enim, natus cum numquam quasi minus veritatis eius
-                tempore rerum quibusdam tempora ducimus explicabo.
+                Join us as we share the remarkable journeys and creative
+                achievements of our talented students, showcasing their
+                dedication, collaboration, and artistic growth. Stay tuned for
+                their inspiring stories and unforgettable music!
               </p>
             </div>
           </section>
