@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-let { contribution } = defineProps(['contribution'])
+let { contribution } = defineProps(["contribution"]);
 </script>
 
 <style scoped>
@@ -44,6 +44,7 @@ let { contribution } = defineProps(['contribution'])
 img {
   width: 2.901875rem;
   height: 3.125rem;
+  object-fit: contain;
 }
 
 h3 {

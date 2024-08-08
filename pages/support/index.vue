@@ -37,13 +37,21 @@
           all of you for making our mission possible.
         </p>
         <NuxtLink to="/support/donors">
-          <button>VIEW OUT SPONSORS</button>
+          <button>VIEW OUR SPONSORS</button>
         </NuxtLink>
       </div>
       <img src="../../public/assets/images/guy-pointing.png" alt="" />
     </div>
     <div class="sponsors-slider">
       <hr />
+      <SponsorAutoSlider />
+      <hr />
+    </div>
+  </div>
+  <div class="bottom-container">
+    <div class="bottom-content">
+      <NewsletterHorizontal />
+      <SpreadTheWord />
     </div>
   </div>
 </template>
@@ -88,6 +96,7 @@ import tongue from "../public/assets/images/tongue.png";
 import bubbles from "../public/assets/images/bubbles.png";
 import drum from "../public/assets/images/drum.png";
 import diamond from "../public/assets/images/diamond.png";
+import SponsorAutoSlider from "~/components/SponsorAutoSlider.vue";
 
 let contributionTypes = [
   {
@@ -199,7 +208,7 @@ button {
   width: 15.625rem;
   border-radius: 0.25rem;
   border: none;
-  margin: 0;
+  margin: 1rem 0 0 0;
   background: red;
   color: white;
   line-height: 1.56rem;
@@ -221,6 +230,9 @@ button:hover {
 .sponsors-container {
   background-color: #fafbfb;
   min-height: 45.625rem;
+  padding: 6.25rem 0;
+  box-sizing: border-box;
+  align-content: center;
 }
 
 .sponsors-content {
@@ -229,9 +241,31 @@ button:hover {
   margin-inline: auto;
   max-width: 73.75rem;
   justify-content: space-between;
+  padding-bottom: 3rem;
 
   img {
+    max-width: 30rem;
+    max-height: 17.5rem;
+    object-fit: cover;
     border-radius: 0.3rem;
   }
+}
+.sponsors-slider {
+  overflow: hidden;
+}
+hr {
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  max-width: 73.75rem;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 54.7rem;
+  max-width: 74rem;
+  margin-inline: auto;
+  padding: 4rem 0 4rem 0;
+  justify-content: space-around;
+  box-sizing: border-box;
 }
 </style>

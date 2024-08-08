@@ -91,3 +91,222 @@ export const news = [
     category: 'Article',
   },
 ]
+
+//Management and Administration images
+import MarinBosnjak from '../public/assets/images/staff/marin-bosnjak.webp'
+import JasminaKazazic from '../public/assets/images/staff/jasmina-kazazic.webp'
+import LubnaCuric from '../public/assets/images/staff/lubna-curic.webp'
+import OrhanMaslo from '../public/assets/images/staff/orhan-maslo.webp'
+//Programme images
+import DjenoMujic from '../public/assets/images/staff/djeno-mujic.webp'
+import MonikaGrubisic from '../public/assets/images/staff/monika-grubisic.webp'
+import NerminaCoric from '../public/assets/images/staff/nermica-coric.webp'
+//Lecturers images
+import AtilaAksoj from '../public/assets/images/staff/atilla-aksoj.webp'
+import IvanKovacevic from '../public/assets/images/staff/ivan-kovacevic.webp'
+import DomagojZelenika from '../public/assets/images/staff/domagoj-zelenika.webp'
+import SeminMerzic from '../public/assets/images/staff/semin-merzic.webp'
+
+export const staff = {
+  managementAndAdministration: [
+    {
+      id: 1,
+      name: 'Marin Bošnjak',
+      department: 'Head of Production',
+      shape: 'circle',
+      img: MarinBosnjak,
+    },
+    {
+      id: 2,
+      name: 'Jasmina Kazazić',
+      department: 'Financial Manager',
+      shape: 'rectangle',
+      img: JasminaKazazic,
+    },
+    {
+      id: 3,
+      name: 'Lubna Ćurić',
+      department: 'Project Assistant/Booking Manager',
+      shape: 'triangle',
+      img: LubnaCuric,
+    },
+    {
+      id: 4,
+      name: 'Orhan Maslo',
+      department: 'Project Manager',
+      shape: 'circle',
+      img: OrhanMaslo,
+    },
+  ],
+  programme: [
+    {
+      id: 5,
+      name: 'Đeno Mujić',
+      department: 'Creative Department/Drums & Audio Production',
+      shape: 'triangle',
+      img: DjenoMujic,
+    },
+    {
+      id: 6,
+      name: 'Monika Grubišić-Ćabo',
+      department: 'Head of Education/Vocal Coach',
+      shape: 'circle',
+      img: MonikaGrubisic,
+    },
+    {
+      id: 7,
+      name: 'Nermina Ćorić',
+      department: 'Student Administration Officer',
+      shape: 'rectangle',
+      img: NerminaCoric,
+    },
+  ],
+  lecturers: [
+    {
+      id: 8,
+      name: 'Atila Aksoj',
+      department: 'Guitar',
+      shape: 'half-rectangle',
+      img: AtilaAksoj,
+    },
+    {
+      id: 9,
+      name: 'Ivan Kovacevic',
+      department: 'Guitar',
+      shape: 'leaf',
+      img: IvanKovacevic,
+    },
+    {
+      id: 10,
+      name: 'Domagoj Zelenika',
+      department: 'Guitar',
+      shape: 'triangle',
+      img: DomagojZelenika,
+    },
+    {
+      id: 11,
+      name: 'Semin Merzić',
+      department: 'Band Coach',
+      shape: 'circle',
+      img: SeminMerzic,
+    },
+  ],
+}
+
+//Sponsors
+import norway_embassy_sarajevo from '../public/assets/images/Norwegian Embassy Sarajevo.png'
+import kingdom_of_netherland from '../public/assets/images/Kingdom of Netherland.png'
+import njemacka_ambasada_sarajevo from '../public/assets/images/Njemacka ambasada Sarajevo.png'
+import embassy_of_sweden_sarajevo from '../public/assets/images/Embassy of Sweden Sarajevo.png'
+import swiss_agency from '../public/assets/images/SWISS-AGENCY.png'
+import federalno_ministarstvo_kulture_i_sporta from '../public/assets/images/FBIH-Kultura i sport.png'
+import usaid from '../public/assets/images/USAID.png'
+import grad_mostar from '../public/assets/images/GRAD-MOSTAR 242x121.png'
+import amus from '../public/assets/images/AMUS.png'
+import spark from '../public/assets/images/SPARK.png'
+import federalno_ministarstvo_obrazovanja_i_nauke from '../public/assets/images/Federalno ministarstvo obrazovanja i nauke.png'
+import usa_embassy_sarajevo from '../public/assets/images/USA Embassy Sarajevo.png'
+import vlada_hnk from '../public/assets/images/VLADA-HNK.png'
+import stability_pact_for_eastern_europe from '../public/assets/images/STABILITY-PAKT.png'
+import dubioza_kolektiv from '../public/assets/images/DUBIOZA KOLEKTIV.png'
+import red_bull from '../public/assets/images/RED-BULL.png'
+import osce from '../public/assets/images/OSCE.png'
+import robert_bosch_stiftung from '../public/assets/images/ROBERT-BOSCH.png'
+import SpreadTheWord from '~/components/SpreadTheWord.vue'
+
+export const sponsors = [
+  {
+    id: 1,
+    name: 'Norwegian Embassy Sarajevo',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.',
+    img: norway_embassy_sarajevo,
+  },
+  {
+    id: 2,
+    name: 'Kingdom of the Netherlands',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.',
+    img: kingdom_of_netherland,
+  },
+  {
+    id: 3,
+    name: 'Njemacka Ambasada Sarajevo',
+    img: njemacka_ambasada_sarajevo,
+  },
+  {
+    id: 4,
+    name: 'Embassy of Sweden Sarajevo',
+    img: embassy_of_sweden_sarajevo,
+  },
+  {
+    id: 5,
+    name: 'Swiss Agency for Development and Cooperation',
+    img: swiss_agency,
+  },
+  {
+    id: 6,
+    name: 'Federalno ministarstvo kulture i sporta',
+    img: federalno_ministarstvo_kulture_i_sporta,
+  },
+  {
+    id: 7,
+    name: 'USAID',
+    img: usaid,
+  },
+  {
+    id: 8,
+    name: 'Grad Mostar',
+    img: grad_mostar,
+  },
+  {
+    id: 9,
+    name: 'AMUS',
+    img: amus,
+  },
+  {
+    id: 10,
+    name: 'SPARK',
+    img: spark,
+  },
+  {
+    id: 11,
+    name: 'Federalno ministarstvo obrazovanja i nauke',
+    img: federalno_ministarstvo_obrazovanja_i_nauke,
+  },
+  {
+    id: 12,
+    name: 'USA Embassy Sarajevo',
+    img: usa_embassy_sarajevo,
+  },
+  {
+    id: 13,
+    name: 'Vlada HNK',
+    img: vlada_hnk,
+  },
+  {
+    id: 14,
+    name: 'Stability Pack',
+    img: stability_pact_for_eastern_europe,
+  },
+  {
+    id: 15,
+    name: 'Dubioza Kolektiv',
+    img: dubioza_kolektiv,
+  },
+  {
+    id: 16,
+    name: 'Red Bull',
+    img: red_bull,
+  },
+  {
+    id: 17,
+    name: 'OSCE',
+    img: osce,
+  },
+  {
+    id: 18,
+    name: 'Robert Bosch Stiftung',
+    img: robert_bosch_stiftung,
+  },
+]

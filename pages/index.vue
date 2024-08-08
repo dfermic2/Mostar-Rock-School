@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="bg-grey">
-      <header>
-        <Navbar />
-      </header>
-      <Statistics />
-    </div>
+    <!-- <div class="bg-grey"> -->
+    <header>
+      <Navbar />
+    </header>
+    <SponsorAutoSlider />
+    <Statistics />
+    <!-- </div> -->
     <p>Index</p>
   </div>
 </template>
@@ -107,107 +108,6 @@ const news = [
 
 let categories = [...new Set(news.map((c) => c.category))];
 categories.splice(0, 0, "All Categories");
-
-//Management and Administration images
-import MarinBosnjak from "../public/assets/images/staff/marin-bosnjak.webp";
-import JasminaKazazic from "../public/assets/images/staff/jasmina-kazazic.webp";
-import LubnaCuric from "../public/assets/images/staff/lubna-curic.webp";
-import OrhanMaslo from "../public/assets/images/staff/orhan-maslo.webp";
-//Programme images
-import DjenoMujic from "../public/assets/images/staff/djeno-mujic.webp";
-import MonikaGrubisic from "../public/assets/images/staff/monika-grubisic.webp";
-import NerminaCoric from "../public/assets/images/staff/nermica-coric.webp";
-//Lecturers images
-import AtilaAksoj from "../public/assets/images/staff/atilla-aksoj.webp";
-import IvanKovacevic from "../public/assets/images/staff/ivan-kovacevic.webp";
-import DomagojZelenika from "../public/assets/images/staff/domagoj-zelenika.webp";
-import SeminMerzic from "../public/assets/images/staff/semin-merzic.webp";
-
-const staff = {
-  managementAndAdministration: [
-    {
-      id: 1,
-      name: "Marin Bošnjak",
-      department: "Head of Production",
-      shape: "circle",
-      img: MarinBosnjak,
-    },
-    {
-      id: 2,
-      name: "Jasmina Kazazić",
-      department: "Financial Manager",
-      shape: "rectangle",
-      img: JasminaKazazic,
-    },
-    {
-      id: 3,
-      name: "Lubna Ćurić",
-      department: "Project Assistant/Booking Manager",
-      shape: "triangle",
-      img: LubnaCuric,
-    },
-    {
-      id: 4,
-      name: "Orhan Maslo",
-      department: "Project Manager",
-      shape: "circle",
-      img: OrhanMaslo,
-    },
-  ],
-  programme: [
-    {
-      id: 5,
-      name: "Đeno Mujić",
-      department: "Creative Department/Drums & Audio Production",
-      shape: "triangle",
-      img: DjenoMujic,
-    },
-    {
-      id: 6,
-      name: "Monika Grubišić-Ćabo",
-      department: "Head of Education/Vocal Coach",
-      shape: "circle",
-      img: MonikaGrubisic,
-    },
-    {
-      id: 7,
-      name: "Nermina Ćorić",
-      department: "Student Administration Officer",
-      shape: "rectangle",
-      img: NerminaCoric,
-    },
-  ],
-  lecturers: [
-    {
-      id: 8,
-      name: "Atila Aksoj",
-      department: "Guitar",
-      shape: "half-rectangle",
-      img: AtilaAksoj,
-    },
-    {
-      id: 9,
-      name: "Ivan Kovacevic",
-      department: "Guitar",
-      shape: "leaf",
-      img: IvanKovacevic,
-    },
-    {
-      id: 10,
-      name: "Domagoj Zelenika",
-      department: "Guitar",
-      shape: "triangle",
-      img: DomagojZelenika,
-    },
-    {
-      id: 11,
-      name: "Semin Merzić",
-      department: "Band Coach",
-      shape: "circle",
-      img: SeminMerzic,
-    },
-  ],
-};
 
 const events = [
   {
