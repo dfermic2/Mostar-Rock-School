@@ -79,7 +79,7 @@
 </template>
 
 <script setup>
-import { staff } from '~/data'
+import { staff } from "~/data";
 </script>
 
 <style scoped>
@@ -97,7 +97,7 @@ header {
       rgba(7, 7, 97, 0) 67%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../../public/assets/images/staff/staff-header-cover-photo.png');
+    url("../../public/assets/images/staff/staff-header-cover-photo.png");
   background-size: cover;
   margin-bottom: 6.25rem;
 }
@@ -120,7 +120,7 @@ header {
 .info > p:first-child {
   width: fit-content;
   font-size: 1.875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   letter-spacing: 0%;
   cursor: pointer;
 }
@@ -139,7 +139,7 @@ header {
   margin-top: 2.1875rem;
   margin-bottom: 2.1875rem;
   font-size: 3.125rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   letter-spacing: 0%;
   line-height: 4.0625rem;
 }
@@ -164,7 +164,7 @@ header {
 
 .sub-heading > h2 {
   font-size: 2.5rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   line-height: 3.125rem;
 }
 
@@ -183,7 +183,7 @@ header {
 
 h3 {
   font-size: 1.875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .management-administration,
