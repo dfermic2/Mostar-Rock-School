@@ -213,8 +213,6 @@ import tongue from "../public/assets/images/tongue.png";
 import bubbles from "../public/assets/images/bubbles.png";
 import drum from "../public/assets/images/drum.png";
 import diamond from "../public/assets/images/diamond.png";
-import theGuardian from "../public/assets/images/The-Guardian.png";
-import alJazeera from "../public/assets/images/Al-Jazeera.png";
 
 let contributionTypes = [
   {
@@ -413,23 +411,6 @@ const basicSponsors = [
     id: 17,
     name: "Robert Bosch Stiftung",
     img: robert_bosch_stiftung,
-  },
-];
-
-const mediaCoverageList = [
-  {
-    id: 1,
-    date: "16 March 2018",
-    content: `Come together: music is rebuilding bridges in divided Balkans`,
-    img: theGuardian,
-    imgName: "The Guardian",
-  },
-  {
-    id: 2,
-    date: "30 July 2024",
-    content: `Development in progress. School is amazing`,
-    img: alJazeera,
-    imgName: "Al-Jazeera",
   },
 ];
 </script>

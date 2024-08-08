@@ -47,7 +47,9 @@
             opportunities for growth and collaboration.
           </p>
         </div>
-        <button>VIEW OUR PROGRAMME</button>
+        <NuxtLink to="/programme">
+          <button>VIEW OUR PROGRAMME</button>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -142,5 +144,6 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #b00;
 }
 </style>

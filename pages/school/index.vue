@@ -43,8 +43,54 @@
         </div>
       </div>
     </div>
+    <Statistics />
+    <div class="media-coverage">
+      <div class="media-coverage-content">
+        <div class="media-coverage-heading">
+          <h1>Media coverage</h1>
+          <button>VIEW ALL</button>
+        </div>
+        <div class="media-coverage-text">
+          <p>
+            The impact of the Mostar Rock School has not gone unnoticed.
+            Renowned media outlets such as NRK, Al Jazeera, and the BBC have
+            recognized the significance of our work, sharing our inspiring story
+            with the world. Through their coverage, our message of unity,
+            reconciliation, and the power of music has reached audiences far and
+            wide.
+          </p>
+          <img src="../../public/assets/images/vinyl.png" alt="vinyl" />
+        </div>
+        <div class="media-coverage-cards">
+          <MediaCoverageCard :media-coverage="mediaCoverageList[0]" />
+          <MediaCoverageCard :media-coverage="mediaCoverageList[1]" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup>
+import theGuardian from "../../public/assets/images/The-Guardian.png";
+import alJazeera from "../../public/assets/images/Al-Jazeera.png";
+
+const mediaCoverageList = [
+  {
+    id: 1,
+    date: "16 March 2018",
+    content: `Come together: music is rebuilding bridges in divided Balkans`,
+    img: theGuardian,
+    imgName: "The Guardian",
+  },
+  {
+    id: 2,
+    date: "30 July 2024",
+    content: `Development in progress. School is amazing`,
+    img: alJazeera,
+    imgName: "Al-Jazeera",
+  },
+];
+</script>
 
 <style scoped>
 header {
@@ -185,5 +231,65 @@ button:hover {
 
 .font-weight-600 {
   font-weight: 600;
+}
+
+.media-coverage-content {
+  max-width: 74rem;
+  margin-inline: auto;
+
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.56rem;
+    max-width: 48.75rem;
+    font-weight: 600;
+  }
+}
+
+.media-coverage-text {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 63.8rem;
+
+  img {
+    max-width: 6.25rem;
+    max-height: 5.3rem;
+  }
+}
+
+.media-coverage-heading {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    width: 7.5rem;
+    height: 1.875rem;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    border: 1px solid #b00;
+    background-color: #b00;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.media-coverage-cards {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 </style>
