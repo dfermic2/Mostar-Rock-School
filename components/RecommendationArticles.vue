@@ -27,34 +27,34 @@ import { news } from '~/data'
 
 <style scoped>
 .container {
-  width: 1180px;
+  width: 73.75rem;
   display: flex;
   flex-direction: column;
-  margin: 0px 130px;
+  margin-inline: auto;
 }
 
 .header {
-  margin-bottom: 10px;
-  margin-top: 80px;
+  margin-bottom: 0.625rem;
+  margin-top: 5rem;
 }
 
 .header h2 {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-family: 'F37Hybrid-Bold';
 }
 
 .recommended-articles {
   z-index: 1;
   display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
 }
 
 .article {
-  width: 580px;
+  width: 36.25rem;
 }
 
 .paging {
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 </style>

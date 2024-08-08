@@ -15,9 +15,9 @@
               </p>
             </div>
 
-            <div class="media">
+            <!-- <div class="media">
               <MediaLinks mediaPosition="side" />
-            </div>
+            </div> -->
           </section>
 
           <section class="speakers">
@@ -46,13 +46,13 @@ categories.splice(0, 0, 'All Categories')
 </script>
 
 <style scoped>
-.container {
-  position: relative;
-  z-index: 3;
+div {
+  max-width: 100vw;
 }
 
 header {
-  height: 850px;
+  max-width: 100vw;
+  height: 53.125rem;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -62,46 +62,49 @@ header {
     ),
     url('../../public/assets/images/news-images/news-hero-image.png');
   background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .hero {
-  margin: 210px auto 50px 130px;
-  margin-top: 210px;
-  height: 610px;
+  width: 100vw;
+  margin: 13.125rem auto 3.125rem auto;
+  margin-top: 13.125rem;
+  height: 38.125rem;
 }
 
 .header {
+  max-width: 74rem;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
 }
 
 .info {
   color: #fff;
-  max-width: 780px;
+  max-width: 48.75rem;
 }
 
 .info > h1 {
-  font-size: 75px;
-  line-height: 85px;
+  font-size: 4.6875rem;
+  line-height: 5.3125rem;
   font-family: 'F37Hybrid-Bold';
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;
 }
 
 .info > p {
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 1rem;
+  line-height: 1.4375rem;
   font-family: 'Inter';
 }
 
 .media {
-  margin-top: -35px;
+  margin-top: -2.1875rem;
 }
 
 .speakers {
-  width: 480px;
-  height: 350px;
-  margin: 0px 130px 0px 0px;
+  width: 30rem;
+  height: 21.875rem;
+  margin: 0rem 21.875rem 0rem 0rem;
   float: right;
 }
 
@@ -112,6 +115,6 @@ header {
 }
 
 .news-paging {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 </style>

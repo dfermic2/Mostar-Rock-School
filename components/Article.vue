@@ -170,26 +170,26 @@
 }
 
 .container {
-  width: 1180px;
-  border-radius: 5px;
+  width: 73.75rem;
+  border-radius: 0.3125rem;
 }
 
 .intro {
-  width: 1180px;
+  width: 73.75rem;
   display: flex;
   justify-content: space-between;
 }
 
 .intro > .content {
-  width: 740px;
+  width: 46.25rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .content-part {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
   text-align: justify;
 }
 
@@ -198,37 +198,37 @@
 }
 
 .central {
-  width: 740px;
+  width: 46.25rem;
 }
 
 .central-img-container {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .central > .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
 }
 
 .qa {
-  width: 1180px;
+  width: 73.75rem;
   display: flex;
-  gap: 60px;
-  margin-bottom: 100px;
+  gap: 3.75rem;
+  margin-bottom: 6.25rem;
 }
 
 .questions {
-  width: 740px;
+  width: 46.25rem;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .question-line {
-  margin-bottom: 20px;
-  line-height: 23px;
+  margin-bottom: 1.25rem;
+  line-height: 1.4375rem;
   font-style: italic;
   color: #437fd9;
 }
@@ -236,7 +236,7 @@
 .answer {
   text-align: justify;
   font-style: italic;
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
 }
 </style>

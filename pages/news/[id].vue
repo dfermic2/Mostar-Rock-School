@@ -5,11 +5,13 @@
         <Navbar />
         <div class="hero">
           <div class="info">
-            <p @click="navigateTo(`/news/`)">< News</p>
-            <h1>{{ article.title }}</h1>
-            <p class="created-and-creator">
-              {{ article.date }} by <span class="author"> Name Surname</span>
-            </p>
+            <div class="info-details">
+              <p @click="navigateTo(`/news/`)">< News</p>
+              <h1>{{ article.title }}</h1>
+              <p class="created-and-creator">
+                {{ article.date }} by <span class="author"> Name Surname</span>
+              </p>
+            </div>
           </div>
           <div class="media">
             <MediaLinks mediaPosition="side" />
@@ -41,10 +43,11 @@ let article = news.find((t) => t.id === id)
 * {
   margin: 0;
   padding: 0;
+  max-width: 100vw;
 }
 
 header {
-  height: 700px;
+  height: 43.75rem;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -54,56 +57,58 @@ header {
     ),
     url('../../public/assets/images/news-images/news-article-jazz-masterclass-cover-photo.png');
   background-size: cover;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 
 .hero {
+  margin-inline: auto;
   position: relative;
-  min-height: 361px;
+  min-height: 22.5625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 172px auto 0px 130px;
+  margin-top: 10.625rem;
 }
 
 .info {
-  width: 880px;
-  min-height: 361px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
+  width: 74rem;
+  margin-inline: auto;
+}
+
+.info-details {
+  width: 55rem;
   color: #fff;
 }
 
-.info > p:first-child {
+.info-details > p:first-child {
   width: fit-content;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: 'F37Hybrid-Bold';
   letter-spacing: 0%;
   cursor: pointer;
 }
 
-.info > p:first-child:hover {
+.info-details > p:first-child:hover {
   color: #ff0000;
   transition: 500ms;
 }
 
-.info > p:first-child:not(hover) {
+.info-details > p:first-child:not(hover) {
   color: #fff;
   transition: 500ms;
 }
 
-.info > h1 {
-  margin-top: 35px;
-  margin-bottom: 140px;
-  font-size: 50px;
+.info-details > h1 {
+  margin-top: 2.1875rem;
+  margin-bottom: 8.75rem;
+  font-size: 3.125rem;
   font-family: 'F37Hybrid-Bold';
   letter-spacing: 0%;
-  line-height: 65px;
+  line-height: 4.0625rem;
 }
 
 .created-and-creator {
-  margin-top: -15px;
+  margin-top: -0.9375rem;
 }
 
 .author {
@@ -115,7 +120,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 38px;
+  margin-top: 2.375rem;
 }
 
 .articles {
@@ -124,6 +129,7 @@ header {
 }
 
 .recommended-articles {
+  max-width: 100vw;
   background: #fafbfb;
 }
 </style>
