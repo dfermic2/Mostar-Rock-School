@@ -62,7 +62,7 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 }
 
 .container {
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   margin: 0;
   background: #000;
   display: flex;
@@ -106,10 +106,11 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 }
 
 .o-side {
-  width: 50px;
-  height: 170px;
+  width: 3.125rem;
+  height: 10.625rem;
   flex-direction: column;
   padding: 0.6rem;
+  box-sizing: border-box;
 }
 
 .side {

@@ -17,7 +17,10 @@
           <button>VIEW OUR JOURNEY</button>
         </div>
         <div class="image">
-          <img src="../../public/assets/images/black-guitar.png" alt="guitar" />
+          <img
+            src="../../public/assets/images/guitar-rotated.png"
+            alt="guitar"
+          />
         </div>
       </div>
     </header>
@@ -68,6 +71,7 @@
         <BasicPaging />
       </div>
     </div>
+    <Donation />
   </div>
 </template>
 
@@ -115,17 +119,16 @@ header {
 }
 
 .image {
-  grid-column: 5 / span 6;
+  grid-column: 8 / span 6;
   align-self: self-end;
   max-width: fit-content;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .grid img {
-  max-width: 52.1rem;
+  max-width: 33.9rem;
   height: auto;
   object-fit: contain;
-  transform: rotate(333deg);
   filter: drop-shadow(0.8rem 2.3rem 0.6rem rgba(0, 0, 0, 0.25));
 }
 
