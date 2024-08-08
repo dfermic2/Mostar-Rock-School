@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container" role="event-card">
-      <section class="header p-inline-25 f-size-s">
+      <section class="header p-inline-25 f-size-s font-weight-600">
         <div class="location-time-info pt-125">
           <div class="date">
             <Icon name="mdi:calendar-check" size="17" />
@@ -10,30 +10,30 @@
 
           <div class="time">
             <Icon class="icon" name="uil:clock" size="17" />
-            <p class="f-weight-500 pl-05">{{ event.time }}</p>
+            <p class="pl-05">{{ event.time }}</p>
           </div>
 
           <div class="location">
             <Icon name="mdi:place" size="17" />
-            <p class="f-weight-300 pl-05">{{ event.location }}</p>
+            <p class="pl-05">{{ event.location }}</p>
           </div>
         </div>
       </section>
 
       <section class="event-description p-inline-25">
-        <h2 class="f-size-l">{{ event.title }}</h2>
+        <h2 class="f-size-l font-hybrid line-heigt-219">{{ event.title }}</h2>
       </section>
 
       <section class="footer p-inline-25">
         <div class="fee-info">
           <img src="../assets/images/Ticket.png" alt="Ticket icon" />
-          <p class="ml-05 f-weight-600 f-size-m">
+          <p class="mr-05 f-size-m">
             <span>{{ event.fee }}</span>
           </p>
         </div>
 
         <div class="actions">
-          <button class="btn p-btn">Find out more</button>
+          <button class="btn p-btn font-weight-bold">Find out more</button>
         </div>
       </section>
     </div>
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-const { event } = defineProps(['event'])
+const { event } = defineProps(["event"]);
 </script>
 
 <style scoped>
@@ -57,7 +57,7 @@ const { event } = defineProps(['event'])
   box-sizing: border-box;
 }
 
-.container[role='event-card']:hover {
+.container[role="event-card"]:hover {
   box-shadow: 5px 9px 9px #e4e4e4;
 
   .header {
@@ -74,10 +74,11 @@ const { event } = defineProps(['event'])
   .btn {
     background: #bb0000;
     transition: 500ms;
+    cursor: pointer;
   }
 }
 
-.container[role='event-card']:not(hover) {
+.container[role="event-card"]:not(hover) {
   .header {
     background: #f1f5f9;
     transition: 500ms;
@@ -141,7 +142,6 @@ const { event } = defineProps(['event'])
   outline: none;
   border: none;
   font-size: 0.875rem;
-  font-weight: 500;
   border-radius: 0.2rem;
 }
 
@@ -175,17 +175,5 @@ const { event } = defineProps(['event'])
 
 .f-size-l {
   font-size: 1.5625rem;
-}
-
-.f-weight-300 {
-  font-weight: 300;
-}
-
-.f-weight-500 {
-  font-weight: 500;
-}
-
-.f-weight-600 {
-  font-weight: 600;
 }
 </style>
