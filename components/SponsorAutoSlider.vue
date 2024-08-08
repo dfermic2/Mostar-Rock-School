@@ -27,10 +27,10 @@ import { sponsors } from '~/data'
 
 @keyframes scroll {
   0% {
-    transform: translateX(350px);
+    transform: translateX(150px);
   }
   100% {
-    transform: translateX(-3300px);
+    transform: translateX(-4000px);
   }
 }
 
@@ -38,7 +38,8 @@ import { sponsors } from '~/data'
   display: flex;
   align-items: center;
   gap: 1.875rem;
-  animation: 30s alternate 20s infinite scroll;
+  animation: 60s alternate 20s infinite scroll;
+  animation-timing-function: linear;
   animation-delay: 5ms;
 }
 
