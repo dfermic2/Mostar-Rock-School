@@ -9,12 +9,11 @@
 </template>
 
 <script setup>
-let { contributionTypes } = defineProps(['contributionTypes'])
-console.log(contributionTypes)
+let { contributionTypes } = defineProps(["contributionTypes"]);
 </script>
 
 <style scoped>
-.container[role='contribution-types'] {
+.container[role="contribution-types"] {
   width: 73.75rem;
   margin: auto;
   display: grid;
