@@ -13,9 +13,6 @@
               </p>
             </div>
           </div>
-          <div class="media">
-            <MediaLinks mediaPosition="side" />
-          </div>
         </div>
       </header>
 
