@@ -36,10 +36,11 @@
 }
 
 h2 {
+  font-family: "F37Hybrid-Bold";
   line-height: 3.125rem;
   display: inline-block;
   letter-spacing: 0;
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-weight: 700;
   height: 6.25rem;
   text-size-adjust: 0%;
@@ -48,30 +49,26 @@ h2 {
 p {
   margin-block: 1.875rem;
   font-size: 0.9375rem;
-  font-weight: 500;
 }
 
 .btn {
-  /* width: 23.75rem; */
-  height: 2.8125rem;
-  line-height: 25px;
-  box-sizing: border-box;
-  background: #ff0000;
-  font-size: 0.7875rem;
-  color: #fff;
-  text-align: center;
-  padding: 0.875rem 3.875rem 0.8125rem 3.9375rem;
-  border-radius: 0.1875rem;
+  height: 2.82rem;
+  width: 23.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  margin: 0;
+  background: red;
+  color: white;
+  line-height: 1.56rem;
+  letter-spacing: 0.02rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background: #bb0000;
-  transition: 500ms;
-}
-
-.btn:not(hover) {
-  background: #ff0000;
-  transition: 500ms;
+  cursor: pointer;
+  background-color: #b00;
 }
 </style>

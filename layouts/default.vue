@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="darkenOverlay" class="normal"></div>
-    <div class="media">
-      <MediaLinks mediaPosition="side" />
+    <div class="right-menu">
+      <MediaLinks :media-position="'side'" />
     </div>
     <div>
       <slot />
@@ -12,10 +12,9 @@
 </template>
 
 <style scoped>
-.media {
+.right-menu {
   position: absolute;
   top: 21.25rem;
   right: 0;
-  z-index: 2;
 }
 </style>

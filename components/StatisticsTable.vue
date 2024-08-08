@@ -8,7 +8,7 @@
         </div>
         <div class="cell bb-1 bt-1">
           <h1>100+</h1>
-          <span>concerts a year</span>
+          <span>concerts</span>
         </div>
       </div>
 
