@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="bg-grey">
-      <header>
-        <Navbar />
-      </header>
-      <Statistics />
-    </div>
+    <!-- <div class="bg-grey"> -->
+    <header>
+      <Navbar />
+    </header>
+    <SponsorAutoSlider />
+    <Statistics />
+    <!-- </div> -->
     <p>Index</p>
   </div>
 </template>
