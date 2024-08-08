@@ -30,7 +30,8 @@
           </div>
         </div>
       </header>
-      <div class="content">
+
+      <section class="staff-content">
         <p class="title">Meet the people behind Mostar Rock School.</p>
         <section class="staff-container">
           <div id="management-administration">
@@ -70,7 +71,16 @@
             </article>
           </div>
         </section>
-      </div>
+      </section>
+
+      <section class="donation">
+        <div class="donation-container">
+          <DonationForm />
+          <div class="form-call">
+            <DonationFormCall />
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -165,7 +175,7 @@ header {
   line-height: 3.125rem;
 }
 
-.content {
+.staff-content {
   max-width: 74rem;
   margin-inline: auto;
   margin-top: 18.75rem;
@@ -189,5 +199,22 @@ h3 {
   display: flex;
   margin-top: 3.125rem;
   gap: 1.25rem;
+}
+
+.donation {
+  padding: 6.25rem;
+  max-width: 100vw;
+  background: #edf3fc;
+}
+
+.donation-container {
+  max-width: 74rem;
+  display: flex;
+  gap: 3.75rem;
+  margin-inline: auto;
+}
+
+.form-call {
+  margin-top: 2.5rem;
 }
 </style>
