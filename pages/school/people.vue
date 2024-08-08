@@ -86,7 +86,7 @@ div {
 
 header {
   max-width: 100vw;
-  height: 1085px;
+  height: 67.8125rem;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -96,14 +96,13 @@ header {
     ),
     url('../../public/assets/images/staff/staff-header-cover-photo.png');
   background-size: cover;
-  margin-bottom: 100px;
-  /* background: yellow; */
+  margin-bottom: 6.25rem;
 }
 
 .hero {
   max-width: 74rem;
-  height: 1085px;
-  margin-top: 187px;
+  height: 67.8125rem;
+  margin-top: 11.6875rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -111,7 +110,7 @@ header {
 }
 
 .info {
-  max-width: 780px;
+  max-width: 48.75rem;
   color: #fff;
 }
 
@@ -135,7 +134,7 @@ header {
 
 .info > h1 {
   margin-top: 2.1875rem;
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;
   font-size: 3.125rem;
   font-family: 'F37Hybrid-Bold';
   letter-spacing: 0%;
@@ -143,44 +142,44 @@ header {
 }
 
 .description {
-  max-width: 680px;
-  line-height: 23px;
+  max-width: 42.5rem;
+  line-height: 1.4375rem;
 }
 
 .info-footer {
-  margin-top: 100px;
+  margin-top: 6.25rem;
   display: flex;
-  gap: 74px;
+  gap: 4.625rem;
 }
 
 .sub-heading {
-  max-width: 640px;
+  max-width: 40rem;
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 130px;
+  margin-top: 8.125rem;
 }
 
 .sub-heading > h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-family: 'F37Hybrid-Bold';
-  line-height: 50px;
+  line-height: 3.125rem;
 }
 
 .content {
   max-width: 74rem;
   margin-inline: auto;
-  margin-top: 300px;
-  margin-bottom: 100px;
+  margin-top: 18.75rem;
+  margin-bottom: 6.25rem;
 }
 
 .staff-container {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: 'F37Hybrid-Bold';
 }
 
@@ -188,7 +187,7 @@ h3 {
 .programme,
 .lecturers {
   display: flex;
-  margin-top: 50px;
-  gap: 20px;
+  margin-top: 3.125rem;
+  gap: 1.25rem;
 }
 </style>
