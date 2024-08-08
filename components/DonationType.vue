@@ -29,7 +29,7 @@ const { donationType } = defineProps(["donationType"]);
   display: block;
   max-width: 36.25rem;
   min-height: 16.25rem;
-  border: 1px solid red;
+  border: 1px solid rgba(255, 0, 0, 0.398);
   border-radius: 0.4rem;
   padding: 1.875rem 1.375rem;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ const { donationType } = defineProps(["donationType"]);
 .content {
   color: white;
   max-width: 31.25rem;
-  min-height: 13.5rem;
+  min-height: 12.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
