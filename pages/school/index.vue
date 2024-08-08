@@ -149,7 +149,6 @@ header {
 
 .text {
   display: flex;
-  max-width: 43rem;
   flex-direction: column;
   grid-column: 1 / span 9;
   box-sizing: border-box;
@@ -165,6 +164,7 @@ header {
 
 .grid p {
   font-weight: 600;
+  max-width: 43rem;
   font-size: 1rem;
   line-height: 1.44rem;
   margin: 0;
