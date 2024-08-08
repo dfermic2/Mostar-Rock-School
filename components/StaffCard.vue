@@ -34,6 +34,7 @@
 
 <script setup>
 let { person } = defineProps(['person'])
+console.log(person)
 
 let hover = (id) => {
   let allArray = []
@@ -132,6 +133,7 @@ div[role='staff-container'] {
   width: 17.5rem;
   height: 22.5rem;
   position: relative;
+  cursor: pointer;
 }
 
 .staff-container {
