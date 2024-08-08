@@ -21,7 +21,28 @@
         </div>
       </div>
     </header>
-    <br />
+    <div class="our-mission">
+      <div class="our-mission-content">
+        <img src="../../public/assets/images/staff/omar.png" />
+        <div class="our-mission-text">
+          <h1>Our mission</h1>
+          <p>
+            Our mission is to use music as a powerful tool for community
+            integration, reconciliation, and personal growth.
+          </p>
+          <p class="font-weight-600">
+            We aim to provide a nurturing environment where individuals can
+            explore their musical passions, develop their talents, and build
+            lasting connections across cultural and social boundaries. Through
+            education, collaboration, and performance, we strive to create a
+            harmonious and inclusive society.
+          </p>
+          <NuxtLink to="/school/people">
+            <button>MEET OUR PEOPLE</button>
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,7 +73,7 @@ header {
   overflow: hidden;
 }
 
-img {
+.grid img {
   max-width: 52.1rem;
   height: auto;
   object-fit: contain;
@@ -101,6 +122,9 @@ img {
 
 .text button {
   width: 13.75rem;
+}
+
+button {
   height: 2.82rem;
   border-radius: 0.25rem;
   border: none;
@@ -114,7 +138,52 @@ img {
   transition: background-color 0.3s ease-in-out;
 }
 
-.text button:hover {
+button:hover {
   cursor: pointer;
+  background-color: #b00;
+}
+
+.our-mission {
+  display: flex;
+  flex-grow: 1;
+  min-height: 29rem;
+  padding-top: 1.25rem;
+  box-sizing: border-box;
+}
+
+.our-mission-content {
+  display: flex;
+  max-width: 61.25rem;
+  flex-grow: 1;
+  margin-inline: auto;
+  justify-content: space-between;
+
+  img {
+    max-width: 15rem;
+    max-height: 20rem;
+  }
+
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.56rem;
+    max-width: 39.6rem;
+  }
+
+  button {
+    width: 15.875rem;
+  }
+}
+
+.our-mission-text {
+  min-height: 20.3rem;
+}
+
+.font-weight-600 {
+  font-weight: 600;
 }
 </style>
