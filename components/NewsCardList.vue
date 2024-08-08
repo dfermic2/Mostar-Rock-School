@@ -109,6 +109,7 @@ let filterByCategory = () => {
   border: none;
   outline: none;
   padding: 1.25rem 0rem 1.1875rem 0.9375rem;
+  cursor: pointer;
 }
 
 .news-container {

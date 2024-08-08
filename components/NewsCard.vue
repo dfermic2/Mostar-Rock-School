@@ -1,36 +1,42 @@
 <template>
   <div>
-    <div class="container" role="news-card">
-      <div class="img">
-        <img
-          class="news-card-img"
-          :src="news.coverPhoto"
-          alt="News photo"
-          :title="news.title"
-        />
-      </div>
+    <NuxtLink>
+      <div
+        class="container"
+        role="news-card"
+        @click="navigateTo(`/news/${news.id}`)"
+      >
+        <div class="img">
+          <img
+            class="news-card-img"
+            :src="news.coverPhoto"
+            alt="News photo"
+            :title="news.title"
+          />
+        </div>
 
-      <div class="news-footer">
-        <div class="header">
-          <h3>
-            {{ news.title }}
-          </h3>
-        </div>
-        <div class="footer">
-          <div class="left-side">
-            <img
-              :src="news.newsTypeIcon"
-              :alt="news.newsTypeIconName"
-              :title="news.newsTypeIconName"
-            />
-            <span class="space">{{ news.date }}</span>
+        <div class="news-footer">
+          <div class="header">
+            <h3>
+              {{ news.title }}
+            </h3>
           </div>
-          <div class="right-side">
-            <button class="btn" type="button">Read More</button>
+          <div class="footer">
+            <div class="left-side">
+              <img
+                :src="news.newsTypeIcon"
+                :alt="news.newsTypeIconName"
+                :title="news.newsTypeIconName"
+              />
+              <span class="space">{{ news.date }}</span>
+            </div>
+            <div class="right-side">
+              <button class="btn" type="button">Read More</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </NuxtLink>
   </div>
 </template>
 
@@ -52,6 +58,7 @@ let { news } = defineProps(['news'])
   border-top-left-radius: 0.3125rem;
   border-top-right-radius: 0.3125rem;
   box-shadow: 0rem 0.125rem 0.25rem #9d9c9c;
+  cursor: pointer;
 }
 
 .container[role='news-card']:hover {
