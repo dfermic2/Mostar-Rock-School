@@ -65,6 +65,7 @@
           <MediaCoverageCard :media-coverage="mediaCoverageList[0]" />
           <MediaCoverageCard :media-coverage="mediaCoverageList[1]" />
         </div>
+        <BasicPaging />
       </div>
     </div>
   </div>
@@ -73,6 +74,7 @@
 <script setup>
 import theGuardian from "../../public/assets/images/The-Guardian.png";
 import alJazeera from "../../public/assets/images/Al-Jazeera.png";
+import BasicPaging from "~/components/BasicPaging.vue";
 
 const mediaCoverageList = [
   {
@@ -233,8 +235,14 @@ button:hover {
   font-weight: 600;
 }
 
+.media-coverage {
+  min-height: 44.7rem;
+  align-content: center;
+}
+
 .media-coverage-content {
   max-width: 74rem;
+  min-height: 32.2rem;
   margin-inline: auto;
 
   h1 {
@@ -291,5 +299,7 @@ button:hover {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2.5rem 0 1.875rem 0;
 }
 </style>
