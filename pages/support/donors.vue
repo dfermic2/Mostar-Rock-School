@@ -26,7 +26,7 @@
 
       <section class="sponsors">
         <div class="sponsors-content">
-          <h1>Platinum Sponsors</h1>
+          <h1>Current Donors</h1>
           <div class="platinum-sponsors-container">
             <div v-for="platinum in platinumSponsors" :key="platinum.id">
               <PlatinumSponsorCard :sponsor="platinum" />
