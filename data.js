@@ -317,3 +317,100 @@ export const basicSponsors = [
     img: robert_bosch_stiftung,
   },
 ]
+
+export const sponsors = [
+  {
+    id: 1,
+    name: 'Norwegian Embassy Sarajevo',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.',
+    img: norway_embassy_sarajevo,
+  },
+  {
+    id: 2,
+    name: 'Kingdom of the Netherlands',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.',
+    img: kingdom_of_netherland,
+  },
+  {
+    id: 3,
+    name: 'Njemacka Ambasada Sarajevo',
+    img: njemacka_ambasada_sarajevo,
+  },
+  {
+    id: 4,
+    name: 'Embassy of Sweden Sarajevo',
+    img: embassy_of_sweden_sarajevo,
+  },
+  {
+    id: 5,
+    name: 'Swiss Agency for Development and Cooperation',
+    img: swiss_agency,
+  },
+  {
+    id: 6,
+    name: 'Federalno ministarstvo kulture i sporta',
+    img: federalno_ministarstvo_kulture_i_sporta,
+  },
+  {
+    id: 7,
+    name: 'USAID',
+    img: usaid,
+  },
+  {
+    id: 8,
+    name: 'Grad Mostar',
+    img: grad_mostar,
+  },
+  {
+    id: 9,
+    name: 'AMUS',
+    img: amus,
+  },
+  {
+    id: 10,
+    name: 'SPARK',
+    img: spark,
+  },
+  {
+    id: 11,
+    name: 'Federalno ministarstvo obrazovanja i nauke',
+    img: federalno_ministarstvo_obrazovanja_i_nauke,
+  },
+  {
+    id: 12,
+    name: 'USA Embassy Sarajevo',
+    img: usa_embassy_sarajevo,
+  },
+  {
+    id: 13,
+    name: 'Vlada HNK',
+    img: vlada_hnk,
+  },
+  {
+    id: 14,
+    name: 'Stability Pack',
+    img: stability_pact_for_eastern_europe,
+  },
+  {
+    id: 15,
+    name: 'Dubioza Kolektiv',
+    img: dubioza_kolektiv,
+  },
+  {
+    id: 16,
+    name: 'Red Bull',
+    img: red_bull,
+  },
+  {
+    id: 17,
+    name: 'OSCE',
+    img: osce,
+  },
+  {
+    id: 18,
+    name: 'Robert Bosch Stiftung',
+    img: robert_bosch_stiftung,
+  },
+]
