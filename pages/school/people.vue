@@ -30,7 +30,9 @@
           </div>
         </div>
       </header>
-
+      <Transition>
+        <PeoplePopup v-if="route.query.id" />
+      </Transition>
       <section class="staff-content">
         <p class="title">Meet the people behind Mostar Rock School.</p>
         <section class="staff-container">
@@ -42,7 +44,10 @@
                 :key="person.id"
                 class="member"
               >
-                <StaffCard :person="person" />
+                <StaffCard
+                  :person="person"
+                  @click="navigateTo(`/school/people/?id=${person.id}`)"
+                />
               </div>
             </article>
           </div>
@@ -54,7 +59,10 @@
                 :key="person.id"
                 class="member"
               >
-                <StaffCard :person="person" />
+                <StaffCard
+                  :person="person"
+                  @click="navigateTo(`/school/people/?id=${person.id}`)"
+                />
               </div>
             </article>
           </div>
@@ -66,7 +74,10 @@
                 :key="person.id"
                 class="member"
               >
-                <StaffCard :person="person" />
+                <StaffCard
+                  :person="person"
+                  @click="navigateTo(`/school/people/?id=${person.id}`)"
+                />
               </div>
             </article>
           </div>
@@ -80,6 +91,7 @@
 
 <script setup>
 import { staff } from "~/data";
+let route = useRoute();
 </script>
 
 <style scoped>
@@ -192,5 +204,15 @@ h3 {
   display: flex;
   margin-top: 3.125rem;
   gap: 1.25rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
