@@ -414,3 +414,38 @@ export const sponsors = [
     img: robert_bosch_stiftung,
   },
 ]
+
+export const offers = [
+  {
+    id: 1,
+    offer: 'Drums',
+  },
+  {
+    id: 2,
+    offer: 'Bass Guitar',
+  },
+  {
+    id: 3,
+    offer: 'Electric Music Production',
+  },
+  {
+    id: 4,
+    offer: 'Keyboards (electric piano)',
+  },
+  {
+    id: 5,
+    offer: 'Electric guitar',
+  },
+  {
+    id: 6,
+    offer: 'Workshops and masterclasses',
+  },
+  {
+    id: 7,
+    offer: 'Vocals',
+  },
+  {
+    id: 8,
+    offer: 'Audio recording production',
+  },
+]

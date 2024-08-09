@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { offers } from '~/data'
+</script>
+
 <template>
   <div>
     <div class="container">
@@ -13,7 +17,7 @@
               individual and group formats, to production of events, creative
               development, studio recordings, publishing and booking.
             </p>
-            <button type="button">Enroll now</button>
+            <button type="button btn-style">Enroll now</button>
           </div>
           <div class="drums-container">
             <div class="drumms">
@@ -26,99 +30,53 @@
           </div>
         </div>
       </header>
-      <section class="music-lessons">
-        <div class="articles">
-          <h2>Music Lessons</h2>
-          <div class="article-text">
-            <strong>
+
+      <section class="music-lessons-container">
+        <h2>Music Lessons</h2>
+        <section class="music-lessons">
+          <div class="articles">
+            <div class="article-text">
+              <strong>
+                <p>
+                  The heart of Rock School Mostar is an educational/teaching
+                  program that has been held cyclically since 2012 from the
+                  beginning of September to the beginning of June and which in
+                  recent years has been attended by between 200 and 250
+                  participants per year. The students of Rock School Mostar come
+                  from 10 countries around the world.
+                </p>
+              </strong>
+            </div>
+            <div class="article-text">
               <p>
-                The heart of Rock School Mostar is an educational/teaching
-                program that has been held cyclically since 2012 from the
-                beginning of September to the beginning of June and which in
-                recent years has been attended by between 200 and 250
-                participants per year. The students of Rock School Mostar come
-                from 10 countries around the world.
+                In addition to instruments/departments, the teaching program is
+                also divided into individual and group teaching, where each
+                lecturer creates an author's curriculum and program for both
+                types of teaching adapted to each student and group. Classes are
+                based on improving technical playing, rhythmicity,
+                harmonization, music theory, and the first steps of pairing
+                different instruments/vocals, which is a prerequisite for
+                playing in a band or orchestra. The eight rooms of the Rock
+                School Mostar are fully equipped with all the necessary means
+                for musical education and creative work. Instruments,
+                loudspeaker, computer, Smart TV. Some of the rooms are specified
+                only for certain classes, e.g. lessons for vocals, guitar,
+                keyboards... Rock school Mostar implements over 8900 hours of
+                teaching program and over 3000 hours of independent and group
+                exercises during one school year.
               </p>
-            </strong>
+            </div>
+            <button class="btn btn-style">Ready to rock with us?</button>
           </div>
-          <div class="article-text">
-            <p>
-              In addition to instruments/departments, the teaching program is
-              also divided into individual and group teaching, where each
-              lecturer creates an author's curriculum and program for both types
-              of teaching adapted to each student and group. Classes are based
-              on improving technical playing, rhythmicity, harmonization, music
-              theory, and the first steps of pairing different
-              instruments/vocals, which is a prerequisite for playing in a band
-              or orchestra. The eight rooms of the Rock School Mostar are fully
-              equipped with all the necessary means for musical education and
-              creative work. Instruments, loudspeaker, computer, Smart TV. Some
-              of the rooms are specified only for certain classes, e.g. lessons
-              for vocals, guitar, keyboards... Rock school Mostar implements
-              over 8900 hours of teaching program and over 3000 hours of
-              independent and group exercises during one school year.
-            </p>
-          </div>
-          <button class="btn">Ready to rock with us?</button>
-        </div>
-
-        <div class="curriculum-offer">
-          <h3>The curriculum offers education for:</h3>
-          <div class="offers">
-            <div class="offer">
-              <div class="box"></div>
-              <p>Drums</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Bass Guitar</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Electric Music Production</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Keyboards (electric piano)</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Electric guitar</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Workshops and masterclasses</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Vocals</p>
-            </div>
-
-            <div class="offer">
-              <div class="box"></div>
-              <p>Audio recording production</p>
-            </div>
-          </div>
-        </div>
+          <CurriculumOffers :offers="offers" />
+        </section>
       </section>
 
       <section class="band-img">
-        <iframe
-          width="1180"
-          height="650"
-          src="https://www.youtube.com/embed/6siKtbEkNxs?si=NtgfUzt8tXyyMD9i"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <img
+          src="../../public/assets/images/programme/video-photo-01.png"
+          alt=""
+        />
       </section>
 
       <section class="session-band-program-background">
@@ -169,34 +127,35 @@
         </section>
       </section>
 
-      <section class="music-camps">
-        <div class="info">
-          <h2>Music Camps</h2>
-          <p>
-            Rock School Mostar has so far taken part in exchanges and music
-            camps in Macedonia, Croatia, Slovenia, France, Germany, Serbia,
-            Austria.
-          </p>
-          <p>
-            The school also implemented two music camps in its own organization.
-            The first camp was held in the Roma settlement of Kiseljak near
-            Tuzla in 2015 for 60 participants from 4 BH cities, and the second
-            in the Olympic Hotel Bistrica in Jahorina in 2016 for 70
-            participants from 18 BH cities.
-          </p>
-          <button class="btn" type="button">Get in touch to learn more</button>
-        </div>
-        <div class="photo-container">
-          <iframe
-            width="440"
-            height="250"
-            src="https://www.youtube.com/embed/ythCtQHOnrU?si=CiaD7nYXFbBVu-em"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+      <section class="music-camps-container">
+        <h2>Music Camps</h2>
+        <div class="music-camps">
+          <div>
+            <strong>
+              <p>
+                Rock School Mostar has so far taken part in exchanges and music
+                camps in Macedonia, Croatia, Slovenia, France, Germany, Serbia,
+                Austria.
+              </p>
+            </strong>
+            <p>
+              The school also implemented two music camps in its own
+              organization. The first camp was held in the Roma settlement of
+              Kiseljak near Tuzla in 2015 for 60 participants from 4 BH cities,
+              and the second in the Olympic Hotel Bistrica in Jahorina in 2016
+              for 70 participants from 18 BH cities.
+            </p>
+            <button class="btn" type="button">
+              Get in touch to learn more
+            </button>
+          </div>
+          <div class="photo-container">
+            <img
+              src="../../public/assets/images/programme/video-photo-02.png"
+              alt="Video 02"
+              title="Video 02"
+            />
+          </div>
         </div>
       </section>
 
@@ -245,7 +204,6 @@
 
 .container {
   max-width: 100vw;
-  /* background: yellow; */
 }
 
 header {
@@ -258,52 +216,45 @@ header {
     ),
     url('../../public/assets/images/programme/programme-header-cover-photo.png');
   background-size: cover;
-  height: 1030px;
+  height: 64.375rem;
   max-width: 100vw;
-  margin-bottom: 180px;
+  margin-bottom: 11.25rem;
 }
 
 .hero {
-  margin-top: 400px;
+  margin-top: 25rem;
   max-width: 74rem;
-  height: 660px;
+  height: 41.25rem;
   margin-inline: auto;
   display: flex;
 }
 
 .info {
-  max-width: 773px;
-  height: 660px;
+  max-width: 48.3125rem;
+  height: 41.25rem;
   display: flex;
   flex-direction: column;
   color: #fff;
 }
 
 .info > h1 {
-  font-size: 75px;
-  line-height: 85px;
+  font-size: 4.6875rem;
+  line-height: 5.3125rem;
   font-family: 'F37Hybrid-Bold';
-  margin-bottom: 35px;
+  margin-top: -11.875rem;
+  margin-bottom: 2.1875rem;
 }
 
 .info > p {
-  font-size: 16px;
-  line-height: 23px;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  margin-bottom: 2.5rem;
 }
 
 .info > button {
-  width: 220px;
-  height: 45px;
-  padding: 14px 61.5px 13px 62.5px;
-  border-radius: 3px;
-  outline: none;
-  border: none;
-  background: #ff0000;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  cursor: pointer;
+  width: 13.75rem;
+  height: 2.8125rem;
+  padding: 0.875rem 3.84375rem 0.8125rem 3.90625rem;
 }
 
 .info > button:hover {
@@ -317,56 +268,60 @@ header {
 }
 
 .drums-container {
-  height: 660px;
-  margin-left: 250px;
+  margin-left: 15.625rem;
   display: grid;
 }
 
 .drumms {
   display: flex;
   flex-direction: column-reverse;
-  width: 670px;
+}
+
+.music-lessons-container {
+  max-width: 74rem;
+  margin-inline: auto;
+  margin-bottom: 6.25rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: 'F37Hybrid-Bold';
 }
 
 .music-lessons {
-  max-width: 74rem;
-  margin-inline: auto;
   display: flex;
-  align-items: end;
-  gap: 60px;
+  margin-top: 1.875rem;
+  gap: 3.75rem;
 }
 
 .articles {
-  margin-top: 30px;
-  max-width: 680px;
+  max-width: 42.5rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.articles > h2 {
-  font-size: 40px;
-  font-family: 'F37Hybrid-Bold';
+  gap: 1.25rem;
 }
 
 .article-text {
   text-align: justify;
 }
 
-.btn {
-  width: fit-content;
-  height: 45px;
-  margin-top: 10px;
-  padding: 14px 43.5px 13px 44.5px;
+.btn-style {
   border: none;
   outline: none;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   background: #ff0000;
   color: #fff;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+.btn {
+  width: fit-content;
+  height: 2.8125rem;
+  margin-top: 0.625rem;
+  padding: 0.875rem 2.71875rem 0.8125rem 2.78125rem;
 }
 
 .btn:hover {
@@ -379,152 +334,93 @@ header {
   transition: 500ms;
 }
 
-.curriculum-offer {
-  max-width: 440px;
-  padding: 40px 20px 40px 40px;
-  background: #fafbfb;
-  border-radius: 5px;
-  box-shadow: 1px 4px 6px #cbcbcb;
-  margin-bottom: 50px;
-}
-
-.curriculum-offer > h3 {
-  font-size: 19px;
-  margin-bottom: 20px;
-  line-height: 25px;
-}
-
-.offers {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.offer {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.box {
-  width: 10px;
-  height: 10px;
-  background: #ff0000;
-}
-
-.offer > p {
-  font-size: 15px;
-  font-weight: 600;
-}
-
 .band-img {
   max-width: 74rem;
   margin-inline: auto;
+  margin-bottom: -21.875rem;
 }
 
 .session-band-program-background {
-  padding-top: 400px;
-  padding-bottom: 100px;
-  margin-top: -300px;
   max-width: 100vw;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
   background: #000;
 }
 
 .session-band-program {
+  padding-top: 28.125rem;
+  padding-bottom: 6.25rem;
   color: #fff;
   max-width: 74rem;
   margin-inline: auto;
-  /* background: yellow; */
-}
-
-.session-band-program > h2 {
-  font-size: 40px;
-  font-family: 'F37Hybrid-Bold';
-  margin-bottom: 30px;
 }
 
 .session-band-program-container {
+  margin-top: 1.875rem;
   display: flex;
-  gap: 60px;
+  gap: 3.75rem;
 }
 
 .article-texts {
   font-family: 'Inter';
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .article-texts > p {
-  max-width: 680px;
+  max-width: 42.5rem;
   text-align: justify;
+}
+
+.music-camps-container {
+  max-width: 74rem;
+  margin-inline: auto;
+  margin-bottom: 6.25rem;
 }
 
 .music-camps {
-  max-width: 74rem;
-  margin-inline: auto;
+  margin-top: 1.875rem;
   display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 100px;
+  gap: 3.75rem;
 }
 
-.music-camps > .info {
-  /* display: flex;
-  justify-content: center; */
+.music-camps div:first-child {
   color: #000;
-  max-width: 680px;
-}
-
-.music-camps > .info > h2 {
-  margin-bottom: 30px;
-  font-size: 40px;
-  font-family: 'F37Hybrid-Bold';
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 42.5rem;
+  margin-top: 1.875rem;
 }
 
 .info > p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-align: justify;
 }
 
-.music-camps > .info > .btn {
+.info > .btn {
   width: fit-content;
-}
-
-.photo-container {
-  height: 660px;
-}
-
-iframe {
-  margin-top: 100px;
 }
 
 .event-festival {
   max-width: 74rem;
   margin-inline: auto;
-  margin-bottom: 100px;
-  margin-top: -300px;
+  margin-bottom: 6.25rem;
 }
 
 .event-container {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 3.75rem;
 }
 
 .right-side {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 680px;
-}
-
-.right-side > h2 {
-  font-size: 40px;
-  font-family: 'F37Hybrid-Bold';
+  gap: 1.25rem;
+  max-width: 42.5rem;
 }
 
 .right-side p {
@@ -534,6 +430,6 @@ iframe {
 .spread-the-word {
   max-width: 74rem;
   margin-inline: auto;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 </style>
