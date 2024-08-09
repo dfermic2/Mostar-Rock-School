@@ -107,7 +107,7 @@ header {
       rgba(7, 7, 97, 0) 67%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url(../../public/assets/images/hero-images/school-index.png);
+    url("../../public/assets/images/hero-images/school-index.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom 5rem center;

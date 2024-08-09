@@ -4,6 +4,9 @@
       <header>
         <Navbar />
       </header>
+      <div style="padding: 5rem">
+        <ContactForm />
+      </div>
     </div>
     <p>Index</p>
   </div>
