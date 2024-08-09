@@ -17,7 +17,7 @@ import { offers } from '~/data'
               individual and group formats, to production of events, creative
               development, studio recordings, publishing and booking.
             </p>
-            <button type="button btn-style">Enroll now</button>
+            <button type="button" class="btn-style">Enroll now</button>
           </div>
           <div class="drums-container">
             <div class="drumms">
@@ -115,7 +115,9 @@ import { offers } from '~/data'
                 one school year, more than 1000 hours of sessions of the program
                 are held.
               </p>
-              <button class="btn" type="button">Ready to rock with us?</button>
+              <button class="btn btn-style" type="button">
+                Ready to rock with us?
+              </button>
             </div>
             <div class="session-band-photo-container">
               <img
@@ -145,7 +147,7 @@ import { offers } from '~/data'
               and the second in the Olympic Hotel Bistrica in Jahorina in 2016
               for 70 participants from 18 BH cities.
             </p>
-            <button class="btn" type="button">
+            <button class="btn btn-style" type="button">
               Get in touch to learn more
             </button>
           </div>
@@ -185,7 +187,7 @@ import { offers } from '~/data'
               World Music Day on June 21, when he proudly presents the young
               talents of his program and invites a regional guest.
             </p>
-            <button class="btn">Get in touch to learn more</button>
+            <button class="btn btn-style">Get in touch to learn more</button>
           </div>
         </div>
       </section>
@@ -306,6 +308,7 @@ h2 {
 }
 
 .btn-style {
+  color: #fff;
   border: none;
   outline: none;
   border-radius: 0.1875rem;
