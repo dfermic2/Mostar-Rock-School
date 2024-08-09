@@ -81,13 +81,11 @@
 function addOverlay() {
   document.querySelector("#darkenOverlay").classList.add("darken");
   document.querySelector("#darkenOverlay").classList.remove("normal");
-  console.log("HOVERED");
 }
 
 function removeOverlay() {
   document.querySelector("#darkenOverlay").classList.add("normal");
   document.querySelector("#darkenOverlay").classList.remove("darken");
-  console.log("MOUSE LEAVE");
 }
 </script>
 

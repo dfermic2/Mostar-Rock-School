@@ -33,93 +33,91 @@
 </template>
 
 <script setup>
-let { person } = defineProps(['person'])
-console.log(person)
+let { person } = defineProps(["person"]);
 
 let hover = (id) => {
-  let allArray = []
-  let all = document.querySelectorAll('.container[role="staff-container"]')
-  allArray = Array.from(all)
-  let specific = allArray.at(id - 1)
+  let allArray = [];
+  let all = document.querySelectorAll('.container[role="staff-container"]');
+  allArray = Array.from(all);
+  let specific = allArray.at(id - 1);
 
-  let container = specific.querySelector('.container[role="staff-container"]')
-  let staffInfoContainer = specific.querySelector('.staff-info-container')
-  let shape = specific.querySelector('.shape')
-  let img = specific.querySelector('.staff-image')
+  let container = specific.querySelector('.container[role="staff-container"]');
+  let staffInfoContainer = specific.querySelector(".staff-info-container");
+  let shape = specific.querySelector(".shape");
+  let img = specific.querySelector(".staff-image");
 
-  img.style.transform = 'scale(1.05)'
-  img.style.clipPath = 'rect(0% 100% 97.5% 0%)'
-  img.style.transition = '500ms'
+  img.style.transform = "scale(1.05)";
+  img.style.clipPath = "rect(0% 100% 97.5% 0%)";
+  img.style.transition = "500ms";
   //shape
-  if (shape.classList.contains('circle')) {
-    let circle = specific.querySelector('.circle')
-    circle.style.background = '#ff0000'
-    circle.style.transition = '500ms'
-  } else if (shape.classList.contains('rectangle')) {
-    let rectangle = specific.querySelector('.rectangle')
-    rectangle.style.background = '#ff0000'
-    rectangle.style.transition = '500ms'
-  } else if (shape.classList.contains('triangle')) {
-    let triangle = specific.querySelector('.triangle')
-    triangle.style.borderTop = '280px solid #ff0000'
-    triangle.style.transition = '500ms'
-  } else if (shape.classList.contains('half-rectangle')) {
-    let halfRectangle = specific.querySelector('.half-rectangle')
-    halfRectangle.style.borderTop = '0px solid #ff0000'
-    halfRectangle.style.borderBottom = '280px solid #ff0000'
-    halfRectangle.style.transition = '500ms'
-  } else if (shape.classList.contains('leaf')) {
-    let leaf = specific.querySelector('.leaf')
-    leaf.style.borderLeft = '280px solid #ff0000'
-    leaf.style.transition = '500ms'
+  if (shape.classList.contains("circle")) {
+    let circle = specific.querySelector(".circle");
+    circle.style.background = "#ff0000";
+    circle.style.transition = "500ms";
+  } else if (shape.classList.contains("rectangle")) {
+    let rectangle = specific.querySelector(".rectangle");
+    rectangle.style.background = "#ff0000";
+    rectangle.style.transition = "500ms";
+  } else if (shape.classList.contains("triangle")) {
+    let triangle = specific.querySelector(".triangle");
+    triangle.style.borderTop = "280px solid #ff0000";
+    triangle.style.transition = "500ms";
+  } else if (shape.classList.contains("half-rectangle")) {
+    let halfRectangle = specific.querySelector(".half-rectangle");
+    halfRectangle.style.borderTop = "0px solid #ff0000";
+    halfRectangle.style.borderBottom = "280px solid #ff0000";
+    halfRectangle.style.transition = "500ms";
+  } else if (shape.classList.contains("leaf")) {
+    let leaf = specific.querySelector(".leaf");
+    leaf.style.borderLeft = "280px solid #ff0000";
+    leaf.style.transition = "500ms";
   }
   //staff-info-container
-  staffInfoContainer.style.color = '#ff0000'
-  staffInfoContainer.style.transition = '500ms'
-}
+  staffInfoContainer.style.color = "#ff0000";
+  staffInfoContainer.style.transition = "500ms";
+};
 
 let leave = (id) => {
-  let allArray = []
-  let all = document.querySelectorAll('.container[role="staff-container"]')
-  allArray = Array.from(all)
-  let specific = allArray.at(id - 1)
-  console.log('Specific', specific)
+  let allArray = [];
+  let all = document.querySelectorAll('.container[role="staff-container"]');
+  allArray = Array.from(all);
+  let specific = allArray.at(id - 1);
 
-  let container = specific.querySelector('.container[role="staff-container"]')
-  let staffInfoContainer = specific.querySelector('.staff-info-container')
-  let shape = specific.querySelector('.shape')
-  let img = specific.querySelector('.staff-image')
+  let container = specific.querySelector('.container[role="staff-container"]');
+  let staffInfoContainer = specific.querySelector(".staff-info-container");
+  let shape = specific.querySelector(".shape");
+  let img = specific.querySelector(".staff-image");
   //image
-  img.style.transform = 'scale(1)'
-  img.style.clipPath = 'rect(0% 100% 100% 0%)'
-  img.style.transition = '500ms'
+  img.style.transform = "scale(1)";
+  img.style.clipPath = "rect(0% 100% 100% 0%)";
+  img.style.transition = "500ms";
   // shape
-  if (shape.classList.contains('circle')) {
-    let circle = specific.querySelector('.circle')
-    circle.style.background = '#000'
-    circle.style.transition = '500ms'
-  } else if (shape.classList.contains('rectangle')) {
-    let rectangle = specific.querySelector('.rectangle')
-    rectangle.style.background = '#000'
-    rectangle.style.transition = '500ms'
-  } else if (shape.classList.contains('triangle')) {
-    let triangle = specific.querySelector('.triangle')
-    triangle.style.borderTop = '280px solid #000'
-    triangle.style.transition = '500ms'
-  } else if (shape.classList.contains('half-rectangle')) {
-    let halfRectangle = specific.querySelector('.half-rectangle')
-    halfRectangle.style.borderTop = '0px solid #000'
-    halfRectangle.style.borderBottom = '280px solid #000'
-    halfRectangle.style.transition = '500ms'
-  } else if (shape.classList.contains('leaf')) {
-    let leaf = specific.querySelector('.leaf')
-    leaf.style.borderLeft = '280px solid #000'
-    leaf.style.transition = '500ms'
+  if (shape.classList.contains("circle")) {
+    let circle = specific.querySelector(".circle");
+    circle.style.background = "#000";
+    circle.style.transition = "500ms";
+  } else if (shape.classList.contains("rectangle")) {
+    let rectangle = specific.querySelector(".rectangle");
+    rectangle.style.background = "#000";
+    rectangle.style.transition = "500ms";
+  } else if (shape.classList.contains("triangle")) {
+    let triangle = specific.querySelector(".triangle");
+    triangle.style.borderTop = "280px solid #000";
+    triangle.style.transition = "500ms";
+  } else if (shape.classList.contains("half-rectangle")) {
+    let halfRectangle = specific.querySelector(".half-rectangle");
+    halfRectangle.style.borderTop = "0px solid #000";
+    halfRectangle.style.borderBottom = "280px solid #000";
+    halfRectangle.style.transition = "500ms";
+  } else if (shape.classList.contains("leaf")) {
+    let leaf = specific.querySelector(".leaf");
+    leaf.style.borderLeft = "280px solid #000";
+    leaf.style.transition = "500ms";
   }
   //staff-info-container
-  staffInfoContainer.style.color = '#000'
-  staffInfoContainer.style.transition = '500ms'
-}
+  staffInfoContainer.style.color = "#000";
+  staffInfoContainer.style.transition = "500ms";
+};
 </script>
 
 <style scoped>
@@ -129,7 +127,7 @@ let leave = (id) => {
   border: 0;
 }
 
-div[role='staff-container'] {
+div[role="staff-container"] {
   width: 17.5rem;
   height: 22.5rem;
   position: relative;
