@@ -115,6 +115,7 @@ export const staff = {
       department: 'Head of Production',
       shape: 'circle',
       img: MarinBosnjak,
+      description: '',
     },
     {
       id: 2,
@@ -122,6 +123,7 @@ export const staff = {
       department: 'Financial Manager',
       shape: 'rectangle',
       img: JasminaKazazic,
+      description: '',
     },
     {
       id: 3,
@@ -129,6 +131,8 @@ export const staff = {
       department: 'Project Assistant/Booking Manager',
       shape: 'triangle',
       img: LubnaCuric,
+      description:
+        'Lubna Ćurić is a student of pedagogy and project assistant and manager of the Booking department at the Rock school. She entered the world of music by attending the first and second degree music school in Mostar, where she played the piano. She fulfilled her ambition towards rhythm and dynamics by enrolling in the Rock School Mostar in 2017, where she started playing drums. At the Rock School, she was the drummer of the then Academic band, and in 2019 she became the drummer of the band New Soul Generation Bosnia and went on a German tour with New Soul Generation Germany. In 2021, she started her DJ career and become an active member of both the local and wider electronic scene.',
     },
     {
       id: 4,
@@ -136,6 +140,7 @@ export const staff = {
       department: 'Project Manager',
       shape: 'circle',
       img: OrhanMaslo,
+      description: '',
     },
   ],
   programme: [
@@ -145,6 +150,7 @@ export const staff = {
       department: 'Creative Department/Drums & Audio Production',
       shape: 'triangle',
       img: DjenoMujic,
+      description: '',
     },
     {
       id: 6,
@@ -152,6 +158,7 @@ export const staff = {
       department: 'Head of Education/Vocal Coach',
       shape: 'circle',
       img: MonikaGrubisic,
+      description: '',
     },
     {
       id: 7,
@@ -159,6 +166,7 @@ export const staff = {
       department: 'Student Administration Officer',
       shape: 'rectangle',
       img: NerminaCoric,
+      description: '',
     },
   ],
   lecturers: [
@@ -168,6 +176,7 @@ export const staff = {
       department: 'Guitar',
       shape: 'half-rectangle',
       img: AtilaAksoj,
+      description: '',
     },
     {
       id: 9,
@@ -175,6 +184,7 @@ export const staff = {
       department: 'Guitar',
       shape: 'leaf',
       img: IvanKovacevic,
+      description: '',
     },
     {
       id: 10,
@@ -182,6 +192,7 @@ export const staff = {
       department: 'Guitar',
       shape: 'triangle',
       img: DomagojZelenika,
+      description: '',
     },
     {
       id: 11,
@@ -189,6 +200,7 @@ export const staff = {
       department: 'Band Coach',
       shape: 'circle',
       img: SeminMerzic,
+      description: '',
     },
   ],
 }

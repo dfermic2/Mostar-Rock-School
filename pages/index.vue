@@ -1,12 +1,10 @@
 <template>
   <div>
-    <!-- <div class="bg-grey"> -->
-    <header>
-      <Navbar />
-    </header>
-    <SponsorAutoSlider />
-    <Statistics />
-    <!-- </div> -->
+    <div class="bg-grey">
+      <header>
+        <Navbar />
+      </header>
+    </div>
     <p>Index</p>
   </div>
 </template>
