@@ -17,23 +17,23 @@ const { offers } = defineProps(['offers'])
 
 <style scoped>
 .curriculum-offer {
-  max-width: 440px;
-  padding: 40px 20px 40px 40px;
+  max-width: 27.5rem;
+  padding: 2.5rem 1.25rem 2.5rem 2.5rem;
   background: #fafbfb;
-  border-radius: 5px;
-  box-shadow: 1px 4px 6px #cbcbcb;
-  margin-bottom: 50px;
+  border-radius: 0.3125rem;
+  box-shadow: 0.0625rem 0.25rem 0.375rem #cbcbcb;
+  margin-bottom: 0.3125rem;
 }
 
 .curriculum-offer > h3 {
-  font-size: 19px;
-  margin-bottom: 20px;
-  line-height: 25px;
+  font-size: 1.1875rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5625rem;
 }
 
 .offers {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 </style>

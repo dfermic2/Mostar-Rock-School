@@ -11,21 +11,21 @@ const { offer } = defineProps(['offer'])
 
 <style scoped>
 .offer {
-  width: 440px;
-  height: 25px;
+  width: 27.5rem;
+  height: 1.5625rem;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .box {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   background: #ff0000;
 }
 
 .offer > p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
 }
 </style>
