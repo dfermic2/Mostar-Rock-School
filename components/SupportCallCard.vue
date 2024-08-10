@@ -51,6 +51,7 @@
   width: 30rem;
   height: 19.6875rem;
   border-radius: 0.1875rem;
+  overflow: hidden;
 }
 
 .container {
@@ -141,7 +142,7 @@ button {
 
 .with-animation:hover {
   pointer-events: none;
-  box-shadow: 1.25rem 1.25rem 4.375rem #d3d3d3;
+  box-shadow: 0.25rem 1.25rem 2.375rem #0000004f;
 
   .container {
     background: #bb0000;

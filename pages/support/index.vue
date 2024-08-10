@@ -57,77 +57,7 @@
 </template>
 
 <script setup>
-const donationTypes = [
-  {
-    id: 1,
-    title: "Online donation",
-    description:
-      "Visit our secure online donation platform to contribute easily and securely. Choose a one-time donation or become a monthly supporter, providing sustained support for our programs.",
-    btnIcn: "ion:heart",
-    btnText: "DONATE NOW!",
-  },
-  {
-    id: 2,
-    title: "Corporate Sponsorship",
-    description:
-      "Explore our corporate sponsorship opportunities and make a lasting impact as a business. Together, we can build stronger communities through the power of music.",
-    btnIcn: "",
-    btnText: "CONTACT US",
-  },
-  {
-    id: 3,
-    title: "In-Kind Donations",
-    description:
-      "If you have musical instruments, equipment, or other resources that can benefit our programs, consider making an in-kind donation. Your contribution directly supports the growth and development of our students.",
-    btnIcn: "",
-    btnText: "GET IN TOUCH",
-  },
-  {
-    id: 4,
-    title: "Fundraising Events",
-    description:
-      "Get involved in our fundraising events or organize your own to support the Mostar Rock School. From benefit concerts to charity auctions, there are various ways to rally support and make a meaningful impact.",
-    btnIcn: "",
-    btnText: "LET'S TALK ABOUT YOUR IDEAS",
-  },
-];
-
-import tongue from "../public/assets/images/tongue.png";
-import bubbles from "../public/assets/images/bubbles.png";
-import drum from "../public/assets/images/drum.png";
-import diamond from "../public/assets/images/diamond.png";
-import SponsorAutoSlider from "~/components/SponsorAutoSlider.vue";
-
-let contributionTypes = [
-  {
-    id: 1,
-    type: "Education",
-    content: `By funding our classrooms, you provide quality music education to talented individuals who may not have access otherwise. Your contribution helps us offer comprehensive programs, individual lessons, group sessions, band collaborations, and live performances.`,
-    icon: tongue,
-    iconName: "Tongue",
-  },
-  {
-    id: 2,
-    type: "Community Integration",
-    content: `Your donation allows us to conduct workshops and outreach programs, reaching out to marginalized communities and promoting inclusivity. Through music, we can bridge divides and foster understanding among diverse groups.`,
-    icon: bubbles,
-    iconName: "Bubbles",
-  },
-  {
-    id: 3,
-    type: "Impactful events",
-    content: `By supporting our concerts, festivals, and special events, you help us create memorable experiences for our students and the wider community. These events not only showcase the incredible talent nurtured at the Mostar Rock School but also bring people together in celebration of music.`,
-    icon: drum,
-    iconName: "Drum",
-  },
-  {
-    id: 4,
-    type: "Scholarship",
-    content: `Your generosity can provide scholarships and financial aid packages to deserving students. With your support, we ensure that talented individuals, regardless of their financial circumstances, have the opportunity to pursue their musical dreams and unlock their full potential.`,
-    icon: diamond,
-    iconName: "Diamond",
-  },
-];
+import { donationTypes, contributionTypes } from "~/data";
 </script>
 
 <style scoped>

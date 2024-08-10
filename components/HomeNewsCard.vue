@@ -6,7 +6,7 @@
           id="video-clip"
           width="660"
           height="340"
-          src="https://www.youtube.com/embed/iIpfWORQWhU?si=baGQfwA-T06i9B2P"
+          src="https://www.youtube.com/embed/3V33lgbQ-Js?si=XJppkZudGal6Zbqo"
           title="YouTube video player"
           frameborder="1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -32,36 +32,36 @@
 
 <script setup>
 onMounted(() => {
-  console.log('Mounted')
-  let container = document.querySelector('.container[role="home-news-card"]')
-  let video = document.getElementById('video-clip')
-  let btn = document.getElementById('btn')
+  console.log("Mounted");
+  let container = document.querySelector('.container[role="home-news-card"]');
+  let video = document.getElementById("video-clip");
+  let btn = document.getElementById("btn");
 
-  container.addEventListener('mouseover', () => {
+  container.addEventListener("mouseover", () => {
     // iframe style
-    video.style.transform = 'scale(1.1)'
-    video.style.transition = '500ms'
+    video.style.transform = "scale(1.1)";
+    video.style.transition = "500ms";
     // button style
-    btn.style.background = '#b00000'
-    btn.style.transition = '500ms'
+    btn.style.background = "#b00000";
+    btn.style.transition = "500ms";
 
     //container
-    container.style.boxShadow = '0.0625rem 0.4375rem 1.25rem #e3e3e3'
-    container.style.transition = '500ms'
-  })
+    container.style.boxShadow = "0.0625rem 0.4375rem 1.25rem #e3e3e3";
+    container.style.transition = "500ms";
+  });
 
-  container.addEventListener('mouseleave', () => {
+  container.addEventListener("mouseleave", () => {
     // iframe style
-    video.style.transform = 'scale(1)'
-    video.style.transition = '500ms'
+    video.style.transform = "scale(1)";
+    video.style.transition = "500ms";
     // button style
-    btn.style.background = '#ff0000'
-    btn.style.transition = '500ms'
+    btn.style.background = "#ff0000";
+    btn.style.transition = "500ms";
     //container
-    container.style.boxShadow = '0.0625rem 0.25rem 0.5rem #ced0d4'
-    container.style.transition = '500ms'
-  })
-})
+    container.style.boxShadow = "0.0625rem 0.25rem 0.5rem #ced0d4";
+    container.style.transition = "500ms";
+  });
+});
 </script>
 
 <style scoped>
@@ -71,7 +71,7 @@ onMounted(() => {
   border: 0;
 }
 
-.container[role='home-news-card'] {
+.container[role="home-news-card"] {
   width: 41.25rem;
   height: 34.375rem;
   padding: 2.5rem 2.5rem 1.875rem 2.5rem;

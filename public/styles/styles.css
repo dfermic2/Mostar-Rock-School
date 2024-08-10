@@ -53,8 +53,13 @@
 .g-2 {
   gap: 2rem;
 }
+
 .g-3 {
   gap: 3rem;
+}
+
+.pt-15 {
+  padding-top: 1.5rem;
 }
 
 .pl-1 {
