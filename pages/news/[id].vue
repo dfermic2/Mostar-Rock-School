@@ -64,7 +64,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10.625rem;
+  margin-top: 6.625rem;
 }
 
 .info {
