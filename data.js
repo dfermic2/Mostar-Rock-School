@@ -461,3 +461,55 @@ export const offers = [
     offer: 'Audio recording production',
   },
 ]
+
+export const years = [
+  {
+    id: 1,
+    year: 2012,
+    title: 'How it started ',
+    about:
+      'Mostar Rock School began its work in August 2012. Twenty young musicians from Mostar (16 students and 4 lecturers) took part in a summer rock camp in Macedonia – Skopje Summer School. First school bands were formed which will lead the way for many generations to come.',
+  },
+  {
+    id: 2,
+    year: 2014,
+    title: 'The humble beginning',
+    about:
+      'Mostar Rock School was registered as an NGO at the local level with the aim of actively contributing through its activities to the revival of the comprehensive urban music scene in Mostar and Bosnia and Herzegovina, and to connect young people through music as a means of achieving their common goals, regardless of their ethnic, religious or other affiliation.',
+  },
+  {
+    id: 3,
+    year: 2015,
+    title: 'Summer of Music',
+    about:
+      'The program started getting traction. More and more students were now a part of the School. In addition, with the help of the Embassy of the Republic of Germany in Bosnia and Herzegovina, Mostar Rock School successfully realized the project called &#39;Summer Rock School&#39; expanding its reach to a wider area.',
+  },
+  {
+    id: 4,
+    year: 2016,
+    title: 'Sailing Through Uncertainty',
+    about:
+      'At the beginning of 2016, with a record number of students thus far, Mostar Rock School is left without funds because the support for this fifth program year could not be continued due to the redirection of the priorities of the Norwegian government. After a 10-month crisis period, we were back on stronger to Rock again!',
+  },
+  {
+    id: 5,
+    year: 2017,
+    title: 'New Partnerships',
+    about:
+      'Mostar Rock School signed and concluded a three-year contract with the Swedish Embassy in Sarajevo in March 2017, and a three-year contract with USAID in Bosnia and Herzegovina in May 2017. The program started expanding, as well as the interest for the School. With the addition of the Booking Department, Mostar Rock School started establishing itself as a bigger generator of cultural and musical events.',
+  },
+  {
+    id: 6,
+    year: 2018,
+    title: 'Continuity and Collaboration',
+    about:
+      'In August 2018, Rock School again signed a three-year agreement with the Embassy of the Kingdom of Norway, and successfully continued with the previous school activities, reaching even bigger numbers, outreaching to communities outside of Mostar with its Mobile Rock School Program and strengthening its core educational program further.',
+  },
+  {
+    id: 7,
+    year: 2023,
+    title: 'Going Forward',
+    about:
+      'The journey is far from over, and the future is bright. Mostar Rock School is expanding horizons, making music, and leaving an indelible mark on the world. With every chord played and every note sung, it continues to be a beacon of hope, unity, and artistic expression in Mostar and beyond.',
+  },
+]
