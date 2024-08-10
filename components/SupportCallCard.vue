@@ -112,6 +112,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.1875rem;
+  cursor: pointer;
 }
 
 button {
@@ -125,6 +126,7 @@ button {
   border: none;
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .animation-container {

@@ -85,32 +85,32 @@
 </template>
 
 <script setup>
-const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000];
+const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000]
 const items = [
   {
-    key: "singledonation",
-    label: "Single donation",
+    key: 'singledonation',
+    label: 'Single donation',
   },
   {
-    key: "monthlysupport",
-    label: "Montly support",
+    key: 'monthlysupport',
+    label: 'Montly support',
   },
-];
+]
 
 const handleValuePick = () => {
-  let amountDonations = document.querySelectorAll(".donation");
-  let donationValue = null;
+  let amountDonations = document.querySelectorAll('.donation')
+  let donationValue = null
 
   amountDonations.forEach((amount) => {
-    amount.addEventListener("click", (e) => {
+    amount.addEventListener('click', (e) => {
       amountDonations.forEach((amount) => {
-        amount.classList.remove("active");
-      });
-      e.currentTarget.classList.add("active");
-      donationValue = e.currentTarget.dataset.amount;
-    });
-  });
-};
+        amount.classList.remove('active')
+      })
+      e.currentTarget.classList.add('active')
+      donationValue = e.currentTarget.dataset.amount
+    })
+  })
+}
 </script>
 
 <style scoped>
@@ -250,6 +250,7 @@ input::-webkit-inner-spin-button {
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .btn:hover {
