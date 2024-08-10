@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container tailwind">
+    <div class="container tailwind-custom">
       <UTabs
         :items="items"
         :ui="{
@@ -51,6 +51,7 @@
               <div class="amount-donations">
                 <span
                   class="donation"
+                  role="money-donation"
                   @click="handleValuePick()"
                   v-for="amount in possibleDonationAmounts"
                   :key="amount"
@@ -85,32 +86,34 @@
 </template>
 
 <script setup>
-const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000];
+const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000]
 const items = [
   {
-    key: "singledonation",
-    label: "Single donation",
+    key: 'singledonation',
+    label: 'Single donation',
   },
   {
-    key: "monthlysupport",
-    label: "Montly support",
+    key: 'monthlysupport',
+    label: 'Montly support',
   },
-];
+]
 
 const handleValuePick = () => {
-  let amountDonations = document.querySelectorAll(".donation");
-  let donationValue = null;
+  let amountDonations = document.querySelectorAll(
+    '.donation[role="money-donation"]'
+  )
+  let donationValue = null
 
   amountDonations.forEach((amount) => {
-    amount.addEventListener("click", (e) => {
+    amount.addEventListener('click', (e) => {
       amountDonations.forEach((amount) => {
-        amount.classList.remove("active");
-      });
-      e.currentTarget.classList.add("active");
-      donationValue = e.currentTarget.dataset.amount;
-    });
-  });
-};
+        amount.classList.remove('active')
+      })
+      e.currentTarget.classList.add('active')
+      donationValue = e.currentTarget.dataset.amount
+    })
+  })
+}
 </script>
 
 <style scoped>
@@ -160,7 +163,7 @@ const handleValuePick = () => {
   background: #fafbfb;
   border-radius: 0.2rem;
   box-shadow: 1px 1px 3px #d6d6d6;
-  transition: 600ms;
+  transition: 200ms;
 }
 
 .active {
@@ -195,7 +198,6 @@ const handleValuePick = () => {
 .custom-donation {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .custom-donation > input {
@@ -250,10 +252,18 @@ input::-webkit-inner-spin-button {
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background: #ff4343;
+  background: #b00;
+  transition: 500ms;
+}
+
+.btn:not(hover) {
+  background: #ff0000;
+  transition: 500ms;
 }
 
 .btn > span {
