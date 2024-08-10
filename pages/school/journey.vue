@@ -191,7 +191,7 @@ header {
 
 .scrollbar {
   position: absolute;
-  bottom: 0rem;
+  bottom: -0.0625rem;
   z-index: -1;
 }
 </style>
