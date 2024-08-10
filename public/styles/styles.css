@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 .tailwind-custom {
   *,
@@ -32,10 +32,11 @@
 */
 
   button,
-  input:where([type='button']),
-  input:where([type='reset']),
-  input:where([type='submit']) {
-    -webkit-appearance: button; /* 1 */
+  input:where([type="button"]),
+  input:where([type="reset"]),
+  input:where([type="submit"]) {
+    -webkit-appearance: button;
+    appearance: button; /* 1 */
     background-color: transparent; /* 2 */
     background-image: none; /* 2 */
   }
@@ -54,7 +55,7 @@ Add the correct display in Chrome and Safari.
   }
 
   button,
-  [role='button'] {
+  [role="button"] {
     cursor: pointer;
   }
 }
@@ -112,8 +113,13 @@ Add the correct display in Chrome and Safari.
 .g-2 {
   gap: 2rem;
 }
+
 .g-3 {
   gap: 3rem;
+}
+
+.pt-15 {
+  padding-top: 1.5rem;
 }
 
 .pl-1 {
@@ -173,7 +179,7 @@ Add the correct display in Chrome and Safari.
   transition: all 0.2s linear;
 }
 
-.normal {
+.normal-ovarlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -185,7 +191,7 @@ Add the correct display in Chrome and Safari.
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }

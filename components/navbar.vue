@@ -80,11 +80,11 @@
 <script setup>
 function addOverlay() {
   document.querySelector("#darkenOverlay").classList.add("darken");
-  document.querySelector("#darkenOverlay").classList.remove("normal");
+  document.querySelector("#darkenOverlay").classList.remove("normal-overlay");
 }
 
 function removeOverlay() {
-  document.querySelector("#darkenOverlay").classList.add("normal");
+  document.querySelector("#darkenOverlay").classList.add("normal-overlay");
   document.querySelector("#darkenOverlay").classList.remove("darken");
 }
 </script>

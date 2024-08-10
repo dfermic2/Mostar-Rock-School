@@ -26,8 +26,8 @@
 
       <section class="footer p-inline-25">
         <div class="fee-info">
-          <img src="../assets/images/Ticket.png" alt="Ticket icon" />
-          <p class="mr-05 f-size-m">
+          <img src="../public/assets/images/Ticket.png" alt="Ticket icon" />
+          <p class="f-size-m">
             <span>{{ event.fee }}</span>
           </p>
         </div>

@@ -1,279 +1,456 @@
 <template>
   <div>
-    <div class="bg-grey">
-      <header>
-        <Navbar />
-      </header>
+    <header>
+      <Navbar />
+      <div class="heading-container">
+        <div class="heading-content">
+          <div class="heading">
+            <h1>The School That Rocks</h1>
+            <p>
+              Experience the transformative power of music and make a
+              difference. Become a student or support our mission today.
+            </p>
+            <NuxtLink to="/school">
+              <button>
+                <img src="../public/assets/images/note.png" />
+                LEARN ABOUT THE SCHOOL
+              </button>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="vignette-wrapper">
+      <div class="vignette"></div>
     </div>
-    <p>Index</p>
+    <div class="video-container">
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source src="../public/assets/home-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="support-container">
+      <div class="support-content">
+        <div class="support-text">
+          <h1>We make music thats more than just a collection of notes</h1>
+          <p>
+            We are a vibrant and inclusive community that harnesses the power of
+            music to bridge divides, foster unity, and inspire positive change.
+            Since 2012, we have embarked on an incredible journey, transforming
+            lives through the universal language of music.
+          </p>
+        </div>
+        <div class="support-card">
+          <SupportCallCard />
+        </div>
+      </div>
+    </div>
+    <div class="programme-container">
+      <div class="programme-content">
+        <div class="programme-video">
+          <iframe
+            width="680"
+            height="380"
+            src="https://www.youtube.com/embed/pckqkg0EeWo?si=cdqFol9-Fa_upJ9t"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div>
+          <p>
+            As a leading music education institution, we provide aspiring
+            musicians with a nurturing environment to learn, create, and
+            connect, empowering students to unlock their musical potential,
+            explore their creativity, and develop lifelong skills.
+          </p>
+          <p>
+            Together, we are making music that transcends boundaries and
+            empowers individuals to make a positive impact in their communities
+            and beyond.
+          </p>
+          <NuxtLink to="/programme">
+            <button>VIEW OUR PROGRAMME</button>
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
+    <Invite />
+    <div class="news-events-container">
+      <div class="news-events-content">
+        <h1 class="ne-heading">And I said: hey, what's going on?...</h1>
+        <div class="news-events">
+          <div class="news">
+            <div class="news-events-heading pt-15">
+              <h1>News</h1>
+              <NuxtLink to="/news">
+                <button>VIEW ALL</button>
+              </NuxtLink>
+            </div>
+            <HomeNewsCard />
+            <BasicPaging class="pt-15" />
+          </div>
+          <div class="events">
+            <div class="news-events-heading">
+              <h1>Events</h1>
+              <button>VIEW ALL</button>
+            </div>
+            <div class="events-list">
+              <div v-for="event in events" :key="event.id">
+                <EventCard :event="event" />
+              </div>
+            </div>
+            <BasicPaging class="pt-15" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Donation />
+    <div class="sponsors">
+      <div class="sponsors-heading">
+        <h1>Making this journey possible</h1>
+        <button>VIEW OUR SPONSORS</button>
+      </div>
+      <div class="sponsors-slider">
+        <hr />
+        <SponsorAutoSlider />
+        <hr />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import videoType from "../public/assets/images/news-images/icon-video.png";
-import textType from "../public/assets/images/news-images/icon-text.png";
-import quoteType from "../public/assets/images/news-images/icon-quote.png";
-
-import firstArticlePhoto from "../public/assets/images/news-images/firstArticlePhoto.png";
-import secondArticlePhoto from "../public/assets/images/news-images/secondArticlePhoto.png";
-import thirdArticlePhoto from "../public/assets/images/news-images/thirdArticlePhoto.png";
-import fourthArticlePhoto from "../public/assets/images/news-images/fourthArticlePhoto.png";
-import fifthArticlePhoto from "../public/assets/images/news-images/fifthArticlePhoto.png";
-import sixthArticlePhoto from "../public/assets/images/news-images/sixthArticlePhoto.png";
-import seventhArticlePhoto from "../public/assets/images/news-images/seventhArticlePhoto.png";
-import eightArticlePhoto from "../public/assets/images/news-images/eightArticlePhoto.png";
-
-const news = [
-  {
-    id: 1,
-    title: "Come together: how music is rebuilding bridges in divided Balkans",
-    date: "1 August 2024",
-    newsTypeIcon: videoType,
-    newsTypeIconName: "Video icon",
-    coverPhoto: firstArticlePhoto,
-    category: "Video",
-  },
-  {
-    id: 2,
-    title: 'Jazz masterclass with Francisco Angel Blanco "Latino"',
-    date: "31 July 2024",
-    newsTypeIcon: textType,
-    newsTypeIconName: "Text icon",
-    coverPhoto: secondArticlePhoto,
-    category: "Article",
-  },
-  {
-    id: 3,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "30 July 2024",
-    newsTypeIcon: quoteType,
-    newsTypeIconName: "Quote icon",
-    coverPhoto: thirdArticlePhoto,
-    category: "Interview",
-  },
-  {
-    id: 4,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "29 July 2024",
-    newsTypeIcon: textType,
-    newsTypeIconName: "Text icon",
-    coverPhoto: fourthArticlePhoto,
-    category: "Article",
-  },
-  {
-    id: 5,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "28 July 2024",
-    newsTypeIcon: videoType,
-    newsTypeIconName: "Video icon",
-    coverPhoto: fifthArticlePhoto,
-    category: "Video",
-  },
-  {
-    id: 6,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "27 July 2024",
-    newsTypeIcon: textType,
-    newsTypeIconName: "Text icon",
-    coverPhoto: sixthArticlePhoto,
-    category: "Article",
-  },
-  {
-    id: 7,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "26 July 2024",
-    newsTypeIcon: textType,
-    newsTypeIconName: "Text icon",
-    coverPhoto: seventhArticlePhoto,
-    category: "Article",
-  },
-  {
-    id: 8,
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ab.",
-    date: "25 July 2024",
-    newsTypeIcon: textType,
-    newsTypeIconName: "Text icon",
-    coverPhoto: eightArticlePhoto,
-    category: "Article",
-  },
-];
-
-let categories = [...new Set(news.map((c) => c.category))];
-categories.splice(0, 0, "All Categories");
-
-const events = [
-  {
-    id: 1,
-    title: "Treći po redu MORS session event u K19",
-    date: "27.04.2023",
-    time: "21:00",
-    location: "MC Pavarotti",
-    fee: "5 KM",
-  },
-  {
-    id: 2,
-    title: "Edo Maajka u Mostaru",
-    date: "27.04.2023",
-    time: "21:00",
-    location: "OKC Abrasevic",
-    fee: "Free",
-  },
-];
-
-/* PLATINUM SPONSORS */
-
-import norway_embassy_sarajevo from "../public/assets/images/Norwegian Embassy Sarajevo.png";
-import kingdom_of_netherland from "../public/assets/images/Kingdom of Netherland.png";
-
-const platinumSponsors = [
-  {
-    id: 1,
-    name: "Norwegian Embassy Sarajevo",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.",
-    img: norway_embassy_sarajevo,
-  },
-  {
-    id: 2,
-    name: "Kingdom of the Netherlands",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta exercitationem dolore accusamus at et aperiam, harum minus. Minima, expedita delectus.",
-    img: kingdom_of_netherland,
-  },
-];
-
-/* GOLDEN SPONSORS */
-
-import njemacka_ambasada_sarajevo from "../public/assets/images/Njemacka ambasada Sarajevo.png";
-import embassy_of_sweden_sarajevo from "../public/assets/images/Embassy of Sweden Sarajevo.png";
-import swiss_agency from "../public/assets/images/SWISS-AGENCY.png";
-
-const goldenSponsors = [
-  {
-    id: 1,
-    name: "Njemacka Ambasada Sarajevo",
-    img: njemacka_ambasada_sarajevo,
-  },
-  {
-    id: 2,
-    name: "Embassy of Sweden Sarajevo",
-    img: embassy_of_sweden_sarajevo,
-  },
-  {
-    id: 3,
-    name: "Swiss Agency for Development and Cooperation",
-    img: swiss_agency,
-  },
-];
-
-/* BASIC SPONSORS */
-
-import federalno_ministarstvo_kulture_i_sporta from "../public/assets/images/FBIH-Kultura i sport.png";
-import usaid from "../public/assets/images/USAID.png";
-import grad_mostar from "../public/assets/images/GRAD-MOSTAR 242x121.png";
-import amus from "../public/assets/images/AMUS.png";
-import spark from "../public/assets/images/SPARK.png";
-import federalno_ministarstvo_obrazovanja_i_nauke from "../public/assets/images/Federalno ministarstvo obrazovanja i nauke.png";
-import usa_embassy_sarajevo from "../public/assets/images/USA Embassy Sarajevo.png";
-import vlada_hnk from "../public/assets/images/VLADA-HNK.png";
-import stability_pact_for_eastern_europe from "../public/assets/images/STABILITY-PAKT.png";
-import dubioza_kolektiv from "../public/assets/images/DUBIOZA KOLEKTIV.png";
-import red_bull from "../public/assets/images/RED-BULL.png";
-import osce from "../public/assets/images/OSCE.png";
-import robert_bosch_stiftung from "../public/assets/images/ROBERT-BOSCH.png";
-import SpreadTheWord from "~/components/SpreadTheWord.vue";
-
-const basicSponsors = [
-  {
-    id: 1,
-    name: "Kingdom of the Netherlands",
-    img: kingdom_of_netherland,
-  },
-  {
-    id: 2,
-    name: "Norwegian Embassy Sarajevo",
-    img: norway_embassy_sarajevo,
-  },
-  {
-    id: 3,
-    name: "Federalno ministarstvo kulture i sporta",
-    img: federalno_ministarstvo_kulture_i_sporta,
-  },
-  {
-    id: 4,
-    name: "USAID",
-    img: usaid,
-  },
-  {
-    id: 5,
-    name: "Embassy of Sweden Sarajevo",
-    img: embassy_of_sweden_sarajevo,
-  },
-  {
-    id: 6,
-    name: "Grad Mostar",
-    img: grad_mostar,
-  },
-  {
-    id: 7,
-    name: "Swiss Agency for Development and Cooperation",
-    img: swiss_agency,
-  },
-  {
-    id: 8,
-    name: "AMUS",
-    img: amus,
-  },
-  {
-    id: 9,
-    name: "SPARK",
-    img: spark,
-  },
-  {
-    id: 10,
-    name: "Federalno ministarstvo obrazovanja i nauke",
-    img: federalno_ministarstvo_obrazovanja_i_nauke,
-  },
-  {
-    id: 11,
-    name: "USA Embassy Sarajevo",
-    img: usa_embassy_sarajevo,
-  },
-  {
-    id: 12,
-    name: "Vlada HNK",
-    img: vlada_hnk,
-  },
-  {
-    id: 13,
-    name: "Stability Pack",
-    img: stability_pact_for_eastern_europe,
-  },
-  {
-    id: 14,
-    name: "Dubioza Kolektiv",
-    img: dubioza_kolektiv,
-  },
-  {
-    id: 15,
-    name: "Red Bull",
-    img: red_bull,
-  },
-  {
-    id: 16,
-    name: "OSCE",
-    img: osce,
-  },
-  {
-    id: 17,
-    name: "Robert Bosch Stiftung",
-    img: robert_bosch_stiftung,
-  },
-];
+import { events } from "~/data";
 </script>
+
+<style scoped>
+.heading-container {
+  display: flex;
+  min-height: 40rem;
+}
+
+.heading-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 74rem;
+  margin-inline: auto;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  min-height: 24.6875rem;
+  justify-content: space-between;
+  color: white;
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 6.875rem;
+    line-height: 6.875rem;
+    max-width: 50.8rem;
+    margin: 0;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.69rem;
+    max-width: 28.875rem;
+  }
+
+  img {
+    width: 0.76rem;
+    height: 1.25rem;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 2.82rem;
+    width: 18.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    margin: 1rem 0 0 0;
+    background: red;
+    color: white;
+    line-height: 1.56rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #b00;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.support-container {
+  display: flex;
+  min-height: 24.7rem;
+}
+
+.support-content {
+  display: flex;
+  flex-grow: 1;
+  margin-inline: auto;
+  max-width: 74rem;
+  justify-content: space-between;
+}
+
+.support-text {
+  max-width: 40rem;
+  align-self: flex-end;
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.programme-container {
+  display: flex;
+  flex-grow: 1;
+  min-height: 33.75rem;
+  align-content: center;
+}
+
+.programme-content {
+  display: flex;
+  flex-grow: 1;
+  max-width: 74rem;
+  min-height: 23.75rem;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    max-width: 26.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 2.82rem;
+    width: 17.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    margin: 1rem 0 0 0;
+    background: red;
+    color: white;
+    line-height: 1.56rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #b00;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+iframe {
+  border-radius: 0.3125rem;
+}
+
+.video-container,
+.vignette-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 53.125rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container {
+  z-index: -2;
+  background-color: black;
+}
+
+.vignette-wrapper {
+  z-index: -1;
+}
+
+.vignette {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -16rem;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  height: 53.125rem;
+  width: 100%;
+}
+
+video {
+  position: relative;
+  z-index: -2;
+  right: -16rem;
+  top: 0;
+  height: 110%;
+}
+
+.sponsors {
+  min-height: 30.625rem;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.sponsors-heading {
+  display: flex;
+  max-width: 74rem;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  button {
+    border: 1px solid red;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+    background-color: white;
+    color: red;
+    width: 12.5rem;
+    height: 1.875rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    border: 1px solid #b00;
+    background-color: #b00;
+    color: white;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 2.5rem;
+  }
+}
+
+.sponsors-slider {
+  overflow: hidden;
+}
+hr {
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  max-width: 73.75rem;
+}
+
+.news-events-container {
+  min-height: 60rem;
+  align-content: center;
+}
+
+.news-events-content {
+  max-width: 74rem;
+  margin-inline: auto;
+}
+
+.news-events {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  min-height: 41.125rem;
+}
+
+.news {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  max-width: 41.25rem;
+}
+
+.events {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 34.375rem;
+}
+
+.ne-heading {
+  font-family: "F37Hybrid-Bold";
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+}
+
+.news-events-heading {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+
+  button {
+    border: 1px solid red;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+    background-color: white;
+    color: red;
+    width: 7.5rem;
+    height: 1.875rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    border: 1px solid #b00;
+    background-color: #b00;
+    color: white;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 1.875rem;
+    margin: 0;
+  }
+}
+</style>

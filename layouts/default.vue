@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="darkenOverlay" class="normal"></div>
+    <div id="darkenOverlay" class="normal-overlay"></div>
     <div class="right-menu">
       <MediaLinks :media-position="'side'" />
     </div>
@@ -16,5 +16,6 @@
   position: absolute;
   top: 21.25rem;
   right: 0;
+  z-index: 998;
 }
 </style>

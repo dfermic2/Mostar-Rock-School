@@ -16,13 +16,13 @@
 </template>
 
 <script setup>
-import { sponsors } from '~/data'
+import { sponsors } from "~/data";
 </script>
 
 <style scoped>
 .container {
   height: 12.5rem;
-  margin: 4rem;
+  margin: 3rem;
 }
 
 @keyframes scroll {
