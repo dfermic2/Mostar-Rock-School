@@ -2,6 +2,7 @@
   <div>
     <div class="container tailwind-custom">
       <UTabs
+        :default-index="1"
         :items="items"
         :ui="{
           list: {
@@ -37,7 +38,11 @@
       >
         <template #item="{ item }">
           <!-- Single donation -->
-          <div v-if="item.key === 'singledonation'" class="space-y-3 tabs">
+          <div
+            v-if="item.key === 'singledonation'"
+            class="space-y-3 tabs"
+            tabindex="0"
+          >
             <p>Single donation</p>
           </div>
 
@@ -45,6 +50,7 @@
           <div
             v-if="item.key === 'monthlysupport'"
             class="content space-y-3 pt-5 pl-10 pr-10 pb-10"
+            tabindex="1"
           >
             <section class="donation-section">
               <p class="f-bold-size mb-11875">Pick an amount</p>

@@ -91,7 +91,6 @@ header {
   display: flex;
   align-items: center;
   gap: 6.25rem;
-  color: #fff;
 }
 
 .info > .about {
@@ -100,10 +99,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  color: #fff;
 }
 
 .about > p:first-child {
   cursor: pointer;
+  width: fit-content;
   margin-bottom: 1.5625rem;
   font-size: 1.875rem;
   font-family: 'F37Hybrid-Bold';
@@ -115,7 +116,6 @@ header {
 }
 
 .about > p:first-child:not(hover) {
-  color: #fff;
   transition: 500ms;
 }
 
