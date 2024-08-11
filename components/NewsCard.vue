@@ -102,7 +102,9 @@ let { news } = defineProps(["news"]);
 
 .img {
   max-width: 100%;
-  height: 100%;
+  width: 580px;
+  max-height: 100%;
+  height: 380px;
   position: absolute;
   top: 0;
   left: 0;
@@ -112,8 +114,10 @@ let { news } = defineProps(["news"]);
 }
 
 .news-card-img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  width: 580px;
+  max-height: 100%;
+  height: 350px;
   max-width: 36.25rem;
   max-height: 21.875rem;
   position: relative;

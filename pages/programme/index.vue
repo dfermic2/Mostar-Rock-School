@@ -73,8 +73,6 @@ import { offers } from "~/data";
 
       <section class="band-img">
         <iframe
-          width="1180"
-          height="650"
           src="https://www.youtube.com/embed/MiozKvQGIzg?si=zDeJTniWCfky3apI"
           title="YouTube video player"
           frameborder="0"
@@ -158,8 +156,6 @@ import { offers } from "~/data";
           </div>
           <div class="photo-container">
             <iframe
-              width="440"
-              height="250"
               src="https://www.youtube.com/embed/kPVx7CINnOU?si=CeVJA14qeJQjO9eb"
               title="YouTube video player"
               frameborder="0"
@@ -239,6 +235,7 @@ header {
 
 .hero-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 74rem;
   min-height: 35.9rem;
   margin-inline: auto;
@@ -248,18 +245,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 35.9rem;
+  min-height: 33.9rem;
   align-items: center;
 }
 
 .img-wrapper img {
-  max-width: 33.9rem;
+  max-width: 100%;
+  width: 33.9rem;
   align-self: baseline;
 }
 
 .ellipse {
   position: absolute;
   z-index: -1;
+  max-width: 100%;
   width: 42rem;
   height: 4rem;
   background: radial-gradient(
@@ -270,7 +269,7 @@ header {
 }
 
 .info {
-  max-width: 48.3125rem;
+  max-width: 39.3125rem;
   height: 41.25rem;
   display: flex;
   flex-direction: column;
@@ -327,12 +326,14 @@ h2 {
 
 .music-lessons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 1.875rem;
-  gap: 3.75rem;
+  gap: 1.25rem;
 }
 
 .articles {
-  max-width: 42.5rem;
+  max-width: 40.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -371,9 +372,21 @@ h2 {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: -21.875rem;
+
+  iframe {
+    max-width: 100%;
+    width: 1180px;
+    max-height: 100%;
+    height: 640px;
+  }
 }
+
 .photo-container {
   iframe {
+    max-width: 100%;
+    width: 440px;
+    max-height: 100%;
+    height: 250px;
     box-shadow: 7px 15px 48px 17px rgba(0, 0, 0, 0.2);
   }
 }
@@ -399,7 +412,9 @@ iframe {
 .session-band-program-container {
   margin-top: 1.875rem;
   display: flex;
-  gap: 3.75rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .article-texts {
@@ -408,6 +423,7 @@ iframe {
   line-height: 1.5625rem;
   display: flex;
   flex-direction: column;
+  max-width: 40.5rem;
   gap: 1.25rem;
 }
 
@@ -425,7 +441,9 @@ iframe {
 .music-camps {
   margin-top: 1.875rem;
   display: flex;
-  gap: 3.75rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .music-camps div:first-child {
@@ -445,8 +463,10 @@ iframe {
 
 .event-container {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
   align-items: center;
-  gap: 3.75rem;
+  gap: 2rem;
 }
 
 .right-side {

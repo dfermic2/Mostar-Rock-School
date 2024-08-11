@@ -5,7 +5,7 @@
       :class="{
         'g-125 o-side': mediaPosition === 'side',
         'g-3': mediaPosition === 'footer',
-        'g-6': mediaPosition === 'normal',
+        'g-normal': mediaPosition === 'normal',
       }"
     >
       <div class="link-container">
@@ -92,7 +92,6 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 .container {
   border-radius: 5px 0 0 5px;
   margin: 0;
-  background: #000;
   display: flex;
   width: min-content;
   align-items: center;
@@ -106,7 +105,7 @@ const { mediaPosition } = defineProps(['mediaPosition'])
   gap: 3rem;
 }
 
-.g-6 {
+.g-normal {
   gap: 6rem;
 }
 
@@ -136,6 +135,7 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 .o-side {
   width: 3.125rem;
   height: 10.625rem;
+  background-color: black;
   flex-direction: column;
   padding: 0.6rem;
   box-sizing: border-box;
@@ -156,5 +156,11 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 
 .sc-footer {
   font-size: 2rem;
+}
+
+@media (width < 600px) {
+  .g-normal {
+    gap: 4.3rem;
+  }
 }
 </style>

@@ -53,8 +53,6 @@
       <div class="programme-content">
         <div class="programme-video">
           <iframe
-            width="680"
-            height="380"
             src="https://www.youtube.com/embed/pckqkg0EeWo?si=cdqFol9-Fa_upJ9t"
             title="YouTube video player"
             frameborder="0"
@@ -206,6 +204,7 @@ import { events } from "~/data";
 
 .support-content {
   display: flex;
+  flex-wrap: wrap-reverse;
   flex-grow: 1;
   margin-inline: auto;
   max-width: 74rem;
@@ -214,7 +213,12 @@ import { events } from "~/data";
 
 .support-text {
   max-width: 40rem;
-  align-self: flex-end;
+  display: flex;
+  min-height: 24.7rem;
+  align-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+
   h1 {
     font-family: "F37Hybrid-Bold";
     font-size: 2.5rem;
@@ -238,6 +242,7 @@ import { events } from "~/data";
 
 .programme-content {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   max-width: 74rem;
   min-height: 23.75rem;
@@ -283,6 +288,10 @@ import { events } from "~/data";
 
 iframe {
   border-radius: 0.3125rem;
+  max-width: 100%;
+  width: 680px;
+  max-height: 100%;
+  height: 380px;
 }
 
 .video-container,
@@ -387,6 +396,7 @@ hr {
 
 .news-events {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
   min-height: 41.125rem;
@@ -402,6 +412,7 @@ hr {
 .events {
   display: flex;
   flex-grow: 1;
+  margin-inline: auto;
   flex-direction: column;
   max-width: 30rem;
 }

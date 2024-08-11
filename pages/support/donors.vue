@@ -70,6 +70,7 @@ header {
 .hero-container {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   max-width: 74rem;
   justify-content: space-between;
   align-items: center;
@@ -123,6 +124,7 @@ header {
 
 .platinum-sponsors-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin-top: 2.4375rem;
 }
@@ -133,8 +135,8 @@ header {
 
 .basic-sponsors-container {
   margin-top: 2.4375;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 </style>

@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-const { sponsor } = defineProps(['sponsor'])
+const { sponsor } = defineProps(["sponsor"]);
 </script>
 
 <style scoped>
@@ -28,9 +28,10 @@ const { sponsor } = defineProps(['sponsor'])
 }
 
 .container {
-  width: 36.25rem;
-  height: 13.4375rem;
+  max-width: 36.25rem;
+  min-height: 13.4375rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 1px 1px 3px #d6d6d6;
   border-radius: 0.3125rem;
@@ -41,8 +42,8 @@ const { sponsor } = defineProps(['sponsor'])
 }
 
 .left-side {
-  width: 13.4375rem;
-  height: 13.4375rem;
+  max-width: 13.4375rem;
+  min-height: 13.4375rem;
   box-sizing: border-box;
   background: rgb(237, 243, 252);
   display: flex;
@@ -52,12 +53,13 @@ const { sponsor } = defineProps(['sponsor'])
 }
 
 .image {
+  max-width: 100%;
   width: 12.1875rem;
 }
 
 .right-side {
-  width: 22.9375rem;
-  height: 13.4375rem;
+  max-width: 21.9375rem;
+  min-height: 13.4375rem;
   box-sizing: border-box;
   padding: 1.875rem 2.5rem;
 }
@@ -74,5 +76,16 @@ const { sponsor } = defineProps(['sponsor'])
 
 .f-size-m {
   font-size: 1.0625rem;
+}
+
+@media (width < 600px) {
+  .left-side {
+    width: 100%;
+    max-width: 100%;
+  }
+  .right-side {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

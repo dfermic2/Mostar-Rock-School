@@ -41,45 +41,45 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-let { articles, categories } = defineProps(['articles', 'categories'])
-let ref_articles = ref(articles)
+import { ref } from "vue";
+let { articles, categories } = defineProps(["articles", "categories"]);
+let ref_articles = ref(articles);
 
 let sortBy = () => {
-  let selectItem = document.querySelector('.sort-filter')
-  let checkedSortingMethod = selectItem.options[selectItem.selectedIndex].value
+  let selectItem = document.querySelector(".sort-filter");
+  let checkedSortingMethod = selectItem.options[selectItem.selectedIndex].value;
 
   if (selectItem.selectedIndex === 0) {
-    ref_articles.value = [...articles]
-  } else if (checkedSortingMethod === 'Latest first') {
+    ref_articles.value = [...articles];
+  } else if (checkedSortingMethod === "Latest first") {
     ref_articles.value = ref_articles.value.sort((a, b) => {
-      return new Date(a.date) - new Date(b.date)
-    })
-  } else if (checkedSortingMethod === 'Earliest first') {
+      return new Date(a.date) - new Date(b.date);
+    });
+  } else if (checkedSortingMethod === "Earliest first") {
     ref_articles.value = ref_articles.value.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date)
-    })
+      return new Date(b.date) - new Date(a.date);
+    });
   }
-}
+};
 
 let filterByCategory = () => {
-  ref_articles.value = [...articles]
-  let selectItem = document.querySelector('.select-filter')
-  let checkedCategory = selectItem.options[selectItem.selectedIndex].value
+  ref_articles.value = [...articles];
+  let selectItem = document.querySelector(".select-filter");
+  let checkedCategory = selectItem.options[selectItem.selectedIndex].value;
 
   if (selectItem.selectedIndex === 0) {
-    ref_articles.value = [...articles]
-    return
+    ref_articles.value = [...articles];
+    return;
   }
 
   ref_articles.value = ref_articles.value.filter(
     (a) => a.category === checkedCategory
-  )
-}
+  );
+};
 </script>
 
 <style scoped>
-.container[role='news-card-list'] {
+.container[role="news-card-list"] {
   max-width: 73.75rem;
   min-height: 3.125rem;
   box-sizing: border-box;
@@ -99,7 +99,6 @@ let filterByCategory = () => {
 .filter {
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* background: center/80% url('../public/assets/images/news-images/arrow.png'); */
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -117,5 +116,11 @@ let filterByCategory = () => {
   grid-template-columns: auto auto;
   gap: 1.25rem;
   margin-top: 3.125rem;
+}
+
+@media (width < 700px) {
+  .news-container {
+    grid-template-columns: auto;
+  }
 }
 </style>

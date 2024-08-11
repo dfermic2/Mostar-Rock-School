@@ -23,8 +23,8 @@ let { contribution } = defineProps(["contribution"]);
 
 <style scoped>
 .container {
-  width: 36.25rem;
-  height: 13.4375rem;
+  max-width: 36.25rem;
+  min-height: 13.4375rem;
   box-sizing: border-box;
   background: rgb(250, 251, 251);
   box-shadow: 0.125rem 0.125rem 0.125rem #f2f3f4;
@@ -42,7 +42,9 @@ let { contribution } = defineProps(["contribution"]);
 }
 
 img {
+  max-width: 100%;
   width: 2.901875rem;
+  max-height: 100%;
   height: 3.125rem;
   object-fit: contain;
 }
@@ -52,7 +54,7 @@ h3 {
 }
 
 .content {
-  width: 31.25rem;
+  max-width: 31.25rem;
   height: 5.625rem;
   padding-top: 0.9375rem;
 }

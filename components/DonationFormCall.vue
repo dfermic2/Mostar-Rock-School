@@ -31,8 +31,8 @@
 }
 
 .container {
-  width: 33.75rem;
-  height: 25.3125rem;
+  max-width: 33.75rem;
+  min-height: 25.3125rem;
 }
 
 h2 {
@@ -42,7 +42,6 @@ h2 {
   letter-spacing: 0;
   font-size: 2.5rem;
   font-weight: 700;
-  height: 6.25rem;
   text-size-adjust: 0%;
 }
 
@@ -53,7 +52,8 @@ p {
 
 .btn {
   height: 2.82rem;
-  width: 23.75rem;
+  max-width: 23.75rem;
+  padding-inline: 1rem;
   border-radius: 0.25rem;
   border: none;
   margin: 0;

@@ -22,10 +22,12 @@
         </div>
 
         <div class="bottom-hero">
-          <h2>
-            The misfits. The rebels. The troublemakers. The square pegs in round
-            holes.
-          </h2>
+          <div class="bottom-heading">
+            <h2>
+              The misfits. The rebels. The troublemakers. The square pegs in
+              round holes.
+            </h2>
+          </div>
           <SupportCallCard />
         </div>
       </header>
@@ -165,15 +167,26 @@ header {
 
 .bottom-hero {
   display: flex;
+  flex-wrap: wrap-reverse;
   max-width: 74rem;
+  gap: 2rem;
   margin-inline: auto;
   align-items: flex-end;
 
-  h2 {
-    color: black;
-    font-size: 2.5rem;
-    line-height: 3.125rem;
-    font-family: "F37Hybrid-Bold";
+  .bottom-heading {
+    display: flex;
+    align-items: flex-end;
+    max-width: 41.75rem;
+    min-height: 20rem;
+
+    h2 {
+      color: black;
+      font-size: 2.5rem;
+      line-height: 3.125rem;
+      font-family: "F37Hybrid-Bold";
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -222,6 +235,7 @@ h3 {
 .programme,
 .lecturers {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 3.125rem;
   gap: 1.25rem;
 }

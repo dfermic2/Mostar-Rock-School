@@ -19,7 +19,9 @@
       </div>
 
       <div class="bottom-hero">
-        <h2>Every journey starts with the first step. Or the first chord.</h2>
+        <div class="bottom-heading">
+          <h2>Every journey starts with the first step. Or the first chord.</h2>
+        </div>
         <SupportCallCard />
       </div>
     </header>
@@ -137,15 +139,23 @@ header {
 
 .bottom-hero {
   display: flex;
+  flex-wrap: wrap-reverse;
   max-width: 74rem;
   margin-inline: auto;
   align-items: flex-end;
 
-  h2 {
-    color: black;
-    font-size: 2.5rem;
-    line-height: 3.125rem;
-    font-family: "F37Hybrid-Bold";
+  .bottom-heading {
+    display: flex;
+    align-items: flex-end;
+    max-width: 43.75rem;
+    min-height: 16.875rem;
+
+    h2 {
+      color: black;
+      font-size: 2.5rem;
+      line-height: 3.125rem;
+      font-family: "F37Hybrid-Bold";
+    }
   }
 }
 
@@ -160,6 +170,7 @@ header {
 
 .desc-vynil-container {
   display: flex;
+
   max-width: 74rem;
   margin-inline: auto;
   padding: 1rem 0 1rem 0;
@@ -167,6 +178,7 @@ header {
 
 .desc-vynil-content {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   max-width: 66.875rem;
   justify-content: space-between;
@@ -188,6 +200,7 @@ header {
 .scrollbar {
   position: absolute;
   bottom: -0.0625rem;
+  width: 100%;
   z-index: -1;
 }
 </style>

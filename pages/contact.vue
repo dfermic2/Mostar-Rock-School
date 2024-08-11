@@ -78,9 +78,14 @@ header {
 
 .hero-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 74rem;
   min-height: 35.9rem;
   margin-inline: auto;
+
+  h1 {
+    max-width: 42.5rem;
+  }
 }
 
 .img-wrapper {
@@ -92,14 +97,15 @@ header {
 }
 
 .img-wrapper img {
-  max-width: 26.8rem;
-  max-height: 20.875rem;
+  max-width: 100%;
+  width: 26.8rem;
   align-self: baseline;
 }
 
 .ellipse {
   position: absolute;
   z-index: -1;
+  max-width: 100%;
   width: 30rem;
   height: 4rem;
   background: radial-gradient(
@@ -118,6 +124,7 @@ header {
 
 .contact-content {
   display: flex;
+  flex-wrap: wrap;
   max-width: 74rem;
   margin-inline: auto;
   justify-content: space-between;

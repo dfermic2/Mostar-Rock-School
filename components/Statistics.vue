@@ -124,7 +124,7 @@ h1 {
 }
 
 img {
-  height: 20rem;
+  max-width: 100%;
   width: 27.5rem;
 }
 

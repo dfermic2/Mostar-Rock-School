@@ -46,8 +46,8 @@ const { event } = defineProps(["event"]);
 
 <style scoped>
 .container {
-  width: 30.3125rem;
-  height: 15.9375rem;
+  max-width: 30.3125rem;
+  min-height: 15.9375rem;
   position: relative;
   display: flex;
   flex-direction: column;
