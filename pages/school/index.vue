@@ -119,14 +119,15 @@ header {
 }
 
 .image {
-  grid-column: 8 / span 6;
+  grid-column: 9 / span 7;
   align-self: self-end;
   max-width: fit-content;
   overflow: visible;
 }
 
 .grid img {
-  max-width: 33.9rem;
+  max-width: 100%;
+  width: 33.9rem;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0.8rem 2.3rem 0.6rem rgba(0, 0, 0, 0.25));
@@ -135,7 +136,7 @@ header {
 .grid {
   display: grid;
   margin-top: auto;
-  grid-template-columns: repeat(auto-fit, minmax(4.93rem, 1fr));
+  grid-template-columns: repeat(15, 1fr);
   max-width: 74rem;
   min-height: 40rem;
   margin-inline: auto;
@@ -206,6 +207,7 @@ button:hover {
   display: flex;
   max-width: 61.25rem;
   flex-grow: 1;
+  flex-wrap: wrap;
   margin-inline: auto;
   justify-content: space-between;
 
@@ -263,6 +265,7 @@ button:hover {
 
 .media-coverage-text {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
@@ -304,5 +307,21 @@ button:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2.5rem 0 1.875rem 0;
+}
+
+@media (width < 1100px) {
+  .text {
+    grid-row: 1 / 2;
+  }
+  .image {
+    grid-row: 2 / 2;
+    grid-column: 5 / span 7;
+  }
+}
+
+@media (width < 600px) {
+  .text h1 {
+    font-size: 3rem;
+  }
 }
 </style>

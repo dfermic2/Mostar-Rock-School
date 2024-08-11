@@ -54,8 +54,8 @@
   overflow: hidden;
 }
 
-.container {
-  width: 30rem;
+.container[role="support-call-card"] {
+  max-width: 30rem;
   height: 19.6875rem;
   padding: 2.5rem;
   box-sizing: border-box;
@@ -66,7 +66,7 @@
 
 .support-card {
   z-index: 1;
-  width: 25rem;
+  max-width: 25rem;
   height: 100%;
   position: relative;
   display: flex;
@@ -131,13 +131,15 @@ button {
 }
 
 .animation-container {
-  width: 30rem;
+  max-width: 30rem;
   height: 19.6875rem;
 }
 
 .animation-container > img {
-  height: 24.375rem;
+  max-width: 24.375rem;
+  width: 100%;
   margin: 0.625rem auto auto 3.125rem;
+  margin-inline: auto;
   filter: invert();
   opacity: 0.2;
 }
@@ -181,6 +183,37 @@ button {
     transform: translateY(0);
     visibility: hidden;
     transition: 500ms;
+  }
+}
+
+@media (width<600px) {
+  .with-animation {
+    max-width: 374px;
+    min-height: 260px;
+  }
+
+  .with-animation > .container[role="support-call-card"] {
+    padding: 1rem;
+    max-width: 374px;
+    min-height: 260px;
+  }
+
+  .with-animation > .animation-container {
+    max-width: 374px;
+    min-height: 260px;
+  }
+
+  .support-card {
+    min-height: 14rem;
+    justify-content: space-evenly;
+  }
+
+  .support-card > .header-container > h1 {
+    font-size: 1.5625rem;
+  }
+
+  .actions {
+    position: static;
   }
 }
 </style>

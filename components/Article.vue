@@ -170,18 +170,19 @@
 }
 
 .container {
-  width: 73.75rem;
+  max-width: 73.75rem;
   border-radius: 0.3125rem;
 }
 
 .intro {
-  width: 73.75rem;
+  max-width: 73.75rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .intro > .content {
-  width: 46.25rem;
+  max-width: 46.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -198,11 +199,16 @@
 }
 
 .central {
-  width: 46.25rem;
+  max-width: 46.25rem;
 }
 
-.central-img-container {
+.central-content-picture {
   margin-bottom: 3.125rem;
+
+  img {
+    max-width: 100%;
+    width: 752px;
+  }
 }
 
 .central > .content {
@@ -213,14 +219,15 @@
 }
 
 .qa {
-  width: 73.75rem;
+  max-width: 73.75rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 3.75rem;
   margin-bottom: 6.25rem;
 }
 
 .questions {
-  width: 46.25rem;
+  max-width: 46.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.875rem;

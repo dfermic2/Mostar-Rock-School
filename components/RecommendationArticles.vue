@@ -22,12 +22,12 @@
 </template>
 
 <script setup>
-import { news } from '~/data'
+import { news } from "~/data";
 </script>
 
 <style scoped>
 .container {
-  width: 73.75rem;
+  max-width: 73.75rem;
   display: flex;
   flex-direction: column;
   margin-inline: auto;
@@ -40,7 +40,7 @@ import { news } from '~/data'
 
 .header h2 {
   font-size: 2.1875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .recommended-articles {
@@ -51,10 +51,21 @@ import { news } from '~/data'
 }
 
 .article {
+  max-width: 100%;
   width: 36.25rem;
 }
 
 .paging {
   margin-bottom: 6.25rem;
+}
+
+@media (width < 700px) {
+  .recommended-articles {
+    flex-direction: column;
+  }
+
+  .article:nth-child(2) {
+    display: none;
+  }
 }
 </style>

@@ -35,6 +35,8 @@
 </template>
 
 <script setup>
+import { Email } from "smtpjs";
+
 let subject = "";
 let name = "";
 let email = "";
@@ -43,9 +45,15 @@ let message = "";
 let privacyPolicy = false;
 let newsletter = false;
 
-function sendEmail() {}
-
-console.log(name);
+function sendEmail() {
+  Email.send({
+    SecureToken: "43420e72-ca5e-49fc-aa26-abaea90efdb9",
+    To: "dfermic@gmail.com",
+    From: "you@isp.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
 </script>
 
 <style scoped>

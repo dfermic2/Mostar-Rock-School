@@ -17,22 +17,23 @@
 
 <style scoped>
 .container {
-  width: 1180px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+  max-width: 1180px;
   height: 40px;
   margin-bottom: 100px;
-  position: relative;
   box-sizing: border-box;
 }
 
 .page-number-container {
   box-sizing: border-box;
 
-  width: 490px;
+  max-width: 490px;
   height: 40px;
   display: flex;
-  gap: 50px;
-  position: absolute;
-  right: 0;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .page-number {

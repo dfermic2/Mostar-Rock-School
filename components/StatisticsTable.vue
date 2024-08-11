@@ -42,11 +42,13 @@
 <style scoped>
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 .pair {
   display: flex;
+  flex-wrap: wrap;
   max-width: 42.5rem;
 }
 .cell {
@@ -56,7 +58,7 @@
   align-items: center;
   justify-content: center;
   margin-inline: auto;
-  width: 50%;
+  width: 20rem;
   height: 9.4rem;
   gap: 0.1rem;
   padding-bottom: 1rem;

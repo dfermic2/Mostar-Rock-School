@@ -12,11 +12,11 @@
             shadow: '',
             padding: 'p-0',
             height: 'h-14',
-            width: 'w-full',
+            width: 'max-w-full',
             marker: {
               wrapper:
                 'absolute inset-x-0 inset-y-0 duration-200 ease-out focus:outline-none',
-              base: 'w-full h-full',
+              base: 'max-w-full h-full',
               background: 'bg-donation dark:bg-gray-900',
               rounded: 'rounded-tr',
               shadow: 'shadow-sm',
@@ -92,40 +92,40 @@
 </template>
 
 <script setup>
-const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000]
+const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000];
 const items = [
   {
-    key: 'singledonation',
-    label: 'Single donation',
+    key: "singledonation",
+    label: "Single donation",
   },
   {
-    key: 'monthlysupport',
-    label: 'Montly support',
+    key: "monthlysupport",
+    label: "Montly support",
   },
-]
+];
 
 const handleValuePick = () => {
   let amountDonations = document.querySelectorAll(
     '.donation[role="money-donation"]'
-  )
-  let donationValue = null
+  );
+  let donationValue = null;
 
   amountDonations.forEach((amount) => {
-    amount.addEventListener('click', (e) => {
+    amount.addEventListener("click", (e) => {
       amountDonations.forEach((amount) => {
-        amount.classList.remove('active')
-      })
-      e.currentTarget.classList.add('active')
-      donationValue = e.currentTarget.dataset.amount
-    })
-  })
-}
+        amount.classList.remove("active");
+      });
+      e.currentTarget.classList.add("active");
+      donationValue = e.currentTarget.dataset.amount;
+    });
+  });
+};
 </script>
 
 <style scoped>
 .container {
-  width: 30rem;
-  height: 30.3125rem;
+  max-width: 30rem;
+  max-height: 30.3125rem;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
   border-radius: 0.4rem;
@@ -134,7 +134,7 @@ const handleValuePick = () => {
 
 .content {
   box-sizing: border-box;
-  height: 26.5625rem;
+  min-height: 26.5625rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,8 +161,8 @@ const handleValuePick = () => {
 }
 
 .donation {
-  width: 7.5rem;
-  height: 3.125rem;
+  max-width: 7.5rem;
+  min-height: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;

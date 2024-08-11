@@ -4,8 +4,6 @@
       <section class="video-container">
         <iframe
           id="video-clip"
-          width="660"
-          height="340"
           src="https://www.youtube.com/embed/3V33lgbQ-Js?si=XJppkZudGal6Zbqo"
           title="YouTube video player"
           frameborder="1"
@@ -72,8 +70,8 @@ onMounted(() => {
 }
 
 .container[role="home-news-card"] {
-  width: 41.25rem;
-  height: 34.375rem;
+  max-width: 41.25rem;
+  min-height: 34.375rem;
   padding: 2.5rem 2.5rem 1.875rem 2.5rem;
   box-shadow: 0.0625rem 0.25rem 0.5rem #ced0d4;
   box-sizing: border-box;
@@ -88,12 +86,16 @@ onMounted(() => {
 
 iframe {
   border-radius: 0.3125rem;
+  max-width: 100%;
+  width: 660px;
+  max-height: 100%;
+  height: 340px;
 }
 
 .news-information {
   margin-top: 2.5rem;
   margin-bottom: 1.875rem;
-  height: 8.75rem;
+  min-height: 8.75rem;
 }
 .details {
   width: 100%;

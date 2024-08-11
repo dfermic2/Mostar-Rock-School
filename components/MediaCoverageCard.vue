@@ -20,49 +20,49 @@
 </template>
 
 <script setup>
-let { mediaCoverage } = defineProps(['mediaCoverage'])
+let { mediaCoverage } = defineProps(["mediaCoverage"]);
 onMounted(() => {
-  let container = document.querySelector('div[role="media-coverage"]')
-  let rightSide = document.querySelector('.right-side')
-  let img = document.querySelector('.media-coverage-img')
-  let button = document.querySelector('.btn')
+  let container = document.querySelector('div[role="media-coverage"]');
+  let rightSide = document.querySelector(".right-side");
+  let img = document.querySelector(".media-coverage-img");
+  let button = document.querySelector(".btn");
 
-  container.addEventListener('mouseover', () => {
+  container.addEventListener("mouseover", () => {
     //container
-    container.style.boxShadow = '0.125rem 0.9375rem 0.625rem #ddddd'
-    container.style.transition = '500ms'
+    container.style.boxShadow = "0.125rem 0.9375rem 0.625rem #ddddd";
+    container.style.transition = "500ms";
 
     //image
-    img.style.transform = 'scale(1.1)'
-    img.style.transition = '500ms'
+    img.style.transform = "scale(1.1)";
+    img.style.transition = "500ms";
 
     //rightside
-    rightSide.style.background = '#E8EFF8'
-    rightSide.style.transition = '500ms'
+    rightSide.style.background = "#E8EFF8";
+    rightSide.style.transition = "500ms";
 
     //button
-    button.style.background = '#b00'
-    button.style.transition = '500ms'
-  })
+    button.style.background = "#b00";
+    button.style.transition = "500ms";
+  });
 
-  container.addEventListener('mouseleave', () => {
+  container.addEventListener("mouseleave", () => {
     //container
-    container.style.boxShadow = '0.125rem 0.1875rem 0.25rem #d9dbde'
-    container.style.transition = '500ms'
+    container.style.boxShadow = "0.125rem 0.1875rem 0.25rem #d9dbde";
+    container.style.transition = "500ms";
 
     //image
-    img.style.transform = 'scale(1)'
-    img.style.transition = '500ms'
+    img.style.transform = "scale(1)";
+    img.style.transition = "500ms";
 
     //rightside
-    rightSide.style.background = '#fafbfb'
-    rightSide.style.transition = '500ms'
+    rightSide.style.background = "#fafbfb";
+    rightSide.style.transition = "500ms";
 
     //button
-    button.style.background = '#ff0000'
-    button.style.transition = '500ms'
-  })
-})
+    button.style.background = "#ff0000";
+    button.style.transition = "500ms";
+  });
+});
 </script>
 
 <style scoped>
@@ -75,9 +75,9 @@ onMounted(() => {
   padding-inline: 0;
 }
 
-div[role='media-coverage'] {
-  width: 36.25rem;
-  height: 14.6875rem;
+div[role="media-coverage"] {
+  max-width: 36.25rem;
+  min-height: 14.6875rem;
   display: flex;
   align-content: baseline;
   box-sizing: border-box;
@@ -85,27 +85,35 @@ div[role='media-coverage'] {
 }
 
 .left-side {
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
+  max-width: 100%;
   width: 15.625rem;
-  padding: 1.125rem 1.5625rem 1.0625rem 1.5625rem;
+  /* padding: 1.125rem 1.5625rem 1.0625rem 1.5625rem; */
   margin-top: -0.125rem;
   overflow: hidden;
 }
 
 .media-coverage-img {
+  justify-self: center;
+  max-width: 100%;
   width: 12.5rem;
-  height: 12.5rem;
 }
 
 .right-side {
+  display: flex;
+  align-items: center;
   background: #fafbfb;
-  width: 20.625rem;
-  height: 14.6875rem;
-  padding: 1.875rem 2.5rem;
+  max-width: 20.625rem;
+  min-height: 14.6875rem;
+  padding: 1.875rem 0;
   box-sizing: border-box;
 }
 
 .details {
+  margin-inline: auto;
+  max-width: 15.625rem;
   height: 100%;
   box-sizing: border-box;
 }
@@ -117,7 +125,7 @@ div[role='media-coverage'] {
 
 .details p:nth-child(2) {
   margin-bottom: 1.5625rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.875rem;

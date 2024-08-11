@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="slot-class">
     <div id="darkenOverlay" class="normal-overlay"></div>
     <div class="right-menu">
       <MediaLinks :media-position="'side'" />

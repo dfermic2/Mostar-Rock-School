@@ -94,6 +94,7 @@ p {
 .hero-container {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   max-width: 74rem;
   justify-content: space-between;
   align-items: center;
@@ -168,14 +169,15 @@ button:hover {
 .sponsors-content {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   margin-inline: auto;
   max-width: 73.75rem;
   justify-content: space-between;
   padding-bottom: 3rem;
 
   img {
-    max-width: 30rem;
-    max-height: 17.5rem;
+    max-width: 100%;
+    width: 30rem;
     object-fit: cover;
     border-radius: 0.3rem;
   }
