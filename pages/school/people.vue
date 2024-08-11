@@ -154,6 +154,7 @@ header {
     font-size: 1.875rem;
     font-family: "F37Hybrid-Bold";
     transition: 500ms;
+    width: fit-content;
   }
 
   .back:hover {

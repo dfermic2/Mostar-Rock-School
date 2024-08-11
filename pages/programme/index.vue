@@ -297,11 +297,11 @@ header {
   height: 2.8125rem;
   padding: 0.875rem 3.84375rem 0.8125rem 3.90625rem;
   font-weight: bold;
+  transition: 500ms;
 }
 
 .info > button:hover {
   background: #b00;
-  transition: 500ms;
 }
 
 .drums-container {
@@ -351,7 +351,7 @@ h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -360,11 +360,11 @@ h2 {
   height: 2.8125rem;
   margin-top: 0.625rem;
   padding: 0.875rem 2.71875rem 0.8125rem 2.78125rem;
+  transition: 500ms;
 }
 
 .btn:hover {
   background: #b00;
-  transition: 500ms;
 }
 
 .band-img {

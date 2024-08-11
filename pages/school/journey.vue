@@ -126,6 +126,7 @@ header {
     font-family: "F37Hybrid-Bold";
     transition: 500ms;
     padding: 1.875rem 0 1.875rem 0;
+    width: fit-content;
   }
 
   .back:hover {
