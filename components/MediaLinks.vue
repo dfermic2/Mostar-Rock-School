@@ -16,6 +16,14 @@
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
+          @click="
+            navigateTo('https://www.instagram.com/mostar_rock_school/', {
+              external: true,
+              open: {
+                target: '_blank',
+              },
+            })
+          "
         />
       </div>
       <div class="link-container">
@@ -26,6 +34,14 @@
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
+          @click="
+            navigateTo('https://www.facebook.com/MostarRockSchool/', {
+              external: true,
+              open: {
+                target: '_blank',
+              },
+            })
+          "
         />
       </div>
       <div class="link-container">
@@ -36,6 +52,12 @@
             footer: mediaPosition === `footer`,
             normal: mediaPosition === 'normal',
           }"
+          @click="
+            navigateTo('https://www.youtube.com/@mostarrockschool', {
+              external: true,
+              open: { target: '_blank' },
+            })
+          "
         />
       </div>
       <div class="link-container">
@@ -46,6 +68,12 @@
             'side side-soundclound': mediaPosition === `side`,
             'sc-normal': mediaPosition === 'normal',
           }"
+          @click="
+            navigateTo('https://soundcloud.com/mostarrockschool', {
+              external: true,
+              open: { target: '_blank' },
+            })
+          "
         />
       </div>
     </div>
@@ -53,7 +81,7 @@
 </template>
 
 <script setup>
-const { mediaPosition } = defineProps(["mediaPosition"]);
+const { mediaPosition } = defineProps(['mediaPosition'])
 </script>
 
 <style scoped>
