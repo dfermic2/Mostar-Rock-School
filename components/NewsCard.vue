@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-let { news } = defineProps(['news'])
+let { news } = defineProps(["news"]);
 </script>
 
 <style scoped>
@@ -50,19 +50,19 @@ let { news } = defineProps(['news'])
   padding: 0;
 }
 
-.container[role='news-card'] {
+.container[role="news-card"] {
   max-width: 36.25rem;
   min-height: 21.875rem;
   position: relative;
   box-sizing: border-box;
   border-top-left-radius: 0.3125rem;
   border-top-right-radius: 0.3125rem;
-  box-shadow: 0rem 0.125rem 0.25rem #9d9c9c;
+  box-shadow: 0rem 0.125rem 0.25rem #000066;
   cursor: pointer;
 }
 
-.container[role='news-card']:hover {
-  box-shadow: 0rem 1.5625rem 2.1875rem #9d9c9c;
+.container[role="news-card"]:hover {
+  box-shadow: 0rem 1.5625rem 2.1875rem #00000066;
   transition: 500ms;
 
   .img {
@@ -80,7 +80,7 @@ let { news } = defineProps(['news'])
   }
 }
 
-.container[role='news-card']:not(hover) {
+.container[role="news-card"]:not(hover) {
   box-shadow: 0rem 0.125rem 0.25rem #9d9c9c;
 
   transition: 500ms;
@@ -134,7 +134,7 @@ let { news } = defineProps(['news'])
   color: #fff;
   font-size: 1.25rem;
   font-weight: 500;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .footer {

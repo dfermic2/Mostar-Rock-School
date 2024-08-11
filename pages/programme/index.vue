@@ -161,11 +161,16 @@ import { offers } from "~/data";
             </button>
           </div>
           <div class="photo-container">
-            <img
-              src="../../public/assets/images/programme/video-photo-02.png"
-              alt="Video 02"
-              title="Video 02"
-            />
+            <iframe
+              width="440"
+              height="250"
+              src="https://www.youtube.com/embed/kPVx7CINnOU?si=CeVJA14qeJQjO9eb"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -370,10 +375,15 @@ h2 {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: -21.875rem;
-
+}
+.photo-container {
   iframe {
-    border-radius: 5px;
+    box-shadow: 7px 15px 48px 17px rgba(0, 0, 0, 0.2);
   }
+}
+
+iframe {
+  border-radius: 5px;
 }
 
 .session-band-program-background {
