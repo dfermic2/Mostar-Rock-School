@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { offers } from '~/data'
+import { offers } from "~/data";
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { offers } from '~/data'
     <div class="container">
       <header>
         <Navbar />
-        <div class="hero">
+        <div class="hero-container">
           <div class="info">
             <h1>School programme</h1>
             <p>
@@ -19,14 +19,13 @@ import { offers } from '~/data'
             </p>
             <button type="button" class="btn-style">Enroll now</button>
           </div>
-          <div class="drums-container">
-            <div class="drumms">
-              <img
-                src="../../public/assets/images/programme/drums.png"
-                alt="Drums photo"
-                title="Drums photo"
-              />
-            </div>
+          <div class="img-wrapper">
+            <img
+              src="../../public/assets/images/programme/drums.png"
+              alt="Drums photo"
+              title="Drums photo"
+            />
+            <div class="ellipse"></div>
           </div>
         </div>
       </header>
@@ -73,10 +72,16 @@ import { offers } from '~/data'
       </section>
 
       <section class="band-img">
-        <img
-          src="../../public/assets/images/programme/video-photo-01.png"
-          alt=""
-        />
+        <iframe
+          width="1180"
+          height="650"
+          src="https://www.youtube.com/embed/MiozKvQGIzg?si=zDeJTniWCfky3apI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
 
       <section class="session-band-program-background">
@@ -152,11 +157,16 @@ import { offers } from '~/data'
             </button>
           </div>
           <div class="photo-container">
-            <img
-              src="../../public/assets/images/programme/video-photo-02.png"
-              alt="Video 02"
-              title="Video 02"
-            />
+            <iframe
+              width="440"
+              height="250"
+              src="https://www.youtube.com/embed/kPVx7CINnOU?si=CeVJA14qeJQjO9eb"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -209,26 +219,54 @@ import { offers } from '~/data'
 }
 
 header {
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(9, 9, 121, 0) 33%,
       rgba(7, 7, 97, 0) 67%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../../public/assets/images/programme/programme-header-cover-photo.png');
+    url("../../public/assets/images/programme/programme-header-cover-photo.png");
   background-size: cover;
-  height: 64.375rem;
-  max-width: 100vw;
-  margin-bottom: 11.25rem;
+  background-repeat: no-repeat;
+  background-position: bottom 6rem center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  min-height: 59.125rem;
 }
 
-.hero {
-  margin-top: 25rem;
-  max-width: 74rem;
-  height: 41.25rem;
-  margin-inline: auto;
+.hero-container {
   display: flex;
+  max-width: 74rem;
+  min-height: 35.9rem;
+  margin-inline: auto;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 35.9rem;
+  align-items: center;
+}
+
+.img-wrapper img {
+  max-width: 33.9rem;
+  align-self: baseline;
+}
+
+.ellipse {
+  position: absolute;
+  z-index: -1;
+  width: 42rem;
+  height: 4rem;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0.728) 35%,
+    rgba(255, 255, 255, 0) 60%
+  );
 }
 
 .info {
@@ -236,13 +274,14 @@ header {
   height: 41.25rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #fff;
 }
 
 .info > h1 {
   font-size: 4.6875rem;
   line-height: 5.3125rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   margin-top: -11.875rem;
   margin-bottom: 2.1875rem;
 }
@@ -257,16 +296,12 @@ header {
   width: 13.75rem;
   height: 2.8125rem;
   padding: 0.875rem 3.84375rem 0.8125rem 3.90625rem;
+  font-weight: bold;
+  transition: 500ms;
 }
 
 .info > button:hover {
   background: #b00;
-  transition: 500ms;
-}
-
-.info > button:not(hover) {
-  background: #ff0000;
-  transition: 500ms;
 }
 
 .drums-container {
@@ -287,7 +322,7 @@ header {
 
 h2 {
   font-size: 2.5rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .music-lessons {
@@ -316,7 +351,7 @@ h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -325,22 +360,26 @@ h2 {
   height: 2.8125rem;
   margin-top: 0.625rem;
   padding: 0.875rem 2.71875rem 0.8125rem 2.78125rem;
+  transition: 500ms;
 }
 
 .btn:hover {
   background: #b00;
-  transition: 500ms;
-}
-
-.btn:not(hover) {
-  background: #ff0000;
-  transition: 500ms;
 }
 
 .band-img {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: -21.875rem;
+}
+.photo-container {
+  iframe {
+    box-shadow: 7px 15px 48px 17px rgba(0, 0, 0, 0.2);
+  }
+}
+
+iframe {
+  border-radius: 5px;
 }
 
 .session-band-program-background {
@@ -364,7 +403,7 @@ h2 {
 }
 
 .article-texts {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   display: flex;
@@ -396,15 +435,6 @@ h2 {
   gap: 1.25rem;
   max-width: 42.5rem;
   margin-top: 1.875rem;
-}
-
-.info > p {
-  font-size: 0.9375rem;
-  text-align: justify;
-}
-
-.info > .btn {
-  width: fit-content;
 }
 
 .event-festival {
