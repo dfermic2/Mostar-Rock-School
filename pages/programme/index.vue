@@ -72,10 +72,6 @@ import { offers } from "~/data";
       </section>
 
       <section class="band-img">
-        <!-- <img
-          src="../../public/assets/images/programme/video-photo-01.png"
-          alt=""
-        /> -->
         <iframe
           width="1180"
           height="650"
