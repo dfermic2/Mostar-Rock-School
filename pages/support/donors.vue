@@ -75,7 +75,6 @@ header {
   align-items: center;
   margin-inline: auto;
 }
-
 .hero-text {
   display: flex;
   flex-direction: column;
