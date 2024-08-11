@@ -3,31 +3,30 @@
     <div class="container">
       <header>
         <Navbar />
-        <div class="hero">
-          <div class="info">
-            <p @click="$router.go(-1)">< The School</p>
-            <h1>Our staff Lorem ipsum dolor sit.</h1>
-            <p class="description">
-              Integrity, dedication, professionalism, enthusiasm and lifelong
-              learning is what drives our staff. MoRS teacher’s went through
-              exchange programs for knowledge updates in modern music curriculum
-              and pedagogy at Popakademie (AU) and Fontys Rock Academy (NL) and
-              they received a Contribution to pedagogical practice in BiH award
-              from Pedagogical Institute in Mostar. We take pride in what we do
-              and live our mission.
-            </p>
-          </div>
-          <div class="info-footer">
-            <div class="sub-heading">
-              <h2>
-                The misfits. The rebels. The troublemakers. The square pegs in
-                round holes.
-              </h2>
-            </div>
-            <div class="call-for-support">
-              <SupportCallCard />
+        <div class="info-container">
+          <div class="info-content">
+            <div class="info">
+              <p class="back" @click="navigateTo('/school')">< The School</p>
+              <h1>Our staff</h1>
+              <p class="info-description">
+                Integrity, dedication, professionalism, enthusiasm and lifelong
+                learning is what drives our staff. MoRS teacher's went through
+                exchange programs for knowledge updates in modern music
+                curriculum and pedagogy at Popakademie (AU) and Fontys Rock
+                Academy (NL) and they received a Contribution to pedagogical
+                practice in BiH award from Pedagogical Institute in Mostar. We
+                take pride in what we do and live our mission.
+              </p>
             </div>
           </div>
+        </div>
+
+        <div class="bottom-hero">
+          <h2>
+            The misfits. The rebels. The troublemakers. The square pegs in round
+            holes.
+          </h2>
+          <SupportCallCard />
         </div>
       </header>
       <Transition>
@@ -100,9 +99,7 @@ div {
 }
 
 header {
-  max-width: 100vw;
-  height: 67.8125rem;
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(9, 9, 121, 0) 33%,
@@ -111,49 +108,72 @@ header {
     ),
     url("../../public/assets/images/staff/staff-header-cover-photo.png");
   background-size: cover;
-  margin-bottom: 6.25rem;
-}
-
-.hero {
-  max-width: 74rem;
-  height: 67.8125rem;
-  margin-top: 11.6875rem;
-  margin-inline: auto;
+  background-repeat: no-repeat;
+  background-position: bottom 14.6875rem center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  flex-grow: 1;
+  justify-content: space-between;
+  min-height: 67.8125rem;
+}
+
+.info-container {
+  display: flex;
+}
+
+.info-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 74rem;
+  margin-inline: auto;
 }
 
 .info {
-  max-width: 48.75rem;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 16.5rem;
+  max-width: 45.9rem;
+  color: white;
+  h1 {
+    font-size: 4.6875rem;
+    font-family: "F37Hybrid-Bold";
+    line-height: 5.3rem;
+    padding-bottom: 2.5rem;
+    margin: 0;
+  }
+
+  .info-description {
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    font-weight: 600;
+  }
+
+  .back {
+    font-size: 1.875rem;
+    font-family: "F37Hybrid-Bold";
+    transition: 500ms;
+  }
+
+  .back:hover {
+    color: #ff0000;
+    cursor: pointer;
+  }
 }
 
-.info > p:first-child {
-  width: fit-content;
-  font-size: 1.875rem;
-  font-family: "F37Hybrid-Bold";
-  letter-spacing: 0%;
-  cursor: pointer;
-}
+.bottom-hero {
+  display: flex;
+  max-width: 74rem;
+  margin-inline: auto;
+  align-items: flex-end;
 
-.info > p:first-child:hover {
-  color: #ff0000;
-  transition: 500ms;
-}
-
-.info > p:first-child:not(hover) {
-  color: #fff;
-  transition: 500ms;
-}
-
-.info > h1 {
-  margin-top: 2.1875rem;
-  margin-bottom: 2.1875rem;
-  font-size: 3.125rem;
-  font-family: "F37Hybrid-Bold";
-  letter-spacing: 0%;
-  line-height: 4.0625rem;
+  h2 {
+    color: black;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    font-family: "F37Hybrid-Bold";
+  }
 }
 
 .description {
@@ -183,7 +203,6 @@ header {
 .staff-content {
   max-width: 74rem;
   margin-inline: auto;
-  margin-top: 18.75rem;
   margin-bottom: 6.25rem;
 }
 

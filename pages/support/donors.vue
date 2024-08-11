@@ -3,24 +3,12 @@
     <div class="container">
       <header>
         <Navbar />
-        <div class="hero">
-          <div class="info">
-            <div class="about">
-              <p @click="navigateTo(`/support`)">< Support</p>
-              <h1>No man is an island…</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos omnis optio architecto laudantium eveniet.
-                Voluptates, consequatur accusantium iusto omnis aperiam
-                reprehenderit fugiat quasi neque! Id, corporis totam adipisci
-                deleniti officia quos, nobis nostrum autem optio ad tenetur
-                explicabo ea fuga!
-              </p>
-            </div>
-            <div class="donations">
-              <DonationForm />
-            </div>
+        <div class="hero-container">
+          <div class="hero-text">
+            <p class="back" @click="navigateTo('/support')">< Support</p>
+            <h1>No man is an island…</h1>
           </div>
+          <DonationForm />
         </div>
       </header>
 
@@ -52,7 +40,7 @@
 </template>
 
 <script setup>
-import { basicSponsors, platinumSponsors } from '~/data'
+import { basicSponsors, platinumSponsors } from "~/data";
 </script>
 
 <style scoped>
@@ -61,78 +49,66 @@ import { basicSponsors, platinumSponsors } from '~/data'
   padding: 0;
 }
 
-.container {
-  max-width: 100vw;
-}
-
 header {
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(9, 9, 121, 0) 33%,
       rgba(7, 7, 97, 0) 67%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../../public/assets/images/support-donors/support-donors-header-cover-photo.png');
+    url("../../public/assets/images/support-donors/support-donors-header-cover-photo.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  min-height: 53.125rem;
 }
 
-.hero {
-  margin-top: 12.1875rem;
-
-  margin-bottom: 6.25rem;
-  min-height: 53.125rem;
+.hero-container {
+  display: flex;
+  flex-grow: 1;
   max-width: 74rem;
+  justify-content: space-between;
+  align-items: center;
   margin-inline: auto;
 }
 
-.info {
-  height: 30.3125rem;
-  display: flex;
-  align-items: center;
-  gap: 6.25rem;
-  color: #fff;
-}
-
-.info > .about {
-  max-width: 40.625rem;
-  height: 19.875rem;
+.hero-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  flex-grow: 1;
+  max-width: 45.7rem;
+  color: white;
+
+  h1 {
+    font-size: 4.7rem;
+    line-height: 5.3rem;
+    padding: 2.3rem 0 2.3rem 0;
+  }
+
+  .back {
+    font-size: 1.875rem;
+    font-family: "F37Hybrid-Bold";
+    transition: 500ms;
+  }
+
+  .back:hover {
+    color: #ff0000;
+    cursor: pointer;
+  }
 }
 
-.about > p:first-child {
-  cursor: pointer;
-  margin-bottom: 1.5625rem;
-  font-size: 1.875rem;
-  font-family: 'F37Hybrid-Bold';
-}
-
-.about > p:first-child:hover {
-  color: #ff0000;
-  transition: 500ms;
-}
-
-.about > p:first-child:not(hover) {
-  color: #fff;
-  transition: 500ms;
-}
-
-.about > h1 {
-  margin-bottom: 0.9375rem;
-  font-size: 4.6875rem;
-  font-family: 'F37Hybrid-Bold';
-}
-
-.about > p:last-child {
-  font-size: 1rem;
-  line-height: 1.4375rem;
+.container {
+  max-width: 100vw;
 }
 
 .sponsors {
   max-width: 100vw;
   margin-bottom: 12.5rem;
+  margin-top: 6.25rem;
 }
 
 .sponsors-content {
@@ -142,7 +118,7 @@ header {
 
 .sponsors-content > h1 {
   font-size: 1.875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .platinum-sponsors-container {
