@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="arrow">
+      <div class="arrow left" @click="previousPage()">
         <img
           src="../public/assets/images/news-images/basic-paging-left-arrow.png"
           alt="Left arrow"
@@ -33,7 +33,7 @@
           />
         </div>
       </div>
-      <div class="arrow">
+      <div class="arrow right" @click="nextPage()">
         <img
           src="../public/assets/images/news-images/basic-paging-right-arrow.png"
           alt="Right arrow"
@@ -43,7 +43,17 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const emit = defineEmits(['goToPreviousPage', 'goToNextPage'])
+
+let nextPage = () => {
+  emit('goToNextPage')
+}
+
+let previousPage = () => {
+  emit('goToPreviousPage')
+}
+</script>
 
 <style scoped>
 .container {
