@@ -60,8 +60,6 @@
   color: white;
   max-width: 66.75rem;
   font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9rem;
 }
 
 .heading {
@@ -144,8 +142,6 @@ input[type="checkbox"]:hover {
 }
 
 h1 {
-  font-family: "F37Hybrid-Bold";
-  font-size: 2.5rem;
   line-height: 2.19rem;
   margin: 0;
 }

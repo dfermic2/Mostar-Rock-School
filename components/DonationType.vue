@@ -77,7 +77,6 @@ h1 {
 }
 
 p {
-  font-size: 0.94rem;
   line-height: 1.45rem;
 }
 </style>

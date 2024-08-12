@@ -87,10 +87,10 @@
       <section class="qa">
         <div class="questions">
           <div class="question-container">
-            <h3 class="question-line">
+            <p class="question-line">
               How it was for you to work with young musicians, Mostar Rock
               School students, and UWC students?
-            </h3>
+            </p>
             <p class="answer">
               I didn’t know the level of playing skills they possess, and I was
               really surprised to see how high the level was. I was glad to see
@@ -109,10 +109,10 @@
             </p>
           </div>
           <div class="question-container">
-            <h3 class="question-line">
+            <p class="question-line">
               Do you think it’s important for young musicians to study jazz as a
               genre? Why?
-            </h3>
+            </p>
             <p class="answer">
               I believe that jazz as a genre, as a musical language, should be
               mandatory everywhere, i.e. included in the curriculum in all music
@@ -128,10 +128,10 @@
             </p>
           </div>
           <div class="question-container">
-            <h3 class="question-line">
+            <p class="question-line">
               Do you have any advice on how music schools could contribute to
               the development of the jazz scene in Mostar and beyond?
-            </h3>
+            </p>
             <p class="answer">
               In the small place I come from, Sedaví, there was no jazz school.
               With my initiative, I brought jazz teachers and musicians from
@@ -189,8 +189,6 @@
 }
 
 .content-part {
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
   text-align: justify;
 }
 
@@ -237,13 +235,13 @@
   margin-bottom: 1.25rem;
   line-height: 1.4375rem;
   font-style: italic;
+  font-weight: bold;
   color: #437fd9;
 }
 
 .answer {
   text-align: justify;
   font-style: italic;
-  font-size: 0.9375rem;
   line-height: 1.4375rem;
 }
 </style>

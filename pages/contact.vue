@@ -115,13 +115,6 @@ header {
   );
 }
 
-.hero-container h1 {
-  font-family: "F37Hybrid-Bold";
-  color: white;
-  font-size: 4.7rem;
-  line-height: 5.3rem;
-}
-
 .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -150,16 +143,6 @@ header {
   justify-content: space-between;
   max-width: 31.25rem;
   min-height: 45.5rem;
-
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
-  }
 
   img {
     max-width: 12.5rem;

@@ -110,15 +110,11 @@
 
 p {
   color: white;
-  font-size: 0.94rem;
-  line-height: 1.7rem;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-family: "F37Hybrid-Bold";
   margin: 0;
   color: white;
 }

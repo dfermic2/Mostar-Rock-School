@@ -79,15 +79,7 @@ header {
   min-height: 53.125rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  line-height: 3.125rem;
-  font-family: "F37Hybrid-Bold";
-}
-
 p {
-  font-size: 0.9375rem;
-  line-height: 1.56rem;
   max-width: 39.6rem;
 }
 
@@ -109,16 +101,11 @@ p {
   color: white;
 
   h1 {
-    font-size: 4.7rem;
-    line-height: 5.3rem;
     margin: 0;
     padding-bottom: 2.3rem;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.4375rem;
-    font-weight: 600;
     max-width: 40rem;
   }
 }

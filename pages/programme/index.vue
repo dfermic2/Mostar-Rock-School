@@ -31,7 +31,7 @@ import { offers } from "~/data";
       </header>
 
       <section class="music-lessons-container">
-        <h2>Music Lessons</h2>
+        <h1>Music Lessons</h1>
         <section class="music-lessons">
           <div class="articles">
             <div class="article-text">
@@ -84,7 +84,7 @@ import { offers } from "~/data";
 
       <section class="session-band-program-background">
         <section class="session-band-program">
-          <h2>Session Band Program</h2>
+          <h1>Session Band Program</h1>
           <div class="session-band-program-container">
             <div class="article-texts">
               <strong>
@@ -133,7 +133,7 @@ import { offers } from "~/data";
       </section>
 
       <section class="music-camps-container">
-        <h2>Music Camps</h2>
+        <h1>Music Camps</h1>
         <div class="music-camps">
           <div>
             <strong>
@@ -177,7 +177,7 @@ import { offers } from "~/data";
           </div>
 
           <div class="right-side">
-            <h2>Events and festivals</h2>
+            <h1>Events and festivals</h1>
             <p>
               Depending on the situation or need, the production department also
               functions as an organizer, promoter, technical producer,
@@ -278,16 +278,11 @@ header {
 }
 
 .info > h1 {
-  font-size: 4.6875rem;
-  line-height: 5.3125rem;
-  font-family: "F37Hybrid-Bold";
   margin-top: -11.875rem;
   margin-bottom: 2.1875rem;
 }
 
 .info > p {
-  font-size: 1rem;
-  line-height: 1.4375rem;
   margin-bottom: 2.5rem;
 }
 
@@ -317,11 +312,6 @@ header {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: 6.25rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-family: "F37Hybrid-Bold";
 }
 
 .music-lessons {
@@ -418,9 +408,6 @@ iframe {
 }
 
 .article-texts {
-  font-family: "Inter";
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
   display: flex;
   flex-direction: column;
   max-width: 40.5rem;

@@ -140,7 +140,6 @@ header {
   max-width: 74rem;
   min-height: 40rem;
   margin-inline: auto;
-  color: white;
 }
 
 .text,
@@ -156,18 +155,12 @@ header {
 }
 
 .text h1 {
-  font-family: "F37Hybrid-Bold";
-  font-size: 4.7rem;
-  line-height: 5.3rem;
   margin: 0;
   padding-bottom: 2.3rem;
 }
 
 .grid p {
-  font-weight: 600;
   max-width: 43rem;
-  font-size: 1rem;
-  line-height: 1.44rem;
   margin: 0;
   padding-bottom: 2.5rem;
 }
@@ -216,14 +209,7 @@ button:hover {
     max-height: 20rem;
   }
 
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
-  }
-
   p {
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
     max-width: 39.6rem;
   }
 
@@ -250,14 +236,7 @@ button:hover {
   min-height: 32.2rem;
   margin-inline: auto;
 
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
-  }
-
   p {
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
     max-width: 48.75rem;
     font-weight: 600;
   }
@@ -312,16 +291,11 @@ button:hover {
 @media (width < 1100px) {
   .text {
     grid-row: 1 / 2;
+    grid-column: 2 / span 13;
   }
   .image {
     grid-row: 2 / 2;
-    grid-column: 5 / span 7;
-  }
-}
-
-@media (width < 600px) {
-  .text h1 {
-    font-size: 3rem;
+    grid-column: 2 / span 13;
   }
 }
 </style>

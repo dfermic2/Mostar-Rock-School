@@ -137,7 +137,6 @@ let { news } = defineProps(["news"]);
 .header h3 {
   color: #fff;
   font-size: 1.25rem;
-  font-weight: 500;
   font-family: "F37Hybrid-Bold";
 }
 

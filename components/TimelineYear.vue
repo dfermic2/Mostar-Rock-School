@@ -2,7 +2,7 @@
   <div>
     <div class="container" role="time-line-year">
       <div class="timeline-info">
-        <p>{{ timeline.year }}</p>
+        <h1>{{ timeline.year }}</h1>
         <img
           src="../public/assets/images/journey/marker.png"
           alt="Marker icon"
@@ -19,11 +19,11 @@
 </template>
 
 <script setup>
-const { timeline } = defineProps(['timeline'])
+const { timeline } = defineProps(["timeline"]);
 </script>
 
 <style scoped>
-.container[role='time-line-year'] {
+.container[role="time-line-year"] {
   max-width: 26.8125rem;
   min-height: 24.375rem;
   box-sizing: border-box;
@@ -34,11 +34,8 @@ const { timeline } = defineProps(['timeline'])
   padding: 0rem 1.875rem;
 }
 
-.timeline-info > p {
+.timeline-info > h1 {
   margin-left: 1.5625rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  font-family: 'F37Hybrid-Bold';
   color: #ff0000;
   margin-bottom: 1.875rem;
 }
@@ -60,11 +57,10 @@ const { timeline } = defineProps(['timeline'])
 
 .history-text > h4 {
   font-size: 1.1875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
 }
 
 .history-text > p {
-  font-size: 0.9375rem;
   line-height: 1.25rem;
   text-align: justify;
 }

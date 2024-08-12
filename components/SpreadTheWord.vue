@@ -53,19 +53,14 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9rem;
 
   p {
+    font-weight: 600;
     max-width: 35rem;
   }
 }
 
 h1 {
-  font-family: "F37Hybrid-Bold";
-  font-size: 2.5rem;
-  line-height: 2.19rem;
   margin: 0;
 }
 

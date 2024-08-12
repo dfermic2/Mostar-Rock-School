@@ -55,12 +55,6 @@ h3 {
 
 .content {
   max-width: 31.25rem;
-  height: 5.625rem;
-  padding-top: 0.9375rem;
-}
-
-p {
-  font-size: 0.9375rem;
-  font-weight: 500;
+  min-height: 5.625rem;
 }
 </style>

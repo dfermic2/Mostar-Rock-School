@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-const { offer } = defineProps(['offer'])
+const { offer } = defineProps(["offer"]);
 </script>
 
 <style scoped>
@@ -25,7 +25,6 @@ const { offer } = defineProps(['offer'])
 }
 
 .offer > p {
-  font-size: 0.9375rem;
   font-weight: 600;
 }
 </style>

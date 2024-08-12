@@ -20,7 +20,7 @@
 
       <div class="bottom-hero">
         <div class="bottom-heading">
-          <h2>Every journey starts with the first step. Or the first chord.</h2>
+          <h1>Every journey starts with the first step. Or the first chord.</h1>
         </div>
         <SupportCallCard />
       </div>
@@ -108,11 +108,7 @@ header {
   justify-content: space-between;
   min-height: 16.5rem;
   max-width: 40.9rem;
-  color: white;
   h1 {
-    font-size: 4.6875rem;
-    font-family: "F37Hybrid-Bold";
-    line-height: 5.3rem;
     padding-bottom: 2.5rem;
   }
 
@@ -150,11 +146,8 @@ header {
     max-width: 43.75rem;
     min-height: 16.875rem;
 
-    h2 {
+    h1 {
       color: black;
-      font-size: 2.5rem;
-      line-height: 3.125rem;
-      font-family: "F37Hybrid-Bold";
     }
   }
 }
@@ -185,8 +178,6 @@ header {
 
   p {
     max-width: 40rem;
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
     font-weight: 600;
   }
 }

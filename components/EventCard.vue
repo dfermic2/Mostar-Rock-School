@@ -2,7 +2,7 @@
   <div>
     <div class="container" role="event-card">
       <section class="header p-inline-25 f-size-s font-weight-600">
-        <div class="location-time-info pt-125">
+        <div class="location-time-info">
           <div class="date">
             <Icon name="mdi:calendar-check" size="17" />
             <p class="date-time pl-05">{{ event.date }}</p>
@@ -21,13 +21,13 @@
       </section>
 
       <section class="event-description p-inline-25">
-        <h2 class="f-size-l font-hybrid line-heigt-219">{{ event.title }}</h2>
+        <h3 class="line-heigt-219">{{ event.title }}</h3>
       </section>
 
       <section class="footer p-inline-25">
         <div class="fee-info">
           <img src="../public/assets/images/TIcket.png" alt="Ticket icon" />
-          <p class="f-size-m">
+          <p class="f-size-m font-weight-bold">
             <span>{{ event.fee }}</span>
           </p>
         </div>
@@ -163,14 +163,6 @@ const { event } = defineProps(["event"]);
 
 .ml-05 {
   margin-left: 0.5rem;
-}
-
-.f-size-s {
-  font-size: 0.9375rem;
-}
-
-.f-size-m {
-  font-size: 1.25rem;
 }
 
 .f-size-l {

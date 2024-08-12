@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="donation-container">
+    <div class="donation-container p-inline-169">
       <div class="donation-content">
         <div class="donation">
           <DonationForm style="margin-inline: auto" />
