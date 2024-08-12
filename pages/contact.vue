@@ -71,7 +71,6 @@ header {
   background-position: bottom 5rem center;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: space-between;
   min-height: 58.125rem;
 }
@@ -79,12 +78,14 @@ header {
 .hero-container {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   max-width: 74rem;
   min-height: 35.9rem;
   margin-inline: auto;
 
   h1 {
-    max-width: 42.5rem;
+    max-width: 46.5rem;
+    align-self: center;
   }
 }
 

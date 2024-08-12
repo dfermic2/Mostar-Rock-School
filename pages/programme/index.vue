@@ -328,10 +328,6 @@ header {
   gap: 1.25rem;
 }
 
-.article-text {
-  text-align: justify;
-}
-
 .btn-style {
   color: #fff;
   border: none;

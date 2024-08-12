@@ -75,7 +75,7 @@ header {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 45.7rem;
+  max-width: 46.7rem;
   color: white;
 
   h1 {
