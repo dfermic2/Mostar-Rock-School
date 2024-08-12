@@ -81,7 +81,7 @@
 </template>
 
 <script setup>
-const { mediaPosition } = defineProps(['mediaPosition'])
+const { mediaPosition } = defineProps(["mediaPosition"]);
 </script>
 
 <style scoped>
@@ -161,6 +161,9 @@ const { mediaPosition } = defineProps(['mediaPosition'])
 @media (width < 600px) {
   .g-normal {
     gap: 4.3rem;
+  }
+  .o-side {
+    display: none;
   }
 }
 </style>

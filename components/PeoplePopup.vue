@@ -27,7 +27,7 @@
         size="3.125rem"
       />
       <div class="staff-info">
-        <h1>{{ person.name }}</h1>
+        <h3>{{ person.name }}</h3>
         <p>{{ person.department }}</p>
         <p>{{ person.description }}</p>
       </div>
@@ -81,9 +81,7 @@ let person = merged.find((p) => p.id == id);
   margin-inline: auto;
 }
 
-h1 {
-  font-family: "F37Hybrid-Bold";
-  font-size: 1.56rem;
+h3 {
   margin: 0;
 }
 

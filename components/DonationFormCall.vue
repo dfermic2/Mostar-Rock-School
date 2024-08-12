@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="container">
-      <h2>
+      <h1>
         The Show Must go on.<br />
         There are two ways to do it.
-      </h2>
+      </h1>
       <p>
         Support Mostar Rock School and be a part of their musical journey! Your
         monthly or one-time donation can make a significant impact on the
@@ -35,19 +35,15 @@
   min-height: 25.3125rem;
 }
 
-h2 {
-  font-family: "F37Hybrid-Bold";
-  line-height: 3.125rem;
+h1 {
   display: inline-block;
   letter-spacing: 0;
-  font-size: 2.5rem;
   font-weight: 700;
   text-size-adjust: 0%;
 }
 
 p {
   margin-block: 1.875rem;
-  font-size: 0.9375rem;
 }
 
 .btn {

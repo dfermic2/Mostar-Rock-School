@@ -20,13 +20,15 @@
 
       <div class="bottom-hero">
         <div class="bottom-heading">
-          <h2>Every journey starts with the first step. Or the first chord.</h2>
+          <h1 class="heading-smaller">
+            Every journey starts with the first step. Or the first chord.
+          </h1>
         </div>
         <SupportCallCard />
       </div>
     </header>
 
-    <div class="desc-vynil-container">
+    <div class="desc-vynil-container p-inline">
       <div class="desc-vynil-content">
         <p class="journey-description">
           In 1998, Apeiron, as part of the Pavarotti Music Center, initiated a
@@ -52,7 +54,7 @@
       </div>
     </div>
 
-    <section class="timeline-container">
+    <section class="timeline-container p-inline">
       <Timeline />
       <img
         class="scrollbar"
@@ -68,7 +70,6 @@
 <style scoped>
 * {
   margin: 0;
-  padding: 0;
 }
 
 header {
@@ -108,11 +109,7 @@ header {
   justify-content: space-between;
   min-height: 16.5rem;
   max-width: 40.9rem;
-  color: white;
   h1 {
-    font-size: 4.6875rem;
-    font-family: "F37Hybrid-Bold";
-    line-height: 5.3rem;
     padding-bottom: 2.5rem;
   }
 
@@ -150,11 +147,8 @@ header {
     max-width: 43.75rem;
     min-height: 16.875rem;
 
-    h2 {
+    h1 {
       color: black;
-      font-size: 2.5rem;
-      line-height: 3.125rem;
-      font-family: "F37Hybrid-Bold";
     }
   }
 }
@@ -173,7 +167,8 @@ header {
 
   max-width: 74rem;
   margin-inline: auto;
-  padding: 1rem 0 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .desc-vynil-content {
@@ -185,8 +180,6 @@ header {
 
   p {
     max-width: 40rem;
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
     font-weight: 600;
   }
 }

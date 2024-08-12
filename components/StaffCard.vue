@@ -193,11 +193,13 @@ div[role="staff-container"] {
 }
 
 .staff-info-container p:first-child {
+  font-family: "F37Hybrid-Bold";
   font-size: 1.1875rem;
   margin-top: 0.625rem;
 }
 
 .staff-info-container p:nth-child(2) {
+  font-weight: 600;
   font-size: 0.875rem;
 }
 

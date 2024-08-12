@@ -10,7 +10,7 @@
         </div>
       </div>
     </header>
-    <div class="contact-content">
+    <div class="contact-content p-inline">
       <div class="contact-text">
         <div class="text">
           <h1>Get in touch</h1>
@@ -48,7 +48,7 @@
         <ContactForm />
       </div>
     </div>
-    <div class="bottom-container">
+    <div class="bottom-container p-inline">
       <div class="bottom">
         <SpreadTheWord />
       </div>
@@ -71,7 +71,6 @@ header {
   background-position: bottom 5rem center;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: space-between;
   min-height: 58.125rem;
 }
@@ -79,12 +78,14 @@ header {
 .hero-container {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   max-width: 74rem;
   min-height: 35.9rem;
   margin-inline: auto;
 
   h1 {
-    max-width: 42.5rem;
+    max-width: 46.5rem;
+    align-self: center;
   }
 }
 
@@ -115,13 +116,6 @@ header {
   );
 }
 
-.hero-container h1 {
-  font-family: "F37Hybrid-Bold";
-  color: white;
-  font-size: 4.7rem;
-  line-height: 5.3rem;
-}
-
 .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -150,16 +144,6 @@ header {
   justify-content: space-between;
   max-width: 31.25rem;
   min-height: 45.5rem;
-
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 0.9375rem;
-    line-height: 1.56rem;
-  }
 
   img {
     max-width: 12.5rem;

@@ -49,19 +49,17 @@
 .pair {
   display: flex;
   flex-wrap: wrap;
-  max-width: 42.5rem;
 }
 .cell {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-inline: auto;
   width: 20rem;
   height: 9.4rem;
-  gap: 0.1rem;
-  padding-bottom: 1rem;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
   box-sizing: border-box;
 }
 
@@ -78,7 +76,6 @@
 }
 
 h1 {
-  font-family: "F37Hybrid-Bold";
   font-size: 5.3rem;
   letter-spacing: 0.015rem;
   margin: 0;
@@ -91,5 +88,11 @@ span {
   letter-spacing: 0.015rem;
   margin: 0;
   color: white;
+}
+
+@media (width < 640px) {
+  .br-1 {
+    border-right: none;
+  }
 }
 </style>

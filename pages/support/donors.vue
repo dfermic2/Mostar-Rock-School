@@ -5,14 +5,14 @@
         <Navbar />
         <div class="hero-container">
           <div class="hero-text">
-            <p class="back" @click="navigateTo('/support')">< Support</p>
+            <h2 class="back" @click="navigateTo('/support')">< Support</h2>
             <h1>No man is an island…</h1>
           </div>
           <DonationForm />
         </div>
       </header>
 
-      <section class="sponsors">
+      <section class="sponsors p-inline">
         <div class="sponsors-content">
           <h1>Current Donors</h1>
           <div class="platinum-sponsors-container">
@@ -23,9 +23,9 @@
         </div>
       </section>
 
-      <section class="donors-throughout-years">
+      <section class="donors-throughout-years p-inline">
         <div class="sponsors-content">
-          <h1>Our supporters throughout the years</h1>
+          <h2>Our supporters throughout the years</h2>
           <div class="basic-sponsors-container">
             <div v-for="basic in basicSponsors" :key="basic.id">
               <BasicSponsorCard :sponsor="basic" />
@@ -44,11 +44,6 @@ import { basicSponsors, platinumSponsors } from "~/data";
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   background-image: linear-gradient(
       0deg,
@@ -80,18 +75,14 @@ header {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 45.7rem;
+  max-width: 46.7rem;
   color: white;
 
   h1 {
-    font-size: 4.7rem;
-    line-height: 5.3rem;
     padding: 2.3rem 0 2.3rem 0;
   }
 
   .back {
-    font-size: 1.875rem;
-    font-family: "F37Hybrid-Bold";
     transition: 500ms;
     width: fit-content;
   }
@@ -115,11 +106,6 @@ header {
 .sponsors-content {
   max-width: 74rem;
   margin-inline: auto;
-}
-
-.sponsors-content > h1 {
-  font-size: 1.875rem;
-  font-family: "F37Hybrid-Bold";
 }
 
 .platinum-sponsors-container {

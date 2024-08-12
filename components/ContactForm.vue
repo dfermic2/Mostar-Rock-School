@@ -162,4 +162,10 @@ button:hover {
   cursor: pointer;
   background: #b00;
 }
+
+@media (width < 600px) {
+  form {
+    font-size: 0.875rem;
+  }
+}
 </style>

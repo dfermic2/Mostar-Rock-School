@@ -140,6 +140,10 @@ Add the correct display in Chrome and Safari.
   padding-bottom: 2rem;
 }
 
+.p-inline {
+  padding-inline: 1.69rem;
+}
+
 .m-0 {
   margin: 0;
 }
@@ -188,6 +192,88 @@ Add the correct display in Chrome and Safari.
   background: transparent;
   z-index: -100;
   transition: all 0.2s linear;
+}
+
+h1 {
+  font-family: "F37Hybrid-Bold";
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+}
+
+h2 {
+  font-family: "F37Hybrid-Bold";
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-family: "F37Hybrid-Bold";
+  font-size: 1.5625rem;
+}
+
+p {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+header {
+  color: white;
+  h1 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 4.7rem;
+    line-height: 5.3rem;
+  }
+
+  .heading-smaller {
+    color: black;
+    font-family: "F37Hybrid-Bold";
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    font-weight: 600;
+  }
+}
+
+@media (width < 600px) {
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.1875rem;
+  }
+
+  .heading-smaller {
+    font-size: 1.5625rem;
+    line-height: 2.1875rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  header {
+    h1 {
+      font-size: 2.5625rem;
+      line-height: 3.4375rem;
+    }
+
+    h2 {
+      font-size: 1.875rem;
+      line-height: 2.1875rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 * {

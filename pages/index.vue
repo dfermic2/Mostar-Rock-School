@@ -2,7 +2,7 @@
   <div>
     <header>
       <Navbar />
-      <div class="heading-container">
+      <div class="heading-container p-inline">
         <div class="heading-content">
           <div class="heading">
             <h1>The School That Rocks</h1>
@@ -33,7 +33,7 @@
         <source src="../public/assets/home-video.mp4" type="video/mp4" />
       </video>
     </div>
-    <div class="support-container">
+    <div class="support-container p-inline">
       <div class="support-content">
         <div class="support-text">
           <h1>We make music thats more than just a collection of notes</h1>
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="programme-container">
+    <div class="programme-container p-inline">
       <div class="programme-content">
         <div class="programme-video">
           <iframe
@@ -79,14 +79,14 @@
         </div>
       </div>
     </div>
-    <Invite />
-    <div class="news-events-container">
+    <Invite class="p-inline" />
+    <div class="news-events-container p-inline">
       <div class="news-events-content">
-        <h1 class="ne-heading">And I said: hey, what's going on?...</h1>
+        <h1>And I said: hey, what's going on?...</h1>
         <div class="news-events">
           <div class="news">
             <div class="news-events-heading pt-15">
-              <h1>News</h1>
+              <h2>News</h2>
               <NuxtLink to="/news">
                 <button>VIEW ALL</button>
               </NuxtLink>
@@ -96,7 +96,7 @@
           </div>
           <div class="events">
             <div class="news-events-heading">
-              <h1>Events</h1>
+              <h2>Events</h2>
               <button>VIEW ALL</button>
             </div>
             <div class="events-list">
@@ -111,7 +111,7 @@
     </div>
     <Donation />
     <div class="sponsors">
-      <div class="sponsors-heading">
+      <div class="sponsors-heading p-inline">
         <h1>Making this journey possible</h1>
         <button>VIEW OUR SPONSORS</button>
       </div>
@@ -147,7 +147,6 @@ import { events } from "~/data";
   flex-direction: column;
   min-height: 24.6875rem;
   justify-content: space-between;
-  color: white;
   h1 {
     font-family: "F37Hybrid-Bold";
     font-size: 6.875rem;
@@ -157,9 +156,6 @@ import { events } from "~/data";
   }
 
   p {
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.69rem;
     max-width: 28.875rem;
   }
 
@@ -211,24 +207,19 @@ import { events } from "~/data";
   justify-content: space-between;
 }
 
+.support-card {
+  margin-inline: auto;
+}
+
 .support-text {
   max-width: 40rem;
   display: flex;
   min-height: 24.7rem;
-  align-content: flex-end;
   flex-direction: column;
   justify-content: flex-end;
 
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
-    line-height: 3.125rem;
-  }
-
   p {
     font-weight: 600;
-    font-size: 0.9375rem;
-    line-height: 1.5625rem;
     padding-bottom: 1.5rem;
   }
 }
@@ -253,8 +244,6 @@ import { events } from "~/data";
 
   p {
     max-width: 26.75rem;
-    font-size: 0.9375rem;
-    line-height: 1.5625rem;
   }
 
   button {
@@ -343,6 +332,7 @@ video {
 
 .sponsors-heading {
   display: flex;
+  flex-wrap: wrap;
   max-width: 74rem;
   margin-inline: auto;
   justify-content: space-between;
@@ -368,11 +358,6 @@ video {
     background-color: #b00;
     color: white;
     cursor: pointer;
-  }
-
-  h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 2.5rem;
   }
 }
 
@@ -424,12 +409,6 @@ hr {
   min-height: 34.375rem;
 }
 
-.ne-heading {
-  font-family: "F37Hybrid-Bold";
-  font-size: 2.5rem;
-  line-height: 3.125rem;
-}
-
 .news-events-heading {
   display: flex;
   flex-grow: 1;
@@ -459,9 +438,18 @@ hr {
   }
 
   h1 {
-    font-family: "F37Hybrid-Bold";
-    font-size: 1.875rem;
     margin: 0;
+  }
+}
+
+@media (width < 600px) {
+  .heading {
+    align-items: center;
+    h1 {
+      font-size: 4.375rem;
+      line-height: 4.375rem;
+      text-align: center;
+    }
   }
 }
 </style>

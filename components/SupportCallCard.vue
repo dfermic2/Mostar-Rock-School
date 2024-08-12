@@ -9,7 +9,7 @@
               alt="Hand icon"
               title="Hand icon"
             />
-            <h1>We need your support!</h1>
+            <h2>We need your support!</h2>
           </div>
 
           <div class="description-container">
@@ -85,8 +85,7 @@
   filter: invert();
 }
 
-.header-container > h1 {
-  font-size: 1.875rem;
+.header-container > h2 {
   letter-spacing: 0.015625rem;
 }
 
@@ -95,9 +94,7 @@
 }
 
 .description-container > p {
-  font-size: 0.9375rem;
-  line-height: 1.5625rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .actions {
@@ -208,7 +205,7 @@ button {
     justify-content: space-evenly;
   }
 
-  .support-card > .header-container > h1 {
+  .support-card > .header-container > h2 {
     font-size: 1.5625rem;
   }
 

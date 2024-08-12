@@ -6,12 +6,12 @@
 </template>
 
 <script setup>
-const { offer } = defineProps(['offer'])
+const { offer } = defineProps(["offer"]);
 </script>
 
 <style scoped>
 .offer {
-  width: 27.5rem;
+  max-width: 27.5rem;
   height: 1.5625rem;
   display: flex;
   align-items: center;
@@ -25,7 +25,6 @@ const { offer } = defineProps(['offer'])
 }
 
 .offer > p {
-  font-size: 0.9375rem;
   font-weight: 600;
 }
 </style>

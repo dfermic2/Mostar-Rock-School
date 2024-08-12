@@ -17,7 +17,7 @@
       </div>
       <div class="smaller-wrapper">
         <div class="smaller">
-          <h1>Enrol in the school</h1>
+          <h3>Enrol in the school</h3>
           <p>
             If you already play or sing, or if you want to learn to play and
             sing and participate actively in music creation, you have the
@@ -29,7 +29,7 @@
       </div>
       <div class="smaller-wrapper">
         <div class="smaller">
-          <h1>Become a member</h1>
+          <h3>Become a member</h3>
           <p>
             As a member you'll gain exclusive access to a world of music,
             creativity and collaboration. Whether you're a musician, music
@@ -57,7 +57,6 @@
 }
 
 h1 {
-  font-family: "F37Hybrid-Bold";
   margin: 0;
 }
 
@@ -78,8 +77,8 @@ h1 {
   width: 23.5rem;
 
   h1 {
-    font-size: 2.5rem;
     padding-bottom: 1rem;
+    padding-top: 1.7rem;
   }
 }
 
@@ -122,8 +121,9 @@ h1 {
     background-color: red;
   }
 
-  h1 {
-    font-size: 1.56rem;
+  h3 {
+    font-family: "F37Hybrid-Bold";
+    font-size: 1.5625rem;
     letter-spacing: 0.25px;
     color: red;
     padding-bottom: 1rem;
@@ -131,8 +131,6 @@ h1 {
 }
 
 p {
-  font-size: 1.0625rem;
-  line-height: 1.6875rem;
   margin: 0;
   padding-bottom: 1rem;
 }

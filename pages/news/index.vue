@@ -23,7 +23,7 @@
         </div>
       </header>
 
-      <div class="news-container">
+      <div class="news-container p-inline">
         <NewsCardList :articles="news" :categories="categories" />
         <div class="news-paging">
           <NewsPaging />
@@ -91,20 +91,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
 }
 
 .info > h1 {
-  font-size: 4.6875rem;
-  line-height: 5.3125rem;
-  font-family: "F37Hybrid-Bold";
   margin-top: -11.875rem;
   margin-bottom: 2.1875rem;
 }
 
 .info > p {
-  font-size: 1rem;
-  line-height: 1.4375rem;
   margin-bottom: 2.5rem;
 }
 

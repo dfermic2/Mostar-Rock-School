@@ -138,6 +138,7 @@ const handleValuePick = () => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: black;
 }
 
 .donation-section {

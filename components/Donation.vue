@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="donation-container">
+    <div class="donation-container p-inline">
       <div class="donation-content">
         <div class="donation">
           <DonationForm style="margin-inline: auto" />
@@ -16,7 +16,6 @@
   background-color: #ecf2fb;
   min-height: 42.8rem;
   align-content: center;
-  padding-inline: 1rem;
 }
 
 .donation-content {

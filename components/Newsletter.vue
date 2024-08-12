@@ -4,7 +4,7 @@
       <div class="content">
         <div class="heading">
           <img src="../public/assets/doodle.png" alt="drum doodle" />
-          <h1>Our newsletter</h1>
+          <h2>Our newsletter</h2>
         </div>
         <p>
           Stay informed about the latest news, upcoming events, and success
@@ -19,12 +19,16 @@
 
 <style scoped>
 .container-newsletter {
-  width: 23.75rem;
-  height: 20.6rem;
+  display: flex;
+  flex-grow: 1;
+  max-width: 23.75rem;
+  height: 20.625rem;
   background: #b00;
   border-radius: 0.4rem;
+  justify-content: center;
   padding: 1.56rem 2rem 1.875rem 2rem;
   box-sizing: border-box;
+  align-items: center;
   transition: background 0.3s ease-in-out;
 }
 
@@ -37,12 +41,15 @@
 }
 
 .content {
+  height: 17.2rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: white;
 }
 
 img {
+  max-height: 100%;
   height: 2.5rem;
 }
 
@@ -52,26 +59,22 @@ img {
   gap: 1.2rem;
 }
 
-h1 {
-  font-family: "F37Hybrid-Bold";
-  font-size: 1.875rem;
+h2 {
   margin: 0;
 }
 
 p {
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5rem;
-  margin: 1.875rem 0 0 0;
+  margin: 0;
 }
 
 input {
-  width: 20rem;
+  width: 100%;
   height: 3.125rem;
   border-radius: 0.2rem;
   border: none;
   box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  margin: 1.56rem 0 1.25rem 0;
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -89,7 +92,7 @@ input:focus {
 }
 
 button {
-  width: 20rem;
+  width: 100%;
   height: 3.125rem;
   border-radius: 0.25rem;
   border: none;

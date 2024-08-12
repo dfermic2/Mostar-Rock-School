@@ -28,12 +28,12 @@
 </template>
 
 <script setup>
-import { news } from '~/data'
+import { news } from "~/data";
 
-const route = useRoute()
-let { id } = route.params
-id = parseInt(id)
-let article = news.find((t) => t.id === id)
+const route = useRoute();
+let { id } = route.params;
+id = parseInt(id);
+let article = news.find((t) => t.id === id);
 </script>
 
 <style scoped>
@@ -52,7 +52,7 @@ header {
       rgba(7, 7, 97, 0) 67%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../../public/assets/images/news-images/news-article-jazz-masterclass-cover-photo.png');
+    url("../../public/assets/images/news-images/news-article-jazz-masterclass-cover-photo.png");
   background-size: cover;
   margin-bottom: 6.25rem;
 }
@@ -80,7 +80,7 @@ header {
 .info-details > p:first-child {
   width: fit-content;
   font-size: 1.875rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   letter-spacing: 0%;
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ header {
   margin-top: 2.1875rem;
   margin-bottom: 8.75rem;
   font-size: 3.125rem;
-  font-family: 'F37Hybrid-Bold';
+  font-family: "F37Hybrid-Bold";
   letter-spacing: 0%;
   line-height: 4.0625rem;
 }
@@ -128,5 +128,12 @@ header {
 .recommended-articles {
   max-width: 100vw;
   background: #fafbfb;
+}
+
+@media (width < 600px) {
+  h1 {
+    font-size: 2.1875rem;
+    line-height: 2.825rem;
+  }
 }
 </style>

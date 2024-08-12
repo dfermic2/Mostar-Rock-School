@@ -1,5 +1,5 @@
 <template>
-  <div class="statistics">
+  <div class="statistics p-inline">
     <div class="content">
       <div class="left">
         <h1>A school that rocks!</h1>
@@ -68,6 +68,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  box-sizing: border-box;
 }
 
 .content {
@@ -110,15 +111,11 @@
 
 p {
   color: white;
-  font-size: 0.94rem;
-  line-height: 1.7rem;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-family: "F37Hybrid-Bold";
   margin: 0;
   color: white;
 }

@@ -23,10 +23,10 @@
 
         <div class="bottom-hero">
           <div class="bottom-heading">
-            <h2>
+            <h1 class="heading-smaller">
               The misfits. The rebels. The troublemakers. The square pegs in
               round holes.
-            </h2>
+            </h1>
           </div>
           <SupportCallCard />
         </div>
@@ -34,11 +34,11 @@
       <Transition>
         <PeoplePopup v-if="route.query.id" />
       </Transition>
-      <section class="staff-content">
-        <p class="title">Meet the people behind Mostar Rock School.</p>
+      <section class="staff-content p-inline">
+        <p>Meet the people behind Mostar Rock School.</p>
         <section class="staff-container">
           <div id="management-administration">
-            <h3>Management and Administration</h3>
+            <h2>Management and Administration</h2>
             <article class="management-administration">
               <div
                 v-for="person in staff.managementAndAdministration"
@@ -53,7 +53,7 @@
             </article>
           </div>
           <div id="programme">
-            <h3>Programme</h3>
+            <h2>Programme</h2>
             <article class="programme">
               <div
                 v-for="person in staff.programme"
@@ -68,7 +68,7 @@
             </article>
           </div>
           <div id="lecturers">
-            <h3>Lecturers</h3>
+            <h2>Lecturers</h2>
             <article class="lecturers">
               <div
                 v-for="person in staff.lecturers"
@@ -137,19 +137,9 @@ header {
   justify-content: space-between;
   min-height: 16.5rem;
   max-width: 45.9rem;
-  color: white;
   h1 {
-    font-size: 4.6875rem;
-    font-family: "F37Hybrid-Bold";
-    line-height: 5.3rem;
     padding-bottom: 2.5rem;
     margin: 0;
-  }
-
-  .info-description {
-    font-size: 1rem;
-    line-height: 1.4375rem;
-    font-weight: 600;
   }
 
   .back {
@@ -179,11 +169,8 @@ header {
     max-width: 41.75rem;
     min-height: 20rem;
 
-    h2 {
+    h1 {
       color: black;
-      font-size: 2.5rem;
-      line-height: 3.125rem;
-      font-family: "F37Hybrid-Bold";
       margin: 0;
       padding: 0;
     }
@@ -201,19 +188,6 @@ header {
   gap: 4.625rem;
 }
 
-.sub-heading {
-  max-width: 40rem;
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: 8.125rem;
-}
-
-.sub-heading > h2 {
-  font-size: 2.5rem;
-  font-family: "F37Hybrid-Bold";
-  line-height: 3.125rem;
-}
-
 .staff-content {
   max-width: 74rem;
   margin-inline: auto;
@@ -224,11 +198,6 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 3.125rem;
-}
-
-h3 {
-  font-size: 1.875rem;
-  font-family: "F37Hybrid-Bold";
 }
 
 .management-administration,
