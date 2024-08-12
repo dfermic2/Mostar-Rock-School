@@ -30,7 +30,7 @@ import { offers } from "~/data";
         </div>
       </header>
 
-      <section class="music-lessons-container">
+      <section class="music-lessons-container p-inline">
         <h1>Music Lessons</h1>
         <section class="music-lessons">
           <div class="articles">
@@ -71,7 +71,7 @@ import { offers } from "~/data";
         </section>
       </section>
 
-      <section class="band-img">
+      <section class="band-img p-inline">
         <iframe
           src="https://www.youtube.com/embed/MiozKvQGIzg?si=zDeJTniWCfky3apI"
           title="YouTube video player"
@@ -82,7 +82,7 @@ import { offers } from "~/data";
         ></iframe>
       </section>
 
-      <section class="session-band-program-background">
+      <section class="session-band-program-background p-inline">
         <section class="session-band-program">
           <h1>Session Band Program</h1>
           <div class="session-band-program-container">
@@ -132,7 +132,7 @@ import { offers } from "~/data";
         </section>
       </section>
 
-      <section class="music-camps-container">
+      <section class="music-camps-container p-inline">
         <h1>Music Camps</h1>
         <div class="music-camps">
           <div>
@@ -167,7 +167,7 @@ import { offers } from "~/data";
         </div>
       </section>
 
-      <section class="event-festival">
+      <section class="event-festival p-inline">
         <div class="event-container">
           <div class="left-side">
             <img
@@ -198,7 +198,7 @@ import { offers } from "~/data";
         </div>
       </section>
 
-      <section class="spread-the-word">
+      <section class="spread-the-word p-inline">
         <SpreadTheWord />
       </section>
     </div>
@@ -207,7 +207,6 @@ import { offers } from "~/data";
 <style scoped>
 * {
   margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -397,6 +396,11 @@ iframe {
   color: #fff;
   max-width: 74rem;
   margin-inline: auto;
+
+  img {
+    max-width: 100%;
+    width: 27.5rem;
+  }
 }
 
 .session-band-program-container {
@@ -405,6 +409,11 @@ iframe {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.left-side img {
+  max-width: 100%;
+  width: 27.5rem;
 }
 
 .article-texts {

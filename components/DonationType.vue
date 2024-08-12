@@ -24,9 +24,11 @@ const { donationType } = defineProps(["donationType"]);
 <style scoped>
 .donation-type {
   width: 100%;
+  display: flex;
 }
 .container {
-  display: block;
+  display: flex;
+  flex-grow: 1;
   max-width: 36.25rem;
   min-height: 16.25rem;
   border: 1px solid rgba(255, 0, 0, 0.398);
@@ -36,6 +38,7 @@ const { donationType } = defineProps(["donationType"]);
 }
 .content {
   color: white;
+  flex-grow: 1;
   max-width: 31.25rem;
   min-height: 12.5rem;
   display: flex;

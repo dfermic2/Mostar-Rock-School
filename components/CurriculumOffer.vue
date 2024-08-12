@@ -11,7 +11,7 @@ const { offer } = defineProps(["offer"]);
 
 <style scoped>
 .offer {
-  width: 27.5rem;
+  max-width: 27.5rem;
   height: 1.5625rem;
   display: flex;
   align-items: center;

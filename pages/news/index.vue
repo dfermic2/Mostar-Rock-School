@@ -23,7 +23,7 @@
         </div>
       </header>
 
-      <div class="news-container">
+      <div class="news-container p-inline">
         <NewsCardList :articles="news" :categories="categories" />
         <div class="news-paging">
           <NewsPaging />

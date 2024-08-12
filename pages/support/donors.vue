@@ -12,7 +12,7 @@
         </div>
       </header>
 
-      <section class="sponsors">
+      <section class="sponsors p-inline">
         <div class="sponsors-content">
           <h1>Current Donors</h1>
           <div class="platinum-sponsors-container">
@@ -23,7 +23,7 @@
         </div>
       </section>
 
-      <section class="donors-throughout-years">
+      <section class="donors-throughout-years p-inline">
         <div class="sponsors-content">
           <h2>Our supporters throughout the years</h2>
           <div class="basic-sponsors-container">
@@ -44,11 +44,6 @@ import { basicSponsors, platinumSponsors } from "~/data";
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   background-image: linear-gradient(
       0deg,

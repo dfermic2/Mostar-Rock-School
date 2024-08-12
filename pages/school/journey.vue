@@ -20,13 +20,15 @@
 
       <div class="bottom-hero">
         <div class="bottom-heading">
-          <h1>Every journey starts with the first step. Or the first chord.</h1>
+          <h1 class="heading-smaller">
+            Every journey starts with the first step. Or the first chord.
+          </h1>
         </div>
         <SupportCallCard />
       </div>
     </header>
 
-    <div class="desc-vynil-container">
+    <div class="desc-vynil-container p-inline">
       <div class="desc-vynil-content">
         <p class="journey-description">
           In 1998, Apeiron, as part of the Pavarotti Music Center, initiated a
@@ -52,7 +54,7 @@
       </div>
     </div>
 
-    <section class="timeline-container">
+    <section class="timeline-container p-inline">
       <Timeline />
       <img
         class="scrollbar"
@@ -68,7 +70,6 @@
 <style scoped>
 * {
   margin: 0;
-  padding: 0;
 }
 
 header {
@@ -166,7 +167,8 @@ header {
 
   max-width: 74rem;
   margin-inline: auto;
-  padding: 1rem 0 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .desc-vynil-content {

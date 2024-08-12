@@ -23,7 +23,7 @@
 
         <div class="bottom-hero">
           <div class="bottom-heading">
-            <h1>
+            <h1 class="heading-smaller">
               The misfits. The rebels. The troublemakers. The square pegs in
               round holes.
             </h1>
@@ -34,7 +34,7 @@
       <Transition>
         <PeoplePopup v-if="route.query.id" />
       </Transition>
-      <section class="staff-content">
+      <section class="staff-content p-inline">
         <p>Meet the people behind Mostar Rock School.</p>
         <section class="staff-container">
           <div id="management-administration">

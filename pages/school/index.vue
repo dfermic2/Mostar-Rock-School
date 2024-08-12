@@ -24,7 +24,7 @@
         </div>
       </div>
     </header>
-    <div class="our-mission">
+    <div class="our-mission p-inline">
       <div class="our-mission-content">
         <img src="../../public/assets/images/staff/omar.png" />
         <div class="our-mission-text">
@@ -47,7 +47,7 @@
       </div>
     </div>
     <Statistics />
-    <div class="media-coverage">
+    <div class="media-coverage p-inline">
       <div class="media-coverage-content">
         <div class="media-coverage-heading">
           <h1>Media coverage</h1>
@@ -190,7 +190,6 @@ button:hover {
 
 .our-mission {
   display: flex;
-  flex-grow: 1;
   min-height: 29rem;
   padding-top: 1.25rem;
   box-sizing: border-box;

@@ -49,11 +49,9 @@
 .pair {
   display: flex;
   flex-wrap: wrap;
-  max-width: 42.5rem;
 }
 .cell {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -90,5 +88,11 @@ span {
   letter-spacing: 0.015rem;
   margin: 0;
   color: white;
+}
+
+@media (width < 640px) {
+  .br-1 {
+    border-right: none;
+  }
 }
 </style>

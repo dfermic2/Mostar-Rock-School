@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="donation-types">
+    <div class="donation-types p-inline">
       <div class="donation-text">
         <h1>How to donate?</h1>
         <p>There are several ways in which you can support us.</p>
@@ -23,13 +23,12 @@ const { donationTypes } = defineProps(["donationTypes"]);
   min-height: 54.375rem;
   align-content: center;
   width: 100%;
-  padding: 0;
-  margin: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../public/assets/images/howToDonate.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  box-sizing: border-box;
 }
 
 .donation-text {

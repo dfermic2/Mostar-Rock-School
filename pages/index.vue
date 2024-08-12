@@ -2,7 +2,7 @@
   <div>
     <header>
       <Navbar />
-      <div class="heading-container p-inline-169">
+      <div class="heading-container p-inline">
         <div class="heading-content">
           <div class="heading">
             <h1>The School That Rocks</h1>
@@ -33,7 +33,7 @@
         <source src="../public/assets/home-video.mp4" type="video/mp4" />
       </video>
     </div>
-    <div class="support-container p-inline-169">
+    <div class="support-container p-inline">
       <div class="support-content">
         <div class="support-text">
           <h1>We make music thats more than just a collection of notes</h1>
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="programme-container p-inline-169">
+    <div class="programme-container p-inline">
       <div class="programme-content">
         <div class="programme-video">
           <iframe
@@ -79,8 +79,8 @@
         </div>
       </div>
     </div>
-    <Invite class="p-inline-169" />
-    <div class="news-events-container p-inline-169">
+    <Invite class="p-inline" />
+    <div class="news-events-container p-inline">
       <div class="news-events-content">
         <h1>And I said: hey, what's going on?...</h1>
         <div class="news-events">
@@ -111,7 +111,7 @@
     </div>
     <Donation />
     <div class="sponsors">
-      <div class="sponsors-heading p-inline-169">
+      <div class="sponsors-heading p-inline">
         <h1>Making this journey possible</h1>
         <button>VIEW OUR SPONSORS</button>
       </div>

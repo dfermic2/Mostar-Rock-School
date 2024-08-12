@@ -10,7 +10,7 @@
         </div>
       </div>
     </header>
-    <div class="contact-content">
+    <div class="contact-content p-inline">
       <div class="contact-text">
         <div class="text">
           <h1>Get in touch</h1>
@@ -48,7 +48,7 @@
         <ContactForm />
       </div>
     </div>
-    <div class="bottom-container">
+    <div class="bottom-container p-inline">
       <div class="bottom">
         <SpreadTheWord />
       </div>

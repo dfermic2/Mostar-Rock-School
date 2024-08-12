@@ -15,7 +15,7 @@
       <DonationForm />
     </div>
   </header>
-  <div class="contribute-container">
+  <div class="contribute-container p-inline">
     <div class="contribute-content">
       <div class="contribute-text">
         <h1>We'll make a better day, just you and me...</h1>

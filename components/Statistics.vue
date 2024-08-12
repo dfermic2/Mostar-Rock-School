@@ -1,5 +1,5 @@
 <template>
-  <div class="statistics">
+  <div class="statistics p-inline">
     <div class="content">
       <div class="left">
         <h1>A school that rocks!</h1>
@@ -68,6 +68,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  box-sizing: border-box;
 }
 
 .content {
