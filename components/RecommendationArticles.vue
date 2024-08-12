@@ -27,12 +27,11 @@
 <script setup>
 import { news } from '~/data'
 import { ref } from 'vue'
-import NewsCard from './NewsCard.vue'
 
+let numberOfArticles = news.length - 1
 let currentArticle = 0
 let nextArticle = currentArticle + 1
 
-let numberOfArticles = news.length - 1
 let ref_firstShownArticle = ref(news[currentArticle])
 let ref_secondShownArticle = ref(news[nextArticle])
 
