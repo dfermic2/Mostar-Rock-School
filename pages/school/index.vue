@@ -297,4 +297,12 @@ button:hover {
     grid-column: 2 / span 13;
   }
 }
+
+@media (width < 360px) {
+  header {
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
+}
 </style>

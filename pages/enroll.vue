@@ -5,6 +5,6 @@
         <Navbar />
       </header>
     </div>
-    <p>Enroll</p>
+    <DonationForm />
   </div>
 </template>

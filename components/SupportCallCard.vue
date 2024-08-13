@@ -48,7 +48,7 @@
 }
 
 .with-animation {
-  width: 30rem;
+  max-width: 30rem;
   height: 19.6875rem;
   border-radius: 0.1875rem;
   overflow: hidden;
