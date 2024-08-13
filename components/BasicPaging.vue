@@ -44,15 +44,15 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['goToPreviousPage', 'goToNextPage'])
+const emit = defineEmits(["goToPreviousPage", "goToNextPage"]);
 
 let nextPage = () => {
-  emit('goToNextPage')
-}
+  emit("goToNextPage");
+};
 
 let previousPage = () => {
-  emit('goToPreviousPage')
-}
+  emit("goToPreviousPage");
+};
 </script>
 
 <style scoped>
@@ -69,7 +69,9 @@ let previousPage = () => {
 
 .dots {
   display: flex;
-  gap: 80px;
+  flex-grow: 1;
+  max-width: 9.1rem;
+  justify-content: space-between;
 }
 
 .dot {

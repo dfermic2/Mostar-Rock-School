@@ -196,6 +196,13 @@
   font-weight: 600;
 }
 
+.intro-content-picture {
+  img {
+    max-width: 100%;
+    width: 380px;
+  }
+}
+
 .central {
   max-width: 46.25rem;
 }
@@ -222,6 +229,11 @@
   flex-wrap: wrap;
   gap: 3.75rem;
   margin-bottom: 6.25rem;
+
+  img {
+    max-width: 100%;
+    width: 380px;
+  }
 }
 
 .questions {

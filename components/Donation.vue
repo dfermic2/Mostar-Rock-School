@@ -3,7 +3,9 @@
     <div class="donation-container p-inline">
       <div class="donation-content">
         <div class="donation">
-          <DonationForm style="margin-inline: auto" />
+          <div class="donation-form">
+            <DonationForm style="margin-inline: auto" />
+          </div>
           <DonationFormCall style="margin-inline: auto" />
         </div>
       </div>
@@ -30,5 +32,16 @@
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
+}
+
+.donation-form {
+  width: 30rem;
+}
+
+@media (width < 600px) {
+  .donation-form {
+    width: 100%;
+    max-width: 30rem;
+  }
 }
 </style>

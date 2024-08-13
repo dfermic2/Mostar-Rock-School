@@ -16,11 +16,11 @@
         </div>
       </header>
 
-      <section class="articles">
+      <section class="articles p-inline">
         <Article />
       </section>
 
-      <section class="recommended-articles">
+      <section class="recommended-articles p-inline">
         <RecommendationArticles />
       </section>
     </div>
@@ -39,7 +39,6 @@ let article = news.find((t) => t.id === id);
 <style scoped>
 * {
   margin: 0;
-  padding: 0;
   max-width: 100vw;
 }
 
@@ -123,11 +122,13 @@ header {
 .articles {
   max-width: 74rem;
   margin-inline: auto;
+  box-sizing: border-box;
 }
 
 .recommended-articles {
   max-width: 100vw;
   background: #fafbfb;
+  box-sizing: border-box;
 }
 
 @media (width < 600px) {

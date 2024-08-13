@@ -54,6 +54,9 @@
   background-color: black;
   min-height: 32.8rem;
   align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -75,7 +78,7 @@ h1 {
   justify-content: space-between;
   color: white;
   width: 23.5rem;
-
+  margin-inline: auto;
   h1 {
     padding-bottom: 1rem;
     padding-top: 1.7rem;
@@ -86,6 +89,7 @@ h1 {
   display: flex;
   justify-content: flex-end;
   width: 23.5rem;
+  margin-inline: auto;
   border-left: 1px solid rgba(255, 0, 0, 0.4);
 }
 
@@ -102,7 +106,7 @@ h1 {
     justify-content: center;
     gap: 1rem;
     height: 2.5rem;
-    width: 20.5rem;
+    max-width: 20.5rem;
     border-radius: 0.25rem;
     border: 1px solid red;
     margin: 1rem 0 0 0;
@@ -133,5 +137,28 @@ h1 {
 p {
   margin: 0;
   padding-bottom: 1rem;
+}
+
+@media (width < 600px) {
+  .smaller-wrapper {
+    border-left: none;
+    border-top: 1px solid rgba(255, 0, 0, 0.4);
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+
+  .smaller,
+  .left {
+    align-items: center;
+    width: 100%;
+  }
+
+  .invite-content {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 </style>

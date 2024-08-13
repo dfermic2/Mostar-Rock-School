@@ -97,7 +97,7 @@ p {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 48.7rem;
+  max-width: 42.7rem;
   color: white;
 
   h1 {
@@ -186,5 +186,12 @@ hr {
   padding: 4rem 0 4rem 0;
   justify-content: space-around;
   box-sizing: border-box;
+}
+
+@media (width < 600px) {
+  .donations {
+    width: 100%;
+    max-width: 30rem;
+  }
 }
 </style>

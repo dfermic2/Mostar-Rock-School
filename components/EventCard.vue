@@ -97,13 +97,14 @@ const { event } = defineProps(["event"]);
 
 .header {
   width: 100%;
-  height: 3.75rem;
+  min-height: 3.75rem;
   background: #f1f5f9;
   box-sizing: border-box;
 }
 
 .location-time-info {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -132,7 +133,6 @@ const { event } = defineProps(["event"]);
 }
 
 .btn {
-  width: 11.25rem;
   height: 2.1875rem;
   background: #ff0000;
   background: hsl(0, 240, 120);
@@ -167,5 +167,19 @@ const { event } = defineProps(["event"]);
 
 .f-size-l {
   font-size: 1.5625rem;
+}
+
+@media (width < 400px) {
+  .p-inline-25 {
+    padding-inline: 1rem;
+  }
+
+  button {
+    width: 9.25rem;
+  }
+
+  .p-btn {
+    padding: 0;
+  }
 }
 </style>

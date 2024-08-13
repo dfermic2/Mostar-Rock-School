@@ -450,6 +450,22 @@ hr {
       line-height: 4.375rem;
       text-align: center;
     }
+
+    button {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+      max-width: 19.375rem;
+    }
+  }
+
+  .video-container video,
+  .vignette {
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 </style>

@@ -1,93 +1,91 @@
 <template>
-  <div>
-    <div class="container tailwind-custom">
-      <UTabs
-        :default-index="1"
-        :items="items"
-        :ui="{
-          list: {
-            base: 'relative -mt-1',
-            background: 'bg-white-100 dark:bg-gray-800',
+  <div class="container-tabs tailwind-custom">
+    <UTabs
+      :default-index="1"
+      :items="items"
+      :ui="{
+        list: {
+          base: 'relative -mt-1',
+          background: 'bg-white-100 dark:bg-gray-800',
+          rounded: 'rounded-tr',
+          shadow: '',
+          padding: 'p-0',
+          height: 'h-14',
+          width: 'max-w-full',
+          marker: {
+            wrapper:
+              'absolute inset-x-0 inset-y-0 duration-200 ease-out focus:outline-none',
+            base: 'max-w-full h-full',
+            background: 'bg-donation dark:bg-gray-900',
+            rounded: 'rounded-tr',
+            shadow: 'shadow-sm',
+          },
+          tab: {
+            base: 'relative inline-flex items-center justify-center flex-shrink-0 w-full ui-focus-visible:outline-0 ui-focus-visible:ring-2 ui-focus-visible:ring-primary-500 dark:ui-focus-visible:ring-primary-400 ui-not-focus-visible:outline-none focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 transition-colors duration-200 ease-out',
+            background: '',
+            active: 'text-white dark:text-white',
+            inactive: 'text-blue-600 dark:text-gray-400',
+            height: 'h-12',
+            padding: 'p-3',
+            size: 'text-l',
+            font: 'font-medium',
             rounded: 'rounded-tr',
             shadow: '',
-            padding: 'p-0',
-            height: 'h-14',
-            width: 'max-w-full',
-            marker: {
-              wrapper:
-                'absolute inset-x-0 inset-y-0 duration-200 ease-out focus:outline-none',
-              base: 'max-w-full h-full',
-              background: 'bg-donation dark:bg-gray-900',
-              rounded: 'rounded-tr',
-              shadow: 'shadow-sm',
-            },
-            tab: {
-              base: 'relative inline-flex items-center justify-center flex-shrink-0 w-full ui-focus-visible:outline-0 ui-focus-visible:ring-2 ui-focus-visible:ring-primary-500 dark:ui-focus-visible:ring-primary-400 ui-not-focus-visible:outline-none focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 transition-colors duration-200 ease-out',
-              background: '',
-              active: 'text-white dark:text-white',
-              inactive: 'text-blue-600 dark:text-gray-400',
-              height: 'h-12',
-              padding: 'p-3',
-              size: 'text-l',
-              font: 'font-medium',
-              rounded: 'rounded-tr',
-              shadow: '',
-            },
           },
-        }"
-      >
-        <template #item="{ item }">
-          <!-- Single donation -->
-          <div
-            v-if="item.key === 'singledonation'"
-            class="space-y-3 tabs"
-            tabindex="0"
-          >
-            <p>Single donation</p>
-          </div>
+        },
+      }"
+    >
+      <template #item="{ item }">
+        <!-- Single donation -->
+        <div
+          v-if="item.key === 'singledonation'"
+          class="space-y-3 tabs"
+          tabindex="0"
+        >
+          <p>Single donation</p>
+        </div>
 
-          <!-- Monthly support -->
-          <div
-            v-if="item.key === 'monthlysupport'"
-            class="content space-y-3 pt-5 pl-10 pr-10 pb-10"
-            tabindex="1"
-          >
-            <section class="donation-section">
-              <p class="f-bold-size mb-11875">Pick an amount</p>
-              <div class="amount-donations">
-                <span
-                  class="donation"
-                  role="money-donation"
-                  @click="handleValuePick()"
-                  v-for="amount in possibleDonationAmounts"
-                  :key="amount"
-                  :data-amount="amount"
-                >
-                  <Icon name="healthicons:money-bag" size="20" />
-                  <span class="amount f-bold-size">{{ amount }} KM</span>
-                </span>
-              </div>
-            </section>
+        <!-- Monthly support -->
+        <div
+          v-if="item.key === 'monthlysupport'"
+          class="content space-y-3 pt-5 pl-10 pr-10 pb-10"
+          tabindex="1"
+        >
+          <section class="donation-section">
+            <p class="f-bold-size mb-11875">Pick an amount</p>
+            <div class="amount-donations">
+              <span
+                class="donation"
+                role="money-donation"
+                @click="handleValuePick()"
+                v-for="amount in possibleDonationAmounts"
+                :key="amount"
+                :data-amount="amount"
+              >
+                <Icon name="healthicons:money-bag" size="20" />
+                <span class="amount f-bold-size">{{ amount }} KM</span>
+              </span>
+            </div>
+          </section>
 
-            <hr class="separator mb-11875" />
+          <hr class="separator mb-11875" />
 
-            <section class="donation-section">
-              <p class="f-bold-size mb-11875">Other amount</p>
-              <div class="custom-donation mb-11875">
-                <input class="p-07" type="number" placeholder="0" />
-                <span class="p-07">KM</span>
-              </div>
-              <button class="btn p-07" type="submit">
-                Proceed to next step
-                <span>
-                  <Icon name="basil:arrow-right-outline" size="25" />
-                </span>
-              </button>
-            </section>
-          </div>
-        </template>
-      </UTabs>
-    </div>
+          <section class="donation-section">
+            <p class="f-bold-size mb-11875">Other amount</p>
+            <div class="custom-donation mb-11875">
+              <input class="p-07" type="number" placeholder="0" />
+              <span class="p-07">KM</span>
+            </div>
+            <button class="btn p-07" type="submit">
+              Proceed to next step
+              <span>
+                <Icon name="basil:arrow-right-outline" size="25" />
+              </span>
+            </button>
+          </section>
+        </div>
+      </template>
+    </UTabs>
   </div>
 </template>
 
@@ -123,8 +121,8 @@ const handleValuePick = () => {
 </script>
 
 <style scoped>
-.container {
-  max-width: 30rem;
+.container-tabs {
+  width: 30rem;
   max-height: 30.3125rem;
   background: #fff;
   box-shadow: 1px 1px 3px #d6d6d6;
@@ -283,5 +281,18 @@ input::-webkit-inner-spin-button {
 
 button {
   border: 0;
+}
+
+@media (width < 600px) {
+  .container-tabs {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+
+@media (width < 400px) {
+  .content {
+    padding-inline: 1rem;
+  }
 }
 </style>
