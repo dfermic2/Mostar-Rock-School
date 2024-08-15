@@ -67,4 +67,13 @@ p {
   cursor: pointer;
   background-color: #b00;
 }
+
+@media (width < 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 </style>

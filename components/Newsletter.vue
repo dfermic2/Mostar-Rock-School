@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <div class="container-newsletter">
-      <div class="content">
-        <div class="heading">
-          <img src="../public/assets/doodle.png" alt="drum doodle" />
-          <h2>Our newsletter</h2>
-        </div>
-        <p>
-          Stay informed about the latest news, upcoming events, and success
-          stories from the Mostar Rock School.
-        </p>
-        <input type="email" placeholder="Email adress" />
-        <button>SIGN UP</button>
+  <div class="container-newsletter">
+    <div class="content">
+      <div class="heading">
+        <img src="../public/assets/doodle.png" alt="drum doodle" />
+        <h2>Our newsletter</h2>
       </div>
+      <p>
+        Stay informed about the latest news, upcoming events, and success
+        stories from the Mostar Rock School.
+      </p>
+      <input type="email" placeholder="Email adress" />
+      <button>SIGN UP</button>
     </div>
   </div>
 </template>
@@ -22,7 +20,7 @@
   display: flex;
   flex-grow: 1;
   max-width: 23.75rem;
-  height: 20.625rem;
+  min-height: 20.625rem;
   background: #b00;
   border-radius: 0.4rem;
   justify-content: center;
@@ -41,7 +39,7 @@
 }
 
 .content {
-  height: 17.2rem;
+  min-height: 17.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -107,5 +105,11 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+@media (width < 350px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 </style>

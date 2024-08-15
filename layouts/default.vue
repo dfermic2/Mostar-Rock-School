@@ -1,6 +1,8 @@
 <template>
   <div class="slot-class">
-    <div id="darkenOverlay" class="normal-overlay"></div>
+    <Transition>
+      <div id="darkenOverlay" class="normal-overlay"></div>
+    </Transition>
     <div class="right-menu">
       <MediaLinks :media-position="'side'" />
     </div>

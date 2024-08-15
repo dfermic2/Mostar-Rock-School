@@ -154,12 +154,13 @@ header {
 }
 
 .illustrations {
-  max-width: 30rem;
+  max-width: 21.25rem;
   margin-top: 1.5625rem;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  gap: 4.375rem;
+  justify-content: space-between;
 }
 
 .desc-vynil-container {
@@ -182,18 +183,28 @@ header {
     max-width: 40rem;
     font-weight: 600;
   }
+
+  img:first-child {
+    width: 100px;
+    max-width: 100%;
+  }
+
+  img:nth-child(2) {
+    width: 170px;
+    max-width: 100%;
+  }
 }
 
 .timeline-container {
   position: relative;
   max-width: 74rem;
   margin-inline: auto;
+  overflow-x: clip;
 }
 
 .scrollbar {
   position: absolute;
   bottom: -0.0625rem;
-  width: 100%;
   z-index: -1;
 }
 </style>

@@ -40,9 +40,11 @@
             education, collaboration, and performance, we strive to create a
             harmonious and inclusive society.
           </p>
-          <NuxtLink to="/school/people">
-            <button>MEET OUR PEOPLE</button>
-          </NuxtLink>
+          <div class="our-mission-btn">
+            <NuxtLink to="/school/people">
+              <button>MEET OUR PEOPLE</button>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -199,9 +201,10 @@ button:hover {
   display: flex;
   max-width: 61.25rem;
   flex-grow: 1;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   margin-inline: auto;
   justify-content: space-between;
+  padding-bottom: 2rem;
 
   img {
     max-width: 15rem;
@@ -298,11 +301,33 @@ button:hover {
   }
 }
 
-@media (width < 360px) {
-  header {
-    h1 {
-      font-size: 2.4rem;
+@media (width < 600px) {
+  .our-mission-content {
+    justify-content: center;
+
+    .our-mission-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .our-mission-btn {
+        display: block;
+        width: 100%;
+        max-width: 19.375rem;
+      }
+
+      button {
+        width: 100%;
+        margin: 2rem 0;
+      }
     }
+  }
+}
+
+@media (width < 360px) {
+  header h1 {
+    font-size: 2.4rem;
   }
 }
 </style>
