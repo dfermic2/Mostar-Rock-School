@@ -218,4 +218,17 @@ header {
 .v-leave-to {
   opacity: 0;
 }
+
+.member {
+  margin-inline: auto;
+}
+
+@media (width < 600px) {
+  .staff-content {
+    h2,
+    p {
+      text-align: center;
+    }
+  }
+}
 </style>

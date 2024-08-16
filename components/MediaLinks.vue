@@ -4,7 +4,7 @@
       class="container"
       :class="{
         'g-125 o-side': mediaPosition === 'side',
-        'g-3': mediaPosition === 'footer',
+        'g-footer': mediaPosition === 'footer',
         'g-normal': mediaPosition === 'normal',
       }"
     >
@@ -101,7 +101,7 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
   gap: 1.25rem;
 }
 
-.g-3 {
+.g-footer {
   gap: 3rem;
 }
 
@@ -160,10 +160,22 @@ const { mediaPosition } = defineProps(["mediaPosition"]);
 
 @media (width < 600px) {
   .g-normal {
-    gap: 4.3rem;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
   }
   .o-side {
     display: none;
+  }
+
+  #media-links-main-container {
+    width: 100%;
+  }
+
+  .g-footer {
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 </style>

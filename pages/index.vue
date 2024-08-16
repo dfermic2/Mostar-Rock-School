@@ -61,7 +61,7 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div>
+        <div class="programme-info">
           <p>
             As a leading music education institution, we provide aspiring
             musicians with a nurturing environment to learn, create, and
@@ -104,7 +104,7 @@
                 <EventCard :event="event" />
               </div>
             </div>
-            <BasicPaging class="pt-15" />
+            <BasicPaging class="pt-15 pb-" />
           </div>
         </div>
       </div>
@@ -226,9 +226,7 @@ import { events } from "~/data";
 
 .programme-container {
   display: flex;
-  flex-grow: 1;
   min-height: 33.75rem;
-  align-content: center;
 }
 
 .programme-content {
@@ -466,6 +464,29 @@ hr {
     right: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .programme-content {
+    align-items: center;
+
+    button {
+      width: 100%;
+      max-width: 19.375rem;
+      margin-inline: auto;
+    }
+
+    .programme-info {
+      margin-inline: auto;
+    }
+  }
+
+  .news-events-container {
+    margin-top: 2rem;
+
+    .news,
+    .events {
+      margin-bottom: 2rem;
+    }
   }
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="donation-content">
         <div class="donation">
           <div class="donation-form">
-            <DonationForm style="margin-inline: auto" />
+            <DonationForm />
           </div>
           <DonationFormCall style="margin-inline: auto" />
         </div>
@@ -22,11 +22,10 @@
 
 .donation-content {
   max-width: 74rem;
-  margin-inline: auto;
+  margin: 3rem auto;
 }
 .donation {
   display: flex;
-  flex-grow: 1;
   gap: 1rem;
   max-width: 67.5rem;
   flex-wrap: wrap-reverse;
@@ -35,13 +34,12 @@
 }
 
 .donation-form {
-  width: 30rem;
+  margin-inline: auto;
 }
 
 @media (width < 600px) {
   .donation-form {
-    width: 100%;
-    max-width: 30rem;
+    margin-top: 2rem;
   }
 }
 </style>

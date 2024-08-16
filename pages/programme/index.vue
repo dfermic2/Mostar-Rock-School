@@ -244,7 +244,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 33.9rem;
   align-items: center;
 }
 

@@ -48,7 +48,7 @@
         <ContactForm />
       </div>
     </div>
-    <div class="bottom-container p-inline">
+    <div class="bottom-container">
       <div class="bottom">
         <SpreadTheWord />
       </div>
