@@ -248,7 +248,7 @@ a:hover + .dropdown,
 
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .v-enter-from,
@@ -324,14 +324,5 @@ a:hover + .dropdown,
   .btn-red:active {
     color: red;
   }
-
-  /* .dropdown {
-    position: static;
-    display: block;
-
-    li {
-      background-color: transparent;
-    }
-  } */
 }
 </style>
