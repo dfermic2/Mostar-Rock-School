@@ -91,8 +91,12 @@
                 <button>VIEW ALL</button>
               </NuxtLink>
             </div>
-            <HomeNewsCard />
-            <BasicPaging class="pt-15" />
+            <HomeNewsCard :article="ref_article" />
+            <BasicPaging
+              @go-to-previous-page="goToPreviousPage"
+              @go-to-next-page="goToNextPage"
+              class="pt-15"
+            />
           </div>
           <div class="events">
             <div class="news-events-heading">
@@ -125,7 +129,30 @@
 </template>
 
 <script setup>
-import { events } from "~/data";
+import { events } from '~/data'
+import { news } from '~/data'
+import { ref } from 'vue'
+
+let numberOfArticles = news.length - 1
+let currentArticle = 0
+
+let ref_article = ref(news[currentArticle])
+
+let goToPreviousPage = () => {
+  --currentArticle
+  if (currentArticle < 0) {
+    currentArticle = numberOfArticles
+  }
+  ref_article.value = news[currentArticle]
+}
+
+let goToNextPage = () => {
+  ++currentArticle
+  if (currentArticle > numberOfArticles) {
+    currentArticle = 0
+  }
+  ref_article.value = news[currentArticle]
+}
 </script>
 
 <style scoped>
@@ -148,7 +175,7 @@ import { events } from "~/data";
   min-height: 24.6875rem;
   justify-content: space-between;
   h1 {
-    font-family: "F37Hybrid-Bold";
+    font-family: 'F37Hybrid-Bold';
     font-size: 6.875rem;
     line-height: 6.875rem;
     max-width: 50.8rem;
@@ -403,16 +430,18 @@ hr {
 .events-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 34.375rem;
+  justify-content: space-around;
+  /* min-height: 34.375rem; */ /* ---admir--- */
+  min-height: 41.7rem; /* ---admir--- */
 }
 
 .news-events-heading {
   display: flex;
-  flex-grow: 1;
+  /* flex-grow: 1; */ /* ---admir--- */
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */ /* ---admir--- */
+  padding-top: 1.5rem; /* ---admir--- */
 
   button {
     border: 1px solid red;
