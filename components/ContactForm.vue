@@ -1,59 +1,98 @@
 <template>
   <div class="form-container">
     <form @submit.prevent="sendEmail">
-      <select v-model="subject">
+      <select>
         <option value="" disabled selected>I'm writing about...</option>
         <option value="temp1">Temp1</option>
         <option value="temp2">Temp2</option>
       </select>
 
-      <input v-model="name" type="text" placeholder="Your name*" required />
-      <input
-        v-model="email"
-        type="email"
-        placeholder="Email address*"
-        required
-      />
+      <input v-model="name" type="text" placeholder="Your name*" />
+
+      <input v-model="to_email" type="email" placeholder="Email address*" />
       <input v-model="phone" type="tel" placeholder="Phone number" />
+
       <textarea
         v-model="message"
         type="text"
         placeholder="Your message..."
-        required
-      />
+      ></textarea>
+
       <div class="checkbox-container">
-        <input v-model="privacyPolicy" type="checkbox" required />
+        <input v-model="privacyPolicy" type="checkbox" />
         <label>I agree to <u>Privacy Policy</u></label>
       </div>
+
       <div class="checkbox-container">
         <input v-model="newsletter" type="checkbox" />
         <label>I want to sign up for the Newsletter</label>
       </div>
+
       <button type="submit">SEND MESSAGE</button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { Email } from "smtpjs";
+import { toast } from "vue3-toastify";
 
-let subject = "";
+let subject = "Selamalejk familij uNjemackoj";
+console.log(subject);
+let from_email = "admir.learn.sitnic@gmail.com";
+let from_name = "Deutchland GmBH";
 let name = "";
-let email = "";
+let to_email;
 let phone = "";
 let message = "";
 let privacyPolicy = false;
 let newsletter = false;
 
-function sendEmail() {
-  Email.send({
-    SecureToken: "43420e72-ca5e-49fc-aa26-abaea90efdb9",
-    To: "dfermic@gmail.com",
-    From: "you@isp.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
+const sendEmail = async () => {
+  console.log("Accessed!");
+
+  let msg = {
+    personalizations: [
+      {
+        to: [
+          {
+            email: to_email,
+            name: name,
+          },
+        ],
+      },
+    ],
+    from: {
+      email: "admir.learn.sitnic@gmail.com",
+      name: "Baki 83",
+    },
+    subject: subject,
+    content: [
+      {
+        type: "text/plain",
+        value: "Mulac obicni",
+      },
+      {
+        type: "text/html",
+        value: `
+        <p>Hello ${name}</p>
+        <p>Wie geht's </p>
+        <p>${message}</p>
+        `,
+      },
+    ],
+  };
+  await useFetch("/api/sendgrid", {
+    method: "POST",
+    body: msg,
+  })
+    .then((response) => {
+      console.log("ADMIROV RESPONSE JE", response);
+      toast.done("Successfully sent email !", {
+        autoClose: 1000,
+      });
+    })
+    .catch((err) => console.log("ADMIROV ERROR JE", err));
+};
 </script>
 
 <style scoped>
