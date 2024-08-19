@@ -1,25 +1,33 @@
 <template>
   <div class="form-container">
     <form @submit.prevent="sendEmail">
-      <select>
+      <select v-model="subject">
         <option value="" disabled selected>I'm writing about...</option>
-        <option value="temp1">Temp1</option>
-        <option value="temp2">Temp2</option>
+        <option value="Obavezno pročitati">Obavezno pročitati</option>
+        <option value="Obavezno pročitati i shvatiti">
+          Obavezno pročitati i shvatiti
+        </option>
       </select>
 
-      <input v-model="name" type="text" placeholder="Your name*" />
+      <input v-model="name" type="text" placeholder="Your name*" required />
 
-      <input v-model="to_email" type="email" placeholder="Email address*" />
+      <input
+        v-model="to_email"
+        type="email"
+        placeholder="Email address*"
+        required
+      />
       <input v-model="phone" type="tel" placeholder="Phone number" />
 
       <textarea
         v-model="message"
         type="text"
         placeholder="Your message..."
+        required
       ></textarea>
 
       <div class="checkbox-container">
-        <input v-model="privacyPolicy" type="checkbox" />
+        <input v-model="privacyPolicy" type="checkbox" required />
         <label>I agree to <u>Privacy Policy</u></label>
       </div>
 
@@ -35,9 +43,9 @@
 
 <script setup>
 import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
-let subject = "Selamalejk familij uNjemackoj";
-console.log(subject);
+let subject = "";
 let from_email = "admir.learn.sitnic@gmail.com";
 let from_name = "Deutchland GmBH";
 let name = "";
@@ -48,8 +56,6 @@ let privacyPolicy = false;
 let newsletter = false;
 
 const sendEmail = async () => {
-  console.log("Accessed!");
-
   let msg = {
     personalizations: [
       {
@@ -63,20 +69,17 @@ const sendEmail = async () => {
     ],
     from: {
       email: "admir.learn.sitnic@gmail.com",
-      name: "Baki 83",
+      name: "BH Telecom",
     },
     subject: subject,
     content: [
       {
-        type: "text/plain",
-        value: "Mulac obicni",
-      },
-      {
         type: "text/html",
         value: `
-        <p>Hello ${name}</p>
-        <p>Wie geht's </p>
+        <h3>Poštovani/a ${name}, </h3>
         <p>${message}</p>
+        <br/><br/>
+        <p>Vaš BH Telecom iz susjedne sobe </p>
         `,
       },
     ],
@@ -84,14 +87,12 @@ const sendEmail = async () => {
   await useFetch("/api/sendgrid", {
     method: "POST",
     body: msg,
-  })
-    .then((response) => {
-      console.log("ADMIROV RESPONSE JE", response);
-      toast.done("Successfully sent email !", {
-        autoClose: 1000,
-      });
-    })
-    .catch((err) => console.log("ADMIROV ERROR JE", err));
+  }).then((response) => {
+    toast.success("You've sent an email", {
+      position: "bottom-right",
+      autoClose: 3500,
+    });
+  });
 };
 </script>
 
