@@ -2,8 +2,6 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const body = await readBody(event);
 
-  console.log("", body);
-
   const sgRequest = await fetch("https://api.sendgrid.com/v3/mail/send", {
     method: "POST",
     headers: {
@@ -13,7 +11,6 @@ export default defineEventHandler(async (event) => {
     },
     body: JSON.stringify(body),
   }).catch((error) => {
-    console.log(error);
     return error;
   });
   return sgRequest;

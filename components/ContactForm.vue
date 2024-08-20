@@ -76,10 +76,8 @@ const sendEmail = async () => {
       {
         type: "text/html",
         value: `
-        <h3>Poštovani/a ${name}, </h3>
+        <h3>Hello/a ${name}, </h3>
         <p>${message}</p>
-        <br/><br/>
-        <p>Vaš BH Telecom iz susjedne sobe </p>
         `,
       },
     ],
