@@ -43,39 +43,39 @@
 </template>
 
 <script setup>
-let { article } = defineProps(['article'])
-let url = 'news/' + article.id
+let { article } = defineProps(["article"]);
+let url = "news/" + article.id;
 onMounted(() => {
-  console.log('Mounted')
-  let container = document.querySelector('.container[role="home-news-card"]')
-  let video = document.getElementById('video-clip')
-  let btn = document.getElementById('btn')
+  console.log("Mounted");
+  let container = document.querySelector('.container[role="home-news-card"]');
+  let video = document.getElementById("video-clip");
+  let btn = document.getElementById("btn");
 
-  container.addEventListener('mouseover', () => {
+  container.addEventListener("mouseover", () => {
     // iframe style
-    video.style.transform = 'scale(1.1)'
-    video.style.transition = '500ms'
+    video.style.transform = "scale(1.1)";
+    video.style.transition = "500ms";
     // button style
-    btn.style.background = '#b00000'
-    btn.style.transition = '500ms'
+    btn.style.background = "#b00000";
+    btn.style.transition = "500ms";
 
     //container
-    container.style.boxShadow = '0.0625rem 0.4375rem 1.25rem #e3e3e3'
-    container.style.transition = '500ms'
-  })
+    container.style.boxShadow = "0.0625rem 0.4375rem 1.25rem #e3e3e3";
+    container.style.transition = "500ms";
+  });
 
-  container.addEventListener('mouseleave', () => {
+  container.addEventListener("mouseleave", () => {
     // iframe style
-    video.style.transform = 'scale(1)'
-    video.style.transition = '500ms'
+    video.style.transform = "scale(1)";
+    video.style.transition = "500ms";
     // button style
-    btn.style.background = '#ff0000'
-    btn.style.transition = '500ms'
+    btn.style.background = "#ff0000";
+    btn.style.transition = "500ms";
     //container
-    container.style.boxShadow = '0.0625rem 0.25rem 0.5rem #ced0d4'
-    container.style.transition = '500ms'
-  })
-})
+    container.style.boxShadow = "0.0625rem 0.25rem 0.5rem #ced0d4";
+    container.style.transition = "500ms";
+  });
+});
 </script>
 
 <style scoped>
@@ -85,7 +85,7 @@ onMounted(() => {
   border: 0;
 }
 
-.container[role='home-news-card'] {
+.container[role="home-news-card"] {
   max-width: 41.25rem;
   min-height: 34.375rem;
   padding: 2.5rem 2.5rem 1.875rem 2.5rem;
@@ -112,9 +112,9 @@ onMounted(() => {
 .home-news-img {
   border-radius: 0.3125rem;
   max-width: 100%;
-  width: 660px;
+  width: 41.25rem;
   max-height: 100%;
-  height: 400px;
+  height: 25rem;
 }
 
 .news-information {
