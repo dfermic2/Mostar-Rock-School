@@ -3,16 +3,19 @@
     <form @submit.prevent="sendEmail">
       <select v-model="subject">
         <option value="" disabled selected>I'm writing about...</option>
-        <option value="Obavezno pročitati">Obavezno pročitati</option>
-        <option value="Obavezno pročitati i shvatiti">
-          Obavezno pročitati i shvatiti
-        </option>
+        <option value="Temp 1">Temp 1</option>
+        <option value="Temp 2">Temp 2</option>
       </select>
 
-      <input v-model="name" type="text" placeholder="Your name*" required />
+      <input
+        v-model="from_name"
+        type="text"
+        placeholder="Your name*"
+        required
+      />
 
       <input
-        v-model="to_email"
+        v-model="from_email"
         type="email"
         placeholder="Email address*"
         required
@@ -46,10 +49,10 @@ import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 
 let subject = "";
-let from_email = "admir.learn.sitnic@gmail.com";
-let from_name = "Deutchland GmBH";
+let from_email;
+let from_name;
 let name = "";
-let to_email;
+let to_email = " info@mostarrockschool.org";
 let phone = "";
 let message = "";
 let privacyPolicy = false;
@@ -68,16 +71,17 @@ const sendEmail = async () => {
       },
     ],
     from: {
-      email: "admir.learn.sitnic@gmail.com",
-      name: "BH Telecom",
+      email: from_email,
+      name: "MoRS Contact Form",
     },
     subject: subject,
     content: [
       {
         type: "text/html",
         value: `
-        <h3>Hello/a ${name}, </h3>
         <p>${message}</p>
+        <p>${from_name}</p>
+        <p>${phone}</p>
         `,
       },
     ],
