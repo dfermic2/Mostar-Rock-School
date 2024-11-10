@@ -39,7 +39,7 @@
               <NuxtLink to="/school">OUR SCHOOL</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/programme">PROGRAMME</NuxtLink>
+              <NuxtLink to="/programme/regular-programme">PROGRAMME</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/enroll">ENROLL</NuxtLink>
