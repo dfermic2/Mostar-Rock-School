@@ -40,37 +40,26 @@
                     <NuxtLink to="/school/people"> OUR PEOPLE </NuxtLink>
                   </li>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/school/schedule"> SCHEDULE </NuxtLink>
+                    <NuxtLink to="https://planer.mostarrockschool.org/">
+                      SCHEDULE
+                    </NuxtLink>
                   </li>
                 </ul>
               </div>
             </li>
-            <li
-              @mouseover="addOverlay"
-              @mouseleave="removeOverlay"
-              @click="removeOverlay"
-            >
-              <NuxtLink to="/programme">Programme</NuxtLink>
+            <li @mouseover="addOverlay" @mouseleave="removeOverlay">
+              <span class="link-text">Programme</span>
               <div class="dropdown">
                 <ul>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/programme/dk-studio"> DK STUDIO </NuxtLink>
-                  </li>
-                  <li @click="removeOverlay">
-                    <NuxtLink to="/programme/booking"> MORS BOOKING </NuxtLink>
-                  </li>
-                  <li @click="removeOverlay">
-                    <NuxtLink to="/programme/summer-rock-school">
-                      SUMMER ROCK SCHOOL
+                    <NuxtLink to="/programme/regular-programme">
+                      Regular programme
                     </NuxtLink>
                   </li>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/programme/mobile-rock-school">
-                      MOBILE ROCK SCHOOL
+                    <NuxtLink to="/programme/additional-programme">
+                      Additional programme
                     </NuxtLink>
-                  </li>
-                  <li @click="removeOverlay">
-                    <NuxtLink to="/programme/liron"> LIRON </NuxtLink>
                   </li>
                 </ul>
               </div>
@@ -234,6 +223,11 @@ button:hover,
 }
 
 a:hover + .dropdown,
+.dropdown:hover {
+  display: block;
+}
+
+span:hover + .dropdown,
 .dropdown:hover {
   display: block;
 }

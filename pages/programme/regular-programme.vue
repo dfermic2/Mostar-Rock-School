@@ -9,15 +9,24 @@ import { offers } from "~/data";
         <Navbar />
         <div class="hero-container">
           <div class="info">
-            <h1>School programme</h1>
+            <h1>Regular School programme</h1>
             <p>
-              Mostar Rock School offers a comprehensive programme that
-              encompasses everything young musicians might need when starting
-              their musical journey. From educational activities in both
-              individual and group formats, to production of events, creative
+              Mostar Rock School Regular Programme offers a comprehensive
+              curriculum that encompasses everything young musicians might need
+              when starting their musical journey. From educational activities
+              in both individual and group formats, to production, creative
               development, studio recordings, publishing and booking.
             </p>
-            <button type="button" class="btn-style">Enroll now</button>
+            <NuxtLink to="/enroll">
+              <button type="button" class="btn-style btn-link">
+                Enroll now
+              </button>
+            </NuxtLink>
+            <NuxtLink to="/programme/additional-programme"
+              ><button type="button" class="btn-style btn-link">
+                Additional Programme
+              </button>
+            </NuxtLink>
           </div>
           <div class="img-wrapper">
             <img
@@ -65,7 +74,11 @@ import { offers } from "~/data";
                 exercises during one school year.
               </p>
             </div>
-            <button class="btn btn-style">Ready to rock with us?</button>
+            <NuxtLink to="/enroll">
+              <button type="button" class="btn-style btn-link">
+                Ready to rock with us?
+              </button>
+            </NuxtLink>
           </div>
           <CurriculumOffers :offers="offers" />
         </section>
@@ -132,31 +145,62 @@ import { offers } from "~/data";
         </section>
       </section>
 
-      <section class="music-camps-container p-inline">
-        <h1>Music Camps</h1>
-        <div class="music-camps">
-          <div>
-            <strong>
-              <p>
-                Rock School Mostar has so far taken part in exchanges and music
-                camps in Macedonia, Croatia, Slovenia, France, Germany, Serbia,
-                Austria.
-              </p>
-            </strong>
+      <section class="summer-school p-inline">
+        <div class="summer-school-container">
+          <div class="left-side">
+            <img
+              src="../../public/assets/images/programme/Summer School.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="right-side">
+            <h1>Summer School</h1>
             <p>
-              The school also implemented two music camps in its own
-              organization. The first camp was held in the Roma settlement of
-              Kiseljak near Tuzla in 2015 for 60 participants from 4 BH cities,
-              and the second in the Olympic Hotel Bistrica in Jahorina in 2016
-              for 70 participants from 18 BH cities.
+              Ljetna škola je eksperimentalni obrazovni program koji traje u
+              ljetnom periodu, tačnije kroz 6 i 7 mjesec. U programu Ljetne
+              škole se nude grupne radionice, master class program na određene
+              teme ili za određene isntrumente. U suradnji sa drugim festivalima
+              npr. Mostar Blues & Rock Festivalom se organizuju radionice sa
+              poznatim svjetskim ličnostima. Program Ljetne škole redovno pohađa
+              oko 70 polaznika dok su master class radionice i prezentacije
+              otvorene za javnost.
             </p>
-            <button class="btn btn-style" type="button">
-              Get in touch to learn more
-            </button>
+            <p>
+              Ljetna škola organizuje 150+ radionica u toku 2 mjeseca i završni
+              koncert na kojem se prezentira rad na radionicama.
+            </p>
+            <NuxtLink to="/contact">
+              <button class="btn btn-style btn-link">
+                Get in touch to learn more
+              </button>
+            </NuxtLink>
+          </div>
+        </div>
+      </section>
+
+      <section class="mors-production-container p-inline">
+        <div class="mors-production">
+          <div class="right-side">
+            <h1>MoRS Production</h1>
+            <p>
+              Ciljevi MoRS produkcije su da uveže sve rezultate Škole i kreira
+              tržište za mlade talente. Prepoznaje potencijal talenta/proizvoda,
+              osmišljava pakovanje istog u vidu audio/video snimka, nalazi način
+              da realizuje potrebe kako bi proizvod mogao da se uveže sa realnim
+              sektorom poslovanja u muzičkoj industriji (klubovi, festivali,
+              specifični eventi, ostvarivanje autorskih i izvođačkih prava,
+              itd.)
+            </p>
+            <NuxtLink to="/contact">
+              <button class="btn btn-style btn-link">
+                Get in touch to learn more
+              </button>
+            </NuxtLink>
           </div>
           <div class="photo-container">
             <iframe
-              src="https://www.youtube.com/embed/kPVx7CINnOU?si=CeVJA14qeJQjO9eb"
+              src="https://www.youtube.com/embed/OrQ-XlVpkLc?si=_ZT6OtORCXWtBxmR"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -167,35 +211,39 @@ import { offers } from "~/data";
         </div>
       </section>
 
-      <section class="event-festival p-inline">
-        <div class="event-container">
-          <div class="left-side">
-            <img
-              src="../../public/assets/images/programme/guy-with-guitar.png"
-              alt=""
-            />
-          </div>
-
-          <div class="right-side">
-            <h1>Events and festivals</h1>
-            <p>
-              Depending on the situation or need, the production department also
-              functions as an organizer, promoter, technical producer,
-              coordinator, and/or executive producer.
-            </p>
-            <p>
-              MoRS started and so far realized two editions of the festival Open
-              City Mostar, four editions of Old Town Street Fest festival that
-              takes place as part of the Red Bull Cliff Diving acrobatic world
-              competition jumps from Stari Most in Mostar, two editions of the
-              Winterville Festival, the Dubioze Kolektiv Concert at SC
-              Kantarevac stadium. MoRS also organizes a concert every year for
-              World Music Day on June 21, when he proudly presents the young
-              talents of his program and invites a regional guest.
-            </p>
-            <button class="btn btn-style">Get in touch to learn more</button>
-          </div>
-        </div>
+      <section class="mors-booking p-inline">
+        <h1>MoRS Booking</h1>
+        <p>
+          MoRS booking je nastao kao prirodna potreba da mladi talenti naprave
+          sljedeće korake u muzičkoj industriji kako bi dobili priliku za
+          amaterski i profesionalni angažman na muzičkoj domaćoj, regionalnoj
+          ili svjetskoj sceni.
+        </p>
+        <p>
+          Ovisno o mogućnosti finansiranja, Booking odjel organizira turneje,
+          spaja mlade muzičare/bendove sa klubovima, festivalima, specifičnim
+          eventima. Kroz proces organizacije mladi ljudi uče o organizaciji
+          koncerata, o poslovima promocije, tehničke organizacije, interesima
+          raznih strana u samoj organizaciji, dok se na terenu suočavaju i sa
+          organizacijom putovanja, tonskih proba, medijskim kampanjama i drugim
+          potrebama vezanim za turneju. Praktično, sučeljavaju se sa svim
+          neophodnim potezima koji se trebaju desiti kako bi turneja bila
+          uspješna, a čega publika nije niti svjesna.
+        </p>
+        <p>
+          Booking department posjeduje regionalnu kontakt bazu promotora i
+          organizatora. Booking također prezentira mlade bendove iz regiona u
+          regionu.
+        </p>
+        <p>
+          Booking odjel je od 2017. godine do danas organizovao preko 450
+          događaja.
+        </p>
+        <NuxtLink to="/contact">
+          <button class="btn btn-style btn-link">
+            Get in touch to learn more
+          </button>
+        </NuxtLink>
       </section>
 
       <section class="spread-the-word p-inline">
@@ -284,15 +332,15 @@ header {
   margin-bottom: 2.5rem;
 }
 
-.info > button {
-  width: 13.75rem;
+.btn-link {
   height: 2.8125rem;
-  padding: 0.875rem 3.84375rem 0.8125rem 3.90625rem;
+  width: 17rem;
+  margin-bottom: 1rem;
   font-weight: bold;
   transition: 500ms;
 }
 
-.info > button:hover {
+.btn-link:hover {
   background: #b00;
 }
 
@@ -365,16 +413,6 @@ header {
   }
 }
 
-.photo-container {
-  iframe {
-    max-width: 100%;
-    width: 440px;
-    max-height: 100%;
-    height: 250px;
-    box-shadow: 7px 15px 48px 17px rgba(0, 0, 0, 0.2);
-  }
-}
-
 iframe {
   border-radius: 5px;
 }
@@ -406,11 +444,6 @@ iframe {
   gap: 2rem;
 }
 
-.left-side img {
-  max-width: 100%;
-  width: 27.5rem;
-}
-
 .article-texts {
   display: flex;
   flex-direction: column;
@@ -423,41 +456,82 @@ iframe {
   text-align: justify;
 }
 
-.music-camps-container {
+.spread-the-word,
+.mors-booking {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: 6.25rem;
 }
 
-.music-camps {
-  margin-top: 1.875rem;
+.mors-booking {
   display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  h1 {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.mors-production-container {
+  max-width: 74rem;
+  margin-inline: auto;
+  margin-bottom: 6.25rem;
+}
+
+.mors-production {
+  margin-top: 0.875rem;
+  display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.music-camps div:first-child {
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 42.5rem;
-  margin-top: 1.875rem;
-}
-
-.event-festival {
+.summer-school {
   max-width: 74rem;
   margin-inline: auto;
   margin-bottom: 6.25rem;
 }
 
-.event-container {
+.summer-school-container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   flex-wrap: wrap-reverse;
   align-items: center;
   gap: 2rem;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  iframe {
+    max-width: 100%;
+    width: 440px;
+    max-height: 100%;
+    height: 250px;
+    box-shadow: 7px 15px 48px 17px rgba(0, 0, 0, 0.2);
+  }
+}
+
+iframe {
+  border-radius: 5px;
+}
+
+.btn-style {
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0.1875rem;
+  background: #ff0000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .right-side {
@@ -471,9 +545,20 @@ iframe {
   text-align: justify;
 }
 
-.spread-the-word {
-  max-width: 74rem;
-  margin-inline: auto;
-  margin-bottom: 6.25rem;
+.btn {
+  width: fit-content;
+  height: 2.8125rem;
+  margin-top: 0.625rem;
+  padding: 0.875rem 2.71875rem 0.8125rem 2.78125rem;
+  transition: 500ms;
+}
+
+.left-side img {
+  max-width: 100%;
+  width: 27.5rem;
+}
+
+.btn:hover {
+  background: #b00;
 }
 </style>
