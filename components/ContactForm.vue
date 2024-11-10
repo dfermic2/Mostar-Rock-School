@@ -3,57 +3,99 @@
     <form @submit.prevent="sendEmail">
       <select v-model="subject">
         <option value="" disabled selected>I'm writing about...</option>
-        <option value="temp1">Temp1</option>
-        <option value="temp2">Temp2</option>
+        <option value="Temp 1">Temp 1</option>
+        <option value="Temp 2">Temp 2</option>
       </select>
 
-      <input v-model="name" type="text" placeholder="Your name*" required />
       <input
-        v-model="email"
+        v-model="from_name"
+        type="text"
+        placeholder="Your name*"
+        required
+      />
+
+      <input
+        v-model="from_email"
         type="email"
         placeholder="Email address*"
         required
       />
       <input v-model="phone" type="tel" placeholder="Phone number" />
+
       <textarea
         v-model="message"
         type="text"
         placeholder="Your message..."
         required
-      />
+      ></textarea>
+
       <div class="checkbox-container">
         <input v-model="privacyPolicy" type="checkbox" required />
         <label>I agree to <u>Privacy Policy</u></label>
       </div>
+
       <div class="checkbox-container">
         <input v-model="newsletter" type="checkbox" />
         <label>I want to sign up for the Newsletter</label>
       </div>
+
       <button type="submit">SEND MESSAGE</button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { Email } from "smtpjs";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 let subject = "";
+let from_email;
+let from_name;
 let name = "";
-let email = "";
+let to_email = " info@mostarrockschool.org";
 let phone = "";
 let message = "";
 let privacyPolicy = false;
 let newsletter = false;
 
-function sendEmail() {
-  Email.send({
-    SecureToken: "43420e72-ca5e-49fc-aa26-abaea90efdb9",
-    To: "dfermic@gmail.com",
-    From: "you@isp.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
-  }).then((message) => alert(message));
-}
+const sendEmail = async () => {
+  let msg = {
+    personalizations: [
+      {
+        to: [
+          {
+            email: to_email,
+            name: name,
+          },
+        ],
+      },
+    ],
+    from: {
+      email: from_email,
+      name: "MoRS Contact Form",
+    },
+    subject: subject,
+    content: [
+      {
+        type: "text/html",
+        value: `
+        <p>${message}</p>
+        <p>${from_name}</p>
+        <p>${phone}</p>
+        `,
+      },
+    ],
+  };
+  await useFetch("/api/sendgrid", {
+    method: "POST",
+    body: msg,
+  }).then((response) => {
+    toast.success("You've sent an email", {
+      position: "bottom-right",
+      autoClose: 3500,
+    });
+  });
+};
 </script>
 
 <style scoped>
