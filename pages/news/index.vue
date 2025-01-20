@@ -5,12 +5,9 @@
         <Navbar />
         <div class="hero-container">
           <div class="info">
-            <h1>What's new in our world of music.</h1>
+            <h1>{{ $t("news_hero_h") }}</h1>
             <p>
-              Join us as we share the remarkable journeys and creative
-              achievements of our talented students, showcasing their
-              dedication, collaboration, and artistic growth. Stay tuned for
-              their inspiring stories and unforgettable music!
+              {{ $t("news_hero_p") }}
             </p>
           </div>
           <div class="img-wrapper">

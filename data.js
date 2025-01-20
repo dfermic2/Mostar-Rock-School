@@ -95,14 +95,12 @@ export const news = [
 //Management and Administration images
 import MarinBosnjak from "../public/assets/images/staff/marin-bosnjak.webp";
 import JasminaKazazic from "../public/assets/images/staff/jasmina-kazazic.webp";
-import LubnaCuric from "../public/assets/images/staff/lubna-curic.webp";
 import OrhanMaslo from "../public/assets/images/staff/orhan-maslo.webp";
 //Programme images
 import DjenoMujic from "../public/assets/images/staff/djeno-mujic.webp";
 import MonikaGrubisic from "../public/assets/images/staff/monika-grubisic.webp";
 import NerminaCoric from "../public/assets/images/staff/nermica-coric.webp";
 //Lecturers images
-import AtilaAksoj from "../public/assets/images/staff/atilla-aksoj.webp";
 import IvanKovacevic from "../public/assets/images/staff/ivan-kovacevic.webp";
 import DomagojZelenika from "../public/assets/images/staff/domagoj-zelenika.webp";
 import SeminMerzic from "../public/assets/images/staff/semin-merzic.webp";
@@ -112,7 +110,7 @@ export const staff = {
     {
       id: 1,
       name: "Marin Bošnjak",
-      department: "Head of Production",
+      department: "head_of_production",
       shape: "circle",
       img: MarinBosnjak,
       description: "",
@@ -120,24 +118,15 @@ export const staff = {
     {
       id: 2,
       name: "Jasmina Kazazić",
-      department: "Financial Manager",
+      department: "financial_manager",
       shape: "rectangle",
       img: JasminaKazazic,
       description: "",
     },
     {
       id: 3,
-      name: "Lubna Ćurić",
-      department: "Project Assistant/Booking Manager",
-      shape: "triangle",
-      img: LubnaCuric,
-      description:
-        "Lubna Ćurić is a student of pedagogy and project assistant and manager of the Booking department at the Rock school. She entered the world of music by attending the first and second degree music school in Mostar, where she played the piano. She fulfilled her ambition towards rhythm and dynamics by enrolling in the Rock School Mostar in 2017, where she started playing drums. At the Rock School, she was the drummer of the then Academic band, and in 2019 she became the drummer of the band New Soul Generation Bosnia and went on a German tour with New Soul Generation Germany. In 2021, she started her DJ career and become an active member of both the local and wider electronic scene.",
-    },
-    {
-      id: 4,
       name: "Orhan Maslo",
-      department: "Project Manager",
+      department: "project_manager",
       shape: "circle",
       img: OrhanMaslo,
       description: "",
@@ -145,25 +134,25 @@ export const staff = {
   ],
   programme: [
     {
-      id: 5,
+      id: 4,
       name: "Đeno Mujić",
-      department: "Creative Department/Drums & Audio Production",
+      department: "creative_department",
       shape: "triangle",
       img: DjenoMujic,
       description: "",
     },
     {
-      id: 6,
+      id: 5,
       name: "Monika Grubišić-Ćabo",
-      department: "Head of Education/Vocal Coach",
+      department: "vocal_coach",
       shape: "circle",
       img: MonikaGrubisic,
       description: "",
     },
     {
-      id: 7,
+      id: 6,
       name: "Nermina Ćorić",
-      department: "Student Administration Officer",
+      department: "student_administration",
       shape: "rectangle",
       img: NerminaCoric,
       description: "",
@@ -171,33 +160,25 @@ export const staff = {
   ],
   lecturers: [
     {
-      id: 8,
-      name: "Atila Aksoj",
-      department: "Guitar",
-      shape: "half-rectangle",
-      img: AtilaAksoj,
-      description: "",
-    },
-    {
-      id: 9,
+      id: 7,
       name: "Ivan Kovacevic",
-      department: "Guitar",
+      department: "guitar",
       shape: "leaf",
       img: IvanKovacevic,
       description: "",
     },
     {
-      id: 10,
+      id: 8,
       name: "Domagoj Zelenika",
-      department: "Guitar",
+      department: "guitar",
       shape: "triangle",
       img: DomagojZelenika,
       description: "",
     },
     {
-      id: 11,
+      id: 9,
       name: "Semin Merzić",
-      department: "Band Coach",
+      department: "band_coach",
       shape: "circle",
       img: SeminMerzic,
       description: "",
@@ -430,35 +411,35 @@ export const sponsors = [
 export const offers = [
   {
     id: 1,
-    offer: "Drums",
+    offer: "drums",
   },
   {
     id: 2,
-    offer: "Bass Guitar",
+    offer: "bass_guitar",
   },
   {
     id: 3,
-    offer: "Electric Music Production",
+    offer: "creative_electronic_production",
   },
   {
     id: 4,
-    offer: "Keyboards (electric piano)",
+    offer: "keyboards",
   },
   {
     id: 5,
-    offer: "Electric guitar",
+    offer: "electric_guitar",
   },
   {
     id: 6,
-    offer: "Workshops and masterclasses",
+    offer: "workshops_masterclasses",
   },
   {
     id: 7,
-    offer: "Vocals",
+    offer: "vocals",
   },
   {
     id: 8,
-    offer: "Audio recording production",
+    offer: "audio_recording_production",
   },
 ];
 
@@ -484,35 +465,35 @@ export const events = [
 export const donationTypes = [
   {
     id: 1,
-    title: "Online donation",
-    description:
-      "Visit our secure online donation platform to contribute easily and securely. Choose a one-time donation or become a monthly supporter, providing sustained support for our programs.",
+    title: "online_donation",
+    description: "online_donation_p",
     btnIcn: "ion:heart",
-    btnText: "DONATE NOW!",
+    btnText: "donate_now_btn",
+    path: "/support",
   },
   {
     id: 2,
-    title: "Corporate Sponsorship",
-    description:
-      "Explore our corporate sponsorship opportunities and make a lasting impact as a business. Together, we can build stronger communities through the power of music.",
+    title: "corporate_sponsorship",
+    description: "corporate_sponsorship_p",
     btnIcn: "",
-    btnText: "CONTACT US",
+    btnText: "contact_us_btn",
+    path: "/contact",
   },
   {
     id: 3,
-    title: "In-Kind Donations",
-    description:
-      "If you have musical instruments, equipment, or other resources that can benefit our programs, consider making an in-kind donation. Your contribution directly supports the growth and development of our students.",
+    title: "inKind_donations",
+    description: "inKind_donations_p",
     btnIcn: "",
-    btnText: "GET IN TOUCH",
+    btnText: "get_in_touch_btn",
+    path: "/contact",
   },
   {
     id: 4,
-    title: "Fundraising Events",
-    description:
-      "Get involved in our fundraising events or organize your own to support the Mostar Rock School. From benefit concerts to charity auctions, there are various ways to rally support and make a meaningful impact.",
+    title: "fundraising_events",
+    description: "fundraising_events_p",
     btnIcn: "",
-    btnText: "LET'S TALK ABOUT YOUR IDEAS",
+    btnText: "talk_ideas_btn",
+    path: "/contact",
   },
 ];
 
@@ -524,29 +505,29 @@ import diamond from "../public/assets/images/diamond.png";
 export const contributionTypes = [
   {
     id: 1,
-    type: "Education",
-    content: `By funding our classrooms, you provide quality music education to talented individuals who may not have access otherwise. Your contribution helps us offer comprehensive programs, individual lessons, group sessions, band collaborations, and live performances.`,
+    type: "education",
+    content: "education_p",
     icon: tongue,
     iconName: "Tongue",
   },
   {
     id: 2,
-    type: "Community Integration",
-    content: `Your donation allows us to conduct workshops and outreach programs, reaching out to marginalized communities and promoting inclusivity. Through music, we can bridge divides and foster understanding among diverse groups.`,
+    type: "community_integration",
+    content: "community_integration_p",
     icon: bubbles,
     iconName: "Bubbles",
   },
   {
     id: 3,
-    type: "Impactful events",
-    content: `By supporting our concerts, festivals, and special events, you help us create memorable experiences for our students and the wider community. These events not only showcase the incredible talent nurtured at the Mostar Rock School but also bring people together in celebration of music.`,
+    type: "impactful_events",
+    content: "impactful_events_p",
     icon: drum,
     iconName: "Drum",
   },
   {
     id: 4,
-    type: "Scholarship",
-    content: `Your generosity can provide scholarships and financial aid packages to deserving students. With your support, we ensure that talented individuals, regardless of their financial circumstances, have the opportunity to pursue their musical dreams and unlock their full potential.`,
+    type: "scholarship",
+    content: "scholarship_p",
     icon: diamond,
     iconName: "Diamond",
   },
@@ -556,50 +537,44 @@ export const years = [
   {
     id: 1,
     year: 2012,
-    title: "How it started ",
-    about:
-      "Mostar Rock School began its work in August 2012. Twenty young musicians from Mostar (16 students and 4 lecturers) took part in a summer rock camp in Macedonia – Skopje Summer School. First school bands were formed which will lead the way for many generations to come.",
+    title: "timeline_2012_h",
+    about: "timeline_2012_p",
   },
   {
     id: 2,
     year: 2014,
-    title: "The humble beginning",
-    about:
-      "Mostar Rock School was registered as an NGO at the local level with the aim of actively contributing through its activities to the revival of the comprehensive urban music scene in Mostar and Bosnia and Herzegovina, and to connect young people through music as a means of achieving their common goals, regardless of their ethnic, religious or other affiliation.",
+    title: "timeline_2014_h",
+    about: "timeline_2014_p",
   },
   {
     id: 3,
     year: 2015,
-    title: "Summer of Music",
-    about:
-      "The program started getting traction. More and more students were now a part of the School. In addition, with the help of the Embassy of the Republic of Germany in Bosnia and Herzegovina, Mostar Rock School successfully realized the project called &#39;Summer Rock School&#39; expanding its reach to a wider area.",
+    title: "timeline_2015_h",
+    about: "timeline_2015_p",
   },
   {
     id: 4,
     year: 2016,
-    title: "Sailing Through Uncertainty",
-    about:
-      "At the beginning of 2016, with a record number of students thus far, Mostar Rock School is left without funds because the support for this fifth program year could not be continued due to the redirection of the priorities of the Norwegian government. After a 10-month crisis period, we were back on stronger to Rock again!",
+    title: "timeline_2016_h",
+    about: "timeline_2016_p",
   },
   {
     id: 5,
     year: 2017,
-    title: "New Partnerships",
-    about:
-      "Mostar Rock School signed and concluded a three-year contract with the Swedish Embassy in Sarajevo in March 2017, and a three-year contract with USAID in Bosnia and Herzegovina in May 2017. The program started expanding, as well as the interest for the School. With the addition of the Booking Department, Mostar Rock School started establishing itself as a bigger generator of cultural and musical events.",
+    title: "timeline_2017_h",
+    about: "timeline_2017_p",
   },
   {
     id: 6,
     year: 2018,
-    title: "Continuity and Collaboration",
-    about:
-      "In August 2018, Rock School again signed a three-year agreement with the Embassy of the Kingdom of Norway, and successfully continued with the previous school activities, reaching even bigger numbers, outreaching to communities outside of Mostar with its Mobile Rock School Program and strengthening its core educational program further.",
+    title: "timeline_2018_h",
+    about: "timeline_2018_p",
   },
   {
     id: 7,
     year: 2023,
     title: "Going Forward",
-    about:
-      "The journey is far from over, and the future is bright. Mostar Rock School is expanding horizons, making music, and leaving an indelible mark on the world. With every chord played and every note sung, it continues to be a beacon of hope, unity, and artistic expression in Mostar and beyond.",
+    title: "timeline_2023_h",
+    about: "timeline_2023_p",
   },
 ];

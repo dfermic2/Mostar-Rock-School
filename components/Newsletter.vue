@@ -3,14 +3,13 @@
     <div class="content">
       <div class="heading">
         <img src="../public/assets/doodle.png" alt="drum doodle" />
-        <h2>Our newsletter</h2>
+        <h2>{{ $t("newsletter_h") }}</h2>
       </div>
       <p>
-        Stay informed about the latest news, upcoming events, and success
-        stories from the Mostar Rock School.
+        {{ $t("newsletter_p") }}
       </p>
       <input type="email" placeholder="Email adress" />
-      <button>SIGN UP</button>
+      <button>{{ $t("sign_up_btn") }}</button>
     </div>
   </div>
 </template>

@@ -5,7 +5,9 @@
         <Navbar />
         <div class="hero-container">
           <div class="hero-text">
-            <h2 class="back" @click="navigateTo('/support')">< Support</h2>
+            <NuxtLink :to="localePath('/support')">
+              <h2 class="back">< {{ $t("support") }}</h2>
+            </NuxtLink>
             <h1>No man is an island…</h1>
           </div>
           <DonationForm />
@@ -14,18 +16,13 @@
 
       <section class="sponsors p-inline">
         <div class="sponsors-content">
-          <h1>Current Donors</h1>
-          <div class="platinum-sponsors-container">
-            <div v-for="platinum in platinumSponsors" :key="platinum.id">
-              <PlatinumSponsorCard :sponsor="platinum" />
-            </div>
-          </div>
+          <h1>{{ $t("current_donors") }}</h1>
         </div>
       </section>
 
       <section class="donors-throughout-years p-inline">
         <div class="sponsors-content">
-          <h2>Our supporters throughout the years</h2>
+          <h2>{{ $t("past_donors") }}</h2>
           <div class="basic-sponsors-container">
             <div v-for="basic in basicSponsors" :key="basic.id">
               <BasicSponsorCard :sponsor="basic" />
@@ -40,7 +37,8 @@
 </template>
 
 <script setup>
-import { basicSponsors, platinumSponsors } from "~/data";
+import { basicSponsors } from "~/data";
+const localePath = useLocalePath();
 </script>
 
 <style scoped>
@@ -77,6 +75,11 @@ header {
   flex-grow: 1;
   max-width: 43.7rem;
   color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
   h1 {
     padding: 2.3rem 0 2.3rem 0;

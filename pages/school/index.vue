@@ -4,17 +4,13 @@
       <Navbar />
       <div class="grid">
         <div class="text">
-          <h1>We believe in <br />the transformative power of music</h1>
+          <h1>{{ $t("school_hero_h") }}</h1>
           <p>
-            In August 2012 eight girls and eight boys from different sides of
-            Mostar city joined a music camp in Skopje, North Macedonia.
-            Alongside 40 young people from Kosovska Mitrovica, they created a
-            diverse and harmonious community, free from political divisions.
-            Guided by teachers and coaches from various countries, they formed
-            four music bands, igniting the spirit of the Mostar Rock School
-            adventure.
+            {{ $t("school_hero_p") }}
           </p>
-          <button>VIEW OUR JOURNEY</button>
+          <NuxtLink :to="localePath('/school/journey')">
+            <button>{{ $t("view_journey_btn") }}</button>
+          </NuxtLink>
         </div>
         <div class="image">
           <img
@@ -28,21 +24,16 @@
       <div class="our-mission-content">
         <img src="../../public/assets/images/staff/omar.png" />
         <div class="our-mission-text">
-          <h1>Our mission</h1>
+          <h1>{{ $t("school_mission_h") }}</h1>
           <p>
-            Our mission is to use music as a powerful tool for community
-            integration, reconciliation, and personal growth.
+            {{ $t("school_mission_p1") }}
           </p>
           <p class="font-weight-600">
-            We aim to provide a nurturing environment where individuals can
-            explore their musical passions, develop their talents, and build
-            lasting connections across cultural and social boundaries. Through
-            education, collaboration, and performance, we strive to create a
-            harmonious and inclusive society.
+            {{ $t("school_mission_p2") }}
           </p>
           <div class="our-mission-btn">
-            <NuxtLink to="/school/people">
-              <button>MEET OUR PEOPLE</button>
+            <NuxtLink :to="localePath('/school/people')">
+              <button>{{ $t("meet_people_btn") }}</button>
             </NuxtLink>
           </div>
         </div>
@@ -52,17 +43,11 @@
     <div class="media-coverage p-inline">
       <div class="media-coverage-content">
         <div class="media-coverage-heading">
-          <h1>Media coverage</h1>
-          <button>VIEW ALL</button>
+          <h1>{{ $t("school_media_h") }}</h1>
         </div>
         <div class="media-coverage-text">
           <p>
-            The impact of the Mostar Rock School has not gone unnoticed.
-            Renowned media outlets such as NRK, Al Jazeera, and the BBC have
-            recognized the significance of our work, sharing our inspiring story
-            with the world. Through their coverage, our message of unity,
-            reconciliation, and the power of music has reached audiences far and
-            wide.
+            {{ $t("school_media_p") }}
           </p>
           <img src="../../public/assets/images/vinyl.png" alt="vinyl" />
         </div>
@@ -70,7 +55,6 @@
           <MediaCoverageCard :media-coverage="mediaCoverageList[0]" />
           <MediaCoverageCard :media-coverage="mediaCoverageList[1]" />
         </div>
-        <BasicPaging />
       </div>
     </div>
     <Donation />
@@ -80,7 +64,8 @@
 <script setup>
 import theGuardian from "../../public/assets/images/The-Guardian.png";
 import alJazeera from "../../public/assets/images/Al-Jazeera.png";
-import BasicPaging from "~/components/BasicPaging.vue";
+
+const localePath = useLocalePath();
 
 const mediaCoverageList = [
   {
@@ -168,7 +153,8 @@ header {
 }
 
 .text button {
-  width: 13.75rem;
+  width: fit-content;
+  padding-inline: 2rem;
 }
 
 button {

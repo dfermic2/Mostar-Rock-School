@@ -2,7 +2,7 @@
   <div>
     <div class="curriculum-offer">
       <div class="curriculum-content">
-        <h3>The curriculum offers education for:</h3>
+        <h3>{{ $t("curriculum_h") }}</h3>
         <div class="offers">
           <div v-for="offer in offers" :key="offer.id">
             <CurriculumOffer :offer="offer" />

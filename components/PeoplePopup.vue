@@ -20,15 +20,12 @@
           :alt="`${person.name} photo`"
         />
       </div>
-      <Icon
-        @click="navigateTo('/school/people')"
-        class="x-icon"
-        name="mdi:close-box"
-        size="3.125rem"
-      />
+      <NuxtLink :to="localePath('/school/people')">
+        <Icon class="x-icon" name="mdi:close-box" size="3.125rem" />
+      </NuxtLink>
       <div class="staff-info">
         <h3>{{ person.name }}</h3>
-        <p>{{ person.department }}</p>
+        <p>{{ $t(person.department) }}</p>
         <p>{{ person.description }}</p>
       </div>
     </div>
@@ -39,6 +36,8 @@
 import { staff } from "~/data";
 let route = useRoute();
 let id = route.query.id;
+
+const localePath = useLocalePath();
 
 var merged = [].concat(
   staff.managementAndAdministration,

@@ -35,6 +35,9 @@
         },
       }"
     >
+      <template #default="{ item }">
+        <span>{{ $t(item.label) }}</span>
+      </template>
       <template #item="{ item }">
         <!-- Single donation -->
         <div
@@ -42,7 +45,7 @@
           class="space-y-3 tabs"
           tabindex="0"
         >
-          <p>Single donation</p>
+          <p>{{ $t("single_donation") }}</p>
         </div>
 
         <!-- Monthly support -->
@@ -52,7 +55,7 @@
           tabindex="1"
         >
           <section class="donation-section">
-            <p class="f-bold-size mb-11875">Pick an amount</p>
+            <p class="f-bold-size mb-11875">{{ $t("pick_amount") }}</p>
             <div class="amount-donations">
               <span
                 class="donation"
@@ -71,13 +74,13 @@
           <hr class="separator mb-11875" />
 
           <section class="donation-section">
-            <p class="f-bold-size mb-11875">Other amount</p>
+            <p class="f-bold-size mb-11875">{{ $t("other_amount") }}</p>
             <div class="custom-donation mb-11875">
               <input class="p-07" type="number" placeholder="0" />
               <span class="p-07">KM</span>
             </div>
             <button class="btn p-07" type="submit">
-              Proceed to next step
+              {{ $t("next_step_btn") }}
               <span>
                 <Icon name="basil:arrow-right-outline" size="25" />
               </span>
@@ -91,14 +94,15 @@
 
 <script setup>
 const possibleDonationAmounts = [10, 30, 50, 100, 500, 1000];
+
 const items = [
   {
     key: "singledonation",
-    label: "Single donation",
+    label: "single_donation",
   },
   {
     key: "monthlysupport",
-    label: "Montly support",
+    label: "monthly_support",
   },
 ];
 

@@ -2,7 +2,9 @@
   <div class="form-container">
     <form @submit.prevent="sendEmail">
       <select v-model="subject">
-        <option value="" disabled selected>I'm writing about...</option>
+        <option value="" disabled selected>
+          {{ $t("contact_form_topic") }}
+        </option>
         <option value="Temp 1">Temp 1</option>
         <option value="Temp 2">Temp 2</option>
       </select>
@@ -31,15 +33,18 @@
 
       <div class="checkbox-container">
         <input v-model="privacyPolicy" type="checkbox" required />
-        <label>I agree to <u>Privacy Policy</u></label>
+        <label
+          >{{ $t("contact_form_privacy") }}
+          <u>{{ $t("contact_form_privacy_u") }}</u></label
+        >
       </div>
 
       <div class="checkbox-container">
         <input v-model="newsletter" type="checkbox" />
-        <label>I want to sign up for the Newsletter</label>
+        <label>{{ $t("contact_form_newsletter") }}</label>
       </div>
 
-      <button type="submit">SEND MESSAGE</button>
+      <button type="submit">{{ $t("send_msg_btn") }}</button>
     </form>
   </div>
 </template>

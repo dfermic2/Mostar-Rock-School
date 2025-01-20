@@ -8,9 +8,9 @@
           alt="Marker icon"
         />
         <div class="history-text">
-          <h4>{{ timeline.title }}</h4>
+          <h4>{{ $t(timeline.title) }}</h4>
           <p>
-            {{ timeline.about }}
+            {{ $t(timeline.about) }}
           </p>
         </div>
       </div>

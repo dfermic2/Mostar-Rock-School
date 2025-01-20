@@ -7,8 +7,7 @@
     </div>
     <div class="enroll-container">
       <p>
-        Upis članova za 2024/2025 školsku godinu je završen. Za upise van
-        redovnog upisnog roka obratite se na
+        {{ $t("enroll_msg") }}
         <a href="mailto:someone@example.com"> info@mostarrockschool.org </a>
       </p>
     </div>

@@ -9,22 +9,22 @@
               alt="Hand icon"
               title="Hand icon"
             />
-            <h2>We need your support!</h2>
+            <h2>{{ $t("support_call_card_h") }}</h2>
           </div>
 
           <div class="description-container">
             <p>
-              Your monthly or one-time donation can make a significant impact on
-              the school's mission to empower young musicians, promote music
-              education, and foster cultural exchange.
+              {{ $t("support_call_card_p") }}
             </p>
           </div>
 
           <div class="actions">
-            <div class="donate-button">
-              <Icon class="icon" name="mdi:heart" size="15" />
-              <button type="button">Donate now!</button>
-            </div>
+            <NuxtLink :to="localePath('/support')">
+              <div class="donate-button">
+                <Icon class="icon" name="mdi:heart" size="15" />
+                <button type="button">{{ $t("donate_now_btn") }}</button>
+              </div>
+            </NuxtLink>
           </div>
         </section>
       </div>
@@ -39,7 +39,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 * {
@@ -56,7 +58,7 @@
 
 .container[role="support-call-card"] {
   max-width: 30rem;
-  height: 19.6875rem;
+  height: 100%;
   padding: 2.5rem;
   box-sizing: border-box;
   background: #ff0000;
@@ -71,6 +73,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-bottom: 1.1rem;
 }
 
 .header-container {
@@ -101,11 +104,16 @@
   width: 100%;
   position: absolute;
   bottom: 0;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .donate-button {
   background: #bb0000;
   padding: 0.71875rem 0px 0.65625rem 0px;
+  margin-top: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;

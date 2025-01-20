@@ -7,7 +7,7 @@
             <ul class="g-06 m-0 line-height-15">
               <li class="pb-09"><logo class="logo" /></li>
               <li>Maršala Tita 179 (MC Pavarotti)</li>
-              <li>88000, Mostar, Bosna i Hercegovina</li>
+              <li>{{ $t("address") }}</li>
             </ul>
           </div>
           <div>
@@ -36,25 +36,27 @@
         <div class="second-column">
           <ul class="g-15 m-0 font-weight-bold">
             <li>
-              <NuxtLink to="/school">OUR SCHOOL</NuxtLink>
+              <NuxtLink to="/school">{{ $t("school") }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/programme/regular-programme">PROGRAMME</NuxtLink>
+              <NuxtLink to="/programme/regular-programme">{{
+                $t("programme")
+              }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/enroll">ENROLL</NuxtLink>
+              <NuxtLink to="/enroll">{{ $t("enroll") }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/support">SUPPORT</NuxtLink>
+              <NuxtLink to="/support">{{ $t("support") }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/news">NEWS</NuxtLink>
+              <NuxtLink to="/news">{{ $t("news") }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/contact">CONTACT</NuxtLink>
+              <NuxtLink to="/contact">{{ $t("contact") }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/privacy">PRIVACY POLICY</NuxtLink>
+              <NuxtLink to="/privacy">{{ $t("privacy_policy") }}</NuxtLink>
             </li>
           </ul>
         </div>
@@ -110,6 +112,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  text-transform: uppercase;
 }
 
 .copyright-container {

@@ -2,12 +2,9 @@
   <div>
     <div class="container">
       <div class="content">
-        <h1>Spread the word!</h1>
+        <h1>{{ $t("spread_the_word_h") }}</h1>
         <p>
-          Help us amplify our message by sharing our mission and impact with
-          your friends, family, and colleagues. Together, we can reach more
-          individuals and organizations who believe in the power of music to
-          change lives.
+          {{ $t("spread_the_word_p") }}
         </p>
         <MediaLinks :media-position="'normal'" />
       </div>

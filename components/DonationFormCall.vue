@@ -3,19 +3,17 @@
     <div class="container">
       <h1>
         The Show Must go on.<br />
-        There are two ways to do it.
+        {{ $t("donation_header") }}
       </h1>
       <p>
-        Support Mostar Rock School and be a part of their musical journey! Your
-        monthly or one-time donation can make a significant impact on the
-        school's mission to empower young musicians, promote music education,
-        and foster cultural exchange. <br />
+        {{ $t("donation_p1") }} <br />
         <br />
 
-        Every donation, no matter the size, brings us one step closer to a
-        harmonious future.
+        {{ $t("donation_p2") }}
       </p>
-      <button class="btn" type="button">Where does your donation go?</button>
+      <NuxtLink to="/support">
+        <button class="btn" type="button">{{ $t("donation_info_btn") }}</button>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -49,7 +47,7 @@ p {
 .btn {
   height: 2.82rem;
   max-width: 23.75rem;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   border-radius: 0.25rem;
   border: none;
   margin: 0;

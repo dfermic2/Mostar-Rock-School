@@ -5,23 +5,20 @@
         <div class="left">
           <div class="heading">
             <img src="../public/assets/doodle.png" alt="drum doodle" />
-            <h1>Subscribe to our newsletter</h1>
+            <h1>{{ $t("newsletter_horizonatal_h") }}</h1>
           </div>
-          <p>
-            Stay connected and informed about the latest news, upcoming events,
-            and success stories from Mostar Rock School. Sign up and receive
-            regular updates directly to your inbox.
-          </p>
+          <p>{{ $t("newsletter_p") }} {{ $t("newsletter_horizonatal_p") }}</p>
         </div>
         <div class="right">
           <input type="email" class="email" placeholder="Email adress" />
           <div class="terms">
             <input type="checkbox" />
             <label>
-              I agree to use of my data in line with the <u>Privacy Policy</u>
+              {{ $t("newsletter_horizonatal_privacy_policy") }}
+              <u>{{ $t("privacy_policy_nh") }}</u>
             </label>
           </div>
-          <button>SIGN UP</button>
+          <button>{{ $t("sign_up_btn") }}</button>
         </div>
       </div>
     </div>

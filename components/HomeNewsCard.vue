@@ -17,11 +17,11 @@
         <div class="details">
           <h2>Akademski band</h2>
           <p>
-            Our Akademski band, led by Atila Aksoj with assistants Goran Rebac
-            and Ivan zovko, consists of students attending an advanced level of
-            classes gathered to explore.....
+            {{ $t("home_akademski_bend_p") }}
           </p>
-          <button id="btn" class="btn" type="button">Find out more</button>
+          <button id="btn" class="btn" type="button">
+            {{ $t("find_out_more_btn") }}
+          </button>
         </div>
       </section>
     </div>
