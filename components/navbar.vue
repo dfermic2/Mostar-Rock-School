@@ -30,46 +30,69 @@
               @mouseleave="removeOverlay"
               @click="removeOverlay"
             >
-              <NuxtLink to="/school">The School</NuxtLink>
+              <NuxtLink :to="localePath('/school')">{{
+                $t("school")
+              }}</NuxtLink>
               <div class="dropdown">
                 <ul>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/school/journey"> OUR JOURNEY </NuxtLink>
+                    <NuxtLink
+                      class="min-w-75"
+                      :to="localePath('/school/journey')"
+                    >
+                      {{ $t("journey") }}
+                    </NuxtLink>
                   </li>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/school/people"> OUR PEOPLE </NuxtLink>
+                    <NuxtLink
+                      class="min-w-75"
+                      :to="localePath('/school/people')"
+                    >
+                      {{ $t("people") }}
+                    </NuxtLink>
                   </li>
                   <li @click="removeOverlay">
-                    <NuxtLink to="https://planer.mostarrockschool.org/">
-                      SCHEDULE
+                    <NuxtLink
+                      class="min-w-75"
+                      to="https://planer.mostarrockschool.org/"
+                    >
+                      {{ $t("schedule") }}
                     </NuxtLink>
                   </li>
                 </ul>
               </div>
             </li>
             <li @mouseover="addOverlay" @mouseleave="removeOverlay">
-              <span class="link-text">Programme</span>
+              <span class="link-text">{{ $t("programme") }}</span>
               <div class="dropdown">
                 <ul>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/programme/regular-programme">
-                      Regular programme
+                    <NuxtLink :to="localePath('/programme/regular-programme')">
+                      {{ $t("regular_programme") }}
                     </NuxtLink>
                   </li>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/programme/additional-programme">
-                      Additional programme
+                    <NuxtLink
+                      :to="localePath('/programme/additional-programme')"
+                    >
+                      {{ $t("additional_programme") }}
                     </NuxtLink>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <NuxtLink to="/enroll">Enroll</NuxtLink>
+              <NuxtLink :to="localePath('/enroll')">{{
+                $t("enroll")
+              }}</NuxtLink>
             </li>
-            <li><NuxtLink to="/news">News</NuxtLink></li>
             <li>
-              <NuxtLink to="/contact">Contact</NuxtLink>
+              <NuxtLink :to="localePath('/news')">{{ $t("news") }}</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/contact')">{{
+                $t("contact")
+              }}</NuxtLink>
             </li>
 
             <li
@@ -77,28 +100,51 @@
               @mouseleave="removeOverlay"
               @click="removeOverlay"
             >
-              <NuxtLink to="/support">
+              <NuxtLink :to="localePath('/support')">
                 <button class="btn-red align-center g-07">
-                  <Icon
-                    name="ion:heart"
-                    size="1rem"
-                    class="hearth-icon"
-                  />Support
+                  <Icon name="ion:heart" size="1rem" class="hearth-icon" />{{
+                    $t("support")
+                  }}
                 </button>
               </NuxtLink>
               <div class="dropdown pl-1">
                 <ul>
                   <li @click="removeOverlay">
-                    <NuxtLink to="/support/donors"> OUR DONORS </NuxtLink>
+                    <NuxtLink
+                      class="min-w-75"
+                      :to="localePath('/support/donors')"
+                    >
+                      {{ $t("donors") }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li
+              @mouseover="addOverlay"
+              @mouseleave="removeOverlay"
+              @click="removeOverlay"
+            >
+              <NuxtLink
+                class="align-center g-03"
+                :to="switchLocalePath(`${currentLocale}`)"
+              >
+                <Icon name="ion:earth" /> {{ currentLocale }}
+              </NuxtLink>
+              <div class="dropdown">
+                <ul>
+                  <li @click="removeOverlay">
+                    <NuxtLink :to="switchLocalePath(`${dropdownLocale}`)">
+                      <div class="align-center g-03">
+                        <Icon name="ion:earth" /> {{ dropdownLocale }}
+                      </div>
+                    </NuxtLink>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
         </Transition>
-        <div class="link-text align-center g-05 localization">
-          <Icon name="ion:earth" />EN
-        </div>
       </div>
     </div>
   </nav>
@@ -106,6 +152,18 @@
 
 <script setup>
 import { ref } from "vue";
+
+const switchLocalePath = useSwitchLocalePath();
+const localePath = useLocalePath();
+
+const { locale, locales } = useI18n();
+
+let currentLocale = locale;
+let dropdownLocale = locales.value
+  .filter((x) => {
+    return x.code !== locale.value;
+  })
+  .at(0).code;
 
 const viewport = useViewport();
 let dropdownActive = ref(false);
@@ -186,6 +244,9 @@ button {
   display: block;
   width: 100%;
   padding: 0.8rem 1.3rem;
+}
+
+.min-w-75 {
   min-width: 7.5rem;
 }
 

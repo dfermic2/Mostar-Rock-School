@@ -4,33 +4,33 @@
       <div class="pair">
         <div class="cell bb-1 br-1 bt-1">
           <h1>465</h1>
-          <span>formed bands</span>
+          <span>{{ $t("statistics_table_cell1") }}</span>
         </div>
         <div class="cell bb-1 bt-1">
           <h1>100+</h1>
-          <span>concerts</span>
+          <span>{{ $t("statistics_table_cell2") }}</span>
         </div>
       </div>
 
       <div class="pair">
         <div class="cell bb-1 br-1">
           <h1>200+</h1>
-          <span>active students</span>
+          <span>{{ $t("statistics_table_cell3") }}</span>
         </div>
         <div class="cell bb-1">
           <h1>8-57</h1>
-          <span>age range of students</span>
+          <span>{{ $t("statistics_table_cell4") }}</span>
         </div>
       </div>
 
       <div class="pair">
         <div class="cell br-1 bb-1">
           <h1>8900+</h1>
-          <span>hours of individual classes</span>
+          <span>{{ $t("statistics_table_cell5") }}</span>
         </div>
         <div class="cell bb-1">
           <h1>3000+</h1>
-          <span>hours of rehersals</span>
+          <span>{{ $t("statistics_table_cell6") }}</span>
         </div>
       </div>
     </div>

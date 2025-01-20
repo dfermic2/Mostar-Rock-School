@@ -4,58 +4,42 @@
       <div class="left">
         <h1>A school that rocks!</h1>
         <p>
-          The Mostar Rock School found its first home at the iconic Pavarotti
-          Music Centre in 1997. This creative hub, adorned with the presence of
-          renowned artists like Brian Eno, Zukero, Bono Vox, and maestro Luciano
-          Pavarotti himself, became the backdrop for our inaugural "rock" school
-          year.
+          {{ $t("statistics_p1") }}
         </p>
         <p>
-          With the support of the Norwegian Embassy in B&H, we quickly became a
-          recognized force for community integration and reconciliation. Over
-          the years, we have welcomed over 1,300 students into our classrooms,
-          providing them with a comprehensive music education program.
+          {{ $t("statistics_p2") }}
         </p>
 
         <StatisticsTable />
 
         <p>
-          Today, we proudly serve 250 regular students from 12 countries,
-          ranging in age from 8 to 57. Our classrooms are buzzing with
-          creativity, as we offer 350 hours of education and produce over 15,000
-          hours of music annually.
+          {{ $t("statistics_p3") }}
         </p>
       </div>
       <div class="right">
         <img src="../public/assets/images/drumsticks.png" alt="drumsticks" />
         <div class="left-text">
           <p>
-            Through our curriculum, we have formed 456 bands, offering students
-            the opportunity to develop their musical skills and showcase their
-            talents through over 100 concerts.
+            {{ $t("statistics_p4") }}
           </p>
           <p>
-            These performances attract an audience of more than 5,000 each year,
-            as we celebrate the incredible achievements of our students.
+            {{ $t("statistics_p5") }}
           </p>
           <p>
-            Beyond our classrooms, the Mostar Rock School extends its reach
-            through initiatives such as the Mobile Rock School, which conducts
-            workshops in communities throughout B&H, reaching over 200 youth.
-            Our Master Classes, Booking Department, and Production Department
-            further enhance our students' musical journeys, providing valuable
-            opportunities for growth and collaboration.
+            {{ $t("statistics_p6") }}
           </p>
         </div>
-        <NuxtLink to="/programme">
-          <button>VIEW OUR PROGRAMME</button>
+        <NuxtLink :to="localePath('/programme/regular-programme')">
+          <button>{{ $t("view_programme_btn") }}</button>
         </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 .statistics {

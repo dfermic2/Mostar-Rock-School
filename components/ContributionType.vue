@@ -7,10 +7,10 @@
             :src="contribution.icon"
             :alt="`${contribution.iconName} icon`"
           />
-          <h3>{{ contribution.type }}</h3>
+          <h3>{{ $t(contribution.type) }}</h3>
         </section>
         <section class="content">
-          <p>{{ contribution.content }}</p>
+          <p>{{ $t(contribution.content) }}</p>
         </section>
       </div>
     </div>

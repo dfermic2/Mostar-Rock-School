@@ -25,7 +25,7 @@
         />
         <div class="staff-info-container">
           <p>{{ person.name }}</p>
-          <p>{{ person.department }}</p>
+          <p>{{ $t(person.department) }}</p>
         </div>
       </section>
     </div>
@@ -82,6 +82,7 @@ let leave = (id) => {
   let all = document.querySelectorAll('.container[role="staff-container"]');
   allArray = Array.from(all);
   let specific = allArray.at(id - 1);
+  // console.log("Specific on leave ", specific);
 
   let container = specific.querySelector('.container[role="staff-container"]');
   let staffInfoContainer = specific.querySelector(".staff-info-container");

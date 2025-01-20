@@ -5,14 +5,12 @@
       <div class="info-container">
         <div class="info-content">
           <div class="info">
-            <p class="back" @click="navigateTo('/school')">< The School</p>
-            <h1>Our journey</h1>
+            <NuxtLink class="back" :to="localePath('/school')">
+              < {{ $t("school") }}
+            </NuxtLink>
+            <h1>{{ $t("journey_hero_h") }}</h1>
             <p class="info-description">
-              Since the first idea of starting a Rock School that brings young
-              musicians together through education and performance in 1998,
-              through its first generation when the idea first saw the light of
-              day in 2012, up until the present day, the School has grown to
-              become a leader in urban music education in BiH.
+              {{ $t("journey_hero_p") }}
             </p>
           </div>
         </div>
@@ -21,7 +19,7 @@
       <div class="bottom-hero">
         <div class="bottom-heading">
           <h1 class="heading-smaller">
-            Every journey starts with the first step. Or the first chord.
+            {{ $t("journey_h") }}
           </h1>
         </div>
         <SupportCallCard />
@@ -31,13 +29,7 @@
     <div class="desc-vynil-container p-inline">
       <div class="desc-vynil-content">
         <p class="journey-description">
-          In 1998, Apeiron, as part of the Pavarotti Music Center, initiated a
-          rock school project in Mostar. Although short-lived, it sparked the
-          concept of an urban, non-classical music culture at the center,
-          offering rehearsal space to local bands. By the end of 2011, Orhan
-          Maslo, in collaboration with Musicians without Borders and the
-          Pavarotti Music Center, revived this idea, taking the first steps
-          towards its realization.
+          {{ $t("journey_p") }}
         </p>
         <div class="illustrations">
           <img
@@ -66,6 +58,10 @@
     <Donation />
   </div>
 </template>
+
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 * {
@@ -126,6 +122,8 @@ header {
     transition: 500ms;
     padding: 1.875rem 0 1.875rem 0;
     width: fit-content;
+    text-decoration: none;
+    color: white;
   }
 
   .back:hover {

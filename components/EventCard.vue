@@ -33,7 +33,9 @@
         </div>
 
         <div class="actions">
-          <button class="btn p-btn font-weight-bold">Find out more</button>
+          <button class="btn p-btn font-weight-bold">
+            {{ $t("find_out_more_btn") }}
+          </button>
         </div>
       </section>
     </div>

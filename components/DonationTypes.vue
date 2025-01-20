@@ -2,8 +2,8 @@
   <div>
     <div class="donation-types p-inline">
       <div class="donation-text">
-        <h1>How to donate?</h1>
-        <p>There are several ways in which you can support us.</p>
+        <h1>{{ $t("support_donation_h") }}</h1>
+        <p>{{ $t("support_donation_p") }}</p>
       </div>
       <div class="types-container">
         <div v-for="donation in donationTypes" class="wrapper">

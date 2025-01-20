@@ -13,15 +13,11 @@
     <div class="contact-content p-inline">
       <div class="contact-text">
         <div class="text">
-          <h1>Get in touch</h1>
-          <p>
-            We'll try to answer all your questions, tell you more about the
-            school, book a meeting or tour and help you become a part of our
-            community.
-          </p>
+          <h1>{{ $t("contact_h") }}</h1>
+          <p>{{ $t("contact_p") }}</p>
           <ul class="g-06 pb-09 font-w-bold">
             <li>Maršala Tita 179 (MC Pavarotti)</li>
-            <li>88000, Mostar, Bosna i Hercegovina</li>
+            <li>{{ $t("address") }}</li>
           </ul>
 
           <ul class="g-125 font-w-600">

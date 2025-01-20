@@ -6,16 +6,12 @@
         <div class="info-container">
           <div class="info-content">
             <div class="info">
-              <p class="back" @click="navigateTo('/school')">< The School</p>
-              <h1>Our staff</h1>
+              <NuxtLink class="back" :to="localePath('/school')">
+                < {{ $t("school") }}
+              </NuxtLink>
+              <h1>{{ $t("people_hero_h") }}</h1>
               <p class="info-description">
-                Integrity, dedication, professionalism, enthusiasm and lifelong
-                learning is what drives our staff. MoRS teacher's went through
-                exchange programs for knowledge updates in modern music
-                curriculum and pedagogy at Popakademie (AU) and Fontys Rock
-                Academy (NL) and they received a Contribution to pedagogical
-                practice in BiH award from Pedagogical Institute in Mostar. We
-                take pride in what we do and live our mission.
+                {{ $t("people_hero_p") }}
               </p>
             </div>
           </div>
@@ -24,8 +20,7 @@
         <div class="bottom-hero">
           <div class="bottom-heading">
             <h1 class="heading-smaller">
-              The misfits. The rebels. The troublemakers. The square pegs in
-              round holes.
+              {{ $t("people_h") }}
             </h1>
           </div>
           <SupportCallCard />
@@ -35,50 +30,56 @@
         <PeoplePopup v-if="route.query.id" />
       </Transition>
       <section class="staff-content p-inline">
-        <p>Meet the people behind Mostar Rock School.</p>
+        <p>{{ $t("people_p") }}</p>
         <section class="staff-container">
           <div id="management-administration">
-            <h2>Management and Administration</h2>
+            <h2>{{ $t("management_administration") }}</h2>
             <article class="management-administration">
               <div
                 v-for="person in staff.managementAndAdministration"
                 :key="person.id"
                 class="member"
               >
-                <StaffCard
-                  :person="person"
-                  @click="navigateTo(`/school/people/?id=${person.id}`)"
-                />
+                <NuxtLink
+                  class="person-info"
+                  :to="localePath(`/school/people/?id=${person.id}`)"
+                >
+                  <StaffCard :person="person" />
+                </NuxtLink>
               </div>
             </article>
           </div>
           <div id="programme">
-            <h2>Programme</h2>
+            <h2>{{ $t("programme") }}</h2>
             <article class="programme">
               <div
                 v-for="person in staff.programme"
                 :key="person.id"
                 class="member"
               >
-                <StaffCard
-                  :person="person"
-                  @click="navigateTo(`/school/people/?id=${person.id}`)"
-                />
+                <NuxtLink
+                  class="person-info"
+                  :to="localePath(`/school/people/?id=${person.id}`)"
+                >
+                  <StaffCard :person="person" />
+                </NuxtLink>
               </div>
             </article>
           </div>
           <div id="lecturers">
-            <h2>Lecturers</h2>
+            <h2>{{ $t("lecturers") }}</h2>
             <article class="lecturers">
               <div
                 v-for="person in staff.lecturers"
                 :key="person.id"
                 class="member"
               >
-                <StaffCard
-                  :person="person"
-                  @click="navigateTo(`/school/people/?id=${person.id}`)"
-                />
+                <NuxtLink
+                  class="person-info"
+                  :to="localePath(`/school/people/?id=${person.id}`)"
+                >
+                  <StaffCard :person="person" />
+                </NuxtLink>
               </div>
             </article>
           </div>
@@ -93,6 +94,8 @@
 <script setup>
 import { staff } from "~/data";
 let route = useRoute();
+
+const localePath = useLocalePath();
 </script>
 
 <style scoped>
@@ -119,6 +122,10 @@ header {
   min-height: 67.8125rem;
 }
 
+.person-info {
+  text-decoration: none;
+  color: black;
+}
 .info-container {
   display: flex;
 }
@@ -147,6 +154,8 @@ header {
     font-family: "F37Hybrid-Bold";
     transition: 500ms;
     width: fit-content;
+    text-decoration: none;
+    color: white;
   }
 
   .back:hover {

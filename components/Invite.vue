@@ -4,48 +4,39 @@
       <div class="left">
         <h1>Rock with us!</h1>
         <p>
-          Two options to Rock with us! give you access and opportunities inside
-          our musical community.
+          {{ $t("home_invite_p1") }}
         </p>
         <p>
-          Become a member or Enrol into our regular educational program as a
-          student and start your journey in #theschoolthatrocks. Collaborate,
-          create, connect, rehearse, learn, publish, perform, participate and
-          share with us. Whether it's your hobby or a potential career, we'll
-          make it happen together.
+          {{ $t("home_invite_p2") }}
         </p>
       </div>
       <div class="smaller-wrapper">
         <div class="smaller">
-          <h3>Enrol in the school</h3>
-          <p>
-            If you already play or sing, or if you want to learn to play and
-            sing and participate actively in music creation, you have the
-            opportunity to apply to our unique and original music education
-            program that encompasses the music industry from start to finish.
-          </p>
-          <button>ENROLL NOW</button>
+          <h3>{{ $t("home_enroll_h") }}</h3>
+          <p>{{ $t("home_enroll_p") }}</p>
+          <NuxtLink :to="localePath('/enroll')">
+            <button class="btn">{{ $t("enroll_btn") }}</button>
+          </NuxtLink>
         </div>
       </div>
       <div class="smaller-wrapper">
         <div class="smaller">
-          <h3>Become a member</h3>
+          <h3>{{ $t("become_member") }}</h3>
           <p>
-            As a member you'll gain exclusive access to a world of music,
-            creativity and collaboration. Whether you're a musician, music
-            enthusiast or you want to support our cause, joining our community
-            means you can participate in workshops, jam sessions, concert and
-            events, and you will help us nurture young talent, promote music and
-            foster cultural exchange.
+            {{ $t("home_become_member_p") }}
           </p>
-          <button>BECOME A MEMBER</button>
+          <NuxtLink :to="localePath('/enroll')">
+            <button>{{ $t("become_member_btn") }}</button>
+          </NuxtLink>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 .invite-container {
@@ -61,6 +52,11 @@
 
 h1 {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
 }
 
 .invite-content {
@@ -106,7 +102,7 @@ h1 {
     justify-content: center;
     gap: 1rem;
     height: 2.5rem;
-    max-width: 20.5rem;
+    width: 100%;
     border-radius: 0.25rem;
     border: 1px solid red;
     margin: 1rem 0 0 0;

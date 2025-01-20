@@ -31,7 +31,9 @@
               <span class="space">{{ news.date }}</span>
             </div>
             <div class="right-side">
-              <button class="btn" type="button">Read More</button>
+              <button class="btn" type="button">
+                {{ $t("read_more_btn") }}
+              </button>
             </div>
           </div>
         </div>
@@ -159,7 +161,6 @@ let { news } = defineProps(["news"]);
 }
 
 .btn {
-  max-width: 11.25rem;
   min-height: 1.875rem;
   background: #ff0000;
   color: #fff;

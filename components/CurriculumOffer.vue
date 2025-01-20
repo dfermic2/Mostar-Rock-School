@@ -1,7 +1,7 @@
 <template>
   <div class="offer">
     <div class="box"></div>
-    <p>{{ offer.offer }}</p>
+    <p>{{ $t(offer.offer) }}</p>
   </div>
 </template>
 

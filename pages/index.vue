@@ -7,13 +7,12 @@
           <div class="heading">
             <h1>The School That Rocks</h1>
             <p>
-              Experience the transformative power of music and make a
-              difference. Become a student or support our mission today.
+              {{ $t("home_hero") }}
             </p>
-            <NuxtLink to="/school">
+            <NuxtLink :to="localePath('/school')">
               <button>
                 <img src="../public/assets/images/note.png" />
-                LEARN ABOUT THE SCHOOL
+                {{ $t("learn_about_school_btn") }}
               </button>
             </NuxtLink>
           </div>
@@ -36,12 +35,9 @@
     <div class="support-container p-inline">
       <div class="support-content">
         <div class="support-text">
-          <h1>We make music thats more than just a collection of notes</h1>
+          <h1>{{ $t("home_info_header") }}</h1>
           <p>
-            We are a vibrant and inclusive community that harnesses the power of
-            music to bridge divides, foster unity, and inspire positive change.
-            Since 2012, we have embarked on an incredible journey, transforming
-            lives through the universal language of music.
+            {{ $t("home_info_left_p") }}
           </p>
         </div>
         <div class="support-card">
@@ -63,18 +59,13 @@
         </div>
         <div class="programme-info">
           <p>
-            As a leading music education institution, we provide aspiring
-            musicians with a nurturing environment to learn, create, and
-            connect, empowering students to unlock their musical potential,
-            explore their creativity, and develop lifelong skills.
+            {{ $t("home_info_right_p1") }}
           </p>
           <p>
-            Together, we are making music that transcends boundaries and
-            empowers individuals to make a positive impact in their communities
-            and beyond.
+            {{ $t("home_info_right_p2") }}
           </p>
-          <NuxtLink to="/programme">
-            <button>VIEW OUR PROGRAMME</button>
+          <NuxtLink :to="localePath('/programme/regular-programme')">
+            <button>{{ $t("view_programme_btn") }}</button>
           </NuxtLink>
         </div>
       </div>
@@ -86,9 +77,9 @@
         <div class="news-events">
           <div class="news">
             <div class="news-events-heading pt-15">
-              <h2>News</h2>
-              <NuxtLink to="/news">
-                <button>VIEW ALL</button>
+              <h2>{{ $t("news") }}</h2>
+              <NuxtLink :to="localePath('/news')">
+                <button>{{ $t("view_all_btn") }}</button>
               </NuxtLink>
             </div>
             <HomeNewsCard />
@@ -96,8 +87,8 @@
           </div>
           <div class="events">
             <div class="news-events-heading">
-              <h2>Events</h2>
-              <button>VIEW ALL</button>
+              <h2>{{ $t("events") }}</h2>
+              <button>{{ $t("view_all_btn") }}</button>
             </div>
             <div class="events-list">
               <div v-for="event in events" :key="event.id">
@@ -113,7 +104,9 @@
     <div class="sponsors">
       <div class="sponsors-heading p-inline">
         <h1>Making this journey possible</h1>
-        <button>VIEW OUR SPONSORS</button>
+        <NuxtLink :to="localePath('/support/donors')">
+          <button>{{ $t("view_sponsors_btn") }}</button>
+        </NuxtLink>
       </div>
       <div class="sponsors-slider">
         <hr />
@@ -126,6 +119,7 @@
 
 <script setup>
 import { events } from "~/data";
+const localePath = useLocalePath();
 </script>
 
 <style scoped>
@@ -345,7 +339,7 @@ video {
     background-color: white;
     color: red;
     width: 12.5rem;
-    height: 1.875rem;
+    min-height: 1.875rem;
     border-radius: 3px;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
@@ -421,7 +415,7 @@ hr {
     letter-spacing: 0.02rem;
     background-color: white;
     color: red;
-    width: 7.5rem;
+    min-width: 7.5rem;
     height: 1.875rem;
     border-radius: 3px;
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.1);

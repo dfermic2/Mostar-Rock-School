@@ -5,11 +5,7 @@
       <div class="hero-text">
         <h1>With a little help from our friends...</h1>
         <p>
-          At the Mostar Rock School, we believe in the transformative power of
-          music. Through our innovative programs and inclusive approach, we use
-          music as a tool for community integration, reconciliation, and
-          personal growth. We invite you to join us in making a difference
-          through the universal language of music.
+          {{ $t("support_hero_p") }}
         </p>
       </div>
       <DonationForm />
@@ -20,8 +16,7 @@
       <div class="contribute-text">
         <h1>We'll make a better day, just you and me...</h1>
         <p class="font-w-600">
-          Your support can create lasting change. With your donation, you
-          contribute to:
+          {{ $t("contributions_p") }}
         </p>
       </div>
       <Contributions :contributionTypes="contributionTypes" />
@@ -33,11 +28,10 @@
       <div class="sponsors-text">
         <h1>Making this journey possible</h1>
         <p>
-          People who made it possible throughout the years. A generous thanks to
-          all of you for making our mission possible.
+          {{ $t("support_sponsors_p") }}
         </p>
-        <NuxtLink to="/support/donors">
-          <button>VIEW OUR SPONSORS</button>
+        <NuxtLink :to="localePath('/support/donors')">
+          <button>{{ $t("view_sponsors_btn") }}</button>
         </NuxtLink>
       </div>
       <img src="../../public/assets/images/guy-pointing.png" alt="" />
@@ -58,6 +52,7 @@
 
 <script setup>
 import { donationTypes, contributionTypes } from "~/data";
+const localePath = useLocalePath();
 </script>
 
 <style scoped>

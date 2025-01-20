@@ -1,14 +1,14 @@
 <template>
   <div class="darkenImg">
-    <NuxtLink to="/">
+    <NuxtLink :to="localePath('/')">
       <img src="../public/assets/logo.png" />
     </NuxtLink>
   </div>
 </template>
 
-<!-- <script setup>
-const { imgHeight } = defineProps(["imgHeight"]);
-</script> -->
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 .darkenImg:hover {

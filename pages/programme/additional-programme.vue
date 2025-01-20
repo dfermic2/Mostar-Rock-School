@@ -4,22 +4,20 @@
       <Navbar />
       <div class="hero-container">
         <div class="info">
-          <h1>Additional School programme</h1>
+          <h1>
+            {{ $t("additional_programme_hero_h") }}
+          </h1>
           <p>
-            Besides our regular programme we expand our support to young
-            musicians in other communities, support creative groups through long
-            term creative projects, organize events, festivals and music camps
-            and offer our own studio for competitive commercial price for
-            upcoming and even professional musicians.
+            {{ $t("additional_programme_hero_p") }}
           </p>
-          <NuxtLink to="/contact">
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-style btn-link">
-              Get in touch to learn more
+              {{ $t("learn_more_btn") }}
             </button>
           </NuxtLink>
-          <NuxtLink to="/programme/regular-programme"
+          <NuxtLink :to="localePath('/programme/regular-programme')"
             ><button type="button" class="btn-style btn-add-programme">
-              Regular Programme
+              {{ $t("regular_programme") }}
             </button></NuxtLink
           >
         </div>
@@ -28,24 +26,18 @@
     <section class="video-text-container p-inline">
       <div class="video-text">
         <div class="right-side">
-          <h1>Music Camps</h1>
+          <h1>{{ $t("music_camps_h") }}</h1>
           <strong>
             <p>
-              Rock School Mostar has so far taken part in exchanges and music
-              camps in Macedonia, Croatia, Slovenia, France, Germany, Serbia,
-              Austria.
+              {{ $t("music_camps_p1") }}
             </p>
           </strong>
           <p>
-            The school also implemented two music camps in its own organization.
-            The first camp was held in the Roma settlement of Kiseljak near
-            Tuzla in 2015 for 60 participants from 4 BH cities, and the second
-            in the Olympic Hotel Bistrica in Jahorina in 2016 for 70
-            participants from 18 BH cities.
+            {{ $t("music_camps_p2") }}
           </p>
-          <NuxtLink to="/contact">
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-style btn-link">
-              Get in touch to learn more
+              {{ $t("learn_more_btn") }}
             </button>
           </NuxtLink>
         </div>
@@ -72,25 +64,16 @@
         </div>
 
         <div class="right-side">
-          <h1>Events and festivals</h1>
+          <h1>{{ $t("events_festivals_h") }}</h1>
           <p>
-            Depending on the situation or need, the production department also
-            functions as an organizer, promoter, technical producer,
-            coordinator, and/or executive producer.
+            {{ $t("events_festivals_p1") }}
           </p>
           <p>
-            MoRS started and so far realized two editions of the festival Open
-            City Mostar, four editions of Old Town Street Fest festival that
-            takes place as part of the Red Bull Cliff Diving acrobatic world
-            competition jumps from Stari Most in Mostar, two editions of the
-            Winterville Festival, the Dubioze Kolektiv Concert at SC Kantarevac
-            stadium. MoRS also organizes a concert every year for World Music
-            Day on June 21, when he proudly presents the young talents of his
-            program and invites a regional guest.
+            {{ $t("events_festivals_p2") }}
           </p>
-          <NuxtLink to="/contact">
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-style btn-link">
-              Get in touch to learn more
+              {{ $t("learn_more_btn") }}
             </button>
           </NuxtLink>
         </div>
@@ -98,41 +81,25 @@
     </section>
 
     <section class="mobile-rock-school p-inline">
-      <h1>Mobile Rock School</h1>
+      <h1>{{ $t("mobile_rock_school_h") }}</h1>
       <p>
-        Mobilna Rock Škola je outreach aktivnost Rock škole Mostar i nastala je
-        2020 godine. Namijenjena je prvenstveno mladim ljudima u manjim BH
-        zajednicama gdje je kulturni život mladih zapostavljen u potpunosti ili
-        se u njega ulaže nedovoljno.
+        {{ $t("mobile_rock_school_p1") }}
       </p>
       <p>
-        Kombi Rock škole Mostar zajedno sa tri predavača putuje na trodnevni
-        izlet u manja mjesta gdje zajedno sa lokalnim partnerom organizira
-        cjelodnevne radionice sviranja različitih instrumenata i band coach
-        programa. Posljednji dan se organizira javna prezentacija u vidu
-        koncerta gdje lokalna zajednica može vidjeti i čuti rezultat njihovih
-        mladih sugrađana.
+        {{ $t("mobile_rock_school_p2") }}
       </p>
       <p>
-        Osim manjih općina gdje je kulturni život nedovoljno razvijen, Mobilna
-        rock škola posjećuje i veće gradove u BiH gdje ima za cilj učvrstiti
-        suradnju između mladih ljudi, ponuditi im prilike za učešće u kulturnom
-        životu i vještine kojima mogu postati sudionici i kreatori nove kulturne
-        scene.
+        {{ $t("mobile_rock_school_p3") }}
       </p>
       <p>
-        Bendovi koji se ističu kroz program Mobilne rock škole prezentiraju svoj
-        rad na programskim koncertima Session band programa u Mostaru, dok neki
-        od njih dobiju priliku snimiti svoja djela nastala na radionicama
-        Mobilne rock škole.
+        {{ $t("mobile_rock_school_p4") }}
       </p>
       <p>
-        Ova pokretna radionica je već proputovala kroz 20+ BH općina nudeći
-        radionice sviranja modernih instrumenata i band coach program.
+        {{ $t("mobile_rock_school_p5") }}
       </p>
-      <NuxtLink to="/contact">
+      <NuxtLink :to="localePath('/contact')">
         <button class="btn btn-style btn-link">
-          Get in touch to learn more
+          {{ $t("learn_more_btn") }}
         </button>
       </NuxtLink>
     </section>
@@ -142,18 +109,11 @@
         <div class="right-side">
           <h1>Liron</h1>
           <p>
-            Liron je ženski vokalno-instrumentalni ansambl koji je nastao kao
-            dio “Vocal Art” programa u sklopu Ljetne škole. Trenutno broji 10
-            članova. Liron kombinira vokalno scenski pokret, orijentiran na
-            tradicionalnu glazbu Bosne i Hercegovine, Hrvatske, Bugarske,
-            Makedonije itd. Pored tradicijske obrađuje i popularnu domaću i
-            stranu glazbu koju izvode najčešće acapella ili u kombinaciji sa
-            instrumentalnom pratnjom. Liron predstavlja Rock školu Mostar na
-            raznim manifestacijama širom BiH i inozemstva.
+            {{ $t("liron_p") }}
           </p>
-          <NuxtLink to="/contact">
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-style btn-link">
-              Get in touch to learn more
+              {{ $t("learn_more_btn") }}
             </button>
           </NuxtLink>
         </div>
@@ -174,16 +134,15 @@
       <div class="video-text reverse">
         <div class="right-side">
           <h1>DK Studio</h1>
-          <p>DK (Dubioza kolektiv) Studio je nastao 2016 godine.</p>
           <p>
-            Studio se koristi za nastavu audio i elektronske produkcije te služi
-            i za snimanje Session band programa, Mobilne Rock škole, i drugih
-            DEMO bendova i projekata iz BiH i regiona.
+            {{ $t("dk_p1") }}
           </p>
-          <p>Studio je do sada snimio 100+ muzičkih uradaka.</p>
-          <NuxtLink to="/contact">
+          <p>
+            {{ $t("dk_p2") }}
+          </p>
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-style btn-link">
-              Get in touch to learn more
+              {{ $t("learn_more_btn") }}
             </button>
           </NuxtLink>
         </div>
@@ -205,6 +164,10 @@
     </section>
   </div>
 </template>
+
+<script setup>
+const localePath = useLocalePath();
+</script>
 
 <style scoped>
 * {

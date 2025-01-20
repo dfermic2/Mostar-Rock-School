@@ -12,7 +12,7 @@
         <div class="details">
           <p>{{ mediaCoverage.date }}</p>
           <p>{{ mediaCoverage.content }}</p>
-          <button class="btn" type="button">Read more</button>
+          <button class="btn" type="button">{{ $t("read_more_btn") }}</button>
         </div>
       </section>
     </div>
@@ -140,7 +140,7 @@ div[role="media-coverage"] {
 }
 
 .btn {
-  width: 9.375rem;
+  min-width: 9.375rem;
   border: none;
   cursor: pointer;
   outline: none;
